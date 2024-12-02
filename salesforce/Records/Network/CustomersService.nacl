@@ -3,9 +3,9 @@ salesforce.Network CustomersService {
   allowInternalUserLogin = false
   allowMembersToFlag = false
   caseCommentEmailTemplate = salesforce.EmailTemplate.instance.unfiled_public_SchedulerUnauthenticatedUserAppointmentTypeEmailTemplateForAmazonChime@zcd
-  changePasswordTemplate = "unfiled$public/CommunityChangePasswordEmailTemplate"
-  chgEmailVerNewTemplate = "unfiled$public/CommunityChangePasswordEmailTemplate"
-  chgEmailVerOldTemplate = "unfiled$public/CommunityChangePasswordEmailTemplate"
+  changePasswordTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityChangePasswordEmailTemplate@zcd
+  chgEmailVerNewTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityChangePasswordEmailTemplate@zcd
+  chgEmailVerOldTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityChangePasswordEmailTemplate@zcd
   communityRoles = {
   }
   deviceActEmailTemplate = salesforce.EmailTemplate.instance.unfiled_public_SchedulerUnauthenticatedUserEngagementChannelEmailTemplateForThirdParty@zcd
@@ -35,11 +35,11 @@ salesforce.Network CustomersService {
   enableTopicAssignmentRules = true
   enableTopicSuggestions = false
   enableUpDownVote = false
-  forgotPasswordTemplate = "unfiled$public/CommunityForgotPasswordEmailTemplate"
+  forgotPasswordTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityForgotPasswordEmailTemplate@zcd
   gatherCustomerSentimentData = false
   headlessForgotPasswordTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityHeadlessForgotPasswordTemplate@zcd
   headlessRegistrationTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityHeadlessRegistrationTemplate@zcd
-  lockoutTemplate = "unfiled$public/SchedulerUnauthenticatedUserEngagementChannelEmailTemplateForThirdParty"
+  lockoutTemplate = salesforce.EmailTemplate.instance.unfiled_public_SchedulerUnauthenticatedUserEngagementChannelEmailTemplateForThirdParty@zcd
   networkMemberGroups = {
     profile = "admin"
   }
@@ -63,7 +63,7 @@ salesforce.Network CustomersService {
     standardTab = "Chatter"
   }
   urlPathPrefix = "customers"
-  verificationTemplate = "unfiled$public/SchedulerUnauthenticatedUserEngagementChannelEmailTemplateForThirdParty"
-  welcomeTemplate = "unfiled$public/CommunityWelcomeEmailTemplate"
+  verificationTemplate = salesforce.EmailTemplate.instance.unfiled_public_SchedulerUnauthenticatedUserEngagementChannelEmailTemplateForThirdParty@zcd
+  welcomeTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityWelcomeEmailTemplate@zcd
   _alias = "CustomersService"
 }
