@@ -1,0 +1,14 @@
+salesforce.Queue my_queue {
+  fullName = "my_queue"
+  doesSendEmailToMembers = false
+  name = "my queue"
+  queueMembers = {
+    roles = {
+      role = salesforce.Role.instance.Junior
+    }
+  }
+  queueSobject = {
+    sobjectType = "Lead"
+  }
+  _alias = "my_queue"
+}

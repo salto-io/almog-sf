@@ -1,0 +1,28 @@
+salesforce.LightningPage custom_tab {
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "SALTO_6326"
+            identifier = "c_SALTO_6326"
+          }
+        },
+      ]
+      name = "main"
+      type = "Region"
+    },
+  ]
+  masterLabel = "custom_tab"
+  template = {
+    name = "flexipage:defaultAppHomeTemplate"
+  }
+  type = "AppPage"
+  fullName = "custom_tab"
+  _generated_dependencies = [
+    {
+      reference = salesforce.AuraDefinitionBundle.instance.SALTO_6326
+    },
+  ]
+  _alias = "custom_tab"
+}

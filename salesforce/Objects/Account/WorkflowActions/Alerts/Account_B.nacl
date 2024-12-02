@@ -1,0 +1,17 @@
+salesforce.WorkflowAlert Account_B@v {
+  fullName = "Account.B"
+  description = "B"
+  protected = false
+  recipients = [
+    {
+      recipient = "almog.mesilaty+dev1@salto.io"
+      type = "user"
+    },
+  ]
+  senderType = "CurrentUser"
+  template = salesforce.EmailTemplate.instance.unfiled_public_SupportCaseResponse@zcd
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "Account.B"
+}

@@ -1,0 +1,13 @@
+salesforce.ListView Lead_my_queue_Lead {
+  fullName = "Lead.my_queue_Lead"
+  filterScope = "Queue"
+  label = "my queue"
+  queue = salesforce.Queue.instance.my_queue
+  sharedTo = {
+    allInternalUsers = ""
+  }
+  _parent = [
+    salesforce.Lead,
+  ]
+  _alias = "my queue"
+}

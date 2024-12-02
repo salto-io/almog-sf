@@ -1,0 +1,122 @@
+salesforce.LightningPage SALTO_6326 {
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "decorate"
+                value = "true"
+              },
+              {
+                name = "richTextValue"
+                value = "<p>Hello world!</p>"
+              },
+            ]
+            componentName = "flexipage:richText"
+            identifier = "flexipage_richText"
+          }
+        },
+      ]
+      name = "Facet-6e3a7c40-0721-49af-96e2-ece111fad4ee"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "decorate"
+                value = "true"
+              },
+              {
+                name = "richTextValue"
+                value = "<p>Dashboard things</p>"
+              },
+            ]
+            componentName = "flexipage:richText"
+            identifier = "flexipage_richText2"
+          }
+        },
+      ]
+      name = "Facet-753a4de4-fe4b-4fbe-93f3-a2a67f54c522"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "active"
+                value = "true"
+              },
+              {
+                name = "body"
+                value = "Facet-6e3a7c40-0721-49af-96e2-ece111fad4ee"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.collaborate"
+              },
+            ]
+            componentName = "flexipage:tab"
+            identifier = "flexipage_tab"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "Facet-753a4de4-fe4b-4fbe-93f3-a2a67f54c522"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.dashboard"
+              },
+            ]
+            componentName = "flexipage:tab"
+            identifier = "flexipage_tab2"
+          }
+        },
+      ]
+      name = "Facet-7aad3729-bf74-4f53-8abd-fa033d22c40e"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "tabs"
+                value = "Facet-7aad3729-bf74-4f53-8abd-fa033d22c40e"
+              },
+            ]
+            componentName = "flexipage:tabset"
+            identifier = "flexipage_tabset"
+          }
+        },
+      ]
+      name = "main"
+      type = "Region"
+    },
+  ]
+  masterLabel = "SALTO-6326"
+  quickActionList = {
+    quickActionListItems = [
+      {
+        quickActionName = salesforce.QuickAction.instance.NewCase
+      },
+    ]
+  }
+  template = {
+    name = "flexipage:defaultAppHomeTemplate"
+  }
+  type = "AppPage"
+  fullName = "SALTO_6326"
+  _alias = "SALTO_6326"
+}

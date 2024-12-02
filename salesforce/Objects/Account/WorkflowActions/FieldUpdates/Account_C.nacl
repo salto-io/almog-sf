@@ -1,0 +1,13 @@
+salesforce.WorkflowFieldUpdate Account_C@v {
+  fullName = "Account.C"
+  field = salesforce.Account.field.AnnualRevenue
+  name = "C"
+  notifyAssignee = false
+  operation = "Null"
+  protected = false
+  reevaluateOnChange = false
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "Account.C"
+}
