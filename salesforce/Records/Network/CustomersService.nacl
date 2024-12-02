@@ -2,7 +2,7 @@ salesforce.Network CustomersService {
   fullName = "CustomersService"
   allowInternalUserLogin = false
   allowMembersToFlag = false
-  changePasswordTemplate = "unfiled$public/CommunityChangePasswordEmailTemplate"
+  changePasswordTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityChangePasswordEmailTemplate@zcd
   communityRoles = {
   }
   disableReputationRecordConversations = true
@@ -31,7 +31,7 @@ salesforce.Network CustomersService {
   enableTopicAssignmentRules = true
   enableTopicSuggestions = false
   enableUpDownVote = false
-  forgotPasswordTemplate = "unfiled$public/CommunityForgotPasswordEmailTemplate"
+  forgotPasswordTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityForgotPasswordEmailTemplate@zcd
   gatherCustomerSentimentData = false
   headlessForgotPasswordTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityHeadlessForgotPasswordTemplate@zcd
   headlessRegistrationTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityHeadlessRegistrationTemplate@zcd
@@ -56,6 +56,6 @@ salesforce.Network CustomersService {
     standardTab = "Chatter"
   }
   urlPathPrefix = "customers"
-  welcomeTemplate = "unfiled$public/CommunityWelcomeEmailTemplate"
+  welcomeTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityWelcomeEmailTemplate@zcd
   _alias = "CustomersService"
 }
