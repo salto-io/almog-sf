@@ -2,7 +2,7 @@ salesforce.Network CustomerService_WithReferences {
   fullName = "CustomerService_WithReferences"
   allowInternalUserLogin = false
   allowMembersToFlag = false
-  changePasswordTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityChangePasswordEmailTemplate@zcd
+  changePasswordTemplate = "unfiled$public/CommunityChangePasswordEmailTemplate"
   communityRoles = {
   }
   disableReputationRecordConversations = true
@@ -31,7 +31,7 @@ salesforce.Network CustomerService_WithReferences {
   enableTopicAssignmentRules = true
   enableTopicSuggestions = false
   enableUpDownVote = false
-  forgotPasswordTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityForgotPasswordEmailTemplate@zcd
+  forgotPasswordTemplate = "unfiled$public/CommunityForgotPasswordEmailTemplate"
   gatherCustomerSentimentData = false
   headlessForgotPasswordTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityHeadlessForgotPasswordTemplate@zcd
   headlessRegistrationTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityHeadlessRegistrationTemplate@zcd
@@ -56,6 +56,6 @@ salesforce.Network CustomerService_WithReferences {
     standardTab = "Chatter"
   }
   urlPathPrefix = "customerref"
-  welcomeTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityWelcomeEmailTemplate@zcd
+  welcomeTemplate = "unfiled$public/CommunityWelcomeEmailTemplate"
   _alias = "CustomerService_WithReferences"
 }

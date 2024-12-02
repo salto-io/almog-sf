@@ -2,9 +2,13 @@ salesforce.Network CustomersService {
   fullName = "CustomersService"
   allowInternalUserLogin = false
   allowMembersToFlag = false
-  changePasswordTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityChangePasswordEmailTemplate@zcd
+  caseCommentEmailTemplate = salesforce.EmailTemplate.instance.unfiled_public_SchedulerUnauthenticatedUserAppointmentTypeEmailTemplateForAmazonChime@zcd
+  changePasswordTemplate = "unfiled$public/CommunityChangePasswordEmailTemplate"
+  chgEmailVerNewTemplate = "unfiled$public/CommunityChangePasswordEmailTemplate"
+  chgEmailVerOldTemplate = "unfiled$public/CommunityChangePasswordEmailTemplate"
   communityRoles = {
   }
+  deviceActEmailTemplate = salesforce.EmailTemplate.instance.unfiled_public_SchedulerUnauthenticatedUserEngagementChannelEmailTemplateForThirdParty@zcd
   disableReputationRecordConversations = true
   emailSenderAddress = "almog.mesilaty@salto.io"
   emailSenderName = "CustomersService"
@@ -31,10 +35,11 @@ salesforce.Network CustomersService {
   enableTopicAssignmentRules = true
   enableTopicSuggestions = false
   enableUpDownVote = false
-  forgotPasswordTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityForgotPasswordEmailTemplate@zcd
+  forgotPasswordTemplate = "unfiled$public/CommunityForgotPasswordEmailTemplate"
   gatherCustomerSentimentData = false
   headlessForgotPasswordTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityHeadlessForgotPasswordTemplate@zcd
   headlessRegistrationTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityHeadlessRegistrationTemplate@zcd
+  lockoutTemplate = "unfiled$public/SchedulerUnauthenticatedUserEngagementChannelEmailTemplateForThirdParty"
   networkMemberGroups = {
     profile = "admin"
   }
@@ -46,6 +51,8 @@ salesforce.Network CustomersService {
     selfRegProfilePageOverrideSetting = "Designer"
   }
   picassoSite = "CustomersService1"
+  pwdlessRegEmailTemplate = salesforce.EmailTemplate.instance.unfiled_public_SchedulerUnauthenticatedUserEngagementChannelEmailTemplateForAmazonChime@zcd
+  selfRegMicroBatchSubErrorEmailTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommerceReorderPortalInvitation@zcd
   selfRegistration = false
   sendWelcomeEmail = true
   site = salesforce.CustomSite.instance.CustomersService
@@ -56,6 +63,7 @@ salesforce.Network CustomersService {
     standardTab = "Chatter"
   }
   urlPathPrefix = "customers"
-  welcomeTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityWelcomeEmailTemplate@zcd
+  verificationTemplate = "unfiled$public/SchedulerUnauthenticatedUserEngagementChannelEmailTemplateForThirdParty"
+  welcomeTemplate = "unfiled$public/CommunityWelcomeEmailTemplate"
   _alias = "CustomersService"
 }
