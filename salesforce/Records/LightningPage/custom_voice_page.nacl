@@ -1,0 +1,23 @@
+salesforce.LightningPage custom_voice_page {
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "opencti:voiceIdCard"
+            identifier = "opencti_voiceIdCard"
+          }
+        },
+      ]
+      name = "main"
+      type = "Region"
+    },
+  ]
+  masterLabel = "custom_voice_page"
+  template = {
+    name = "opencti:defaultVoiceExtensionTemplate"
+  }
+  type = "VoiceExtension"
+  fullName = "custom_voice_page"
+  _alias = "custom_voice_page"
+}

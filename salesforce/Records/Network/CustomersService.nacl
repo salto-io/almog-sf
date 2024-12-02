@@ -1,0 +1,61 @@
+salesforce.Network CustomersService {
+  fullName = "CustomersService"
+  allowInternalUserLogin = false
+  allowMembersToFlag = false
+  changePasswordTemplate = "unfiled$public/CommunityChangePasswordEmailTemplate"
+  communityRoles = {
+  }
+  disableReputationRecordConversations = true
+  emailSenderAddress = "almog.mesilaty@salto.io"
+  emailSenderName = "CustomersService"
+  embeddedLoginEnabled = false
+  enableApexCDNCaching = true
+  enableCustomVFErrorPageOverrides = false
+  enableDirectMessages = true
+  enableExpFriendlyUrlsAsDefault = false
+  enableExperienceBundleBasedSnaOverrideEnabled = true
+  enableGuestChatter = false
+  enableGuestFileAccess = false
+  enableGuestMemberVisibility = false
+  enableImageOptimizationCDN = false
+  enableInvitation = false
+  enableKnowledgeable = false
+  enableLWRExperienceConnectedApp = false
+  enableMemberVisibility = false
+  enableNicknameDisplay = true
+  enablePrivateMessages = false
+  enableReputation = false
+  enableShowAllNetworkSettings = false
+  enableSiteAsContainer = true
+  enableTalkingAboutStats = true
+  enableTopicAssignmentRules = true
+  enableTopicSuggestions = false
+  enableUpDownVote = false
+  forgotPasswordTemplate = "unfiled$public/CommunityForgotPasswordEmailTemplate"
+  gatherCustomerSentimentData = false
+  headlessForgotPasswordTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityHeadlessForgotPasswordTemplate@zcd
+  headlessRegistrationTemplate = salesforce.EmailTemplate.instance.unfiled_public_CommunityHeadlessRegistrationTemplate@zcd
+  networkMemberGroups = {
+    profile = "admin"
+  }
+  networkPageOverrides = {
+    changePasswordPageOverrideSetting = "Standard"
+    forgotPasswordPageOverrideSetting = "Designer"
+    homePageOverrideSetting = "Designer"
+    loginPageOverrideSetting = "Designer"
+    selfRegProfilePageOverrideSetting = "Designer"
+  }
+  picassoSite = "CustomersService1"
+  selfRegistration = false
+  sendWelcomeEmail = true
+  site = salesforce.CustomSite.instance.CustomersService
+  siteArchiveStatus = "NotArchived"
+  status = "UnderConstruction"
+  tabs = {
+    defaultTab = "home"
+    standardTab = "Chatter"
+  }
+  urlPathPrefix = "customers"
+  welcomeTemplate = "unfiled$public/CommunityWelcomeEmailTemplate"
+  _alias = "CustomersService"
+}

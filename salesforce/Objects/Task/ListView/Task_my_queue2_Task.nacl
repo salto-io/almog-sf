@@ -1,0 +1,13 @@
+salesforce.ListView Task_my_queue2_Task {
+  fullName = "Task.my_queue2_Task"
+  filterScope = "Queue"
+  label = "my_queue2"
+  queue = salesforce.Queue.instance.my_queue2
+  sharedTo = {
+    allInternalUsers = ""
+  }
+  _parent = [
+    salesforce.Task,
+  ]
+  _alias = "my_queue2"
+}

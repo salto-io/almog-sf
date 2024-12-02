@@ -1,0 +1,44 @@
+salesforce.Flow salto_5023 {
+  fullName = "salto_5023"
+  actionCalls = {
+    name = "Action_1"
+    label = "Action 1"
+    actionName = "nullNotFound"
+    flowTransactionModel = "CurrentTransaction"
+    offset = 0
+    storeOutputAutomatically = true
+    versionSegment = 1
+  }
+  apiVersion = 62
+  environments = "Default"
+  interviewLabel = "Invalid draft {!$Flow.CurrentDateTime}"
+  label = "salto-5023"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  start = {
+    connector = {
+      targetReference = "Action_1"
+    }
+  }
+  status = "InvalidDraft"
+  _alias = "salto-5023"
+}

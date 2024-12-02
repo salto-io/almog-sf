@@ -1,0 +1,4 @@
+salesforce.ManagedTopics CustomersService {
+  fullName = "CustomersService"
+  _alias = "CustomersService"
+}

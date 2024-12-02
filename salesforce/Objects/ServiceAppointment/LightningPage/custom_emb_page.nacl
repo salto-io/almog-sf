@@ -1,0 +1,88 @@
+salesforce.LightningPage custom_emb_page {
+  flexiPageRegions = [
+    {
+      name = "Facet-2d6f9693-ae01-48fe-944a-8dd8cd1215a9"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "active"
+                value = "true"
+              },
+              {
+                name = "body"
+                value = "Facet-2d6f9693-ae01-48fe-944a-8dd8cd1215a9"
+              },
+              {
+                name = "title"
+                value = "EmbeddedService.Tab.newTab"
+              },
+            ]
+            componentName = "embeddedService:verticalTab"
+            identifier = "embeddedService_verticalTab"
+          }
+        },
+      ]
+      name = "Facet-e43313c8-bf11-4c62-ae42-ed09d090de16"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "tabs"
+                value = "Facet-e43313c8-bf11-4c62-ae42-ed09d090de16"
+              },
+            ]
+            componentName = "embeddedService:verticalTabset"
+            identifier = "embeddedService_verticalTabset"
+          }
+        },
+      ]
+      name = "header"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "noAssignedResourceAvatarImgUrl"
+              },
+              {
+                name = "noAssignedResourceHeader"
+                value = "Technician Not Yet Assigned"
+              },
+              {
+                name = "noAssignedResourceMessage"
+                value = "As your appointment nears, check back to see your assigned technician."
+              },
+            ]
+            componentName = "embeddedService:serviceResourceRecordCard"
+            identifier = "embeddedService_serviceResourceRecordCard"
+          }
+        },
+      ]
+      name = "main"
+      type = "Region"
+    },
+  ]
+  masterLabel = "custom_emb_page"
+  sobjectType = "ServiceAppointment"
+  template = {
+    name = "embeddedService:embeddedServicePageTemplateDefault"
+  }
+  type = "EmbeddedServicePage"
+  fullName = "custom_emb_page"
+  _parent = [
+    salesforce.ServiceAppointment,
+  ]
+  _alias = "custom_emb_page"
+}

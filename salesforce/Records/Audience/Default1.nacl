@@ -1,0 +1,10 @@
+salesforce.Audience Default1 {
+  fullName = "Default1"
+  audienceName = "Default"
+  container = salesforce.Network.instance.CustomerService_WithReferences
+  criteria = {
+  }
+  formulaFilterType = "AllCriteriaMatch"
+  isDefaultAudience = true
+  _alias = "Default1"
+}
