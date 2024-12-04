@@ -1,6 +1,0 @@
-salesforce.OrderManagementSettings {
-  fullName = "OrderManagement"
-  enableHighScaleOrders = "false"
-  enableOrderManagement = false
-  _alias = "OrderManagement"
-}

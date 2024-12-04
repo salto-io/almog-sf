@@ -1,7 +1,0 @@
-salesforce.UserCriteria CustomerService_WithReferences_Customer_Members@uvu {
-  fullName = "CustomerService_WithReferences.Customer_Members"
-  description = "Member criteria matches customer members"
-  masterLabel = "Customer Members"
-  userTypes = "Customer"
-  _alias = "CustomerService_WithReferences.Customer_Members"
-}

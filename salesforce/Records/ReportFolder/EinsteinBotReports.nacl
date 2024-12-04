@@ -1,5 +1,0 @@
-salesforce.ReportFolder EinsteinBotReports {
-  name = "Einstein Bot Reports"
-  fullName = "EinsteinBotReports"
-  _alias = "EinsteinBotReports"
-}
