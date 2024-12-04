@@ -1,10 +1,14 @@
 salesforce {
   fetch = {
     optionalFeatures = {
-      ReportChartComponentLayoutItemReferences = false
+      ReportChartComponentLayoutItemReferences = true
     }
     metadata = {
       include = [
+        {
+          metadataType = "ReportFolder"
+          name = "prm_channel_reports_folder/prm_ch_reports_sub_folder/prm_winter24_reportsSPLIT1733046156352/prm_winter24_ch_sales_reports_folderSPLIT1733046156352"
+        },
         {
           metadataType = ".*"
           namespace = ""
