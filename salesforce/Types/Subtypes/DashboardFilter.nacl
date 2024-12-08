@@ -1,0 +1,28 @@
+type salesforce.DashboardFilter {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  "List<salesforce.DashboardFilterOption>" dashboardFilterOptions {
+  }
+  string name {
+  }
+  metadataType = "DashboardFilter"
+  _important_values = [
+    {
+      value = "name"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

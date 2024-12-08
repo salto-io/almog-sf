@@ -1,0 +1,59 @@
+type salesforce.DashboardComponentContent {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string additionalInfo {
+  }
+  string altText {
+  }
+  string fileName {
+  }
+  string fit {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "fitheight",
+        "fitwidth",
+        "original",
+        "stretch",
+        "tile",
+      ]
+    }
+  }
+  string horizontalAlignment {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "center",
+        "left",
+        "right",
+      ]
+    }
+  }
+  string richTextContent {
+  }
+  string tooltip {
+  }
+  string verticalAlignment {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "bottom",
+        "center",
+        "top",
+      ]
+    }
+  }
+  metadataType = "DashboardComponentContent"
+}

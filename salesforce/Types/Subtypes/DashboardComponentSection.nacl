@@ -1,0 +1,29 @@
+type salesforce.DashboardComponentSection {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string columnSize {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Medium",
+        "Narrow",
+        "Wide",
+      ]
+    }
+  }
+  "List<salesforce.DashboardComponent>" components {
+  }
+  metadataType = "DashboardComponentSection"
+}

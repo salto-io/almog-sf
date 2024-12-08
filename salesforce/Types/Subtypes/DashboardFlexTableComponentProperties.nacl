@@ -1,0 +1,25 @@
+type salesforce.DashboardFlexTableComponentProperties {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  number decimalPrecision {
+  }
+  "List<salesforce.DashboardComponentColumn>" flexTableColumn {
+  }
+  salesforce.DashboardComponentSortInfo flexTableSortInfo {
+  }
+  boolean hideChatterPhotos {
+  }
+  metadataType = "DashboardFlexTableComponentProperties"
+}

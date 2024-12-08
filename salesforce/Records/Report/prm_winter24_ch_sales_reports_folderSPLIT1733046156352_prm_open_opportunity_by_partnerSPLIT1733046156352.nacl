@@ -1,0 +1,122 @@
+salesforce.Report prm_winter24_ch_sales_reports_folderSPLIT1733046156352_prm_open_opportunity_by_partnerSPLIT1733046156352@uuuuuduuuu {
+  chart = {
+    backgroundColor1 = "#FFFFFF"
+    backgroundColor2 = "#FFFFFF"
+    backgroundFadeDir = "Diagonal"
+    chartSummaries = [
+      {
+        aggregate = "Sum"
+        axisBinding = "y"
+        column = "AMOUNT"
+      },
+    ]
+    chartType = "HorizontalBar"
+    enableHoverLabels = false
+    expandOthers = true
+    groupingColumn = "ROLLUP_DESCRIPTION"
+    location = "CHART_BOTTOM"
+    showAxisLabels = true
+    showPercentage = false
+    showTotal = false
+    showValues = false
+    size = "Medium"
+    summaryAxisRange = "Auto"
+    textColor = "#000000"
+    textSize = 12
+    titleColor = "#000000"
+    titleSize = 18
+  }
+  columns = [
+    {
+      field = "OPPORTUNITY_NAME"
+    },
+    {
+      field = "TYPE"
+    },
+    {
+      field = "LEAD_SOURCE"
+    },
+    {
+      aggregateTypes = [
+        "Sum",
+      ]
+      field = "AMOUNT"
+    },
+    {
+      field = "EXP_AMOUNT"
+    },
+    {
+      field = "CLOSE_DATE"
+    },
+    {
+      field = "NEXT_STEP"
+    },
+    {
+      field = "STAGE_NAME"
+    },
+    {
+      field = "PROBABILITY"
+    },
+    {
+      field = "FISCAL_QUARTER"
+    },
+    {
+      field = "AGE"
+    },
+    {
+      field = "CREATED_DATE"
+    },
+    {
+      field = "FULL_NAME"
+    },
+    {
+      field = "ACCOUNT_NAME"
+    },
+  ]
+  description = "What opportunities are open from the last quarter?"
+  filter = {
+    criteriaItems = [
+      {
+        column = "ROLLUP_DESCRIPTION"
+        columnToColumn = false
+        isUnlocked = false
+        operator = "contains"
+        value = "Partner"
+      },
+    ]
+  }
+  format = "Summary"
+  groupingsDown = [
+    {
+      dateGranularity = "Day"
+      field = "ROLLUP_DESCRIPTION"
+      sortOrder = "Asc"
+    },
+  ]
+  name = "Open Opportunities by Partner"
+  params = [
+    {
+      name = "open"
+      value = "open"
+    },
+    {
+      name = "probability"
+      value = ">0"
+    },
+    {
+      name = "co"
+      value = "1"
+    },
+  ]
+  reportType = "Opportunity"
+  scope = "organization"
+  showDetails = true
+  showGrandTotal = true
+  showSubTotals = true
+  timeFrameFilter = {
+    dateColumn = "CREATED_DATE"
+    interval = "INTERVAL_PREV1"
+  }
+  fullName = "prm_winter24_ch_sales_reports_folderSPLIT1733046156352/prm_open_opportunity_by_partnerSPLIT1733046156352"
+  _alias = "prm_winter24_ch_sales_reports_folderSPLIT1733046156352/prm_open_opportunity_by_partnerSPLIT1733046156352"
+}

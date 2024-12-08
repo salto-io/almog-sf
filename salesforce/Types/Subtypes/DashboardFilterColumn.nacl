@@ -1,0 +1,19 @@
+type salesforce.DashboardFilterColumn {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string column {
+  }
+  metadataType = "DashboardFilterColumn"
+}

@@ -1,0 +1,45 @@
+type salesforce.DashboardComponentColumn {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  number breakPoint1 {
+  }
+  number breakPoint2 {
+  }
+  number breakPointOrder {
+  }
+  number highRangeColor {
+  }
+  number lowRangeColor {
+  }
+  number midRangeColor {
+  }
+  string reportColumn {
+  }
+  boolean showSubTotal {
+  }
+  boolean showTotal {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "aggregate",
+        "detail",
+        "grouping",
+      ]
+    }
+  }
+  metadataType = "DashboardComponentColumn"
+}

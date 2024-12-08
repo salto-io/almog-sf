@@ -1,0 +1,160 @@
+type salesforce.DashboardComponent {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean autoselectColumnsFromReport {
+  }
+  string chartAxisRange {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Auto",
+        "Manual",
+      ]
+    }
+  }
+  number chartAxisRangeMax {
+  }
+  number chartAxisRangeMin {
+  }
+  "List<salesforce.ChartSummary>" chartSummary {
+  }
+  string componentChartTheme {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "dark",
+        "light",
+      ]
+    }
+  }
+  salesforce.DashboardComponentContent dashboardComponentContents {
+  }
+  salesforce.DashboardDynamicValue dashboardDynamicValues {
+  }
+  "List<salesforce.DashboardFilterColumn>" dashboardFilterColumns {
+  }
+  "List<salesforce.DashboardTableColumn>" dashboardTableColumn {
+  }
+  number decimalPrecision {
+  }
+  string drillDownUrl {
+  }
+  boolean drillEnabled {
+  }
+  boolean drillToDetailEnabled {
+  }
+  boolean enableHover {
+  }
+  boolean expandOthers {
+  }
+  salesforce.DashboardFlexTableComponentProperties flexComponentProperties {
+  }
+  string footer {
+  }
+  number gaugeMax {
+  }
+  number gaugeMin {
+  }
+  "List<string>" groupingColumn {
+  }
+  salesforce.DashboardComponentGroupingSortProperties groupingSortProperties {
+  }
+  string header {
+  }
+  number indicatorBreakpoint1 {
+  }
+  number indicatorBreakpoint2 {
+  }
+  string indicatorHighColor {
+  }
+  string indicatorLowColor {
+  }
+  string indicatorMiddleColor {
+  }
+  string legendPosition {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Bottom",
+        "OnChart",
+        "Right",
+      ]
+    }
+  }
+  number maxValuesDisplayed {
+  }
+  string metricLabel {
+  }
+  string page {
+  }
+  number pageHeightInPixels {
+  }
+  string report {
+  }
+  string scontrol {
+  }
+  number scontrolHeightInPixels {
+  }
+  boolean showPercentage {
+  }
+  boolean showPicturesOnCharts {
+  }
+  boolean showPicturesOnTables {
+  }
+  boolean showRange {
+  }
+  boolean showTotal {
+  }
+  boolean showValues {
+  }
+  string title {
+  }
+  boolean useReportChart {
+  }
+  string componentType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Bar",
+        "BarGrouped",
+        "BarStacked",
+        "BarStacked100",
+        "Column",
+        "ColumnGrouped",
+        "ColumnLine",
+        "ColumnLineGrouped",
+        "ColumnLineStacked",
+        "ColumnLineStacked100",
+        "ColumnStacked",
+        "ColumnStacked100",
+        "Donut",
+        "FlexTable",
+        "Funnel",
+        "Gauge",
+        "Line",
+        "LineGrouped",
+        "Metric",
+        "Pie",
+        "Scatter",
+        "ScatterGrouped",
+        "Scontrol",
+        "Table",
+        "lineCumulative",
+        "lineGroupedCumulative",
+      ]
+    }
+  }
+  metadataType = "DashboardComponent"
+}

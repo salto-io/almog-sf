@@ -1,0 +1,386 @@
+salesforce.ReportType prm_unique_portal_crt {
+  baseObject = "User"
+  category = "other"
+  deployed = true
+  description = "Report on user data, such as name, address, email, last login, and more."
+  label = "User Details"
+  sections = [
+    {
+      columns = [
+        {
+          checkedByDefault = false
+          field = "Id"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Username"
+          table = "User"
+        },
+        {
+          checkedByDefault = true
+          field = "Name"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "FirstName"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "LastName"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "CompanyName"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Division"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Department"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Title"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Address"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Street"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "City"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "State"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "PostalCode"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Country"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Latitude"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Longitude"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "GeocodeAccuracy"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Email"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "SenderEmail"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "SenderName"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Signature"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "StayInTouchSubject"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "StayInTouchSignature"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "StayInTouchNote"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Phone"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Fax"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "MobilePhone"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Alias"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "CommunityNickname"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "IsActive"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "IsSystemControlled"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "TimeZoneSidKey"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "UserRole"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "LocaleSidKey"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "ReceivesInfoEmails"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "ReceivesAdminInfoEmails"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "EmailEncodingKey"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Profile"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "UserType"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "UserSubtype"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "StartDay"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "EndDay"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "LanguageLocaleKey"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "EmployeeNumber"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Manager"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "LastLoginDate"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "LastPasswordChangeDate"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "CreatedDate"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "CreatedBy"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "LastModifiedDate"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "LastModifiedBy"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "NumberOfFailedLogins"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "SuAccessExpirationDate"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "SuOrgAdminExpirationDate"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "OfflineTrialExpirationDate"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "WirelessTrialExpirationDate"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "OfflinePdaTrialExpirationDate"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "ForecastEnabled"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Contact"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Account"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "CallCenter"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Extension"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "FederationIdentifier"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "AboutMe"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "CurrentStatus"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "DigestFrequency"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "DefaultGroupNotificationFrequency"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "JigsawImportLimitOverride"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "ChatterAdoptionStage"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "ChatterAdoptionStageModifiedDate"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "IsProfilePhotoActive"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "Individual"
+          table = "User"
+        },
+        {
+          checkedByDefault = false
+          field = "GlobalIdentity"
+          table = "User"
+        },
+      ]
+      masterLabel = "Users"
+    },
+  ]
+  fullName = "prm_unique_portal_crt"
+  _alias = "User Details"
+}

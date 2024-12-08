@@ -1,0 +1,12 @@
+salesforce.DashboardFolder Enablement_sfdcSESv60 {
+  folderShares = [
+    {
+      accessLevel = "EditAllContents"
+      sharedTo = "AllInternalUsers"
+      sharedToType = "Organization"
+    },
+  ]
+  name = "Enablement Dashboard Spring '24"
+  fullName = "Enablement_sfdcSESv60"
+  _alias = "Enablement_sfdcSESv60"
+}

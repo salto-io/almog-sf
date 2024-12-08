@@ -1,0 +1,27 @@
+type salesforce.DashboardGridComponent {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  number colSpan {
+  }
+  number columnIndex {
+  }
+  salesforce.DashboardComponent dashboardComponent {
+  }
+  number rowIndex {
+  }
+  number rowSpan {
+  }
+  metadataType = "DashboardGridComponent"
+}

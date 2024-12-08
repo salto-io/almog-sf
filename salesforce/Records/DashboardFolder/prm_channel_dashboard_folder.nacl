@@ -1,0 +1,17 @@
+salesforce.DashboardFolder prm_channel_dashboard_folder {
+  folderShares = [
+    {
+      accessLevel = "Manage"
+      sharedTo = "almog.mesilaty+dev1@salto.io"
+      sharedToType = "User"
+    },
+    {
+      accessLevel = "Manage"
+      sharedTo = "almog.mesilaty+weak1@salto.io"
+      sharedToType = "User"
+    },
+  ]
+  name = "PRM Dashboards"
+  fullName = "prm_channel_dashboard_folder"
+  _alias = "prm_channel_dashboard_folder"
+}

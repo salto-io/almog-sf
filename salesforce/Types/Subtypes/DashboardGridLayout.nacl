@@ -1,0 +1,23 @@
+type salesforce.DashboardGridLayout {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  "List<salesforce.DashboardGridComponent>" dashboardGridComponents {
+  }
+  number numberOfColumns {
+  }
+  number rowHeight {
+  }
+  metadataType = "DashboardGridLayout"
+}

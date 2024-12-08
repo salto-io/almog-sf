@@ -1,7 +1,8 @@
 salesforce {
   fetch = {
     optionalFeatures = {
-      ReportChartComponentLayoutItemReferences = true
+      // reportChartComponentLayoutItemReferences = true
+      hideTypesFolder = false
     }
     metadata = {
       include = [
@@ -10,27 +11,27 @@ salesforce {
           name = "prm_channel_reports_folder/prm_ch_reports_sub_folder/prm_winter24_reportsSPLIT1733046156352/prm_winter24_ch_sales_reports_folderSPLIT1733046156352"
         },
         {
-          metadataType = ".*"
+          metadataType = "EmailTemplate|EmailFolder|Report|ReportFolder|Document|DocumentFolder|Dashboard|DashboardFolder"
           namespace = ""
           name = ".*"
         },
       ]
       exclude = [
-        {
-          metadataType = "ReportType"
-        },
-        {
-          metadataType = "Dashboard"
-        },
-        {
-          metadataType = "DashboardFolder"
-        },
-        {
-          metadataType = "Document"
-        },
-        {
-          metadataType = "DocumentFolder"
-        },
+        // {
+        //   metadataType = "ReportType"
+        // },
+        // {
+        //   metadataType = "Dashboard"
+        // },
+        // {
+        //   metadataType = "DashboardFolder"
+        // },
+        // {
+        //   metadataType = "Document"
+        // },
+        // {
+        //   metadataType = "DocumentFolder"
+        // },
         {
           metadataType = "Profile"
         },

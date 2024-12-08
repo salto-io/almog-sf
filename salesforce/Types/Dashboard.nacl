@@ -1,0 +1,168 @@
+type salesforce.Dashboard {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string backgroundEndColor {
+  }
+  string backgroundFadeDirection {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Diagonal",
+        "LeftToRight",
+        "TopToBottom",
+      ]
+    }
+  }
+  string backgroundStartColor {
+  }
+  string chartTheme {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "dark",
+        "light",
+      ]
+    }
+  }
+  string colorPalette {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Default",
+        "accessible",
+        "bluegrass",
+        "colorSafe",
+        "dusk",
+        "earth",
+        "fire",
+        "gray",
+        "heat",
+        "justice",
+        "nightfall",
+        "pond",
+        "sunrise",
+        "tropic",
+        "unity",
+        "water",
+        "watermelon",
+      ]
+    }
+  }
+  string dashboardChartTheme {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "dark",
+        "light",
+      ]
+    }
+  }
+  string dashboardColorPalette {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Default",
+        "accessible",
+        "bluegrass",
+        "colorSafe",
+        "dusk",
+        "earth",
+        "fire",
+        "gray",
+        "heat",
+        "justice",
+        "nightfall",
+        "pond",
+        "sunrise",
+        "tropic",
+        "unity",
+        "water",
+        "watermelon",
+      ]
+    }
+  }
+  "List<salesforce.DashboardFilter>" dashboardFilters {
+  }
+  salesforce.DashboardGridLayout dashboardGridLayout {
+  }
+  string dashboardResultRefreshedDate {
+  }
+  string dashboardResultRunningUser {
+  }
+  string dashboardType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "LoggedInUser",
+        "MyTeamUser",
+        "SpecifiedUser",
+      ]
+    }
+  }
+  string description {
+  }
+  string folderName {
+  }
+  serviceid fullName {
+  }
+  boolean isGridLayout {
+  }
+  salesforce.DashboardComponentSection leftSection {
+  }
+  salesforce.DashboardComponentSection middleSection {
+  }
+  number numSubscriptions {
+  }
+  string owner {
+    foreignKeyDomain = [
+      "User",
+    ]
+  }
+  salesforce.DashboardComponentSection rightSection {
+  }
+  string runningUser {
+    foreignKeyDomain = [
+      "User",
+    ]
+  }
+  string textColor {
+  }
+  string title {
+  }
+  string titleColor {
+  }
+  number titleSize {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  folderType = "DashboardFolder"
+  suffix = "dashboard"
+  dirName = "dashboards"
+  metadataType = "Dashboard"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

@@ -1,0 +1,326 @@
+salesforce.ReportType custom_account_report {
+  baseObject = "Account"
+  category = "accounts"
+  deployed = true
+  description = "Report for account"
+  label = "custom_account_report"
+  sections = [
+    {
+      columns = [
+        {
+          checkedByDefault = false
+          field = "Id"
+          table = "Account"
+        },
+        {
+          checkedByDefault = true
+          field = "Name"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "Type"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "Parent"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "BillingAddress"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "BillingStreet"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "BillingCity"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "BillingState"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "BillingPostalCode"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "BillingCountry"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "BillingLatitude"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "BillingLongitude"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "BillingGeocodeAccuracy"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "ShippingAddress"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "ShippingStreet"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "ShippingCity"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "ShippingState"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "ShippingPostalCode"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "ShippingCountry"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "ShippingLatitude"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "ShippingLongitude"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "ShippingGeocodeAccuracy"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "Phone"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "Fax"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "AccountNumber"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "Website"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "Sic"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "Industry"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "AnnualRevenue"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "NumberOfEmployees"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "Ownership"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "TickerSymbol"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "Description"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "Rating"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "Site"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "Owner"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "CreatedDate"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "CreatedBy"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "LastModifiedDate"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "LastModifiedBy"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "LastActivityDate"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "Jigsaw"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "CleanStatus"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "AccountSource"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "DunsNumber"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "Tradestyle"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "NaicsCode"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "NaicsDesc"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "YearStarted"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "SicDesc"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "DandbCompany"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "OperatingHours"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "CustomerPriority__c"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "SLA__c"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "Active__c"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "NumberofLocations__c"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "UpsellOpportunity__c"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "SLASerialNumber__c"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "SLAExpirationDate__c"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "top_secret__c"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "isunknown__c"
+          table = "Account"
+        },
+        {
+          checkedByDefault = false
+          field = "test_for_unknown__c"
+          table = "Account"
+        },
+      ]
+      masterLabel = "Accounts"
+    },
+  ]
+  fullName = "custom_account_report"
+  _alias = "custom_account_report"
+}
