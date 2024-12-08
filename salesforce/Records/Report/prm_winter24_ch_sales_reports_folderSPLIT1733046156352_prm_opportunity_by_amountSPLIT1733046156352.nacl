@@ -87,5 +87,8 @@ salesforce.Report prm_winter24_ch_sales_reports_folderSPLIT1733046156352_prm_opp
     interval = "INTERVAL_PREV1"
   }
   fullName = "prm_winter24_ch_sales_reports_folderSPLIT1733046156352/prm_opportunity_by_amountSPLIT1733046156352"
+  _parent = [
+    salesforce.ReportFolder.instance.prm_winter24_ch_sales_reports_folderSPLIT1733046156352,
+  ]
   _alias = "prm_winter24_ch_sales_reports_folderSPLIT1733046156352/prm_opportunity_by_amountSPLIT1733046156352"
 }

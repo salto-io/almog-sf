@@ -41,5 +41,8 @@ salesforce.Report prm_winter24_ch_sales_reports_folderSPLIT1733046156352_New_Acc
     startDate = "2024-11-25"
   }
   fullName = "prm_winter24_ch_sales_reports_folderSPLIT1733046156352/New_Accounts_Report_Gzm"
+  _parent = [
+    salesforce.ReportFolder.instance.prm_winter24_ch_sales_reports_folderSPLIT1733046156352,
+  ]
   _alias = "prm_winter24_ch_sales_reports_folderSPLIT1733046156352/New_Accounts_Report_Gzm"
 }
