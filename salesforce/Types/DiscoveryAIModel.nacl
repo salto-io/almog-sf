@@ -1,0 +1,128 @@
+type salesforce.DiscoveryAIModel {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string content {
+  }
+  string algorithmType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Best",
+        "Drf",
+        "Gbm",
+        "Glm",
+        "Xgboost",
+      ]
+    }
+  }
+  number classificationThreshold {
+  }
+  string description {
+  }
+  string label {
+  }
+  "List<salesforce.DiscoveryModelField>" modelFields {
+  }
+  string modelRuntimeType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Discovery",
+        "H2O",
+        "Py36Tensorflow244",
+        "Py37Scikitlearn102",
+        "Py37Tensorflow270",
+      ]
+    }
+  }
+  string predictedField {
+  }
+  string predictionType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Classification",
+        "MulticlassClassification",
+        "Regression",
+        "Unknown",
+      ]
+    }
+  }
+  string sourceType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Discovery",
+        "UserUpload",
+      ]
+    }
+  }
+  string status {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Disabled",
+        "Enabled",
+        "UploadCompleted",
+        "UploadFailed",
+        "Uploading",
+        "Validating",
+        "ValidationCompleted",
+        "ValidationFailed",
+      ]
+    }
+  }
+  string trainingMetrics {
+  }
+  salesforce.DiscoveryModelTransform transformations {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  hasMetaFile = true
+  suffix = "model"
+  dirName = "discovery"
+  metadataType = "DiscoveryAIModel"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "content"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "status"
+      highlighted = true
+      indexed = true
+    },
+  ]
+}

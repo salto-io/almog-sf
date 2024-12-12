@@ -1,0 +1,38 @@
+type salesforce.DiscoveryModelTransform {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string config {
+  }
+  string sourceFieldNames {
+  }
+  string targetFieldNames {
+  }
+  string type {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "CategoricalImputation",
+        "ExtractDayOfWeek",
+        "ExtractMonthOfYear",
+        "FreeTextClustering",
+        "NumericalImputation",
+        "SentimentAnalysis",
+        "TimeSeriesForecast",
+        "TypographicClustering",
+      ]
+    }
+  }
+  metadataType = "DiscoveryModelTransform"
+}
