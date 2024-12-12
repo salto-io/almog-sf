@@ -22,6 +22,6 @@ salesforce.EmailTemplate unfiled_public_CommerceReorderPortalInvitation@zcd {
   type = "custom"
   uiType = "Aloha"
   fullName = "unfiled$public/CommerceReorderPortalInvitation"
-  content = file("salesforce/Records/EmailTemplate/unfiled$public/CommerceReorderPortalInvitation/CommerceReorderPortalInvitation.email")
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/CommerceReorderPortalInvitation.email")
   _alias = "unfiled$public/CommerceReorderPortalInvitation"
 }

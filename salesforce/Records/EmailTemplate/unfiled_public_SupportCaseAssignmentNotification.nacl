@@ -8,6 +8,6 @@ salesforce.EmailTemplate unfiled_public_SupportCaseAssignmentNotification@zcd {
   type = "text"
   uiType = "Aloha"
   fullName = "unfiled$public/SupportCaseAssignmentNotification"
-  content = file("salesforce/Records/EmailTemplate/unfiled$public/SupportCaseAssignmentNotification/SupportCaseAssignmentNotification.email")
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/SupportCaseAssignmentNotification.email")
   _alias = "unfiled$public/SupportCaseAssignmentNotification"
 }

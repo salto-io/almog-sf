@@ -8,6 +8,6 @@ salesforce.EmailTemplate unfiled_public_SUPPORTSelfServiceNewUserLoginInformatio
   type = "text"
   uiType = "Aloha"
   fullName = "unfiled$public/SUPPORTSelfServiceNewUserLoginInformationSAMPLE"
-  content = file("salesforce/Records/EmailTemplate/unfiled$public/SUPPORTSelfServiceNewUserLoginInformationSAMPLE/SUPPORTSelfServiceNewUserLoginInformationSAMPLE.email")
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/SUPPORTSelfServiceNewUserLoginInformationSAMPLE.email")
   _alias = "unfiled$public/SUPPORTSelfServiceNewUserLoginInformationSAMPLE"
 }

@@ -8,6 +8,6 @@ salesforce.EmailTemplate unfiled_public_SupportCaseCreatedWebInquiries@zcd {
   type = "text"
   uiType = "Aloha"
   fullName = "unfiled$public/SupportCaseCreatedWebInquiries"
-  content = file("salesforce/Records/EmailTemplate/unfiled$public/SupportCaseCreatedWebInquiries/SupportCaseCreatedWebInquiries.email")
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/SupportCaseCreatedWebInquiries.email")
   _alias = "unfiled$public/SupportCaseCreatedWebInquiries"
 }
