@@ -1,0 +1,85 @@
+salesforce.DiscoveryAIModel Maximize_IsWon {
+  fullName = "Maximize_IsWon"
+  content = file("salesforce/Records/DiscoveryAIModel/Maximize_IsWon.model")
+  algorithmType = "Glm"
+  classificationThreshold = 0.5152346288172849
+  label = "Maximize IsWon"
+  modelFields = [
+    {
+      isDisparateImpact = false
+      isSensitive = false
+      label = "Industry"
+      name = "Industry"
+      type = "Text"
+      values = [
+        "Banking",
+        "Healthcare",
+        "Technology",
+        "Energy",
+        "Other",
+      ]
+    },
+    {
+      isDisparateImpact = false
+      isSensitive = false
+      label = "Opportunity Type"
+      name = "Opportunity_Type"
+      type = "Text"
+      values = [
+        "New Business / Add-on",
+        "Existing Business",
+        "New Business",
+      ]
+    },
+    {
+      isDisparateImpact = false
+      isSensitive = false
+      label = "Amount"
+      name = "Amount"
+      type = "Number"
+      values = [
+        "0.0___12047.0",
+        "12047.0___15027.0",
+        "15027.0___27860.0",
+        "27860.0___35094.0",
+        "35094.0___42280.0",
+        "42280.0___47391.0",
+        "47391.0___51355.0",
+        "51355.0___56549.0",
+        "56549.0___61557.0",
+        "61557.0___71250.0",
+      ]
+    },
+    {
+      isDisparateImpact = false
+      isSensitive = false
+      label = "Lead Source"
+      name = "Lead_Source"
+      type = "Text"
+      values = [
+        "Partner Referral",
+        "Web",
+        "Phone Inquiry",
+        "Other",
+      ]
+    },
+    {
+      isDisparateImpact = false
+      isSensitive = false
+      label = "IsWon"
+      name = "IsWon"
+      type = "Text"
+      values = [
+        "TRUE",
+        "FALSE",
+      ]
+    },
+  ]
+  modelRuntimeType = "Discovery"
+  predictedField = "IsWon"
+  predictionType = "Classification"
+  sourceType = "Discovery"
+  status = "Enabled"
+  trainingMetrics = "{\"r2\":0.25450163733580544,\"nobs\":7033,\"nullDeviance\":8143.973001730438,\"residualDegreesOfFreedom\":6870,\"type\":\"BinomialGLM\",\"gini\":0.6452698208240031,\"meanPerClassError\":0.24297167408726256,\"logloss\":0.43801436391418025,\"auc\":0.8226349104120015,\"residualDeviance\":6161.11004281686,\"confusionMatrices\":{\"thresholds\":[0.5152346288172849],\"tns\":[4658],\"tps\":[797],\"totalPositives\":1303,\"totalNegatives\":5730},\"rmse\":0.3813998316816914,\"aic\":6487.11004281686,\"nullDegreesOfFreedom\":7032,\"mse\":0.14546583160682253}"
+  _alias = "Maximize IsWon"
+}
