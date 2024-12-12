@@ -1,6 +1,6 @@
 salesforce.EmailTemplate unfiled_public_CommerceReorderPortalInvitation@zcd {
   available = true
-  description = "Invite a contact to a Commerce Reorder Portal.CHANGE"
+  description = "Invite a contact to a Commerce Reorder Portal."
   encodingKey = "UTF-8"
   name = "Commerce Reorder Portal: Invitation"
   style = "none"
