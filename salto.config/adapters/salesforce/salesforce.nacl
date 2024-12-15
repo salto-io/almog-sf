@@ -1,8 +1,8 @@
 salesforce {
   fetch = {
     optionalFeatures = {
-      reportChartComponentLayoutItemReferences = false
       hideTypesFolder = false
+      addParentToInstancesWithinFolder = false
     }
     metadata = {
       include = [
