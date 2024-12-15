@@ -1,0 +1,46 @@
+salesforce.Dashboard AlmogPublicFolder_Sales_dashboard@du {
+  backgroundEndColor = "#FFFFFF"
+  backgroundFadeDirection = "Diagonal"
+  backgroundStartColor = "#FFFFFF"
+  dashboardType = "SpecifiedUser"
+  isGridLayout = false
+  leftSection = {
+    columnSize = "Medium"
+    components = [
+      {
+        autoselectColumnsFromReport = true
+        chartAxisRange = "Auto"
+        componentType = "Bar"
+        displayUnits = "Auto"
+        drillEnabled = false
+        drillToDetailEnabled = false
+        enableHover = false
+        expandOthers = false
+        groupingSortProperties = {
+        }
+        legendPosition = "Bottom"
+        report = "prm_channel_reports_folder/prm_ch_reports_sub_folder/prm_winter24_reportsSPLIT1733046156352/prm_winter24_ch_sales_reports_folderSPLIT1733046156352/prm_lead_conversionSPLIT1733046156352"
+        showPercentage = false
+        showPicturesOnCharts = false
+        showValues = false
+        sortBy = "RowLabelAscending"
+        title = "Lead conversion rate"
+        useReportChart = false
+      },
+    ]
+  }
+  middleSection = {
+    columnSize = "Medium"
+  }
+  owner = "almog.mesilaty+dev1@salto.io"
+  rightSection = {
+    columnSize = "Medium"
+  }
+  runningUser = "almog.mesilaty+dev1@salto.io"
+  textColor = "#000000"
+  title = "Sales dashboard"
+  titleColor = "#000000"
+  titleSize = 12
+  fullName = "AlmogPublicFolder/Sales_dashboard"
+  _alias = "AlmogPublicFolder/Sales_dashboard"
+}
