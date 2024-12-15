@@ -1,0 +1,7 @@
+salesforce.DocumentFolder New_Document_Folder {
+  accessType = "Public"
+  name = "New Document Folder"
+  publicFolderAccess = "ReadWrite"
+  fullName = "New_Document_Folder"
+  _alias = "New_Document_Folder"
+}

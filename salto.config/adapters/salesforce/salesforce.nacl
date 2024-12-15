@@ -1,24 +1,38 @@
 salesforce {
   fetch = {
     optionalFeatures = {
-      // reportChartComponentLayoutItemReferences = true
+      reportChartComponentLayoutItemReferences = true
+      addParentToInstancesWithinFolder = true
       hideTypesFolder = false
     }
     metadata = {
       include = [
-        {
-          metadataType = "ReportFolder"
-          name = "prm_channel_reports_folder/prm_ch_reports_sub_folder/prm_winter24_reportsSPLIT1733046156352/prm_winter24_ch_sales_reports_folderSPLIT1733046156352"
-        },
         // {
         //   metadataType = "EmailFolder"
-        //   name = "salesforce/Records/EmailTemplate/MarketingFolder"
+        //   name = "MarketingFolder"
+        // },
+        // {
+        //   metadataType = "ReportFolder"
+        //   name = "prm_channel_reports_folder/prm_ch_reports_sub_folder/prm_winter24_reportsSPLIT1733046156352/prm_winter24_ch_sales_reports_folderSPLIT1733046156352"
+        // },
+        // {
+        //   metadataType = "DocumentFolder"
+        //   name = ""
+        // },
+        // {
+        //   metadataType = "DashboardFolder"
+        //   name = "Enablement_sfdcSESv60"
         // },
         {
           metadataType = "EmailTemplate|EmailFolder|Report|ReportFolder|Document|DocumentFolder|Dashboard|DashboardFolder"
           namespace = ""
           name = ".*"
         },
+        // {
+        //   metadataType = "Layout|LayoutSection|LayoutColumn|LayoutItem"
+        //   namespace = ""
+        //   name = ".*"
+        // }
       ]
       exclude = [
         // {

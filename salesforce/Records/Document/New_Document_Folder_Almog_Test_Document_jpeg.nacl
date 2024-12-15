@@ -1,0 +1,11 @@
+salesforce.Document New_Document_Folder_Almog_Test_Document_jpeg@uuduuv {
+  internalUseOnly = false
+  name = "Almog Test Document"
+  public = true
+  fullName = "New_Document_Folder/Almog_Test_Document.jpeg"
+  content = file("salesforce/Records/Document/New_Document_Folder/Almog_Test_Document.jpeg")
+  _parent = [
+    salesforce.DocumentFolder.instance.New_Document_Folder,
+  ]
+  _alias = "New_Document_Folder/Almog_Test_Document.jpeg"
+}

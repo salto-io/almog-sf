@@ -390,7 +390,7 @@ type salesforce.Picklist is string {
     }
     salesforce.FieldDependency fieldDependency {
     }
-    salesforce.OrderedMapOfvalueSet valueSet {
+    "List<salesforce.valueSet>" valueSet {
     }
     boolean restricted {
     }
