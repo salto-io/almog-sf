@@ -43,4 +43,7 @@ salesforce.Dashboard AlmogDashboardFolder_Sales_dashboard@du {
   titleSize = 12
   fullName = "AlmogDashboardFolder/Sales_dashboard"
   _alias = "AlmogDashboardFolder/Sales_dashboard"
+  _parent = [
+    salesforce.DashboardFolder.instance.AlmogDashboardFolder,
+  ]
 }

@@ -52,4 +52,7 @@ salesforce.Report AlmogReportFolder_Almog_test_report_99C@duuu {
   }
   fullName = "AlmogReportFolder/Almog_test_report_99C"
   _alias = "AlmogReportFolder/Almog_test_report_99C"
+  _parent = [
+    salesforce.ReportFolder.instance.AlmogReportFolder,
+  ]
 }

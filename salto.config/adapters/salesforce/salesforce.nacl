@@ -2,7 +2,7 @@ salesforce {
   fetch = {
     optionalFeatures = {
       hideTypesFolder = false
-      addParentToInstancesWithinFolder = false
+      addParentToInstancesWithinFolder = true
     }
     metadata = {
       include = [

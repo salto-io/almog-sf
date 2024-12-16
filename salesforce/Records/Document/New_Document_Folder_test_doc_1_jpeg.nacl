@@ -5,4 +5,7 @@ salesforce.Document New_Document_Folder_test_doc_1_jpeg@uuduuv {
   fullName = "New_Document_Folder/test_doc_1.jpeg"
   content = file("salesforce/Records/Document/New_Document_Folder/test_doc_1.jpeg")
   _alias = "New_Document_Folder/test_doc_1.jpeg"
+  _parent = [
+    salesforce.DocumentFolder.instance.New_Document_Folder,
+  ]
 }

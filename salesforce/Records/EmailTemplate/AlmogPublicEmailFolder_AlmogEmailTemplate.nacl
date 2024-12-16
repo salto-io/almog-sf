@@ -10,4 +10,7 @@ salesforce.EmailTemplate AlmogPublicEmailFolder_AlmogEmailTemplate@d {
   fullName = "AlmogPublicEmailFolder/AlmogEmailTemplate"
   content = file("salesforce/Records/EmailTemplate/AlmogPublicEmailFolder/AlmogEmailTemplate/AlmogEmailTemplate.email")
   _alias = "AlmogPublicEmailFolder/AlmogEmailTemplate"
+  _parent = [
+    salesforce.EmailFolder.instance.AlmogPublicEmailFolder,
+  ]
 }
