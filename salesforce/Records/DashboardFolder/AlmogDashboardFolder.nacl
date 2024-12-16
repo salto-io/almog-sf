@@ -1,0 +1,12 @@
+salesforce.DashboardFolder AlmogDashboardFolder {
+  folderShares = [
+    {
+      accessLevel = "Manage"
+      sharedTo = "almog.mesilaty+dev1@salto.io"
+      sharedToType = "User"
+    },
+  ]
+  name = "AlmogDashboardFolder"
+  fullName = "AlmogDashboardFolder"
+  _alias = "AlmogDashboardFolder"
+}

@@ -1,0 +1,12 @@
+salesforce.ReportFolder AlmogReportFolder {
+  folderShares = [
+    {
+      accessLevel = "Manage"
+      sharedTo = "almog.mesilaty+dev1@salto.io"
+      sharedToType = "User"
+    },
+  ]
+  name = "AlmogReportFolder"
+  fullName = "AlmogReportFolder"
+  _alias = "AlmogReportFolder"
+}
