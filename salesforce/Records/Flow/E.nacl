@@ -1,0 +1,98 @@
+salesforce.Flow E {
+  fullName = "E"
+  apiVersion = 62
+  assignments = [
+    {
+      name = "Assignment_with_custom_variable"
+      label = "Assignment with custom variable"
+      assignmentItems = [
+        {
+          assignToReference = "Customvariablealmog"
+          operator = "Assign"
+          value = {
+            stringValue = "{!Customrecordchoicealmog}"
+          }
+        },
+      ]
+    },
+  ]
+  dynamicChoiceSets = [
+    {
+      description = "This is a custom variable, should able to create a reference to it"
+      name = "Almogcustomvariable"
+      dataType = "Number"
+      displayField = "AccountNumber"
+      object = "Account"
+      valueField = "BillingLatitude"
+    },
+    {
+      name = "Customrecordchoicealmog"
+      dataType = "Boolean"
+      displayField = "Active__c"
+      object = "Account"
+    },
+  ]
+  environments = "Default"
+  interviewLabel = "E {!$Flow.CurrentDateTime}"
+  label = "E"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  screens = [
+    {
+      description = "Test testing"
+      name = "E"
+      label = "E"
+      allowBack = true
+      allowFinish = true
+      allowPause = true
+      connector = {
+        targetReference = "Assignment_with_custom_variable"
+      }
+      showFooter = true
+      showHeader = true
+    },
+  ]
+  start = {
+    connector = {
+      targetReference = "E"
+    }
+  }
+  status = "Draft"
+  _alias = "E"
+  textTemplates = {
+    name = "Customtexttemplate"
+    isViewedAsPlainText = false
+    text = "<p>Hey I am a custom template</p>"
+  }
+  variables = [
+    {
+      name = "Customvariablealmog"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      value = {
+        stringValue = ""
+      }
+    },
+  ]
+}
