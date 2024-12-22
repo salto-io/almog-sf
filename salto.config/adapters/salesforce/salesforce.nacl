@@ -7,7 +7,7 @@ salesforce {
     metadata = {
       include = [
         {
-          metadataType = "Flow"
+          metadataType = "Flow|Role"
           namespace = ""
           name = ".*"
         },
@@ -95,6 +95,10 @@ salesforce {
         },
         {
           metadataType = "ManagedEventSubscription"
+        },
+        {
+          metadataType = "DigitalExperienceBundle"
+          name = "enablement/sfdcEnablement_EnablementWorkspace"
         },
       ]
     }

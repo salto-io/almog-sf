@@ -3,14 +3,14 @@ salesforce.Flow E {
   apiVersion = 62
   assignments = [
     {
-      name = "Assignment_with_custom_variable"
-      label = "Assignment with custom variable"
+      name = "AlmogAssignment"
+      label = "AlmogAssignment"
       assignmentItems = [
         {
-          assignToReference = "AccountActive"
+          assignToReference = "AlmogRecordField"
           operator = "Assign"
           value = {
-            elementReference = "$UserRole.MayForecastManagerShare"
+            elementReference = "$UserRole.DeveloperName"
           }
         },
       ]
@@ -24,6 +24,16 @@ salesforce.Flow E {
       displayField = "AccountNumber"
       object = "Account"
       valueField = "BillingLatitude"
+    },
+    {
+      name = "AlmogRecordChoiceSet"
+      dataType = "Boolean"
+      displayField = "Active__c"
+      limit = 1
+      object = "Account"
+      sortField = "Id"
+      sortOrder = "Asc"
+      valueField = "IsCustomerPortal"
     },
     {
       name = "Customrecordchoicealmog"
@@ -65,7 +75,7 @@ salesforce.Flow E {
       allowFinish = true
       allowPause = true
       connector = {
-        targetReference = "Assignment_with_custom_variable"
+        targetReference = "AlmogAssignment"
       }
       showFooter = true
       showHeader = true
@@ -77,7 +87,6 @@ salesforce.Flow E {
     }
   }
   status = "Draft"
-  _alias = "E"
   textTemplates = {
     name = "Customtexttemplate"
     isViewedAsPlainText = false
@@ -96,6 +105,16 @@ salesforce.Flow E {
       }
     },
     {
+      name = "AlmogRecordField"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      value = {
+        elementReference = "$UserRole.DeveloperName"
+      }
+    },
+    {
       name = "Customvariablealmog"
       dataType = "String"
       isCollection = false
@@ -106,4 +125,5 @@ salesforce.Flow E {
       }
     },
   ]
+  _alias = "E"
 }
