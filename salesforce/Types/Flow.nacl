@@ -35,8 +35,6 @@ type salesforce.Flow {
   }
   string description {
   }
-  "List<salesforce.FlowDynamicChoiceSet>" dynamicChoiceSets {
-  }
   string environments {
     _restriction = {
       enforce_value = false
@@ -774,4 +772,6 @@ type salesforce.Flow {
       indexed = true
     },
   ]
+  "List<salesforce.FlowDynamicChoiceSet>" dynamicChoiceSets {
+  }
 }

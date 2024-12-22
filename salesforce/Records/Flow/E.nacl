@@ -3,46 +3,56 @@ salesforce.Flow E {
   apiVersion = 62
   assignments = [
     {
-      name = "AlmogAssignment"
-      label = "AlmogAssignment"
+      name = "Almog_Assignment"
+      label = "Almog Assignment"
       assignmentItems = [
         {
-          assignToReference = "AlmogRecordField"
+          assignToReference = "AlmogGetRecords"
           operator = "Assign"
-          value = {
-            elementReference = "$UserRole.DeveloperName"
-          }
         },
       ]
     },
   ]
+  choices = {
+    name = "AlmogChoice"
+    choiceText = "{!$UserRole.Id}"
+    dataType = "String"
+    value = {
+      elementReference = "$UserRole.Id"
+    }
+  }
+  constants = [
+    {
+      name = "AlmogConstant"
+      dataType = "String"
+      value = {
+        stringValue = ""
+      }
+    },
+  ]
   dynamicChoiceSets = [
     {
-      description = "This is a custom variable, should able to create a reference to it"
-      name = "Almogcustomvariable"
-      dataType = "Number"
-      displayField = "AccountNumber"
-      object = "Account"
-      valueField = "BillingLatitude"
+      name = "AlmogPicklistChoiceSet"
+      dataType = "Picklist"
+      picklistField = "PortalRole"
+      picklistObject = "UserRole"
     },
     {
       name = "AlmogRecordChoiceSet"
-      dataType = "Boolean"
-      displayField = "Active__c"
-      limit = 1
-      object = "Account"
-      sortField = "Id"
-      sortOrder = "Asc"
-      valueField = "IsCustomerPortal"
-    },
-    {
-      name = "Customrecordchoicealmog"
-      dataType = "Boolean"
-      displayField = "Active__c"
-      object = "Account"
+      dataType = "String"
+      displayField = "Id"
+      object = "UserRole"
+      valueField = "Id"
     },
   ]
   environments = "Default"
+  formulas = [
+    {
+      name = "AlmogFormula"
+      dataType = "String"
+      expression = "{!$UserRole.Id}"
+    },
+  ]
   interviewLabel = "E {!$Flow.CurrentDateTime}"
   label = "E"
   processMetadataValues = [
@@ -66,6 +76,19 @@ salesforce.Flow E {
     },
   ]
   processType = "Flow"
+  recordLookups = [
+    {
+      name = "AlmogGetRecords"
+      label = "Almog Get Records"
+      assignNullValuesIfNoRecordsFound = false
+      connector = {
+        targetReference = "Almog_Assignment"
+      }
+      getFirstRecordOnly = false
+      object = "UserRole"
+      storeOutputAutomatically = true
+    },
+  ]
   screens = [
     {
       description = "Test testing"
@@ -75,10 +98,18 @@ salesforce.Flow E {
       allowFinish = true
       allowPause = true
       connector = {
-        targetReference = "AlmogAssignment"
+        targetReference = "AlmogGetRecords"
       }
       showFooter = true
       showHeader = true
+    },
+  ]
+  stages = [
+    {
+      name = "Almog_Stage"
+      isActive = false
+      label = "Almog Stage"
+      stageOrder = 5
     },
   ]
   start = {
@@ -88,40 +119,19 @@ salesforce.Flow E {
   }
   status = "Draft"
   textTemplates = {
-    name = "Customtexttemplate"
+    name = "AlmogTextTemplate"
     isViewedAsPlainText = false
-    text = "<p>Hey I am a custom template</p>"
+    text = "<p>{!$UserRole.Id}</p>"
   }
   variables = [
     {
-      description = "Check account activation"
-      name = "AccountActive"
-      dataType = "Boolean"
-      isCollection = false
-      isInput = false
-      isOutput = false
-      value = {
-        booleanValue = false
-      }
-    },
-    {
-      name = "AlmogRecordField"
+      name = "AlmogVariable"
       dataType = "String"
       isCollection = false
       isInput = false
       isOutput = false
       value = {
-        elementReference = "$UserRole.DeveloperName"
-      }
-    },
-    {
-      name = "Customvariablealmog"
-      dataType = "String"
-      isCollection = false
-      isInput = false
-      isOutput = false
-      value = {
-        stringValue = ""
+        elementReference = "$UserRole.Id"
       }
     },
   ]

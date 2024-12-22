@@ -2,7 +2,7 @@ salesforce {
   fetch = {
     optionalFeatures = {
       hideTypesFolder = false
-      flowAssignmentItemsReferences = false
+      flowAssignmentItemsReferences = true
     }
     metadata = {
       include = [
