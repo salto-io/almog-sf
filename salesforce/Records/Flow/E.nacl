@@ -7,10 +7,10 @@ salesforce.Flow E {
       label = "Assignment with custom variable"
       assignmentItems = [
         {
-          assignToReference = "Customvariablealmog"
+          assignToReference = "AccountActive"
           operator = "Assign"
           value = {
-            stringValue = "{!Customrecordchoicealmog}"
+            elementReference = "$UserRole.MayForecastManagerShare"
           }
         },
       ]
@@ -84,6 +84,17 @@ salesforce.Flow E {
     text = "<p>Hey I am a custom template</p>"
   }
   variables = [
+    {
+      description = "Check account activation"
+      name = "AccountActive"
+      dataType = "Boolean"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      value = {
+        booleanValue = false
+      }
+    },
     {
       name = "Customvariablealmog"
       dataType = "String"
