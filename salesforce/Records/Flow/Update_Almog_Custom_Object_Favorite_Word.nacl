@@ -7,7 +7,7 @@ salesforce.Flow Update_Almog_Custom_Object_Favorite_Word {
       label = "Update Favorite Word"
       assignmentItems = [
         {
-          assignToReference = "$Record.Favorite_word__c"
+          assignToReference = salesforce.Almog_Custom_Object__c.field.Favorite_word__c
           operator = "Assign"
           value = {
             elementReference = "ConcatSign"
@@ -58,11 +58,6 @@ salesforce.Flow Update_Almog_Custom_Object_Favorite_Word {
   status = "Active"
   _parent = [
     salesforce.Almog_Custom_Object__c,
-  ]
-  _generated_dependencies = [
-    {
-      reference = salesforce.Almog_Custom_Object__c.field.Favorite_word__c
-    },
   ]
   _alias = "Update Almog Custom Object Favorite Word"
 }

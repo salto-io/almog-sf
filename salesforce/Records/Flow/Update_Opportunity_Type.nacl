@@ -7,7 +7,7 @@ salesforce.Flow Update_Opportunity_Type {
       label = "Set Opportunity Type"
       assignmentItems = [
         {
-          assignToReference = "$Record.Type"
+          assignToReference = salesforce.Opportunity.field.Type
           operator = "Assign"
           value = {
             elementReference = "UpdateOpportunityType"
