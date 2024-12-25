@@ -15,7 +15,7 @@ type salesforce.Flow {
   }
   serviceid fullName {
   }
-  "List<salesforce.FlowActionCall>" actionCalls {
+  salesforce.FlowActionCall actionCalls {
   }
   salesforce.FlowApexPluginCall apexPluginCalls {
   }
@@ -34,6 +34,8 @@ type salesforce.Flow {
   "List<salesforce.FlowDecision>" decisions {
   }
   string description {
+  }
+  salesforce.FlowDynamicChoiceSet dynamicChoiceSets {
   }
   string environments {
     _restriction = {
@@ -201,7 +203,7 @@ type salesforce.Flow {
       ]
     }
   }
-  "List<salesforce.FlowScreen>" screens {
+  salesforce.FlowScreen screens {
   }
   string sourceTemplate {
     _restriction = {
@@ -266,7 +268,7 @@ type salesforce.Flow {
       salesforce.FlowDefinition,
     ]
   }
-  "List<salesforce.FlowStage>" stages {
+  salesforce.FlowStage stages {
   }
   salesforce.FlowStart start {
   }
@@ -772,6 +774,4 @@ type salesforce.Flow {
       indexed = true
     },
   ]
-  "List<salesforce.FlowDynamicChoiceSet>" dynamicChoiceSets {
-  }
 }

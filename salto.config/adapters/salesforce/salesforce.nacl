@@ -2,14 +2,15 @@ salesforce {
   fetch = {
     optionalFeatures = {
       hideTypesFolder = false
-      flowAssignmentItemsReferences = true
+      // flowAssignmentItemsReferences = true
+      addParentToRecordTriggeredFlows = false
     }
     metadata = {
       include = [
         {
-          metadataType = "Flow|Role"
+          metadataType = "Flow|CustomObject"
           namespace = ""
-          name = ".*"
+          name = "Update_Almog_Custom_Object_Favorite_Word|Update_Opportunity_Type|Opportunity|Contact"
         },
       ]
       exclude = [

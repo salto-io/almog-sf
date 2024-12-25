@@ -31,7 +31,7 @@ type salesforce.FlowScreenField {
   }
   string helpText {
   }
-  "List<salesforce.FlowScreenFieldInputParameter>" inputParameters {
+  salesforce.FlowScreenFieldInputParameter inputParameters {
   }
   string inputsOnNextNavToAssocScrn {
     _restriction = {
@@ -54,7 +54,7 @@ type salesforce.FlowScreenField {
   }
   string objectFieldReference {
   }
-  "List<salesforce.FlowScreenFieldOutputParameter>" outputParameters {
+  salesforce.FlowScreenFieldOutputParameter outputParameters {
   }
   salesforce.FlowMetadataValue processMetadataValues {
   }

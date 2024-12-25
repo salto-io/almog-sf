@@ -1,34 +1,31 @@
-salesforce.Flow Update_Opportunity_Type {
-  fullName = "Update_Opportunity_Type"
+salesforce.Flow Update_Almog_Custom_Object_Favorite_Word {
+  fullName = "Update_Almog_Custom_Object_Favorite_Word"
   apiVersion = 62
   assignments = [
     {
-      name = "Set_Opportunity_Type"
-      label = "Set Opportunity Type"
+      name = "Update_Favorite_Word"
+      label = "Update Favorite Word"
       assignmentItems = [
         {
-          assignToReference = "$Record.Type"
+          assignToReference = "$Record.Favorite_word__c"
           operator = "Assign"
           value = {
-            elementReference = "UpdateOpportunityType"
+            elementReference = "ConcatSign"
           }
         },
       ]
-      connector = {
-        targetReference = "Update_Opportunity"
-      }
     },
   ]
   environments = "Default"
   formulas = [
     {
-      name = "UpdateOpportunityType"
+      name = "ConcatSign"
       dataType = "String"
-      expression = "'New Type'"
+      expression = "{!$Record.Favorite_word__c}& \"&!\""
     },
   ]
-  interviewLabel = "Update Opportunity Type {!$Flow.CurrentDateTime}"
-  label = "Update Opportunity Type"
+  interviewLabel = "Update Almog Custom Object Favorite Word {!$Flow.CurrentDateTime}"
+  label = "Update Almog Custom Object Favorite Word"
   processMetadataValues = [
     {
       name = "BuilderType"
@@ -50,21 +47,14 @@ salesforce.Flow Update_Opportunity_Type {
     },
   ]
   processType = "AutoLaunchedFlow"
-  recordUpdates = [
-    {
-      name = "Update_Opportunity"
-      label = "Update Opportunity"
-      inputReference = "$Record"
-    },
-  ]
   start = {
     connector = {
-      targetReference = "Set_Opportunity_Type"
+      targetReference = "Update_Favorite_Word"
     }
-    object = salesforce.Opportunity
+    object = "Almog_Custom_Object__c"
     recordTriggerType = "CreateAndUpdate"
     triggerType = "RecordAfterSave"
   }
   status = "Active"
-  _alias = "Update Opportunity Type"
+  _alias = "Update Almog Custom Object Favorite Word"
 }
