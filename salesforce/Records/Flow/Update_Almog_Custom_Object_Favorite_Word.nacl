@@ -56,6 +56,9 @@ salesforce.Flow Update_Almog_Custom_Object_Favorite_Word {
     triggerType = "RecordAfterSave"
   }
   status = "Active"
+  _parent = [
+    salesforce.Almog_Custom_Object__c,
+  ]
   _generated_dependencies = [
     {
       reference = salesforce.Almog_Custom_Object__c.field.Favorite_word__c

@@ -66,5 +66,8 @@ salesforce.Flow Update_Opportunity_Type {
     triggerType = "RecordAfterSave"
   }
   status = "Active"
+  _parent = [
+    salesforce.Opportunity,
+  ]
   _alias = "Update Opportunity Type"
 }

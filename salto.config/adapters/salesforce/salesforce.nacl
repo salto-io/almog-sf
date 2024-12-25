@@ -3,7 +3,7 @@ salesforce {
     optionalFeatures = {
       hideTypesFolder = false
       // flowAssignmentItemsReferences = true
-      addParentToRecordTriggeredFlows = false
+      addParentToRecordTriggeredFlows = true
     }
     metadata = {
       include = [
