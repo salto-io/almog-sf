@@ -51,10 +51,15 @@ salesforce.Flow Update_Almog_Custom_Object_Favorite_Word {
     connector = {
       targetReference = "Update_Favorite_Word"
     }
-    object = "Almog_Custom_Object__c"
+    object = salesforce.Almog_Custom_Object__c
     recordTriggerType = "CreateAndUpdate"
     triggerType = "RecordAfterSave"
   }
   status = "Active"
+  _generated_dependencies = [
+    {
+      reference = salesforce.Almog_Custom_Object__c.field.Favorite_word__c
+    },
+  ]
   _alias = "Update Almog Custom Object Favorite Word"
 }
