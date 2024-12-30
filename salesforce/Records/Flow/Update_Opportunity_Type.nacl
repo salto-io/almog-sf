@@ -3,7 +3,7 @@ salesforce.Flow Update_Opportunity_Type {
   apiVersion = 62
   assignments = [
     {
-      name = "Set_Opportunity_Type"
+      name = "Set_Opportunity_Type_change"
       label = "Set Opportunity Type"
       assignmentItems = [
         {

@@ -3,3 +3,22 @@
 Salto will perform the following actions:
 
 Nothing to do.
+
+Please review the following messages; changes with errors will not be deployed.
+    Deploying these changes will create a new inactive version of this flow
+    salesforce/Records/Flow/Update_Opportunity_Type.nacl(line: 1)
+    Info: Deploying these changes will create a new inactive version of this flow. Flow name: salesforce.Flow.instance.Update_Opportunity_Type. You can learn more about this deployment preview error here: https://help.salto.io/en/articles/6982324-managing-salesforce-flows
+    Unused Flow Element
+    salesforce/Records/Flow/Update_Opportunity_Type.nacl(line: 6)
+    Info: The Flow Element "Set_Opportunity_Type_change" isn’t being used in the Flow.
+    Reference to missing Flow Element
+    salesforce/Records/Flow/Update_Opportunity_Type.nacl(line: 62)
+    Error: The Flow Element "Set_Opportunity_Type" does not exist.
+
+Some actions may be required following the completion of this deployment, please perform the following actions:
+
+Deploying flows as inactive
+Your Salesforce is configured to deploy flows as inactive, please make sure to manually activate them after the deployment completes
+  - Go to: https://salto52-dev-ed.develop.lightning.force.com/builder_platform_interaction/flowBuilder.app?flowId=301WU00000aumDKYAY
+  - Activate it by clicking “Activate”
+
