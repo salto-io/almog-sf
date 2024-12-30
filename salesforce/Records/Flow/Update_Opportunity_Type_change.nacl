@@ -1,6 +1,6 @@
-salesforce.Flow Update_Opportunity_Type {
-  fullName = "Update_Opportunity_Type"
-  apiVersion = 61
+salesforce.Flow Update_Opportunity_Type_change {
+  fullName = "Update_Opportunity_Type_change"
+  apiVersion = 62
   assignments = [
     {
       name = "Set_Opportunity_Type"
