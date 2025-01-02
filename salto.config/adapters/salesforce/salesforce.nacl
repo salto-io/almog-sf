@@ -2,7 +2,6 @@ salesforce {
   fetch = {
     optionalFeatures = {
       hideTypesFolder = false
-      // flowAssignmentItemsReferences = true
       addParentToRecordTriggeredFlows = true
     }
     metadata = {
