@@ -2,7 +2,6 @@ salesforce {
   fetch = {
     optionalFeatures = {
       hideTypesFolder = false
-      addParentToRecordTriggeredFlows = true
     }
     metadata = {
       include = [
