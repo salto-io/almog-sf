@@ -7,7 +7,7 @@ salesforce.Flow Update_Opportunity_Type {
       label = "Set Opportunity Type"
       assignmentItems = [
         {
-          assignToReference = salesforce.Opportunity.field.Type
+          assignToReference = "$Record.Type"
           operator = "Assign"
           value = {
             elementReference = "UpdateOpportunityType"
@@ -66,8 +66,5 @@ salesforce.Flow Update_Opportunity_Type {
     triggerType = "RecordAfterSave"
   }
   status = "Active"
-  _parent = [
-    salesforce.Opportunity,
-  ]
   _alias = "Update Opportunity Type"
 }
