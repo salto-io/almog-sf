@@ -1,0 +1,143 @@
+salesforce.Flow E {
+  fullName = "E"
+  apiVersion = 62
+  assignments = [
+    {
+      name = "Almog_Assignment"
+      label = "Almog Assignment"
+      assignmentItems = [
+        {
+          assignToReference = "AlmogGetRecords"
+          operator = "Assign"
+        },
+      ]
+    },
+  ]
+  choices = [
+    {
+      name = "AlmogChoice"
+      choiceText = "{!$UserRole.Id}"
+      dataType = "String"
+      value = {
+        elementReference = "$UserRole.Id"
+      }
+    },
+  ]
+  constants = [
+    {
+      name = "AlmogConstant"
+      dataType = "String"
+      value = {
+        stringValue = ""
+      }
+    },
+  ]
+  dynamicChoiceSets = [
+    {
+      name = "AlmogPicklistChoiceSet"
+      dataType = "Picklist"
+      picklistField = "PortalRole"
+      picklistObject = "UserRole"
+    },
+    {
+      name = "AlmogRecordChoiceSet"
+      dataType = "String"
+      displayField = "Id"
+      object = "UserRole"
+      valueField = "Id"
+    },
+  ]
+  environments = "Default"
+  formulas = [
+    {
+      name = "AlmogFormula"
+      dataType = "String"
+      expression = "{!$UserRole.Id}"
+    },
+  ]
+  interviewLabel = "E {!$Flow.CurrentDateTime}"
+  label = "E"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  recordLookups = [
+    {
+      name = "AlmogGetRecords"
+      label = "Almog Get Records"
+      assignNullValuesIfNoRecordsFound = false
+      connector = {
+        targetReference = "Almog_Assignment"
+      }
+      getFirstRecordOnly = false
+      object = "UserRole"
+      storeOutputAutomatically = true
+    },
+  ]
+  screens = [
+    {
+      description = "Test testing"
+      name = "E"
+      label = "E"
+      allowBack = true
+      allowFinish = true
+      allowPause = true
+      connector = {
+        targetReference = "AlmogGetRecords"
+      }
+      showFooter = true
+      showHeader = true
+    },
+  ]
+  stages = [
+    {
+      name = "Almog_Stage"
+      isActive = false
+      label = "Almog Stage"
+      stageOrder = 5
+    },
+  ]
+  start = {
+    connector = {
+      targetReference = "E"
+    }
+  }
+  status = "Draft"
+  textTemplates = [
+    {
+      name = "AlmogTextTemplate"
+      isViewedAsPlainText = false
+      text = "<p>{!$UserRole.Id}</p>"
+    },
+  ]
+  variables = [
+    {
+      name = "AlmogVariable"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      value = {
+        elementReference = "$UserRole.Id"
+      }
+    },
+  ]
+  _alias = "E"
+}
