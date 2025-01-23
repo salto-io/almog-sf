@@ -1,60 +1,61 @@
 salesforce.Flow E {
   fullName = "E"
   apiVersion = 62
-  assignments = [
+  decisions = [
     {
-      name = "Almog_Assignment"
-      label = "Almog Assignment"
-      assignmentItems = [
+      name = "Test_Decision_for_E_Flow"
+      label = "Test Decision for E Flow"
+      defaultConnectorLabel = "Default Outcome"
+      rules = [
         {
-          assignToReference = "AlmogGetRecords"
-          operator = "Assign"
+          name = "E_Flow_Decision_Outcome"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "TestNewResource.Name"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "Valid"
+              }
+            },
+            {
+              leftValueReference = "SecondVariable.FirstName"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "ValidLeadName"
+              }
+            },
+            {
+              leftValueReference = "E"
+              operator = "WasVisited"
+              rightValue = {
+                elementReference = "ThirdResource.IsDeleted"
+              }
+            },
+          ]
+          label = "E Flow Decision Outcome"
         },
       ]
     },
   ]
-  choices = [
-    {
-      name = "AlmogChoice"
-      choiceText = "{!$UserRole.Id}"
-      dataType = "String"
+  dynamicChoiceSets = {
+    name = "SecondResource"
+    dataType = "Currency"
+    displayField = salesforce.Opportunity.field.Amount
+    filterLogic = "and"
+    filters = {
+      field = salesforce.Opportunity.field.Amount
+      operator = "EqualTo"
       value = {
-        elementReference = "$UserRole.Id"
+        numberValue = 3
       }
-    },
-  ]
-  constants = [
-    {
-      name = "AlmogConstant"
-      dataType = "String"
-      value = {
-        stringValue = ""
-      }
-    },
-  ]
-  dynamicChoiceSets = [
-    {
-      name = "AlmogPicklistChoiceSet"
-      dataType = "Picklist"
-      picklistField = "PortalRole"
-      picklistObject = "UserRole"
-    },
-    {
-      name = "AlmogRecordChoiceSet"
-      dataType = "String"
-      displayField = "Id"
-      object = "UserRole"
-      valueField = "Id"
-    },
-  ]
+    }
+    object = salesforce.Opportunity
+    sortField = salesforce.Opportunity.field.Amount
+    sortOrder = "Desc"
+    valueField = salesforce.Opportunity.field.Amount
+  }
   environments = "Default"
-  formulas = [
-    {
-      name = "AlmogFormula"
-      dataType = "String"
-      expression = "{!$UserRole.Id}"
-    },
-  ]
   interviewLabel = "E {!$Flow.CurrentDateTime}"
   label = "E"
   processMetadataValues = [
@@ -78,65 +79,49 @@ salesforce.Flow E {
     },
   ]
   processType = "Flow"
-  recordLookups = [
-    {
-      name = "AlmogGetRecords"
-      label = "Almog Get Records"
-      assignNullValuesIfNoRecordsFound = false
-      connector = {
-        targetReference = "Almog_Assignment"
-      }
-      getFirstRecordOnly = false
-      object = "UserRole"
-      storeOutputAutomatically = true
-    },
-  ]
-  screens = [
-    {
-      description = "Test testing"
-      name = "E"
-      label = "E"
-      allowBack = true
-      allowFinish = true
-      allowPause = true
-      connector = {
-        targetReference = "AlmogGetRecords"
-      }
-      showFooter = true
-      showHeader = true
-    },
-  ]
-  stages = [
-    {
-      name = "Almog_Stage"
-      isActive = false
-      label = "Almog Stage"
-      stageOrder = 5
-    },
-  ]
+  screens = {
+    description = "Test testing"
+    name = "E"
+    label = "E"
+    allowBack = true
+    allowFinish = true
+    allowPause = true
+    connector = {
+      targetReference = "Test_Decision_for_E_Flow"
+    }
+    showFooter = true
+    showHeader = true
+  }
   start = {
     connector = {
       targetReference = "E"
     }
   }
   status = "Draft"
-  textTemplates = [
-    {
-      name = "AlmogTextTemplate"
-      isViewedAsPlainText = false
-      text = "<p>{!$UserRole.Id}</p>"
-    },
-  ]
   variables = [
     {
-      name = "AlmogVariable"
-      dataType = "String"
+      name = "SecondVariable"
+      dataType = "SObject"
       isCollection = false
-      isInput = false
-      isOutput = false
-      value = {
-        elementReference = "$UserRole.Id"
-      }
+      isInput = true
+      isOutput = true
+      objectType = "Lead"
+    },
+    {
+      name = "TestNewResource"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Account
+    },
+    {
+      name = "ThirdResource"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = "Asset"
     },
   ]
   _alias = "E"

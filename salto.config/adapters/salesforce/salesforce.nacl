@@ -5,12 +5,12 @@ salesforce {
         {
           metadataType = "Flow"
           namespace = ""
-          name = ".*"
+          name = "E"
         },
         {
           metadataType = "CustomObject"
           namespace = ""
-          name = "Opportunity"
+          name = "Opportunity|Almog_Custom_Object__c|Account"
         },
       ]
       exclude = [
