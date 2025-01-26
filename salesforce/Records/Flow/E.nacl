@@ -121,7 +121,7 @@ salesforce.Flow E {
       isCollection = false
       isInput = true
       isOutput = true
-      objectType = "Asset"
+      objectType = salesforce.Asset
     },
   ]
   _alias = "E"
