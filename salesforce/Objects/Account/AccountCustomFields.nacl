@@ -82,6 +82,20 @@ type salesforce.Account {
     updateable = true
     queryable = true
   }
+  salesforce.Lookup RelationshipToAsset__c {
+    apiName = "Account.RelationshipToAsset__c"
+    deleteConstraint = "Restrict"
+    label = "Asset"
+    referenceTo = [
+      salesforce.Asset,
+    ]
+    relationshipLabel = "Accounts"
+    relationshipName = "Accounts"
+    _required = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
   salesforce.Date SLAExpirationDate__c {
     apiName = "Account.SLAExpirationDate__c"
     label = "SLA Expiration Date"
