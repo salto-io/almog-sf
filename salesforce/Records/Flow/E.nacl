@@ -26,10 +26,17 @@ salesforce.Flow E {
               }
             },
             {
-              leftValueReference = "E"
-              operator = "WasVisited"
+              leftValueReference = "TestNewResource.AccountLookup__r.AccountLookup__r.test_for_unknown__c"
+              operator = "EqualTo"
               rightValue = {
-                elementReference = "ThirdResource.IsDeleted"
+                dateValue = "2000-01-01"
+              }
+            },
+            {
+              leftValueReference = "SecondVariable.MasterRecord.IsPriorityRecord"
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = true
               }
             },
           ]
@@ -115,13 +122,13 @@ salesforce.Flow E {
       isOutput = true
       objectType = salesforce.Account
     },
+  ]
+  _generated_dependencies = [
     {
-      name = "ThirdResource"
-      dataType = "SObject"
-      isCollection = false
-      isInput = true
-      isOutput = true
-      objectType = salesforce.Asset
+      reference = salesforce.Account.field.AccountLookup__c
+    },
+    {
+      reference = salesforce.Account.field.test_for_unknown__c
     },
   ]
   _alias = "E"
