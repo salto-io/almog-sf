@@ -18,6 +18,17 @@ salesforce.Flow Record_Triggered_Flow {
                 booleanValue = true
               }
             },
+            {
+              leftValueReference = "$Record.IsEmailBounced"
+              operator = "EqualTo"
+            },
+            {
+              leftValueReference = "$Record.Account.Name"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "\"Best Name\""
+              }
+            },
           ]
           label = "FirstOutcome"
         },
