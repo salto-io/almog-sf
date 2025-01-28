@@ -21,12 +21,15 @@ salesforce.Flow Record_Triggered_Flow {
             {
               leftValueReference = "$Record.IsEmailBounced"
               operator = "EqualTo"
+              rightValue = {
+                elementReference = "$Record.IsDeleted"
+              }
             },
             {
               leftValueReference = "$Record.Account.Name"
               operator = "EqualTo"
               rightValue = {
-                stringValue = "\"Best Name\""
+                elementReference = "$Record.CreatedBy.Contact.IsPriorityRecord"
               }
             },
           ]
