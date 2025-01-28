@@ -1,0 +1,14 @@
+type salesforce.WebCart {
+  salesforce.Text CartCustomName__c {
+    apiName = "WebCart.CartCustomName__c"
+    externalId = false
+    label = "CartCustomName"
+    length = 34
+    _required = true
+    unique = false
+    createable = true
+    updateable = true
+    caseSensitive = false
+    queryable = true
+  }
+}

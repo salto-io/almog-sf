@@ -1,0 +1,16 @@
+type salesforce.Asset {
+  salesforce.Lookup RelationshipToCart__c {
+    apiName = "Asset.RelationshipToCart__c"
+    deleteConstraint = "Restrict"
+    label = "Cart"
+    referenceTo = [
+      salesforce.WebCart,
+    ]
+    relationshipLabel = "Assets"
+    relationshipName = "Assets"
+    _required = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+}

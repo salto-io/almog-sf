@@ -1,0 +1,92 @@
+salesforce.Flow Record_Triggered_Flow {
+  fullName = "Record_Triggered_Flow"
+  apiVersion = 62
+  decisions = [
+    {
+      name = "FirstDecision"
+      label = "FirstDecision"
+      defaultConnectorLabel = "Default Outcome"
+      rules = [
+        {
+          name = "FirstOutcome"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "$Record.IsPriorityRecord"
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = true
+              }
+            },
+          ]
+          label = "FirstOutcome"
+        },
+      ]
+    },
+  ]
+  environments = "Default"
+  interviewLabel = "Record Triggered Flow {!$Flow.CurrentDateTime}"
+  label = "Record Triggered Flow"
+  orchestratedStages = {
+    description = "The first stage"
+    name = "First_Stage"
+    label = "First Stage"
+    connector = {
+      targetReference = "FirstDecision"
+    }
+    exitConditionLogic = "and"
+    stageSteps = {
+      name = "Interactive_Step_1_of_First_Stage"
+      actionName = "setup_service_experience__Create_Case"
+      actionType = "stepInteractive"
+      assignees = {
+        assignee = {
+          stringValue = "almog.mesilaty+dev1@salto.io"
+        }
+        assigneeType = "User"
+      }
+      canAssigneeEdit = false
+      entryConditionLogic = "and"
+      exitConditionLogic = "and"
+      label = "Interactive Step 1 of First Stage"
+      requiresAsyncProcessing = false
+      runAsUser = false
+      shouldLock = false
+      stepSubtype = "InteractiveStep"
+    }
+  }
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Orchestrator"
+  start = {
+    connector = {
+      targetReference = "First_Stage"
+    }
+    object = salesforce.Contact
+    recordTriggerType = "Create"
+    triggerType = "RecordAfterSave"
+  }
+  status = "InvalidDraft"
+  _parent = [
+    salesforce.Contact,
+  ]
+  _alias = "Record Triggered Flow"
+}

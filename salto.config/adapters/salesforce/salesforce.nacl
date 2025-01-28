@@ -5,7 +5,7 @@ salesforce {
         {
           metadataType = "Flow"
           namespace = ""
-          name = "E|F|Record_Triggered_Flow"
+          name = "E|F|Record_Triggered_Flow|salto_5023"
         },
         {
           metadataType = "CustomObject"

@@ -1,0 +1,10 @@
+salesforce.ValidationRule Asset_Asset_Validation_Rule_4 {
+  fullName = "Asset.Asset_Validation_Rule_4"
+  active = true
+  errorConditionFormula = "Price < 0"
+  errorMessage = "Invalid input"
+  _parent = [
+    salesforce.Asset,
+  ]
+  _alias = "Asset.Asset_Validation_Rule_4"
+}
