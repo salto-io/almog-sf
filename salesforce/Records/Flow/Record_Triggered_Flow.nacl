@@ -12,17 +12,17 @@ salesforce.Flow Record_Triggered_Flow {
           conditionLogic = "and"
           conditions = [
             {
-              leftValueReference = "$Record.IsPriorityRecord"
+              leftValueReference = salesforce.Contact.field.IsPriorityRecord
               operator = "EqualTo"
               rightValue = {
                 booleanValue = true
               }
             },
             {
-              leftValueReference = "$Record.IsEmailBounced"
+              leftValueReference = salesforce.Contact.field.IsEmailBounced
               operator = "EqualTo"
               rightValue = {
-                elementReference = "$Record.IsDeleted"
+                elementReference = salesforce.Contact.field.IsDeleted
               }
             },
             {

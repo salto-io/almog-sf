@@ -33,7 +33,7 @@ salesforce.Flow Update_Almog_Custom_Object_Favorite_Word {
               leftValueReference = "$Profile.Name"
               operator = "EqualTo"
               rightValue = {
-                elementReference = "$Record.Name"
+                elementReference = salesforce.Almog_Custom_Object__c.field.Name
               }
             },
           ]
