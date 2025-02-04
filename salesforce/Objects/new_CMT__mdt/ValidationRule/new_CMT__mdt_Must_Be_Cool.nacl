@@ -1,0 +1,15 @@
+salesforce.ValidationRule new_CMT__mdt_Must_Be_Cool {
+  fullName = "new_CMT__mdt.Must_Be_Cool"
+  active = true
+  errorConditionFormula = "Is_Cool__c = true"
+  errorMessage = "This instance is not cool enough"
+  _parent = [
+    salesforce.new_CMT__mdt,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.new_CMT__mdt.field.Is_Cool__c
+    },
+  ]
+  _alias = "new_CMT__mdt.Must_Be_Cool"
+}

@@ -1,0 +1,60 @@
+type salesforce.new_CMT__mdt {
+  salesforce.MetadataRelationship Almog_MDT_Relationship_Field__c {
+    apiName = "new_CMT__mdt.Almog_MDT_Relationship_Field__c"
+    fieldManageability = "DeveloperControlled"
+    label = "Almog MDT Relationship Field"
+    referenceTo = [
+      "EntityDefinition",
+    ]
+    relationshipLabel = "new_CMTS"
+    relationshipName = "new_CMTS"
+    unique = false
+    length = 255
+    createable = false
+    updateable = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox Is_Cool__c {
+    apiName = "new_CMT__mdt.Is_Cool__c"
+    defaultValue = false
+    fieldManageability = "DeveloperControlled"
+    label = "Is Cool"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.MetadataRelationship MDT_Relationship_Field_Definition__c {
+    apiName = "new_CMT__mdt.MDT_Relationship_Field_Definition__c"
+    fieldManageability = "DeveloperControlled"
+    label = "MDT Relationship Field Definition"
+    metadataRelationshipControllingField = "new_CMT__mdt.Almog_MDT_Relationship_Field__c"
+    referenceTo = [
+      "FieldDefinition",
+    ]
+    relationshipLabel = "new_CMTS"
+    relationshipName = "new_CMTS"
+    unique = false
+    length = 255
+    createable = false
+    updateable = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Name__c {
+    apiName = "new_CMT__mdt.Name__c"
+    externalId = false
+    fieldManageability = "DeveloperControlled"
+    label = "Name"
+    length = 100
+    unique = false
+    createable = false
+    updateable = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+}
