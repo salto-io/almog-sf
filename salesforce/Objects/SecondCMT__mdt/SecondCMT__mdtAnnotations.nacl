@@ -1,4 +1,4 @@
-type salesforce.new_CMT__mdt {
+type salesforce.SecondCMT__mdt {
   annotations {
     serviceid apiName {
     }
@@ -13,10 +13,10 @@ type salesforce.new_CMT__mdt {
     hidden_string keyPrefix {
     }
   }
-  apiName = "new_CMT__mdt"
+  apiName = "SecondCMT__mdt"
   metadataType = "CustomMetadata"
-  label = "new CMT"
+  label = "SecondCMT"
   description = ""
-  pluralLabel = "new CMTS"
-  _alias = "new CMT"
+  pluralLabel = "SecondCMTs"
+  _alias = "SecondCMT"
 }

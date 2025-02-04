@@ -1,0 +1,1306 @@
+2025-02-04T12:41:09.152Z debug cli/command_builder Running command fetch in path . with arguments {
+  force: true,
+  stateOnly: false,
+  mode: 'default',
+  regenerateSaltoIds: false,
+  fromState: false,
+  withChangesDetection: false,
+  verbose: true
+}
+2025-02-04T12:41:09.157Z debug local-workspace/remote_map/location_cache Max location cache pool size: 1
+2025-02-04T12:41:09.160Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: staticFilesCache-config-cache
+2025-02-04T12:41:09.160Z debug local-workspace/remote_map/remote_map opening connection to /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache/tmp-dbs/eaa08a74-c0d1-4050-be6a-176b861ce83b, read-only=false
+2025-02-04T12:41:09.182Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource-salto.config/adapters-elements_index
+2025-02-04T12:41:09.185Z debug local-workspace/remote_map/remote_map cleaning tmp db 11a67ce8-5c3c-46d1-8603-4d06464dbe89
+2025-02-04T12:41:09.185Z debug local-workspace/remote_map/remote_map caught a rocksdb lock error while cleaning tmp db: IO error: While lock file: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache/tmp-dbs/11a67ce8-5c3c-46d1-8603-4d06464dbe89/LOCK: Resource temporarily unavailable
+2025-02-04T12:41:09.185Z debug local-workspace/remote_map/remote_map cleaning tmp db eaa08a74-c0d1-4050-be6a-176b861ce83b
+2025-02-04T12:41:09.186Z debug local-workspace/remote_map/remote_map caught a rocksdb lock error while cleaning tmp db: IO error: lock hold by current process, acquire time 1738672869 acquiring thread 6205485056: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache/tmp-dbs/eaa08a74-c0d1-4050-be6a-176b861ce83b/LOCK: No locks available
+2025-02-04T12:41:09.186Z debug local-workspace/remote_map/remote_map opening connection to /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, read-only=false
+2025-02-04T12:41:09.190Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource-salto.config/adapters-errors
+2025-02-04T12:41:09.190Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource-salto.config/adapters-merged
+2025-02-04T12:41:09.190Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-metadata
+2025-02-04T12:41:09.190Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource-salto.config/adapters-searchableNamesIndex
+2025-02-04T12:41:09.190Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-elements
+2025-02-04T12:41:09.190Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource-salto.config/adapters-static_files_index
+2025-02-04T12:41:09.191Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-sourceMap
+2025-02-04T12:41:09.191Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource-salto.config/adapters-metadata
+2025-02-04T12:41:09.191Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-errors
+2025-02-04T12:41:09.191Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-staticFiles
+2025-02-04T12:41:09.196Z debug workspace/workspace/nacl_files/nacl_files_source building elements indices for 1 NaCl files
+2025-02-04T12:41:09.196Z debug workspace/workspace/nacl_files/nacl_files_source shouldCreateFilenameToElementIDsMapping is false
+2025-02-04T12:41:09.196Z debug workspace/workspace/nacl_files/nacl_files_source handle deletions of nacl files starting
+2025-02-04T12:41:09.197Z debug workspace/workspace/nacl_files/nacl_files_source handle deletions of nacl files took 1 ms
+2025-02-04T12:41:09.197Z debug workspace/workspace/nacl_files/nacl_files_source handle additions/modifications of nacl files starting
+2025-02-04T12:41:09.199Z debug workspace/workspace/nacl_files/nacl_files_source handle additions/modifications of nacl files took 2 ms
+2025-02-04T12:41:09.199Z info workspace/workspace/nacl_files/elements_cache going to merge new elements to the existing elements
+2025-02-04T12:41:09.200Z debug workspace/merger/index merged 1 elements to 1 elements [errors=0]
+2025-02-04T12:41:09.201Z info workspace/workspace/nacl_files/nacl_files_source loading nacl file source found 1 changes
+2025-02-04T12:41:09.202Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: workspace-salto.config/adapters-validationErrors
+2025-02-04T12:41:09.202Z debug workspace/validator validateElements with 1 elements starting
+2025-02-04T12:41:09.202Z debug workspace/expressions resolve 1 elements starting
+2025-02-04T12:41:09.205Z debug workspace/expressions resolve handled a total of 41 elements
+2025-02-04T12:41:09.205Z debug workspace/expressions resolve 1 elements took 3 ms
+2025-02-04T12:41:09.206Z debug workspace/validator validateElements with 1 elements took 4 ms
+2025-02-04T12:41:09.208Z debug local-workspace/workspace Creating environment source for env1 at /Users/almogmesilaty/ws/CustomMetadataValidationRules
+2025-02-04T12:41:09.209Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: staticFilesCache-envs/env1
+2025-02-04T12:41:09.209Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: staticFilesCache-common
+2025-02-04T12:41:09.210Z debug workspace/workspace/workspace Loading workspace with id: 4673fc09-feb0-4186-8f74-45d498cfd20c
+- Loading workspace...
+2025-02-04T12:41:09.212Z debug workspace/workspace/workspace buildWorkspaceState starting
+2025-02-04T12:41:09.212Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource-envs/env1-elements_index
+2025-02-04T12:41:09.212Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource-envs/env1-errors
+2025-02-04T12:41:09.212Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource-envs/env1-merged
+2025-02-04T12:41:09.212Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-metadata
+2025-02-04T12:41:09.212Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource-envs/env1-searchableNamesIndex
+2025-02-04T12:41:09.212Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-elements
+2025-02-04T12:41:09.212Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource-envs/env1-static_files_index
+2025-02-04T12:41:09.213Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-sourceMap
+2025-02-04T12:41:09.213Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource-envs/env1-metadata
+2025-02-04T12:41:09.213Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-errors
+2025-02-04T12:41:09.213Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-staticFiles
+2025-02-04T12:41:09.214Z debug workspace/workspace/nacl_files/nacl_files_source building elements indices for 0 NaCl files
+2025-02-04T12:41:09.214Z debug workspace/workspace/nacl_files/nacl_files_source shouldCreateFilenameToElementIDsMapping is false
+2025-02-04T12:41:09.214Z debug workspace/workspace/nacl_files/nacl_files_source handle deletions of nacl files starting
+2025-02-04T12:41:09.214Z debug workspace/workspace/nacl_files/nacl_files_source handle deletions of nacl files took 0 ms
+2025-02-04T12:41:09.214Z debug workspace/workspace/nacl_files/nacl_files_source handle additions/modifications of nacl files starting
+2025-02-04T12:41:09.214Z debug workspace/workspace/nacl_files/nacl_files_source handle additions/modifications of nacl files took 0 ms
+2025-02-04T12:41:09.214Z info workspace/workspace/nacl_files/elements_cache going to merge new elements to the existing elements
+2025-02-04T12:41:09.214Z debug workspace/merger/index merged 0 elements to 0 elements [errors=0]
+2025-02-04T12:41:09.215Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource--elements_index
+2025-02-04T12:41:09.215Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource--errors
+2025-02-04T12:41:09.215Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource--merged
+2025-02-04T12:41:09.215Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: parsedResultCache-naclFileSource--parsed_nacl_files-metadata
+2025-02-04T12:41:09.215Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource--searchableNamesIndex
+2025-02-04T12:41:09.215Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: parsedResultCache-naclFileSource--parsed_nacl_files-elements
+2025-02-04T12:41:09.215Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource--static_files_index
+2025-02-04T12:41:09.215Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: parsedResultCache-naclFileSource--parsed_nacl_files-sourceMap
+2025-02-04T12:41:09.215Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource--metadata
+2025-02-04T12:41:09.215Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: parsedResultCache-naclFileSource--parsed_nacl_files-errors
+2025-02-04T12:41:09.215Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: parsedResultCache-naclFileSource--parsed_nacl_files-staticFiles
+2025-02-04T12:41:09.218Z debug workspace/workspace/nacl_files/nacl_files_source building elements indices for 0 NaCl files
+2025-02-04T12:41:09.218Z debug workspace/workspace/nacl_files/nacl_files_source shouldCreateFilenameToElementIDsMapping is false
+2025-02-04T12:41:09.218Z debug workspace/workspace/nacl_files/nacl_files_source handle deletions of nacl files starting
+2025-02-04T12:41:09.218Z debug workspace/workspace/nacl_files/nacl_files_source handle deletions of nacl files took 0 ms
+2025-02-04T12:41:09.218Z debug workspace/workspace/nacl_files/nacl_files_source handle additions/modifications of nacl files starting
+2025-02-04T12:41:09.218Z debug workspace/workspace/nacl_files/nacl_files_source handle additions/modifications of nacl files took 0 ms
+2025-02-04T12:41:09.218Z info workspace/workspace/nacl_files/elements_cache going to merge new elements to the existing elements
+2025-02-04T12:41:09.218Z debug workspace/merger/index merged 0 elements to 0 elements [errors=0]
+2025-02-04T12:41:09.219Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: multi_env-env1-merged
+2025-02-04T12:41:09.219Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: multi_env-env1-errors
+2025-02-04T12:41:09.219Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: multi_env-multi_env_mergeManagermerge_manager
+2025-02-04T12:41:09.219Z debug workspace/workspace/nacl_files/elements_cache Merging components: env1, COMMON_
+2025-02-04T12:41:09.220Z debug workspace/workspace/nacl_files/elements_cache Setting hash multi_env-multi_env_mergeManagermerge_manager::env1_COMMON__merged_hash to 322216109bce4df09ee21afb2a6b34e4
+2025-02-04T12:41:09.220Z debug workspace/merger/index merged 0 elements to 0 elements [errors=0]
+2025-02-04T12:41:09.220Z debug workspace/workspace/nacl_files/elements_cache Setting COMMON_ source hash in namespace multi_env-multi_env_mergeManagermerge_manager to 322216109bce4df09ee21afb2a6b34e4
+2025-02-04T12:41:09.220Z debug workspace/workspace/nacl_files/elements_cache Applying merged changes to cache.
+2025-02-04T12:41:09.222Z debug workspace/workspace/workspace initializing state for workspace 4673fc09-feb0-4186-8f74-45d498cfd20c
+2025-02-04T12:41:09.222Z debug workspace/workspace/workspace Full workspace config: {
+  envs: [
+    {
+      name: 'env1',
+      accountToServiceName: { salesforce: 'salesforce' }
+    },
+    [length]: 1
+  ],
+  currentEnv: 'env1',
+  uid: '4673fc09-feb0-4186-8f74-45d498cfd20c'
+}
+2025-02-04T12:41:09.222Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: workspace-env1-merged
+2025-02-04T12:41:09.222Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: workspace-env1-errors
+2025-02-04T12:41:09.222Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: workspace-env1-validationErrors
+2025-02-04T12:41:09.222Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: workspace-env1-changedBy
+2025-02-04T12:41:09.222Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: workspace-env1-changedAt
+2025-02-04T12:41:09.222Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: workspace-env1-authorInformation
+2025-02-04T12:41:09.222Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: workspace-env1-alias
+2025-02-04T12:41:09.222Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: workspace-env1-referencedStaticFiles
+2025-02-04T12:41:09.222Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: workspace-env1-referenceSources
+2025-02-04T12:41:09.223Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: workspace-env1-referenceTargets
+2025-02-04T12:41:09.223Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: workspace-env1-mapVersions
+2025-02-04T12:41:09.223Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: workspaceMergeManagermerge_manager
+2025-02-04T12:41:09.223Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: state-env1-elements
+2025-02-04T12:41:09.223Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: state-env1-path_index
+2025-02-04T12:41:09.223Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: state-env1-top_level_path_index
+2025-02-04T12:41:09.223Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: state-env1-accounts
+2025-02-04T12:41:09.223Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: state-env1-salto_metadata
+2025-02-04T12:41:09.223Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: state-env1-service_update_date
+2025-02-04T12:41:09.227Z debug local-workspace/state/content_providers/common Calculating hash from hashes 0321d0b5766f7cdce77082d72667bdfc, got 4a7813fb6730a70c70fea2806dccba3b
+2025-02-04T12:41:09.227Z debug workspace/workspace/workspace got 0 init hidden element changes
+2025-02-04T12:41:09.227Z debug workspace/workspace/workspace got 0 state removed element changes
+2025-02-04T12:41:09.227Z debug workspace/workspace/nacl_files/elements_cache Merging components: multi_env_element_sourceenv1, state_element_sourceenv1
+2025-02-04T12:41:09.227Z debug workspace/workspace/nacl_files/elements_cache Setting hash workspaceMergeManagermerge_manager::multi_env_element_sourceenv1_state_element_sourceenv1_merged_hash to 322216109bce4df09ee21afb2a6b34e44a7813fb6730a70c70fea2806dccba3b
+2025-02-04T12:41:09.227Z debug workspace/merger/index merged 0 elements to 0 elements [errors=0]
+2025-02-04T12:41:09.228Z debug workspace/workspace/nacl_files/elements_cache Setting multi_env_element_sourceenv1 source hash in namespace workspaceMergeManagermerge_manager to 322216109bce4df09ee21afb2a6b34e4
+2025-02-04T12:41:09.228Z debug workspace/workspace/nacl_files/elements_cache Setting state_element_sourceenv1 source hash in namespace workspaceMergeManagermerge_manager to 4a7813fb6730a70c70fea2806dccba3b
+2025-02-04T12:41:09.228Z debug workspace/workspace/nacl_files/elements_cache Applying merged changes to cache.
+2025-02-04T12:41:09.228Z debug workspace/workspace/index_utils updating changed by index starting
+2025-02-04T12:41:09.229Z debug workspace/workspace/index_utils updating changed by index took 1 ms
+2025-02-04T12:41:09.229Z debug workspace/workspace/index_utils updating changed at index starting
+2025-02-04T12:41:09.229Z debug workspace/workspace/index_utils updating changed at index took 0 ms
+2025-02-04T12:41:09.229Z debug workspace/workspace/index_utils updating author information index starting
+2025-02-04T12:41:09.229Z debug workspace/workspace/index_utils updating author information index took 0 ms
+2025-02-04T12:41:09.229Z debug workspace/workspace/index_utils updating alias index starting
+2025-02-04T12:41:09.229Z debug workspace/workspace/index_utils updating alias index took 0 ms
+2025-02-04T12:41:09.229Z debug workspace/workspace/index_utils updating static files index starting
+2025-02-04T12:41:09.229Z debug workspace/workspace/index_utils updating static files index took 0 ms
+2025-02-04T12:41:09.229Z debug workspace/workspace/reference_indexes updating references indexes starting
+2025-02-04T12:41:09.229Z debug workspace/workspace/reference_indexes getIdToCustomReferences for 0 changes starting
+2025-02-04T12:41:09.229Z debug workspace/workspace/reference_indexes getIdToCustomReferences for 0 changes took 0 ms
+2025-02-04T12:41:09.230Z debug workspace/workspace/reference_indexes calculated references for 0 changes, updating indexes
+2025-02-04T12:41:09.230Z debug workspace/workspace/reference_indexes updating references indexes took 1 ms
+2025-02-04T12:41:09.230Z debug workspace/workspace/dependents getDependentIDsFromReferenceSourceIndex for 0 elemIDs starting
+2025-02-04T12:41:09.230Z debug workspace/workspace/dependents getDependentIDsFromReferenceSourceIndex for 0 elemIDs took 0 ms
+2025-02-04T12:41:09.230Z debug workspace/workspace/dependents getting 0 dependents from elements source starting
+2025-02-04T12:41:09.230Z debug workspace/workspace/dependents getting 0 dependents from elements source took 0 ms
+2025-02-04T12:41:09.230Z debug workspace/workspace/dependents found 0 dependents of 0 elements
+2025-02-04T12:41:09.230Z debug workspace/validator validateElements with 0 elements starting
+2025-02-04T12:41:09.230Z debug workspace/expressions resolve 0 elements starting
+2025-02-04T12:41:09.230Z debug workspace/expressions resolve handled a total of 13 elements
+2025-02-04T12:41:09.230Z debug workspace/expressions resolve 0 elements took 0 ms
+2025-02-04T12:41:09.230Z debug workspace/validator validateElements with 0 elements took 0 ms
+2025-02-04T12:41:09.230Z debug workspace/workspace/workspace buildWorkspaceState took 18 ms
+✔ Finished loading workspace for environment env1
+2025-02-04T12:41:09.232Z debug core/api fetch starting..
+2025-02-04T12:41:09.275Z debug workspace/merger/index merged 1 elements to 1 elements [errors=0]
+2025-02-04T12:41:09.277Z debug core/core/adapters/adapters Using the following config for salesforce account: {
+  "fetch": {
+    "metadata": {
+      "include": [
+        {
+          "metadataType": "CustomObject",
+          "namespace": "",
+          "name": ".*__mdt"
+        }
+      ],
+      "exclude": [
+        {
+          "metadataType": "Report"
+        },
+        {
+          "metadataType": "ReportType"
+        },
+        {
+          "metadataType": "ReportFolder"
+        },
+        {
+          "metadataType": "Dashboard"
+        },
+        {
+          "metadataType": "DashboardFolder"
+        },
+        {
+          "metadataType": "Document"
+        },
+        {
+          "metadataType": "DocumentFolder"
+        },
+        {
+          "metadataType": "SiteDotCom"
+        },
+        {
+          "metadataType": "EmailTemplate",
+          "name": "Marketo_?Email_?Templates/.*"
+        },
+        {
+          "metadataType": "ContentAsset"
+        },
+        {
+          "metadataType": "CustomObjectTranslation"
+        },
+        {
+          "metadataType": "AnalyticSnapshot"
+        },
+        {
+          "metadataType": "WaveDashboard"
+        },
+        {
+          "metadataType": "WaveDataflow"
+        },
+        {
+          "metadataType": "StandardValueSet",
+          "name": "^(AddressCountryCode)|(AddressStateCode)$",
+          "namespace": ""
+        },
+        {
+          "metadataType": "Layout",
+          "name": "CollaborationGroup-Group Layout"
+        },
+        {
+          "metadataType": "Layout",
+          "name": "CaseInteraction-Case Feed Layout"
+        },
+        {
+          "metadataType": "EclairGeoData"
+        },
+        {
+          "metadataType": "OmniUiCard|OmniDataTransform|OmniIntegrationProcedure|OmniInteractionAccessConfig|OmniInteractionConfig|OmniScript"
+        },
+        {
+          "metadataType": "DiscoveryAIModel"
+        },
+        {
+          "metadataType": "Translations"
+        },
+        {
+          "metadataType": "ManagedEventSubscription"
+        },
+        {
+          "metadataType": "Profile"
+        },
+        {
+          "metadataType": "PermissionSet"
+        },
+        {
+          "metadataType": "MutingPermissionSet"
+        },
+        {
+          "metadataType": "PermissionSetGroup"
+        }
+      ]
+    },
+    "fetchAllCustomSettings": false,
+    "maxInstancesPerType": 5000
+  },
+  "maxItemsInRetrieveRequest": 2500
+}
+2025-02-04T12:41:09.278Z debug adapter-components/client/rate_limit salesforce client rate limit config: {
+  total: 100,
+  retrieve: 3,
+  read: undefined,
+  list: undefined,
+  query: 4,
+  describe: undefined,
+  deploy: undefined
+}
+
+Fetching and applying changes from the account(s)
+This might take a few minutes. You can go grab your favorite beverage.
+The steps are: I. Fetching configs, II. Calculating difference and III. Applying the changes
+2025-02-04T12:41:09.280Z debug cli/outputer 
+Fetching and applying changes from the account(s)
+This might take a few minutes. You can go grab your favorite beverage.
+The steps are: I. Fetching configs, II. Calculating difference and III. Applying the changes
+
+
+2025-02-04T12:41:09.280Z debug cli/outputer 
+
+  >>> Fetching the latest configs from: salesforce
+2025-02-04T12:41:09.280Z debug cli/outputer   >>> Fetching the latest configs from: salesforce
+2025-02-04T12:41:09.281Z debug adapter-utils/decorators fetching account configuration starting
+2025-02-04T12:41:09.281Z debug adapter-components/client/rate_limit SFDC:client.listMetadataTypes() enqueued
+2025-02-04T12:41:09.288Z debug adapter-components/client/decorators SFDC:client.listMetadataTypes() starting
+2025-02-04T12:41:09.880Z debug salesforce-adapter/client/client Received headers: {
+  date: 'Tue, 04 Feb 2025 12:41:09 GMT',
+  'cache-control': 'no-cache,must-revalidate,max-age=0,no-store,private',
+  'set-cookie': [
+    'BrowserId=T0dEHuL1Ee-J4clAD1O34Q; domain=.salesforce.com; path=/; expires=Wed, 04-Feb-2026 12:41:09 GMT; Max-Age=31536000; secure; SameSite=None',
+    [length]: 1
+  ],
+  'content-type': 'text/xml; charset=utf-8',
+  vary: 'Accept-Encoding',
+  'content-length': '1860',
+  connection: 'close'
+} from request to path: //services/Soap/u/62.0
+2025-02-04T12:41:10.564Z debug salesforce-adapter/client/client org namespace: 
+2025-02-04T12:41:10.565Z debug adapter-components/client/decorators SFDC:client.listMetadataTypes() took 1277 ms
+2025-02-04T12:41:10.568Z debug adapter-components/client/rate_limit SFDC:client.listMetadataObjects(WebLink) enqueued
+2025-02-04T12:41:10.568Z debug adapter-components/client/rate_limit SFDC:client.listMetadataObjects(ValidationRule) enqueued
+2025-02-04T12:41:10.568Z debug adapter-components/client/rate_limit SFDC:client.listMetadataObjects(BusinessProcess) enqueued
+2025-02-04T12:41:10.568Z debug adapter-components/client/rate_limit SFDC:client.listMetadataObjects(RecordType) enqueued
+2025-02-04T12:41:10.568Z debug adapter-components/client/rate_limit SFDC:client.listMetadataObjects(ListView) enqueued
+2025-02-04T12:41:10.568Z debug adapter-components/client/rate_limit SFDC:client.listMetadataObjects(FieldSet) enqueued
+2025-02-04T12:41:10.568Z debug adapter-components/client/rate_limit SFDC:client.listMetadataObjects(CompactLayout) enqueued
+2025-02-04T12:41:10.568Z debug adapter-components/client/rate_limit SFDC:client.listMetadataObjects(SharingReason) enqueued
+2025-02-04T12:41:10.568Z debug adapter-components/client/rate_limit SFDC:client.listMetadataObjects(Index) enqueued
+2025-02-04T12:41:10.568Z debug adapter-components/client/rate_limit SFDC:client.listMetadataObjects(CustomObject) enqueued
+2025-02-04T12:41:10.568Z debug adapter-components/client/rate_limit SFDC:client.listMetadataObjects(CustomField) enqueued
+2025-02-04T12:41:10.574Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(WebLink) starting
+2025-02-04T12:41:10.574Z debug salesforce-adapter/client/client Sending chunked listMetadataObjects on [ { type: 'WebLink' }, [length]: 1 ]
+2025-02-04T12:41:10.577Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(ValidationRule) starting
+2025-02-04T12:41:10.578Z debug salesforce-adapter/client/client Sending chunked listMetadataObjects on [ { type: 'ValidationRule' }, [length]: 1 ]
+2025-02-04T12:41:10.580Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(BusinessProcess) starting
+2025-02-04T12:41:10.580Z debug salesforce-adapter/client/client Sending chunked listMetadataObjects on [ { type: 'BusinessProcess' }, [length]: 1 ]
+2025-02-04T12:41:10.583Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(RecordType) starting
+2025-02-04T12:41:10.583Z debug salesforce-adapter/client/client Sending chunked listMetadataObjects on [ { type: 'RecordType' }, [length]: 1 ]
+2025-02-04T12:41:10.586Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(ListView) starting
+2025-02-04T12:41:10.586Z debug salesforce-adapter/client/client Sending chunked listMetadataObjects on [ { type: 'ListView' }, [length]: 1 ]
+2025-02-04T12:41:10.588Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(FieldSet) starting
+2025-02-04T12:41:10.588Z debug salesforce-adapter/client/client Sending chunked listMetadataObjects on [ { type: 'FieldSet' }, [length]: 1 ]
+2025-02-04T12:41:10.590Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(CompactLayout) starting
+2025-02-04T12:41:10.590Z debug salesforce-adapter/client/client Sending chunked listMetadataObjects on [ { type: 'CompactLayout' }, [length]: 1 ]
+2025-02-04T12:41:10.593Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(SharingReason) starting
+2025-02-04T12:41:10.593Z debug salesforce-adapter/client/client Sending chunked listMetadataObjects on [ { type: 'SharingReason' }, [length]: 1 ]
+2025-02-04T12:41:10.596Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(Index) starting
+2025-02-04T12:41:10.596Z debug salesforce-adapter/client/client Sending chunked listMetadataObjects on [ { type: 'Index' }, [length]: 1 ]
+2025-02-04T12:41:10.599Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(CustomObject) starting
+2025-02-04T12:41:10.599Z debug salesforce-adapter/client/client Sending chunked listMetadataObjects on [ { type: 'CustomObject' }, [length]: 1 ]
+2025-02-04T12:41:10.602Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(CustomField) starting
+2025-02-04T12:41:10.603Z debug salesforce-adapter/client/client Sending chunked listMetadataObjects on [ { type: 'CustomField' }, [length]: 1 ]
+2025-02-04T12:41:10.751Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(BusinessProcess) took 170 ms
+2025-02-04T12:41:10.752Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(Index) took 156 ms
+2025-02-04T12:41:10.799Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(WebLink) took 225 ms
+2025-02-04T12:41:10.838Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(FieldSet) took 250 ms
+2025-02-04T12:41:10.893Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(RecordType) took 310 ms
+2025-02-04T12:41:10.894Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(SharingReason) took 301 ms
+2025-02-04T12:41:10.896Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(CompactLayout) took 306 ms
+2025-02-04T12:41:10.920Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(ValidationRule) took 343 ms
+2025-02-04T12:41:11.108Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(CustomObject) took 509 ms
+2025-02-04T12:41:11.148Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(ListView) took 562 ms
+2025-02-04T12:41:11.159Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(CustomField) took 557 ms
+2025-02-04T12:41:11.164Z debug salesforce-adapter/adapter going to fetch salesforce account configuration..
+        - salesforce adapter: Fetching types
+2025-02-04T12:41:11.165Z debug cli/outputer         - salesforce adapter: Fetching types
+2025-02-04T12:41:11.165Z debug adapter-utils/decorators fetching metadata types starting
+2025-02-04T12:41:11.165Z debug adapter-components/client/rate_limit SFDC:client.describeMetadataType(CustomObject) enqueued
+2025-02-04T12:41:11.173Z debug adapter-components/client/decorators SFDC:client.describeMetadataType(CustomObject) starting
+2025-02-04T12:41:11.607Z debug adapter-components/client/decorators SFDC:client.describeMetadataType(CustomObject) took 434 ms
+2025-02-04T12:41:11.611Z debug adapter-components/client/rate_limit SFDC:client.describeMetadataType(Language) enqueued
+2025-02-04T12:41:11.619Z debug adapter-components/client/decorators SFDC:client.describeMetadataType(Language) starting
+2025-02-04T12:41:11.739Z debug adapter-components/client/decorators SFDC:client.describeMetadataType(Language) took 119 ms
+2025-02-04T12:41:11.742Z debug adapter-utils/decorators fetching metadata types took 577 ms
+        - salesforce adapter: Fetching instances
+2025-02-04T12:41:11.742Z debug cli/outputer         - salesforce adapter: Fetching instances
+2025-02-04T12:41:11.743Z debug adapter-utils/decorators fetching instances starting
+2025-02-04T12:41:11.745Z debug adapter-components/client/rate_limit SFDC:client.listMetadataObjects(CustomObject) enqueued
+2025-02-04T12:41:11.751Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(CustomObject) starting
+2025-02-04T12:41:11.752Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(CustomObject) took 1 ms
+2025-02-04T12:41:11.762Z info salesforce-adapter/fetch going to retrieve 2 files
+2025-02-04T12:41:11.763Z debug salesforce-adapter/fetch Retrieved files: [ 'objects/new_CMT__mdt.object', 'objects/SecondCMT__mdt.object' ]
+2025-02-04T12:41:11.763Z debug salesforce-adapter/fetch retrieving types CustomObject
+2025-02-04T12:41:11.763Z debug adapter-components/client/rate_limit SFDC:client.retrieve() enqueued
+2025-02-04T12:41:11.772Z debug adapter-components/client/decorators SFDC:client.retrieve() starting
+2025-02-04T12:41:15.195Z debug adapter-components/client/decorators SFDC:client.retrieve() took 3423 ms
+2025-02-04T12:41:15.198Z debug salesforce-adapter/fetch retrieve result for types CustomObject: {
+  done: 'true',
+  id: '09SWU000004y4852AA',
+  status: 'Succeeded',
+  success: 'true'
+}
+2025-02-04T12:41:15.199Z debug salesforce-adapter/config_change Created the config changes [ [length]: 0 ]
+2025-02-04T12:41:15.203Z debug salesforce-adapter/transformers/xml_transformer retrieved zip contains the following files: ["unpackaged/objects/SecondCMT__mdt.object","unpackaged/objects/new_CMT__mdt.object","unpackaged/package.xml"]
+2025-02-04T12:41:15.215Z debug salesforce-adapter/transformers/xml_transformer xml parsing types  with diffs: []
+2025-02-04T12:41:15.216Z debug adapter-utils/decorators fetching instances took 3473 ms
+        - salesforce adapter: Fetching Metadata Settings types
+2025-02-04T12:41:15.217Z debug cli/outputer         - salesforce adapter: Fetching Metadata Settings types
+2025-02-04T12:41:15.217Z debug adapter-utils/decorators fetching Metadata Settings types starting
+2025-02-04T12:41:15.217Z debug adapter-utils/decorators fetching Metadata Settings types took 0 ms
+        - salesforce adapter: Running filters for additional information
+2025-02-04T12:41:15.217Z debug cli/outputer         - salesforce adapter: Running filters for additional information
+2025-02-04T12:41:15.222Z debug adapter-utils/filter (waveStaticFiles):onFetch starting
+2025-02-04T12:41:15.222Z debug adapter-utils/filter (waveStaticFiles):onFetch took 0 ms
+2025-02-04T12:41:15.222Z debug adapter-utils/filter (createMissingInstalledPackagesInstancesFilter):onFetch starting
+2025-02-04T12:41:15.223Z debug adapter-utils/filter (createMissingInstalledPackagesInstancesFilter):onFetch took 1 ms
+2025-02-04T12:41:15.223Z debug adapter-utils/filter (settingsFilter):onFetch starting
+2025-02-04T12:41:15.223Z debug adapter-utils/filter (settingsFilter):onFetch took 0 ms
+2025-02-04T12:41:15.223Z debug adapter-utils/filter (settingsFilterV2):onFetch starting
+2025-02-04T12:41:15.223Z debug adapter-utils/filter (settingsFilterV2):onFetch took 0 ms
+2025-02-04T12:41:15.223Z debug adapter-utils/filter (workflowFilter):onFetch starting
+2025-02-04T12:41:15.223Z debug adapter-utils/filter (workflowFilter):onFetch took 0 ms
+2025-02-04T12:41:15.223Z debug adapter-utils/filter (flowsFilter):onFetch starting
+2025-02-04T12:41:15.223Z debug adapter-utils/filter (flowsFilter):onFetch took 0 ms
+2025-02-04T12:41:15.223Z debug adapter-utils/filter (customMetadataToObjectTypeFilter):onFetch starting
+2025-02-04T12:41:15.227Z warn salesforce-adapter/filters/custom_metadata_to_object_type Could not find CustomMetadata ObjectType. Skipping filter.
+2025-02-04T12:41:15.227Z debug adapter-utils/filter (customMetadataToObjectTypeFilter):onFetch took 4 ms
+2025-02-04T12:41:15.227Z debug adapter-utils/filter (customObjectsFromDescribeFilter):onFetch starting
+2025-02-04T12:41:15.228Z debug adapter-components/client/rate_limit SFDC:client.listSObjects() enqueued
+2025-02-04T12:41:15.235Z debug adapter-components/client/decorators SFDC:client.listSObjects() starting
+2025-02-04T12:41:16.680Z debug salesforce-adapter/client/client Received headers: {
+  date: 'Tue, 04 Feb 2025 12:41:16 GMT',
+  'content-type': 'application/json;charset=UTF-8',
+  'transfer-encoding': 'chunked',
+  connection: 'close',
+  'cache-control': 'no-cache,must-revalidate,max-age=0,no-store,private',
+  'x-content-type-options': 'nosniff',
+  vary: 'Accept-Encoding',
+  'set-cookie': [
+    'CookieConsentPolicy=0:1; path=/; expires=Wed, 04-Feb-2026 12:41:15 GMT; Max-Age=31536000; secure',
+    'LSKey-c$CookieConsentPolicy=0:1; path=/; expires=Wed, 04-Feb-2026 12:41:15 GMT; Max-Age=31536000; secure',
+    'BrowserId=Uq_qAuL1Ee-eOnXUNsrW0A; domain=.salesforce.com; path=/; expires=Wed, 04-Feb-2026 12:41:15 GMT; Max-Age=31536000; secure; SameSite=None',
+    [length]: 3
+  ],
+  'strict-transport-security': 'max-age=63072000; includeSubDomains',
+  'last-modified': 'Mon, 03 Feb 2025 15:48:55 GMT',
+  'sforce-limit-info': 'api-usage=60/15000',
+  etag: '"aa9b1d57"',
+  'x-robots-tag': 'none',
+  server: 'sfdcedge',
+  'x-sfdc-request-id': '6a85472532adecd530500494ca32c41f',
+  'x-request-id': '6a85472532adecd530500494ca32c41f',
+  'x-sfdc-edge-cache': 'MISS'
+} from request to path: /services/data/v62.0/sobjects
+2025-02-04T12:41:16.741Z debug adapter-components/client/decorators SFDC:client.listSObjects() took 1506 ms
+2025-02-04T12:41:16.743Z debug adapter-components/client/rate_limit SFDC:client.describeSObjects() enqueued
+2025-02-04T12:41:16.750Z debug adapter-components/client/decorators SFDC:client.describeSObjects() starting
+2025-02-04T12:41:16.750Z debug salesforce-adapter/client/client Sending chunked describeSObjects on [ 'SecondCMT__mdt', 'new_CMT__mdt', [length]: 2 ]
+2025-02-04T12:41:17.013Z debug adapter-components/client/decorators SFDC:client.describeSObjects() took 263 ms
+2025-02-04T12:41:17.022Z debug salesforce-adapter/filters/custom_objects_from_soap_describe added 8 fields from soap API to salesforce._CustomObject.instance.SecondCMT__mdt, the fields are - Id, DeveloperName, MasterLabel, Language, NamespacePrefix, Label, QualifiedApiName, SystemModstamp
+2025-02-04T12:41:17.022Z debug salesforce-adapter/filters/custom_objects_from_soap_describe modified 1 fields from soap API to salesforce._CustomObject.instance.SecondCMT__mdt, the fields are - CMT_Relationship_To_newCMT__c
+2025-02-04T12:41:17.022Z debug salesforce-adapter/filters/custom_objects_from_soap_describe added 8 fields from soap API to salesforce._CustomObject.instance.new_CMT__mdt, the fields are - Id, DeveloperName, MasterLabel, Language, NamespacePrefix, Label, QualifiedApiName, SystemModstamp
+2025-02-04T12:41:17.022Z debug salesforce-adapter/filters/custom_objects_from_soap_describe modified 5 fields from soap API to salesforce._CustomObject.instance.new_CMT__mdt, the fields are - Name__c, Is_Cool__c, Almog_MDT_Relationship_Field__c, MDT_Relationship_Field_Definition__c, MDT_Relationship_Particle__c
+2025-02-04T12:41:17.022Z debug adapter-utils/filter (customObjectsFromDescribeFilter):onFetch took 1795 ms
+2025-02-04T12:41:17.022Z debug adapter-utils/filter (customSettingsFilter):onFetch starting
+2025-02-04T12:41:17.022Z debug adapter-utils/filter (customSettingsFilter):onFetch took 0 ms
+2025-02-04T12:41:17.022Z debug adapter-utils/filter (customObjectsToObjectTypeFilter):onFetch starting
+2025-02-04T12:41:17.022Z debug salesforce-adapter/filters/custom_objects_to_object_type Replacing custom object instances with object types
+2025-02-04T12:41:17.042Z debug salesforce-adapter/filters/custom_objects_to_object_type Changing paths for instances that are nested under custom objects
+2025-02-04T12:41:17.047Z debug adapter-utils/filter (customObjectsToObjectTypeFilter):onFetch took 25 ms
+2025-02-04T12:41:17.047Z debug adapter-utils/filter (organizationSettings):onFetch starting
+2025-02-04T12:41:17.047Z debug adapter-components/client/rate_limit SFDC:client.describeSObjects() enqueued
+2025-02-04T12:41:17.053Z debug adapter-components/client/decorators SFDC:client.describeSObjects() starting
+2025-02-04T12:41:17.053Z debug salesforce-adapter/client/client Sending chunked describeSObjects on [ 'Organization', [length]: 1 ]
+2025-02-04T12:41:17.664Z debug adapter-components/client/decorators SFDC:client.describeSObjects() took 611 ms
+2025-02-04T12:41:17.669Z debug adapter-components/client/rate_limit SFDC:client.query(SELECT FIELDS(ALL) FROM Organization LIMIT 200) enqueued
+2025-02-04T12:41:17.676Z debug adapter-components/client/decorators SFDC:client.query(SELECT FIELDS(ALL) FROM Organization LIMIT 200) starting
+2025-02-04T12:41:17.867Z debug salesforce-adapter/client/client Received headers: {
+  date: 'Tue, 04 Feb 2025 12:41:17 GMT',
+  'content-type': 'application/json;charset=UTF-8',
+  'transfer-encoding': 'chunked',
+  connection: 'close',
+  'set-cookie': [
+    'CookieConsentPolicy=0:1; path=/; expires=Wed, 04-Feb-2026 12:41:17 GMT; Max-Age=31536000; secure',
+    'LSKey-c$CookieConsentPolicy=0:1; path=/; expires=Wed, 04-Feb-2026 12:41:17 GMT; Max-Age=31536000; secure',
+    'BrowserId=VCOea-L1Ee-f21O2rbpuSg; domain=.salesforce.com; path=/; expires=Wed, 04-Feb-2026 12:41:17 GMT; Max-Age=31536000; secure; SameSite=None',
+    [length]: 3
+  ],
+  'x-content-type-options': 'nosniff',
+  'x-robots-tag': 'none',
+  'strict-transport-security': 'max-age=63072000; includeSubDomains',
+  vary: 'Accept-Encoding',
+  'sforce-limit-info': 'api-usage=61/15000',
+  'cache-control': 'no-cache,must-revalidate,max-age=0,no-store,private',
+  server: 'sfdcedge',
+  'x-sfdc-request-id': '66332bf19d89811636565974e1f8a27c',
+  'x-request-id': '66332bf19d89811636565974e1f8a27c',
+  'x-sfdc-edge-cache': 'MISS'
+} from request to path: /services/data/v62.0/query?q=SELECT%20FIELDS(ALL)%20FROM%20Organization%20LIMIT%20200
+2025-02-04T12:41:17.870Z debug adapter-components/client/decorators SFDC:client.query(SELECT FIELDS(ALL) FROM Organization LIMIT 200) took 194 ms
+2025-02-04T12:41:17.874Z debug adapter-components/client/decorators SFDC:client.request(/services/data/) starting
+2025-02-04T12:41:18.010Z debug salesforce-adapter/client/client Received headers: {
+  date: 'Tue, 04 Feb 2025 12:41:18 GMT',
+  'content-type': 'application/json;charset=UTF-8',
+  'transfer-encoding': 'chunked',
+  connection: 'close',
+  'x-content-type-options': 'nosniff',
+  'strict-transport-security': 'max-age=63072000; includeSubDomains',
+  'cache-control': 'no-cache,must-revalidate,max-age=0,no-store,private',
+  vary: 'Accept-Encoding',
+  'x-robots-tag': 'none',
+  'set-cookie': [
+    'CookieConsentPolicy=0:1; path=/; expires=Wed, 04-Feb-2026 12:41:18 GMT; Max-Age=31536000; secure',
+    'LSKey-c$CookieConsentPolicy=0:1; path=/; expires=Wed, 04-Feb-2026 12:41:18 GMT; Max-Age=31536000; secure',
+    'BrowserId=VEJxeeL1Ee-r91WfFgmiFQ; domain=.salesforce.com; path=/; expires=Wed, 04-Feb-2026 12:41:18 GMT; Max-Age=31536000; secure; SameSite=None',
+    [length]: 3
+  ],
+  server: 'sfdcedge',
+  'x-sfdc-request-id': '4fff762d3ea444f8743568ee9af55364',
+  'x-request-id': '4fff762d3ea444f8743568ee9af55364',
+  'x-sfdc-edge-cache': 'MISS'
+} from request to path: /services/data/
+2025-02-04T12:41:18.012Z debug adapter-components/client/decorators SFDC:client.request(/services/data/) took 138 ms
+2025-02-04T12:41:18.014Z debug adapter-utils/filter (organizationSettings):onFetch took 967 ms
+2025-02-04T12:41:18.014Z debug adapter-utils/filter (customObjectsInstancesFilter):onFetch starting
+2025-02-04T12:41:18.015Z debug adapter-utils/filter (customObjectsInstancesFilter):onFetch took 1 ms
+2025-02-04T12:41:18.015Z debug adapter-utils/filter (removeFieldsAndValuesFilter):onFetch starting
+2025-02-04T12:41:18.015Z debug adapter-utils/filter (removeFieldsAndValuesFilter):onFetch took 0 ms
+2025-02-04T12:41:18.016Z debug adapter-utils/filter (removeRestrictionAnnotationsFilter):onFetch starting
+2025-02-04T12:41:18.016Z debug adapter-utils/filter (removeRestrictionAnnotationsFilter):onFetch took 0 ms
+2025-02-04T12:41:18.016Z debug adapter-utils/filter (addMissingIdsFilter):onFetch starting
+2025-02-04T12:41:18.019Z debug salesforce-adapter/filters/add_missing_ids Getting missing ids for the following types: CustomField,ValidationRule
+2025-02-04T12:41:18.019Z debug adapter-components/client/rate_limit SFDC:client.listMetadataObjects(CustomField) enqueued
+2025-02-04T12:41:18.020Z debug adapter-components/client/rate_limit SFDC:client.listMetadataObjects(ValidationRule) enqueued
+2025-02-04T12:41:18.027Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(CustomField) starting
+2025-02-04T12:41:18.027Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(CustomField) took 0 ms
+2025-02-04T12:41:18.031Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(ValidationRule) starting
+2025-02-04T12:41:18.031Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(ValidationRule) took 0 ms
+2025-02-04T12:41:18.035Z debug adapter-utils/filter (addMissingIdsFilter):onFetch took 18 ms
+2025-02-04T12:41:18.035Z debug adapter-utils/filter (customMetadataRecordsFilter):onFetch starting
+2025-02-04T12:41:18.045Z debug adapter-utils/filter (customMetadataRecordsFilter):onFetch took 10 ms
+2025-02-04T12:41:18.045Z debug adapter-utils/filter (layoutFilter):onFetch starting
+2025-02-04T12:41:18.045Z debug adapter-utils/filter (layoutFilter):onFetch took 0 ms
+2025-02-04T12:41:18.045Z debug adapter-utils/filter (emailTemplateFilter):onFetch starting
+2025-02-04T12:41:18.045Z debug adapter-utils/filter (emailTemplateFilter):onFetch took 0 ms
+2025-02-04T12:41:18.045Z debug adapter-utils/filter (standardValueSetFilter):onFetch starting
+2025-02-04T12:41:18.046Z debug adapter-utils/filter (standardValueSetFilter):onFetch took 1 ms
+2025-02-04T12:41:18.046Z debug adapter-utils/filter (cpqLookupFieldsFilter):onFetch starting
+2025-02-04T12:41:18.046Z debug salesforce-adapter/filters/cpq/lookup_fields Started replacing lookupObject values with references
+2025-02-04T12:41:18.046Z debug salesforce-adapter/filters/cpq/lookup_fields Finished replacing lookupObject values with references
+2025-02-04T12:41:18.046Z debug adapter-utils/filter (cpqLookupFieldsFilter):onFetch took 0 ms
+2025-02-04T12:41:18.046Z debug adapter-utils/filter (convertMapsFilter):onFetch starting
+2025-02-04T12:41:18.047Z debug adapter-utils/filter (convertMapsFilter):onFetch took 1 ms
+2025-02-04T12:41:18.047Z debug adapter-utils/filter (flowFilter):onFetch starting
+2025-02-04T12:41:18.047Z debug adapter-utils/filter (flowFilter):onFetch took 0 ms
+2025-02-04T12:41:18.047Z debug adapter-utils/filter (elementsUrlFilter):onFetch starting
+2025-02-04T12:41:18.053Z debug adapter-utils/filter (elementsUrlFilter):onFetch took 6 ms
+2025-02-04T12:41:18.053Z debug adapter-utils/filter (customObjectInstanceReferencesFilter):onFetch starting
+2025-02-04T12:41:18.053Z debug adapter-utils/filter (customObjectInstanceReferencesFilter):onFetch took 0 ms
+2025-02-04T12:41:18.053Z debug adapter-utils/filter (cpqReferencableFieldReferencesFilter):onFetch starting
+2025-02-04T12:41:18.053Z debug adapter-utils/filter (cpqReferencableFieldReferencesFilter):onFetch took 0 ms
+2025-02-04T12:41:18.053Z debug adapter-utils/filter (cpqCustomScriptFilter):onFetch starting
+2025-02-04T12:41:18.054Z debug adapter-utils/filter (cpqCustomScriptFilter):onFetch took 1 ms
+2025-02-04T12:41:18.054Z debug adapter-utils/filter (cpqRulesAndConditionsFilter):onFetch starting
+2025-02-04T12:41:18.054Z debug salesforce-adapter/filters/cpq/rules_and_conditions_refs No rule instances were fetched. Skipping filter
+2025-02-04T12:41:18.054Z debug adapter-utils/filter (cpqRulesAndConditionsFilter):onFetch took 0 ms
+2025-02-04T12:41:18.054Z debug adapter-utils/filter (animationRulesFilter):onFetch starting
+2025-02-04T12:41:18.054Z debug adapter-utils/filter (animationRulesFilter):onFetch took 0 ms
+2025-02-04T12:41:18.054Z debug adapter-utils/filter (samlInitMethodFilter):onFetch starting
+2025-02-04T12:41:18.054Z debug adapter-utils/filter (samlInitMethodFilter):onFetch took 0 ms
+2025-02-04T12:41:18.054Z debug adapter-utils/filter (topicsForObjectsFilter):onFetch starting
+2025-02-04T12:41:18.054Z debug salesforce-adapter/filters/topics_for_objects skipping topicsForObjectsFilter since the MetadataType TopicsForObjects is excluded
+2025-02-04T12:41:18.054Z debug adapter-utils/filter (topicsForObjectsFilter):onFetch took 0 ms
+2025-02-04T12:41:18.054Z debug adapter-utils/filter (globalValueSetFilter):onFetch starting
+2025-02-04T12:41:18.059Z debug adapter-utils/filter (globalValueSetFilter):onFetch took 5 ms
+2025-02-04T12:41:18.059Z debug adapter-utils/filter (staticResourceFileExtFilter):onFetch starting
+2025-02-04T12:41:18.059Z debug adapter-utils/filter (staticResourceFileExtFilter):onFetch took 0 ms
+2025-02-04T12:41:18.059Z debug adapter-utils/filter (staticResourceZipTimestampFilter):onFetch starting
+2025-02-04T12:41:18.059Z debug adapter-utils/filter (staticResourceZipTimestampFilter):onFetch took 0 ms
+2025-02-04T12:41:18.059Z debug adapter-utils/filter (extendTriggersMetadata):onFetch starting
+2025-02-04T12:41:18.059Z debug salesforce-adapter/filters/extend_triggers_metadata ApexTrigger MetadataType not found. Skipping filter
+2025-02-04T12:41:18.059Z debug adapter-utils/filter (extendTriggersMetadata):onFetch took 0 ms
+2025-02-04T12:41:18.059Z debug adapter-utils/filter (profilePathsFilter):onFetch starting
+2025-02-04T12:41:18.059Z debug adapter-utils/filter (profilePathsFilter):onFetch took 0 ms
+2025-02-04T12:41:18.059Z debug adapter-utils/filter (territoryFilter):onFetch starting
+2025-02-04T12:41:18.059Z debug adapter-utils/filter (territoryFilter):onFetch took 0 ms
+2025-02-04T12:41:18.060Z debug adapter-utils/filter (nestedInstancesAuthorFilter):onFetch starting
+2025-02-04T12:41:18.060Z debug adapter-components/client/rate_limit SFDC:client.listMetadataObjects(ValidationRule) enqueued
+2025-02-04T12:41:18.067Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(ValidationRule) starting
+2025-02-04T12:41:18.067Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(ValidationRule) took 0 ms
+2025-02-04T12:41:18.070Z debug adapter-utils/filter (nestedInstancesAuthorFilter):onFetch took 11 ms
+2025-02-04T12:41:18.070Z debug adapter-utils/filter (customObjectAuthorFilter):onFetch starting
+2025-02-04T12:41:18.070Z debug adapter-components/client/rate_limit SFDC:client.listMetadataObjects(CustomObject) enqueued
+2025-02-04T12:41:18.077Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(CustomObject) starting
+2025-02-04T12:41:18.077Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(CustomObject) took 0 ms
+2025-02-04T12:41:18.080Z debug adapter-components/client/rate_limit SFDC:client.listMetadataObjects(CustomField) enqueued
+2025-02-04T12:41:18.087Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(CustomField) starting
+2025-02-04T12:41:18.087Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(CustomField) took 0 ms
+2025-02-04T12:41:18.091Z debug adapter-utils/filter (customObjectAuthorFilter):onFetch took 21 ms
+2025-02-04T12:41:18.091Z debug adapter-utils/filter (dataInstancesAuthorFilter):onFetch starting
+2025-02-04T12:41:18.091Z debug adapter-components/client/rate_limit SFDC:client.query(SELECT Id,Name FROM User) enqueued
+2025-02-04T12:41:18.099Z debug adapter-components/client/decorators SFDC:client.query(SELECT Id,Name FROM User) starting
+2025-02-04T12:41:18.262Z debug salesforce-adapter/client/client Received headers: {
+  date: 'Tue, 04 Feb 2025 12:41:18 GMT',
+  'content-type': 'application/json;charset=UTF-8',
+  'transfer-encoding': 'chunked',
+  connection: 'close',
+  'set-cookie': [
+    'CookieConsentPolicy=0:1; path=/; expires=Wed, 04-Feb-2026 12:41:18 GMT; Max-Age=31536000; secure',
+    'LSKey-c$CookieConsentPolicy=0:1; path=/; expires=Wed, 04-Feb-2026 12:41:18 GMT; Max-Age=31536000; secure',
+    'BrowserId=VGO0wOL1Ee-9j33m0XV5VA; domain=.salesforce.com; path=/; expires=Wed, 04-Feb-2026 12:41:18 GMT; Max-Age=31536000; secure; SameSite=None',
+    [length]: 3
+  ],
+  'x-content-type-options': 'nosniff',
+  'x-robots-tag': 'none',
+  'strict-transport-security': 'max-age=63072000; includeSubDomains',
+  vary: 'Accept-Encoding',
+  'sforce-limit-info': 'api-usage=63/15000',
+  'cache-control': 'no-cache,must-revalidate,max-age=0,no-store,private',
+  server: 'sfdcedge',
+  'x-sfdc-request-id': '1d20caf855c8fae45ad65900cb163b73',
+  'x-request-id': '1d20caf855c8fae45ad65900cb163b73',
+  'x-sfdc-edge-cache': 'MISS'
+} from request to path: /services/data/v62.0/query?q=SELECT%20Id%2CName%20FROM%20User
+2025-02-04T12:41:18.263Z debug adapter-components/client/decorators SFDC:client.query(SELECT Id,Name FROM User) took 164 ms
+2025-02-04T12:41:18.267Z debug adapter-utils/filter (dataInstancesAuthorFilter):onFetch took 175 ms
+2025-02-04T12:41:18.267Z debug adapter-utils/filter (sharingRulesAuthorFilter):onFetch starting
+2025-02-04T12:41:18.267Z debug adapter-components/client/rate_limit SFDC:client.listMetadataObjects(SharingCriteriaRule) enqueued
+2025-02-04T12:41:18.276Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(SharingCriteriaRule) starting
+2025-02-04T12:41:18.276Z debug salesforce-adapter/client/client Sending chunked listMetadataObjects on [ { type: 'SharingCriteriaRule' }, [length]: 1 ]
+2025-02-04T12:41:18.277Z debug salesforce-adapter/client/client Sending chunked listMetadataObjects on [ { type: 'SharingGuestRule' }, [length]: 1 ]
+2025-02-04T12:41:18.278Z debug salesforce-adapter/client/client Sending chunked listMetadataObjects on [ { type: 'SharingOwnerRule' }, [length]: 1 ]
+2025-02-04T12:41:19.427Z debug adapter-components/client/decorators SFDC:client.listMetadataObjects(SharingCriteriaRule) took 1151 ms
+2025-02-04T12:41:19.431Z debug adapter-utils/filter (sharingRulesAuthorFilter):onFetch took 1164 ms
+2025-02-04T12:41:19.431Z debug adapter-utils/filter (hideReadOnlyValuesFilter):onFetch starting
+2025-02-04T12:41:19.432Z debug adapter-utils/filter (hideReadOnlyValuesFilter):onFetch took 1 ms
+2025-02-04T12:41:19.432Z debug adapter-utils/filter (currencyIsoCodeFilter):onFetch starting
+2025-02-04T12:41:19.433Z debug adapter-utils/filter (currencyIsoCodeFilter):onFetch took 1 ms
+2025-02-04T12:41:19.433Z debug adapter-utils/filter (splitCustomLabels):onFetch starting
+2025-02-04T12:41:19.433Z info salesforce-adapter/filters/split_custom_labels CustomLabel type does not exist, skipping filter
+2025-02-04T12:41:19.434Z debug adapter-utils/filter (splitCustomLabels):onFetch took 0 ms
+2025-02-04T12:41:19.434Z debug adapter-utils/filter (xmlAttributesFilter):onFetch starting
+2025-02-04T12:41:19.434Z debug adapter-utils/filter (xmlAttributesFilter):onFetch took 0 ms
+2025-02-04T12:41:19.434Z debug adapter-utils/filter (formulaDeps):onFetch starting
+2025-02-04T12:41:19.441Z debug adapter-utils/filter (formulaDeps):onFetch took 7 ms
+2025-02-04T12:41:19.441Z debug adapter-utils/filter (centralizeTrackingInfo):onFetch starting
+2025-02-04T12:41:19.442Z debug adapter-utils/filter (centralizeTrackingInfo):onFetch took 1 ms
+2025-02-04T12:41:19.442Z debug adapter-utils/filter (convertListsFilter):onFetch starting
+2025-02-04T12:41:19.446Z debug adapter-utils/filter (convertListsFilter):onFetch took 4 ms
+2025-02-04T12:41:19.446Z debug adapter-utils/filter (convertTypeFilter):onFetch starting
+2025-02-04T12:41:19.447Z debug adapter-utils/filter (convertTypeFilter):onFetch took 1 ms
+2025-02-04T12:41:19.447Z debug adapter-utils/filter (enumFieldPermissionsFilter):onFetch starting
+2025-02-04T12:41:19.447Z debug adapter-utils/filter (enumFieldPermissionsFilter):onFetch took 0 ms
+2025-02-04T12:41:19.447Z debug adapter-utils/filter (replaceFieldValuesFilter):onFetch starting
+2025-02-04T12:41:19.453Z debug adapter-utils/filter (replaceFieldValuesFilter):onFetch took 6 ms
+2025-02-04T12:41:19.453Z debug adapter-utils/filter (valueToStaticFileFilter):onFetch starting
+2025-02-04T12:41:19.453Z debug adapter-utils/filter (valueToStaticFileFilter):onFetch took 0 ms
+2025-02-04T12:41:19.453Z debug adapter-utils/filter (addParentToRecordTriggeredFlows):onFetch starting
+2025-02-04T12:41:19.457Z debug salesforce-adapter/filters/add_parent_to_record_triggered_flows filter created 0 references in total
+2025-02-04T12:41:19.457Z debug adapter-utils/filter (addParentToRecordTriggeredFlows):onFetch took 4 ms
+2025-02-04T12:41:19.457Z debug adapter-utils/filter (addParentToApprovalProcess):onFetch starting
+2025-02-04T12:41:19.461Z debug salesforce-adapter/filters/add_parent_to_approval_process filter created 0 references in total
+2025-02-04T12:41:19.462Z debug adapter-utils/filter (addParentToApprovalProcess):onFetch took 4 ms
+2025-02-04T12:41:19.462Z debug adapter-utils/filter (fieldReferencesFilter):onFetch starting
+2025-02-04T12:41:19.469Z debug salesforce-adapter/filters/field_references added references in the following fields: []
+2025-02-04T12:41:19.469Z debug adapter-utils/filter (fieldReferencesFilter):onFetch took 7 ms
+2025-02-04T12:41:19.469Z debug adapter-utils/filter (referenceAnnotationsFilter):onFetch starting
+2025-02-04T12:41:19.473Z debug adapter-utils/filter (referenceAnnotationsFilter):onFetch took 4 ms
+2025-02-04T12:41:19.473Z debug adapter-utils/filter (foreignKeyReferencesFilter):onFetch starting
+2025-02-04T12:41:19.478Z debug adapter-utils/filter (foreignKeyReferencesFilter):onFetch took 5 ms
+2025-02-04T12:41:19.478Z debug adapter-utils/filter (extraDependenciesFilter):onFetch starting
+2025-02-04T12:41:19.478Z debug salesforce-adapter/filters/extra_dependencies about to query dependencies for 108 elements with 500 initialChunkSize
+2025-02-04T12:41:19.479Z debug adapter-components/client/rate_limit SFDC:client.query(SELECT 
+    MetadataComponentId, MetadataComponentType, MetadataComponentName, 
+    RefMetadataComponentId, RefMetadataComponentType, RefMetadataComponentName 
+  FROM MetadataComponentDependency WHERE MetadataComponentId IN ('01IWU000001rUFV2A2', '01IWU000002phUo2AI', '03dWU000005I5pZYAS', '03dWU000005gXKrYAM', '03dWU000005gXPhYAM')) enqueued
+2025-02-04T12:41:19.486Z debug adapter-components/client/decorators SFDC:client.query(SELECT 
+    MetadataComponentId, MetadataComponentType, MetadataComponentName, 
+    RefMetadataComponentId, RefMetadataComponentType, RefMetadataComponentName 
+  FROM MetadataComponentDependency WHERE MetadataComponentId IN ('01IWU000001rUFV2A2', '01IWU000002phUo2AI', '03dWU000005I5pZYAS', '03dWU000005gXKrYAM', '03dWU000005gXPhYAM')) starting
+2025-02-04T12:41:19.673Z debug salesforce-adapter/client/client Received headers: {
+  date: 'Tue, 04 Feb 2025 12:41:19 GMT',
+  'content-type': 'application/json;charset=UTF-8',
+  'transfer-encoding': 'chunked',
+  connection: 'close',
+  'x-content-type-options': 'nosniff',
+  vary: 'Accept-Encoding',
+  'x-robots-tag': 'none',
+  'set-cookie': [
+    'CookieConsentPolicy=0:1; path=/; expires=Wed, 04-Feb-2026 12:41:19 GMT; Max-Age=31536000; secure',
+    'LSKey-c$CookieConsentPolicy=0:1; path=/; expires=Wed, 04-Feb-2026 12:41:19 GMT; Max-Age=31536000; secure',
+    'BrowserId=VTbjluL1Ee-K-DvOVorisQ; domain=.salesforce.com; path=/; expires=Wed, 04-Feb-2026 12:41:19 GMT; Max-Age=31536000; secure; SameSite=None',
+    [length]: 3
+  ],
+  'sforce-limit-info': 'api-usage=64/15000',
+  'strict-transport-security': 'max-age=63072000; includeSubDomains',
+  'cache-control': 'no-cache,must-revalidate,max-age=0,no-store,private',
+  server: 'sfdcedge',
+  'x-sfdc-request-id': '102e50b295861633afbf9ec63e4a5c30',
+  'x-request-id': '102e50b295861633afbf9ec63e4a5c30',
+  'x-sfdc-edge-cache': 'MISS'
+} from request to path: /services/data/v62.0/tooling/query?q=SELECT%20%0A%20%20%20%20MetadataComponentId%2C%20MetadataComponentType%2C%20MetadataComponentName%2C%20%0A%20%20%20%20RefMetadataComponentId%2C%20RefMetadataComponentType%2C%20RefMetadataComponentName%20%0A%20%20FROM%20MetadataComponentDependency%20WHERE%20MetadataComponentId%20IN%20(%2701IWU000001rUFV2A2%27%2C%20%2701IWU000002phUo2AI%27%2C%20%2703dWU000005I5pZYAS%27%2C%20%2703dWU000005gXKrYAM%27%2C%20%2703dWU000005gXPhYAM%27)
+2025-02-04T12:41:19.674Z debug adapter-components/client/decorators SFDC:client.query(SELECT 
+    MetadataComponentId, MetadataComponentType, MetadataComponentName, 
+    RefMetadataComponentId, RefMetadataComponentType, RefMetadataComponentName 
+  FROM MetadataComponentDependency WHERE MetadataComponentId IN ('01IWU000001rUFV2A2', '01IWU000002phUo2AI', '03dWU000005I5pZYAS', '03dWU000005gXKrYAM', '03dWU000005gXPhYAM')) took 188 ms
+2025-02-04T12:41:19.678Z debug salesforce-adapter/filters/extra_dependencies Queried 2 dependencies for 5 elements, the last 3 elements are [ '03dWU000005I5pZYAS', '03dWU000005gXKrYAM', '03dWU000005gXPhYAM' ]
+2025-02-04T12:41:19.679Z debug salesforce-adapter/filters/extra_dependencies query extra dependencies info: {"queriesExecuted":1,"idsCount":5,"totalQueriedDependencies":2}
+2025-02-04T12:41:19.690Z debug salesforce-adapter/filters/extra_dependencies Added 2 extra dependencies
+2025-02-04T12:41:19.691Z debug adapter-utils/filter (extraDependenciesFilter):onFetch took 213 ms
+2025-02-04T12:41:19.691Z debug adapter-utils/filter (installedPackageGeneratedDependencies):onFetch starting
+2025-02-04T12:41:19.691Z debug salesforce-adapter/filters/installed_package_generated_dependencies About to add InstalledPackage generated dependencies to Elements from the following namespaces: []
+2025-02-04T12:41:19.697Z debug salesforce-adapter/filters/installed_package_generated_dependencies Managed elements custom references handler enabled, not adding explicit references.
+2025-02-04T12:41:19.697Z debug adapter-utils/filter (installedPackageGeneratedDependencies):onFetch took 6 ms
+2025-02-04T12:41:19.697Z debug adapter-utils/filter (omitStandardFieldsNonDeployableValues):onFetch starting
+2025-02-04T12:41:19.697Z debug adapter-utils/filter (omitStandardFieldsNonDeployableValues):onFetch took 0 ms
+2025-02-04T12:41:19.697Z debug adapter-utils/filter (picklistReferences):onFetch starting
+2025-02-04T12:41:19.702Z debug adapter-utils/filter (picklistReferences):onFetch took 5 ms
+2025-02-04T12:41:19.702Z debug adapter-utils/filter (taskAndEventCustomFields):onFetch starting
+2025-02-04T12:41:19.702Z debug salesforce-adapter/filters/task_and_event_custom_fields Activity Object not found
+2025-02-04T12:41:19.702Z debug adapter-utils/filter (taskAndEventCustomFields):onFetch took 0 ms
+2025-02-04T12:41:19.702Z debug adapter-utils/filter (mergeProfilesWithSourceValues):onFetch starting
+2025-02-04T12:41:19.703Z debug adapter-utils/filter (mergeProfilesWithSourceValues):onFetch took 1 ms
+2025-02-04T12:41:19.703Z debug adapter-utils/filter (profilesAndPermissionSetsBrokenPaths):onFetch starting
+2025-02-04T12:41:19.703Z debug adapter-utils/filter (profilesAndPermissionSetsBrokenPaths):onFetch took 0 ms
+2025-02-04T12:41:19.703Z debug adapter-utils/filter (fetchTargetsFilter):onFetch starting
+2025-02-04T12:41:19.703Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.MetadataRelationship for field salesforce.new_CMT__mdt.field.Almog_MDT_Relationship_Field__c
+2025-02-04T12:41:19.703Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.Checkbox for field salesforce.new_CMT__mdt.field.Is_Cool__c
+2025-02-04T12:41:19.703Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.MetadataRelationship for field salesforce.new_CMT__mdt.field.MDT_Relationship_Field_Definition__c
+2025-02-04T12:41:19.703Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.MetadataRelationship for field salesforce.new_CMT__mdt.field.MDT_Relationship_Particle__c
+2025-02-04T12:41:19.703Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.Text for field salesforce.new_CMT__mdt.field.Name__c
+2025-02-04T12:41:19.703Z warn salesforce-adapter/filters/utils Unknown reference field type serviceid for field salesforce.new_CMT__mdt.field.Id
+2025-02-04T12:41:19.703Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.Text for field salesforce.new_CMT__mdt.field.DeveloperName
+2025-02-04T12:41:19.703Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.Text for field salesforce.new_CMT__mdt.field.MasterLabel
+2025-02-04T12:41:19.703Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.Picklist for field salesforce.new_CMT__mdt.field.Language
+2025-02-04T12:41:19.703Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.Text for field salesforce.new_CMT__mdt.field.NamespacePrefix
+2025-02-04T12:41:19.703Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.Text for field salesforce.new_CMT__mdt.field.Label
+2025-02-04T12:41:19.704Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.Text for field salesforce.new_CMT__mdt.field.QualifiedApiName
+2025-02-04T12:41:19.704Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.DateTime for field salesforce.new_CMT__mdt.field.SystemModstamp
+2025-02-04T12:41:19.704Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.MetadataRelationship for field salesforce.SecondCMT__mdt.field.CMT_Relationship_To_newCMT__c
+2025-02-04T12:41:19.704Z warn salesforce-adapter/filters/utils Unknown reference field type serviceid for field salesforce.SecondCMT__mdt.field.Id
+2025-02-04T12:41:19.704Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.Text for field salesforce.SecondCMT__mdt.field.DeveloperName
+2025-02-04T12:41:19.704Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.Text for field salesforce.SecondCMT__mdt.field.MasterLabel
+2025-02-04T12:41:19.704Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.Picklist for field salesforce.SecondCMT__mdt.field.Language
+2025-02-04T12:41:19.704Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.Text for field salesforce.SecondCMT__mdt.field.NamespacePrefix
+2025-02-04T12:41:19.704Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.Text for field salesforce.SecondCMT__mdt.field.Label
+2025-02-04T12:41:19.704Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.Text for field salesforce.SecondCMT__mdt.field.QualifiedApiName
+2025-02-04T12:41:19.704Z warn salesforce-adapter/filters/utils Unknown reference field type salesforce.DateTime for field salesforce.SecondCMT__mdt.field.SystemModstamp
+2025-02-04T12:41:19.704Z debug adapter-utils/filter (fetchTargetsFilter):onFetch took 1 ms
+2025-02-04T12:41:19.704Z debug adapter-utils/filter (customTypeSplit):onFetch starting
+2025-02-04T12:41:19.705Z debug adapter-utils/filter (customTypeSplit):onFetch took 1 ms
+2025-02-04T12:41:19.705Z debug adapter-utils/filter (profileInstanceSplitFilter):onFetch starting
+2025-02-04T12:41:19.706Z debug adapter-utils/filter (profileInstanceSplitFilter):onFetch took 1 ms
+2025-02-04T12:41:19.706Z debug adapter-utils/filter (removeUnixTimeZero):onFetch starting
+2025-02-04T12:41:19.706Z debug adapter-utils/filter (removeUnixTimeZero):onFetch took 0 ms
+2025-02-04T12:41:19.706Z debug adapter-utils/filter (metadataInstancesAliases):onFetch starting
+2025-02-04T12:41:19.706Z debug adapter-utils/filter (metadataInstancesAliases):onFetch took 0 ms
+2025-02-04T12:41:19.706Z debug adapter-utils/filter (salesforceImportantValuesFilter):onFetch starting
+2025-02-04T12:41:19.706Z debug adapter-utils/filter (salesforceImportantValuesFilter):onFetch took 0 ms
+2025-02-04T12:41:19.706Z debug adapter-utils/filter (hideTypesFolder):onFetch starting
+2025-02-04T12:41:19.707Z debug adapter-utils/filter (hideTypesFolder):onFetch took 1 ms
+2025-02-04T12:41:19.707Z debug adapter-utils/filter (flowCoordinates):onFetch starting
+2025-02-04T12:41:19.707Z debug adapter-utils/filter (flowCoordinates):onFetch took 0 ms
+2025-02-04T12:41:19.707Z debug adapter-utils/filter (changedAtSingletonFilter):onFetch starting
+2025-02-04T12:41:19.726Z debug workspace/expressions resolve 106 elements starting
+2025-02-04T12:41:19.729Z debug workspace/expressions resolve handled a total of 131 elements
+2025-02-04T12:41:19.729Z debug workspace/expressions resolve 106 elements took 3 ms
+2025-02-04T12:41:19.730Z debug adapter-utils/filter (changedAtSingletonFilter):onFetch took 23 ms
+2025-02-04T12:41:19.730Z debug adapter-utils/filter (addParentToInstancesWithinFolderFilter):onFetch starting
+2025-02-04T12:41:19.730Z warn adapter-utils/element_source duplicate ElemIDs of elementSource found. the duplicates are salesforce.SecondCMT__mdt,salesforce.new_CMT__mdt
+2025-02-04T12:41:19.732Z debug salesforce-adapter/filters/add_parent_to_instances_within_folder addParentToInstancesWithinFolderFilter created 0 references in total
+2025-02-04T12:41:19.732Z debug adapter-utils/filter (addParentToInstancesWithinFolderFilter):onFetch took 2 ms
+2025-02-04T12:41:19.733Z debug adapter-components/client/decorators SFDC:client.awaitCompletionOfAllListRequests() starting
+2025-02-04T12:41:19.733Z debug adapter-components/client/decorators SFDC:client.awaitCompletionOfAllListRequests() took 1 ms
+2025-02-04T12:41:19.733Z debug adapter-utils/decorators fetching account configuration took 10452 ms
+2025-02-04T12:41:19.737Z debug core/core/fetch fetched 114 elements from adapters
+2025-02-04T12:41:19.743Z debug workspace/merger/index merged 114 elements to 110 elements [errors=0]
+2025-02-04T12:41:19.743Z debug core/core/fetch process merge errors for 0 errors starting
+2025-02-04T12:41:19.744Z debug core/core/fetch process merge errors for 0 errors took 1 ms
+2025-02-04T12:41:19.744Z debug core/core/fetch after merge there are 110 elements [errors=0]
+2025-02-04T12:41:19.744Z debug core/core/fetch looking for inconsistent types (SALTO-5878) starting
+2025-02-04T12:41:19.747Z warn core/core/fetch found inconsistent types in the following 1 types (1 elements), the types will be resolved from the element source. salesforce.Organization.field.Address
+2025-02-04T12:41:19.747Z debug core/core/fetch looking for inconsistent types (SALTO-5878) took 3 ms
+  vvv Finished fetching the latest configs from: salesforce
+2025-02-04T12:41:19.747Z debug cli/outputer   vvv Finished fetching the latest configs from: salesforce
+
+
+2025-02-04T12:41:19.747Z debug cli/outputer 
+
+  >>> Calculating the difference between local and remote
+2025-02-04T12:41:19.747Z debug cli/outputer   >>> Calculating the difference between local and remote
+2025-02-04T12:41:19.748Z debug core/core/fetch calculate service-state changes starting
+2025-02-04T12:41:19.769Z debug core/core/fetch calculate service-state changes took 21 ms
+2025-02-04T12:41:19.772Z debug core/core/fetch calculate pending changes starting
+2025-02-04T12:41:19.775Z debug core/core/fetch calculate pending changes took 4 ms
+2025-02-04T12:41:19.775Z debug core/core/fetch calculate service-workspace changes starting
+2025-02-04T12:41:19.776Z debug core/core/fetch calculate service-workspace changes took 1 ms
+2025-02-04T12:41:19.788Z debug core/core/fetch finished to calculate fetch changes
+  vvv Finished calculating the difference between local and remote
+2025-02-04T12:41:19.788Z debug cli/outputer   vvv Finished calculating the difference between local and remote
+2025-02-04T12:41:19.788Z debug workspace/merger/index merged 0 elements to 0 elements [errors=0]
+2025-02-04T12:41:19.788Z debug core/core/plan/plan get plan with 0 -> 0 elements starting
+2025-02-04T12:41:19.788Z debug core/core/plan/plan add nodes to graph starting
+2025-02-04T12:41:19.789Z debug core/core/plan/plan add nodes to graph took 0 ms
+2025-02-04T12:41:19.789Z debug core/core/plan/plan resolve node elements for 0 nodes starting
+2025-02-04T12:41:19.789Z debug core/core/plan/plan Resolving before items starting
+2025-02-04T12:41:19.789Z debug workspace/expressions resolve 0 elements starting
+2025-02-04T12:41:19.789Z debug workspace/expressions resolve handled a total of 13 elements
+2025-02-04T12:41:19.789Z debug workspace/expressions resolve 0 elements took 0 ms
+2025-02-04T12:41:19.789Z debug core/core/plan/plan Resolving before items took 0 ms
+2025-02-04T12:41:19.789Z debug core/core/plan/plan Resolving after items starting
+2025-02-04T12:41:19.789Z debug workspace/expressions resolve 0 elements starting
+2025-02-04T12:41:19.789Z debug workspace/expressions resolve handled a total of 13 elements
+2025-02-04T12:41:19.789Z debug workspace/expressions resolve 0 elements took 0 ms
+2025-02-04T12:41:19.789Z debug core/core/plan/plan Resolving after items took 0 ms
+2025-02-04T12:41:19.789Z debug core/core/plan/plan resolve node elements for 0 nodes took 0 ms
+2025-02-04T12:41:19.789Z debug core/core/plan/dependency/dependency add dependencies to graph starting
+2025-02-04T12:41:19.789Z debug core/core/plan/dependency/reference_dependency addReferencesDependency starting
+2025-02-04T12:41:19.789Z debug core/core/plan/dependency/reference_dependency addReferencesDependency took 0 ms
+2025-02-04T12:41:19.789Z debug core/core/plan/dependency/dependency add dependencies to graph took 0 ms
+2025-02-04T12:41:19.789Z debug core/core/plan/filter getChangeErrors for 0 changes with 0 validators starting
+2025-02-04T12:41:19.789Z debug core/core/plan/filter getChangeErrors for 0 changes with 0 validators took 0 ms
+2025-02-04T12:41:19.789Z debug core/core/plan/filter filterInvalidChanges for 0 changes with 0 change errors starting
+2025-02-04T12:41:19.790Z debug core/core/plan/filter filterInvalidChanges for 0 changes with 0 change errors took 1 ms
+2025-02-04T12:41:19.790Z debug core/core/plan/group removeRedundantFieldNodes starting
+2025-02-04T12:41:19.790Z debug core/core/plan/group removeRedundantFieldNodes took 0 ms
+2025-02-04T12:41:19.790Z debug dag/group build grouped graph for 0 nodes starting
+2025-02-04T12:41:19.790Z debug dag/group build grouped graph for 0 nodes took 0 ms
+2025-02-04T12:41:19.790Z debug core/core/plan/plan get plan with 0 -> 0 elements took 2 ms
+2025-02-04T12:41:19.790Z debug core/api 110 elements were fetched [mergedErrors=0]
+2025-02-04T12:41:19.790Z debug workspace/workspace/state/in_mem updateStateElements starting
+2025-02-04T12:41:19.794Z debug workspace/workspace/nacl_files/nacl_files_source no static files were found in the changes before
+2025-02-04T12:41:19.794Z debug workspace/workspace/state/in_mem updateStateElements took 4 ms
+2025-02-04T12:41:19.794Z debug workspace/workspace/path_index updateTopLevelPathIndex starting
+2025-02-04T12:41:19.796Z debug workspace/workspace/path_index updateTopLevelPathIndex took 2 ms
+2025-02-04T12:41:19.796Z debug workspace/workspace/path_index updatePathIndex starting
+2025-02-04T12:41:19.797Z debug workspace/workspace/path_index updatePathIndex took 1 ms
+2025-02-04T12:41:19.798Z debug cli/commands/fetch Applying 193 semantic changes to the local workspace
+
+
+2025-02-04T12:41:19.798Z debug cli/outputer 
+
+  >>> Applying changes
+2025-02-04T12:41:19.798Z debug cli/outputer   >>> Applying changes
+2025-02-04T12:41:19.799Z info cli/workspace/workspace going to update workspace with 193 changes
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace going to log only 100 changes
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace - salesforce.CustomMetadata
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace - salesforce.CustomMetadataValue
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace | salesforce.FetchTargets.instance
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace   M customObjects
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace   M metadataTypes
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace | salesforce.SecondCMT__mdt
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace   | annotation
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + actionOverrides
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + allowInChatterGroups
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + compactLayoutAssignment
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + customHelp
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + customHelpPage
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + customSettingsType
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + deploymentStatus
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + deprecated
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + enableActivities
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + enableBulkApi
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + enableDataTranslation
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + enableDivisions
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + enableEnhancedLookup
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + enableFeeds
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + enableHistory
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + enableLicensing
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + enablePublishStatusTracking
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + enableReports
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + enableSearch
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + enableSharing
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + enableStreamingApi
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + externalDataSource
+2025-02-04T12:41:19.799Z debug cli/workspace/workspace     + externalName
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + externalRepository
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + externalSharingModel
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + gender
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + historyRetentionPolicy
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + internalId
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + mktDataLakeAttributes
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + mktDataModelAttributes
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + nameField
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + profileSearchLayouts
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + recordTypeTrackFeedHistory
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + recordTypeTrackHistory
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + searchLayouts
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + sharingModel
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + sharingRecalculations
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + startsWith
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + visibility
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   + _changed_at
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   + _changed_by
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   + _created_at
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   + _created_by
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   M _service_url
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   + internalId
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   + keyPrefix
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   M metadataType
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   + visibility
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   | CMT_Relationship_To_newCMT__c
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + _changed_at
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + _changed_by
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + _created_at
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + _created_by
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + _hidden_value
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     M _service_url
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + createable
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + queryable
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     | referenceTo
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace       M 0
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + updateable
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   + DeveloperName
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   + Id
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   + Label
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   + Language
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   + MasterLabel
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   + NamespacePrefix
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   + QualifiedApiName
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   + SystemModstamp
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   - description
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   - fullName
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   - internalId
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   - label
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   - protected
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace + salesforce.ValidationRule.instance.new_CMT__mdt_Invalid_Name
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace + salesforce.ValidationRule.instance.new_CMT__mdt_Must_Be_Cool
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace + salesforce.ValidationRule.instance.new_CMT__mdt_Valid_Profile_Name
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace | salesforce.new_CMT__mdt
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace   | annotation
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + actionOverrides
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + compactLayoutAssignment
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + enableDataTranslation
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + enableDivisions
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + enableEnhancedLookup
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + enableFeeds
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + enableHistory
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + enableLicensing
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + enablePublishStatusTracking
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + externalDataSource
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + externalName
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + externalRepository
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + externalSharingModel
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + historyRetentionPolicy
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + internalId
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + mktDataLakeAttributes
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + mktDataModelAttributes
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + profileSearchLayouts
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + recordTypeTrackFeedHistory
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + recordTypeTrackHistory
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + searchLayouts
+2025-02-04T12:41:19.800Z debug cli/workspace/workspace     + sharingRecalculations
+2025-02-04T12:41:19.801Z debug workspace/workspace/hidden_values Handling changes in hidden values and annotations:
+2025-02-04T12:41:19.801Z debug workspace/workspace/hidden_values fields to hide: [salesforce.SecondCMT__mdt.field.CMT_Relationship_To_newCMT__c, salesforce.SecondCMT__mdt.field.Id, salesforce.SecondCMT__mdt.field.DeveloperName, salesforce.SecondCMT__mdt.field.MasterLabel, salesforce.SecondCMT__mdt.field.Language, salesforce.SecondCMT__mdt.field.NamespacePrefix, salesforce.SecondCMT__mdt.field.Label, salesforce.SecondCMT__mdt.field.QualifiedApiName, salesforce.SecondCMT__mdt.field.SystemModstamp, salesforce.new_CMT__mdt.field.Almog_MDT_Relationship_Field__c, salesforce.new_CMT__mdt.field.Is_Cool__c, salesforce.new_CMT__mdt.field.MDT_Relationship_Field_Definition__c, salesforce.new_CMT__mdt.field.Name__c, salesforce.new_CMT__mdt.field.MDT_Relationship_Particle__c, salesforce.new_CMT__mdt.field.Id, salesforce.new_CMT__mdt.field.DeveloperName, salesforce.new_CMT__mdt.field.MasterLabel, salesforce.new_CMT__mdt.field.Language, salesforce.new_CMT__mdt.field.NamespacePrefix, salesforce.new_CMT__mdt.field.Label, salesforce.new_CMT__mdt.field.QualifiedApiName, salesforce.new_CMT__mdt.field.SystemModstamp]
+2025-02-04T12:41:19.801Z debug workspace/workspace/hidden_values fields to unhide: [salesforce.SecondCMT__mdt.field.internalId, salesforce.new_CMT__mdt.field.internalId]
+2025-02-04T12:41:19.801Z debug workspace/workspace/hidden_values types to hide: []
+2025-02-04T12:41:19.801Z debug workspace/workspace/hidden_values types to unhide: []
+2025-02-04T12:41:19.801Z debug workspace/workspace/hidden_values annotation types to hide: []
+2025-02-04T12:41:19.801Z debug workspace/workspace/hidden_values annotation types to unhide: []
+2025-02-04T12:41:19.821Z debug workspace/workspace/nacl_files/nacl_files_source groupChangesByFilename for 145 changes starting
+2025-02-04T12:41:19.821Z debug workspace/workspace/nacl_files/nacl_files_source groupChangesByFilename for 0 changes starting
+2025-02-04T12:41:19.821Z debug workspace/workspace/nacl_files/nacl_files_source Nacl source envs/env1 getting source maps for 0 nacl files
+2025-02-04T12:41:19.821Z debug workspace/workspace/nacl_files/nacl_files_source groupChangesByFilename for 0 changes took 0 ms
+2025-02-04T12:41:19.821Z debug workspace/workspace/nacl_files/nacl_files_source Nacl source envs/env1 going to update 0 nacl files with 0 changes
+2025-02-04T12:41:19.822Z debug workspace/workspace/nacl_files/nacl_files_source no static files were found in the changes before
+2025-02-04T12:41:19.822Z debug workspace/workspace/nacl_files/nacl_files_source Nacl source  getting source maps for 8 nacl files
+2025-02-04T12:41:19.830Z debug workspace/workspace/nacl_files/nacl_files_source groupChangesByFilename for 145 changes took 9 ms
+2025-02-04T12:41:19.830Z debug workspace/workspace/nacl_files/nacl_files_source Nacl source  going to update 11 nacl files with 145 changes
+2025-02-04T12:41:19.837Z debug workspace/workspace/nacl_files/nacl_files_source no static files were found in the changes before
+2025-02-04T12:41:19.837Z debug workspace/workspace/nacl_files/nacl_files_source going to update 11 NaCl files
+2025-02-04T12:41:19.837Z debug workspace/workspace/nacl_files/nacl_files_source building elements indices for 11 NaCl files
+2025-02-04T12:41:19.837Z debug workspace/workspace/nacl_files/nacl_files_source shouldCreateFilenameToElementIDsMapping is false
+2025-02-04T12:41:19.837Z debug workspace/workspace/nacl_files/nacl_files_source handle deletions of nacl files starting
+2025-02-04T12:41:19.838Z debug workspace/workspace/nacl_files/nacl_files_source handle deletions of nacl files took 1 ms
+2025-02-04T12:41:19.838Z debug workspace/workspace/nacl_files/nacl_files_source handle additions/modifications of nacl files starting
+2025-02-04T12:41:19.842Z debug workspace/workspace/nacl_files/nacl_files_source handle additions/modifications of nacl files took 4 ms
+2025-02-04T12:41:19.842Z info workspace/workspace/nacl_files/elements_cache going to merge new elements to the existing elements
+2025-02-04T12:41:19.842Z debug workspace/merger/index merged 9 elements to 5 elements [errors=0]
+2025-02-04T12:41:19.845Z debug workspace/workspace/nacl_files/elements_cache Merging components: env1, COMMON_
+2025-02-04T12:41:19.845Z debug workspace/workspace/nacl_files/elements_cache Setting hash multi_env-multi_env_mergeManagermerge_manager::env1_COMMON__merged_hash to 4eafe2bb475ac9e40029607e0750ae16
+2025-02-04T12:41:19.845Z debug workspace/merger/index merged 5 elements to 5 elements [errors=0]
+2025-02-04T12:41:19.846Z debug workspace/workspace/nacl_files/elements_cache Setting COMMON_ source hash in namespace multi_env-multi_env_mergeManagermerge_manager to 4eafe2bb475ac9e40029607e0750ae16
+2025-02-04T12:41:19.846Z debug workspace/workspace/nacl_files/elements_cache Applying merged changes to cache.
+2025-02-04T12:41:19.846Z debug workspace/workspace/nacl_files/elements_cache Change type: remove, on 2 elements. The first 2 ids are: salesforce.new_CMT__mdt.instance.new_CMT_TestRecord@uv, salesforce.new_CMT__mdt.instance.new_CMT_Test_CMT_instance@uvuu
+2025-02-04T12:41:19.847Z debug workspace/workspace/nacl_files/elements_cache Change type: add, on 3 elements. The first 3 ids are: salesforce.ValidationRule.instance.new_CMT__mdt_Invalid_Name, salesforce.ValidationRule.instance.new_CMT__mdt_Must_Be_Cool, salesforce.ValidationRule.instance.new_CMT__mdt_Valid_Profile_Name
+2025-02-04T12:41:19.847Z debug workspace/workspace/nacl_files/elements_cache Change type: modify, on 2 elements. The first 2 ids are: salesforce.SecondCMT__mdt, salesforce.new_CMT__mdt
+2025-02-04T12:41:19.874Z debug local-workspace/state/state finished dumping state text [#elements=110]
+2025-02-04T12:41:19.875Z debug local-workspace/state/content_providers/common Calculating hash from hashes a26b328a0d9214a9f42d8cd14798020b, got 1ca1d3d4cce7cd69d25b90eeb3b3078a
+2025-02-04T12:41:19.879Z debug workspace/workspace/workspace buildWorkspaceState starting
+2025-02-04T12:41:19.879Z debug workspace/workspace/workspace got 0 init hidden element changes
+2025-02-04T12:41:19.879Z debug workspace/workspace/workspace got 2 state removed element changes
+2025-02-04T12:41:19.879Z debug workspace/workspace/nacl_files/elements_cache Merging components: multi_env_element_sourceenv1, state_element_sourceenv1
+2025-02-04T12:41:19.879Z debug workspace/workspace/nacl_files/elements_cache Setting hash workspaceMergeManagermerge_manager::multi_env_element_sourceenv1_state_element_sourceenv1_merged_hash to 4eafe2bb475ac9e40029607e0750ae161ca1d3d4cce7cd69d25b90eeb3b3078a
+2025-02-04T12:41:19.880Z debug workspace/merger/index merged 11 elements to 6 elements [errors=0]
+2025-02-04T12:41:19.881Z debug workspace/workspace/nacl_files/elements_cache Setting multi_env_element_sourceenv1 source hash in namespace workspaceMergeManagermerge_manager to 4eafe2bb475ac9e40029607e0750ae16
+2025-02-04T12:41:19.881Z debug workspace/workspace/nacl_files/elements_cache Setting state_element_sourceenv1 source hash in namespace workspaceMergeManagermerge_manager to 1ca1d3d4cce7cd69d25b90eeb3b3078a
+2025-02-04T12:41:19.881Z debug workspace/workspace/nacl_files/elements_cache Applying merged changes to cache.
+2025-02-04T12:41:19.881Z debug workspace/workspace/nacl_files/elements_cache Change type: remove, on 4 elements. The first 4 ids are: salesforce.new_CMT__mdt.instance.new_CMT_TestRecord@uv, salesforce.new_CMT__mdt.instance.new_CMT_Test_CMT_instance@uvuu, salesforce.CustomMetadata, salesforce.CustomMetadataValue
+2025-02-04T12:41:19.882Z debug workspace/workspace/nacl_files/elements_cache Change type: add, on 3 elements. The first 3 ids are: salesforce.ValidationRule.instance.new_CMT__mdt_Invalid_Name, salesforce.ValidationRule.instance.new_CMT__mdt_Must_Be_Cool, salesforce.ValidationRule.instance.new_CMT__mdt_Valid_Profile_Name
+2025-02-04T12:41:19.882Z debug workspace/workspace/nacl_files/elements_cache Change type: modify, on 3 elements. The first 3 ids are: salesforce.FetchTargets.instance, salesforce.SecondCMT__mdt, salesforce.new_CMT__mdt
+2025-02-04T12:41:19.882Z debug workspace/workspace/index_utils updating changed by index starting
+2025-02-04T12:41:19.884Z debug workspace/workspace/index_utils updating changed by index took 2 ms
+2025-02-04T12:41:19.884Z debug workspace/workspace/index_utils updating changed at index starting
+2025-02-04T12:41:19.884Z debug workspace/workspace/index_utils updating changed at index took 0 ms
+2025-02-04T12:41:19.884Z debug workspace/workspace/index_utils updating author information index starting
+2025-02-04T12:41:19.885Z debug workspace/workspace/index_utils updating author information index took 1 ms
+2025-02-04T12:41:19.885Z debug workspace/workspace/index_utils updating alias index starting
+2025-02-04T12:41:19.885Z debug workspace/workspace/index_utils updating alias index took 0 ms
+2025-02-04T12:41:19.885Z debug workspace/workspace/index_utils updating static files index starting
+2025-02-04T12:41:19.885Z debug workspace/workspace/index_utils updating static files index took 0 ms
+2025-02-04T12:41:19.885Z debug workspace/workspace/reference_indexes updating references indexes starting
+2025-02-04T12:41:19.885Z debug workspace/workspace/reference_indexes getIdToCustomReferences for 10 changes starting
+2025-02-04T12:41:19.886Z info adapter-components/config_utils The following entries are disabled: formulaRefs, omitNonExistingFields
+2025-02-04T12:41:19.886Z warn adapter-api/elements Element with ElemID salesforce.FetchTargets.instance's type is resolved non-ObjectType
+2025-02-04T12:41:19.886Z debug salesforce-adapter/custom_references/profiles_and_permission_sets Generating references from 0 instances. starting
+2025-02-04T12:41:19.886Z debug salesforce-adapter/custom_references/profiles_and_permission_sets Generating references from 0 instances. took 0 ms
+2025-02-04T12:41:19.886Z debug salesforce-adapter/custom_references/profiles_and_permission_sets Generated 0 references for 6 elements.
+2025-02-04T12:41:19.886Z warn adapter-api/elements Element with ElemID salesforce.FetchTargets.instance's type is resolved non-ObjectType
+2025-02-04T12:41:19.886Z debug salesforce-adapter/custom_references/managed_elements Generated InstalledPackage instance custom references for 0 elements.
+2025-02-04T12:41:19.886Z info adapter-components/config_utils The following entries are disabled: formulaRefs, omitNonExistingFields
+2025-02-04T12:41:19.886Z warn adapter-api/elements Element with ElemID salesforce.FetchTargets.instance's type is resolved non-ObjectType
+2025-02-04T12:41:19.886Z warn adapter-api/elements Element with ElemID salesforce.new_CMT__mdt.instance.new_CMT_TestRecord@uv's type is resolved non-ObjectType
+2025-02-04T12:41:19.886Z warn adapter-api/elements Element with ElemID salesforce.new_CMT__mdt.instance.new_CMT_Test_CMT_instance@uvuu's type is resolved non-ObjectType
+2025-02-04T12:41:19.886Z debug salesforce-adapter/custom_references/profiles_and_permission_sets Generating references from 0 instances. starting
+2025-02-04T12:41:19.886Z debug salesforce-adapter/custom_references/profiles_and_permission_sets Generating references from 0 instances. took 0 ms
+2025-02-04T12:41:19.886Z debug salesforce-adapter/custom_references/profiles_and_permission_sets Generated 0 references for 7 elements.
+2025-02-04T12:41:19.886Z warn adapter-api/elements Element with ElemID salesforce.FetchTargets.instance's type is resolved non-ObjectType
+2025-02-04T12:41:19.886Z warn adapter-api/elements Element with ElemID salesforce.new_CMT__mdt.instance.new_CMT_TestRecord@uv's type is resolved non-ObjectType
+2025-02-04T12:41:19.886Z warn adapter-api/elements Element with ElemID salesforce.new_CMT__mdt.instance.new_CMT_TestRecord@uv's type is resolved non-ObjectType
+2025-02-04T12:41:19.886Z warn adapter-api/elements Element with ElemID salesforce.new_CMT__mdt.instance.new_CMT_Test_CMT_instance@uvuu's type is resolved non-ObjectType
+2025-02-04T12:41:19.886Z warn adapter-api/elements Element with ElemID salesforce.new_CMT__mdt.instance.new_CMT_Test_CMT_instance@uvuu's type is resolved non-ObjectType
+2025-02-04T12:41:19.886Z debug salesforce-adapter/custom_references/managed_elements Generated InstalledPackage instance custom references for 0 elements.
+2025-02-04T12:41:19.886Z debug workspace/workspace/reference_indexes getIdToCustomReferences for 10 changes took 1 ms
+2025-02-04T12:41:19.887Z debug workspace/workspace/reference_indexes calculated references for 10 changes, updating indexes
+2025-02-04T12:41:19.890Z debug workspace/workspace/reference_indexes updating references indexes took 5 ms
+2025-02-04T12:41:19.890Z debug workspace/workspace/dependents getDependentIDsFromReferenceSourceIndex for 10 elemIDs starting
+2025-02-04T12:41:19.890Z debug workspace/workspace/dependents getDependentIDsFromReferenceSourceIndex for 10 elemIDs took 0 ms
+2025-02-04T12:41:19.890Z debug workspace/workspace/dependents getting 0 dependents from elements source starting
+2025-02-04T12:41:19.890Z debug workspace/workspace/dependents getting 0 dependents from elements source took 0 ms
+2025-02-04T12:41:19.890Z debug workspace/workspace/dependents found 0 dependents of 10 elements
+2025-02-04T12:41:19.890Z debug workspace/validator validateElements with 6 elements starting
+2025-02-04T12:41:19.890Z debug workspace/expressions resolve 6 elements starting
+2025-02-04T12:41:19.892Z debug workspace/expressions resolve handled a total of 49 elements
+2025-02-04T12:41:19.892Z debug workspace/expressions resolve 6 elements took 2 ms
+2025-02-04T12:41:19.893Z debug workspace/validator validateElements with 6 elements took 3 ms
+2025-02-04T12:41:19.893Z debug workspace/workspace/workspace buildWorkspaceState took 14 ms
+2025-02-04T12:41:19.893Z debug workspace/workspace/nacl_files/elements_cache mergeManager.flush workspaceMergeManager starting
+2025-02-04T12:41:19.894Z debug local-workspace/remote_map/remote_map flushing workspaceMergeManagermerge_manager, wasClearCalled=false
+2025-02-04T12:41:19.894Z debug local-workspace/remote_map/remote_map finished writing to persistent db workspaceMergeManagermerge_manager, writeRes=true
+2025-02-04T12:41:19.894Z debug local-workspace/remote_map/remote_map cleared temp db workspaceMergeManagermerge_manager
+2025-02-04T12:41:19.894Z debug local-workspace/remote_map/remote_map flushed workspaceMergeManagermerge_manager. results { writeRes: true, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.894Z debug local-workspace/remote_map/remote_map flushing workspace-env1-merged, wasClearCalled=false
+2025-02-04T12:41:19.894Z debug local-workspace/remote_map/remote_map finished writing to persistent db workspace-env1-merged, writeRes=true
+2025-02-04T12:41:19.894Z debug local-workspace/remote_map/remote_map cleared temp db workspace-env1-merged
+2025-02-04T12:41:19.894Z debug local-workspace/remote_map/remote_map flushed workspace-env1-merged. results { writeRes: true, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.894Z debug local-workspace/remote_map/remote_map flushing workspace-env1-errors, wasClearCalled=false
+2025-02-04T12:41:19.895Z debug local-workspace/remote_map/remote_map finished writing to persistent db workspace-env1-errors, writeRes=false
+2025-02-04T12:41:19.895Z debug local-workspace/remote_map/remote_map cleared temp db workspace-env1-errors
+2025-02-04T12:41:19.895Z debug local-workspace/remote_map/remote_map flushed workspace-env1-errors. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.895Z debug local-workspace/remote_map/remote_map flushing workspace-env1-validationErrors, wasClearCalled=false
+2025-02-04T12:41:19.895Z debug local-workspace/remote_map/remote_map finished writing to persistent db workspace-env1-validationErrors, writeRes=false
+2025-02-04T12:41:19.895Z debug local-workspace/remote_map/remote_map cleared temp db workspace-env1-validationErrors
+2025-02-04T12:41:19.895Z debug local-workspace/remote_map/remote_map flushed workspace-env1-validationErrors. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.895Z debug local-workspace/remote_map/remote_map flushing workspace-env1-changedBy, wasClearCalled=false
+2025-02-04T12:41:19.896Z debug local-workspace/remote_map/remote_map finished writing to persistent db workspace-env1-changedBy, writeRes=true
+2025-02-04T12:41:19.896Z debug local-workspace/remote_map/remote_map cleared temp db workspace-env1-changedBy
+2025-02-04T12:41:19.896Z debug local-workspace/remote_map/remote_map flushed workspace-env1-changedBy. results { writeRes: true, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.896Z debug local-workspace/remote_map/remote_map flushing workspace-env1-changedAt, wasClearCalled=false
+2025-02-04T12:41:19.896Z debug local-workspace/remote_map/remote_map finished writing to persistent db workspace-env1-changedAt, writeRes=true
+2025-02-04T12:41:19.897Z debug local-workspace/remote_map/remote_map cleared temp db workspace-env1-changedAt
+2025-02-04T12:41:19.897Z debug local-workspace/remote_map/remote_map flushed workspace-env1-changedAt. results { writeRes: true, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.897Z debug local-workspace/remote_map/remote_map flushing workspace-env1-authorInformation, wasClearCalled=false
+2025-02-04T12:41:19.897Z debug local-workspace/remote_map/remote_map finished writing to persistent db workspace-env1-authorInformation, writeRes=true
+2025-02-04T12:41:19.898Z debug local-workspace/remote_map/remote_map cleared temp db workspace-env1-authorInformation
+2025-02-04T12:41:19.898Z debug local-workspace/remote_map/remote_map flushed workspace-env1-authorInformation. results { writeRes: true, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.898Z debug local-workspace/remote_map/remote_map flushing workspace-env1-alias, wasClearCalled=false
+2025-02-04T12:41:19.898Z debug local-workspace/remote_map/remote_map finished writing to persistent db workspace-env1-alias, writeRes=true
+2025-02-04T12:41:19.898Z debug local-workspace/remote_map/remote_map cleared temp db workspace-env1-alias
+2025-02-04T12:41:19.898Z debug local-workspace/remote_map/remote_map flushed workspace-env1-alias. results { writeRes: true, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.898Z debug local-workspace/remote_map/remote_map flushing workspace-env1-referencedStaticFiles, wasClearCalled=false
+2025-02-04T12:41:19.899Z debug local-workspace/remote_map/remote_map finished writing to persistent db workspace-env1-referencedStaticFiles, writeRes=false
+2025-02-04T12:41:19.899Z debug local-workspace/remote_map/remote_map cleared temp db workspace-env1-referencedStaticFiles
+2025-02-04T12:41:19.899Z debug local-workspace/remote_map/remote_map flushed workspace-env1-referencedStaticFiles. results { writeRes: false, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.899Z debug local-workspace/remote_map/remote_map flushing workspace-env1-referenceSources, wasClearCalled=false
+2025-02-04T12:41:19.899Z debug local-workspace/remote_map/remote_map finished writing to persistent db workspace-env1-referenceSources, writeRes=true
+2025-02-04T12:41:19.900Z debug local-workspace/remote_map/remote_map cleared temp db workspace-env1-referenceSources
+2025-02-04T12:41:19.900Z debug local-workspace/remote_map/remote_map flushed workspace-env1-referenceSources. results { writeRes: true, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.900Z debug local-workspace/remote_map/remote_map flushing workspace-env1-referenceTargets, wasClearCalled=false
+2025-02-04T12:41:19.900Z debug local-workspace/remote_map/remote_map finished writing to persistent db workspace-env1-referenceTargets, writeRes=true
+2025-02-04T12:41:19.902Z debug local-workspace/remote_map/remote_map cleared temp db workspace-env1-referenceTargets
+2025-02-04T12:41:19.902Z debug local-workspace/remote_map/remote_map flushed workspace-env1-referenceTargets. results { writeRes: true, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.902Z debug local-workspace/remote_map/remote_map flushing workspace-env1-mapVersions, wasClearCalled=false
+2025-02-04T12:41:19.902Z debug local-workspace/remote_map/remote_map finished writing to persistent db workspace-env1-mapVersions, writeRes=false
+2025-02-04T12:41:19.902Z debug local-workspace/remote_map/remote_map cleared temp db workspace-env1-mapVersions
+2025-02-04T12:41:19.902Z debug local-workspace/remote_map/remote_map flushed workspace-env1-mapVersions. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.902Z debug local-workspace/remote_map/remote_map flushing workspaceMergeManagermerge_manager, wasClearCalled=false
+2025-02-04T12:41:19.902Z debug local-workspace/remote_map/remote_map finished writing to persistent db workspaceMergeManagermerge_manager, writeRes=false
+2025-02-04T12:41:19.902Z debug local-workspace/remote_map/remote_map cleared temp db workspaceMergeManagermerge_manager
+2025-02-04T12:41:19.902Z debug local-workspace/remote_map/remote_map flushed workspaceMergeManagermerge_manager. results { writeRes: false, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.902Z debug workspace/workspace/nacl_files/elements_cache mergeManager.flush workspaceMergeManager took 9 ms
+2025-02-04T12:41:19.906Z debug local-workspace/remote_map/remote_map flushing staticFilesCache-common, wasClearCalled=false
+2025-02-04T12:41:19.906Z debug local-workspace/remote_map/remote_map finished writing to persistent db staticFilesCache-common, writeRes=false
+2025-02-04T12:41:19.906Z debug local-workspace/remote_map/remote_map cleared temp db staticFilesCache-common
+2025-02-04T12:41:19.907Z debug local-workspace/remote_map/remote_map flushed staticFilesCache-common. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.907Z debug local-workspace/remote_map/remote_map flushing naclFileSource--elements_index, wasClearCalled=false
+2025-02-04T12:41:19.907Z debug local-workspace/remote_map/remote_map finished writing to persistent db naclFileSource--elements_index, writeRes=true
+2025-02-04T12:41:19.907Z debug local-workspace/remote_map/remote_map cleared temp db naclFileSource--elements_index
+2025-02-04T12:41:19.907Z debug local-workspace/remote_map/remote_map flushed naclFileSource--elements_index. results { writeRes: true, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.907Z debug local-workspace/remote_map/remote_map flushing naclFileSource--errors, wasClearCalled=false
+2025-02-04T12:41:19.907Z debug local-workspace/remote_map/remote_map finished writing to persistent db naclFileSource--errors, writeRes=false
+2025-02-04T12:41:19.907Z debug local-workspace/remote_map/remote_map cleared temp db naclFileSource--errors
+2025-02-04T12:41:19.907Z debug local-workspace/remote_map/remote_map flushed naclFileSource--errors. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.907Z debug local-workspace/remote_map/remote_map flushing naclFileSource--merged, wasClearCalled=false
+2025-02-04T12:41:19.908Z debug local-workspace/remote_map/remote_map finished writing to persistent db naclFileSource--merged, writeRes=true
+2025-02-04T12:41:19.908Z debug local-workspace/remote_map/remote_map cleared temp db naclFileSource--merged
+2025-02-04T12:41:19.908Z debug local-workspace/remote_map/remote_map flushed naclFileSource--merged. results { writeRes: true, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.908Z debug local-workspace/remote_map/remote_map flushing parsedResultCache-naclFileSource--parsed_nacl_files-metadata, wasClearCalled=false
+2025-02-04T12:41:19.909Z debug local-workspace/remote_map/remote_map finished writing to persistent db parsedResultCache-naclFileSource--parsed_nacl_files-metadata, writeRes=true
+2025-02-04T12:41:19.914Z debug local-workspace/remote_map/remote_map cleared temp db parsedResultCache-naclFileSource--parsed_nacl_files-metadata
+2025-02-04T12:41:19.914Z debug local-workspace/remote_map/remote_map flushed parsedResultCache-naclFileSource--parsed_nacl_files-metadata. results { writeRes: true, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.914Z debug local-workspace/remote_map/remote_map flushing parsedResultCache-naclFileSource--parsed_nacl_files-elements, wasClearCalled=false
+2025-02-04T12:41:19.914Z debug local-workspace/remote_map/remote_map finished writing to persistent db parsedResultCache-naclFileSource--parsed_nacl_files-elements, writeRes=true
+2025-02-04T12:41:19.915Z debug local-workspace/remote_map/remote_map cleared temp db parsedResultCache-naclFileSource--parsed_nacl_files-elements
+2025-02-04T12:41:19.915Z debug local-workspace/remote_map/remote_map flushed parsedResultCache-naclFileSource--parsed_nacl_files-elements. results { writeRes: true, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.915Z debug local-workspace/remote_map/remote_map flushing parsedResultCache-naclFileSource--parsed_nacl_files-sourceMap, wasClearCalled=false
+2025-02-04T12:41:19.915Z debug local-workspace/remote_map/remote_map finished writing to persistent db parsedResultCache-naclFileSource--parsed_nacl_files-sourceMap, writeRes=false
+2025-02-04T12:41:19.915Z debug local-workspace/remote_map/remote_map cleared temp db parsedResultCache-naclFileSource--parsed_nacl_files-sourceMap
+2025-02-04T12:41:19.915Z debug local-workspace/remote_map/remote_map flushed parsedResultCache-naclFileSource--parsed_nacl_files-sourceMap. results { writeRes: false, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.915Z debug local-workspace/remote_map/remote_map flushing parsedResultCache-naclFileSource--parsed_nacl_files-errors, wasClearCalled=false
+2025-02-04T12:41:19.915Z debug local-workspace/remote_map/remote_map finished writing to persistent db parsedResultCache-naclFileSource--parsed_nacl_files-errors, writeRes=false
+2025-02-04T12:41:19.915Z debug local-workspace/remote_map/remote_map cleared temp db parsedResultCache-naclFileSource--parsed_nacl_files-errors
+2025-02-04T12:41:19.915Z debug local-workspace/remote_map/remote_map flushed parsedResultCache-naclFileSource--parsed_nacl_files-errors. results { writeRes: false, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.915Z debug local-workspace/remote_map/remote_map flushing parsedResultCache-naclFileSource--parsed_nacl_files-staticFiles, wasClearCalled=false
+2025-02-04T12:41:19.916Z debug local-workspace/remote_map/remote_map finished writing to persistent db parsedResultCache-naclFileSource--parsed_nacl_files-staticFiles, writeRes=true
+2025-02-04T12:41:19.916Z debug local-workspace/remote_map/remote_map cleared temp db parsedResultCache-naclFileSource--parsed_nacl_files-staticFiles
+2025-02-04T12:41:19.916Z debug local-workspace/remote_map/remote_map flushed parsedResultCache-naclFileSource--parsed_nacl_files-staticFiles. results { writeRes: true, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.916Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: parsedResultCache-naclFileSource--parsed_nacl_files-referenced
+2025-02-04T12:41:19.916Z debug local-workspace/remote_map/remote_map flushing naclFileSource--searchableNamesIndex, wasClearCalled=false
+2025-02-04T12:41:19.916Z debug local-workspace/remote_map/remote_map finished writing to persistent db naclFileSource--searchableNamesIndex, writeRes=true
+2025-02-04T12:41:19.917Z debug local-workspace/remote_map/remote_map cleared temp db naclFileSource--searchableNamesIndex
+2025-02-04T12:41:19.917Z debug local-workspace/remote_map/remote_map flushed naclFileSource--searchableNamesIndex. results { writeRes: true, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.917Z debug local-workspace/remote_map/remote_map flushing naclFileSource--static_files_index, wasClearCalled=false
+2025-02-04T12:41:19.917Z debug local-workspace/remote_map/remote_map finished writing to persistent db naclFileSource--static_files_index, writeRes=false
+2025-02-04T12:41:19.917Z debug local-workspace/remote_map/remote_map cleared temp db naclFileSource--static_files_index
+2025-02-04T12:41:19.917Z debug local-workspace/remote_map/remote_map flushed naclFileSource--static_files_index. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.917Z debug local-workspace/remote_map/remote_map flushing naclFileSource--metadata, wasClearCalled=false
+2025-02-04T12:41:19.917Z debug local-workspace/remote_map/remote_map finished writing to persistent db naclFileSource--metadata, writeRes=true
+2025-02-04T12:41:19.917Z debug local-workspace/remote_map/remote_map cleared temp db naclFileSource--metadata
+2025-02-04T12:41:19.917Z debug local-workspace/remote_map/remote_map flushed naclFileSource--metadata. results { writeRes: true, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.917Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource--referenced_index
+2025-02-04T12:41:19.917Z debug local-workspace/remote_map/remote_map flushing staticFilesCache-envs/env1, wasClearCalled=false
+2025-02-04T12:41:19.917Z debug local-workspace/remote_map/remote_map finished writing to persistent db staticFilesCache-envs/env1, writeRes=false
+2025-02-04T12:41:19.917Z debug local-workspace/remote_map/remote_map cleared temp db staticFilesCache-envs/env1
+2025-02-04T12:41:19.917Z debug local-workspace/remote_map/remote_map flushed staticFilesCache-envs/env1. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.917Z debug local-workspace/remote_map/remote_map flushing naclFileSource-envs/env1-elements_index, wasClearCalled=false
+2025-02-04T12:41:19.917Z debug local-workspace/remote_map/remote_map finished writing to persistent db naclFileSource-envs/env1-elements_index, writeRes=false
+2025-02-04T12:41:19.917Z debug local-workspace/remote_map/remote_map cleared temp db naclFileSource-envs/env1-elements_index
+2025-02-04T12:41:19.917Z debug local-workspace/remote_map/remote_map flushed naclFileSource-envs/env1-elements_index. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map flushing naclFileSource-envs/env1-errors, wasClearCalled=false
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map finished writing to persistent db naclFileSource-envs/env1-errors, writeRes=false
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map cleared temp db naclFileSource-envs/env1-errors
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map flushed naclFileSource-envs/env1-errors. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map flushing naclFileSource-envs/env1-merged, wasClearCalled=false
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map finished writing to persistent db naclFileSource-envs/env1-merged, writeRes=false
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map cleared temp db naclFileSource-envs/env1-merged
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map flushed naclFileSource-envs/env1-merged. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map flushing parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-metadata, wasClearCalled=false
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map finished writing to persistent db parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-metadata, writeRes=false
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map cleared temp db parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-metadata
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map flushed parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-metadata. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map flushing parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-elements, wasClearCalled=false
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map finished writing to persistent db parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-elements, writeRes=false
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map cleared temp db parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-elements
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map flushed parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-elements. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map flushing parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-sourceMap, wasClearCalled=false
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map finished writing to persistent db parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-sourceMap, writeRes=false
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map cleared temp db parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-sourceMap
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map flushed parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-sourceMap. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map flushing parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-errors, wasClearCalled=false
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map finished writing to persistent db parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-errors, writeRes=false
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map cleared temp db parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-errors
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map flushed parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-errors. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map flushing parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-staticFiles, wasClearCalled=false
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map finished writing to persistent db parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-staticFiles, writeRes=false
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map cleared temp db parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-staticFiles
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map flushed parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-staticFiles. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: parsedResultCache-naclFileSource-envs/env1-parsed_nacl_files-referenced
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map flushing naclFileSource-envs/env1-searchableNamesIndex, wasClearCalled=false
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map finished writing to persistent db naclFileSource-envs/env1-searchableNamesIndex, writeRes=false
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map cleared temp db naclFileSource-envs/env1-searchableNamesIndex
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map flushed naclFileSource-envs/env1-searchableNamesIndex. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map flushing naclFileSource-envs/env1-static_files_index, wasClearCalled=false
+2025-02-04T12:41:19.918Z debug local-workspace/remote_map/remote_map finished writing to persistent db naclFileSource-envs/env1-static_files_index, writeRes=false
+2025-02-04T12:41:19.919Z debug local-workspace/remote_map/remote_map cleared temp db naclFileSource-envs/env1-static_files_index
+2025-02-04T12:41:19.919Z debug local-workspace/remote_map/remote_map flushed naclFileSource-envs/env1-static_files_index. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.919Z debug local-workspace/remote_map/remote_map flushing naclFileSource-envs/env1-metadata, wasClearCalled=false
+2025-02-04T12:41:19.919Z debug local-workspace/remote_map/remote_map finished writing to persistent db naclFileSource-envs/env1-metadata, writeRes=false
+2025-02-04T12:41:19.919Z debug local-workspace/remote_map/remote_map cleared temp db naclFileSource-envs/env1-metadata
+2025-02-04T12:41:19.919Z debug local-workspace/remote_map/remote_map flushed naclFileSource-envs/env1-metadata. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.919Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource-envs/env1-referenced_index
+2025-02-04T12:41:19.919Z debug workspace/workspace/nacl_files/elements_cache mergeManager.flush multi_env-multi_env_mergeManager starting
+2025-02-04T12:41:19.919Z debug local-workspace/remote_map/remote_map flushing multi_env-multi_env_mergeManagermerge_manager, wasClearCalled=false
+2025-02-04T12:41:19.919Z debug local-workspace/remote_map/remote_map finished writing to persistent db multi_env-multi_env_mergeManagermerge_manager, writeRes=true
+2025-02-04T12:41:19.919Z debug local-workspace/remote_map/remote_map cleared temp db multi_env-multi_env_mergeManagermerge_manager
+2025-02-04T12:41:19.919Z debug local-workspace/remote_map/remote_map flushed multi_env-multi_env_mergeManagermerge_manager. results { writeRes: true, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.919Z debug local-workspace/remote_map/remote_map flushing multi_env-env1-merged, wasClearCalled=false
+2025-02-04T12:41:19.919Z debug local-workspace/remote_map/remote_map finished writing to persistent db multi_env-env1-merged, writeRes=true
+2025-02-04T12:41:19.919Z debug local-workspace/remote_map/remote_map cleared temp db multi_env-env1-merged
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map flushed multi_env-env1-merged. results { writeRes: true, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map flushing multi_env-env1-errors, wasClearCalled=false
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map finished writing to persistent db multi_env-env1-errors, writeRes=false
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map cleared temp db multi_env-env1-errors
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map flushed multi_env-env1-errors. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map flushing multi_env-multi_env_mergeManagermerge_manager, wasClearCalled=false
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map finished writing to persistent db multi_env-multi_env_mergeManagermerge_manager, writeRes=false
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map cleared temp db multi_env-multi_env_mergeManagermerge_manager
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map flushed multi_env-multi_env_mergeManagermerge_manager. results { writeRes: false, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.920Z debug workspace/workspace/nacl_files/elements_cache mergeManager.flush multi_env-multi_env_mergeManager took 1 ms
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map flushing staticFilesCache-config-cache, wasClearCalled=false
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map finished writing to persistent db staticFilesCache-config-cache, writeRes=false
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map cleared temp db staticFilesCache-config-cache
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map flushed staticFilesCache-config-cache. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map flushing naclFileSource-salto.config/adapters-elements_index, wasClearCalled=false
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map finished writing to persistent db naclFileSource-salto.config/adapters-elements_index, writeRes=false
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map cleared temp db naclFileSource-salto.config/adapters-elements_index
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map flushed naclFileSource-salto.config/adapters-elements_index. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map flushing naclFileSource-salto.config/adapters-errors, wasClearCalled=false
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map finished writing to persistent db naclFileSource-salto.config/adapters-errors, writeRes=false
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map cleared temp db naclFileSource-salto.config/adapters-errors
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map flushed naclFileSource-salto.config/adapters-errors. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map flushing naclFileSource-salto.config/adapters-merged, wasClearCalled=false
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map finished writing to persistent db naclFileSource-salto.config/adapters-merged, writeRes=true
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map cleared temp db naclFileSource-salto.config/adapters-merged
+2025-02-04T12:41:19.920Z debug local-workspace/remote_map/remote_map flushed naclFileSource-salto.config/adapters-merged. results { writeRes: true, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map flushing parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-metadata, wasClearCalled=false
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map finished writing to persistent db parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-metadata, writeRes=true
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map cleared temp db parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-metadata
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map flushed parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-metadata. results { writeRes: true, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map flushing parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-elements, wasClearCalled=false
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map finished writing to persistent db parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-elements, writeRes=true
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map cleared temp db parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-elements
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map flushed parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-elements. results { writeRes: true, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map flushing parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-sourceMap, wasClearCalled=false
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map finished writing to persistent db parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-sourceMap, writeRes=false
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map cleared temp db parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-sourceMap
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map flushed parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-sourceMap. results { writeRes: false, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map flushing parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-errors, wasClearCalled=false
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map finished writing to persistent db parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-errors, writeRes=false
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map cleared temp db parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-errors
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map flushed parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-errors. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map flushing parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-staticFiles, wasClearCalled=false
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map finished writing to persistent db parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-staticFiles, writeRes=true
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map cleared temp db parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-staticFiles
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map flushed parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-staticFiles. results { writeRes: true, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: parsedResultCache-naclFileSource-salto.config/adapters-parsed_nacl_files-referenced
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map flushing naclFileSource-salto.config/adapters-searchableNamesIndex, wasClearCalled=false
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map finished writing to persistent db naclFileSource-salto.config/adapters-searchableNamesIndex, writeRes=false
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map cleared temp db naclFileSource-salto.config/adapters-searchableNamesIndex
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map flushed naclFileSource-salto.config/adapters-searchableNamesIndex. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map flushing naclFileSource-salto.config/adapters-static_files_index, wasClearCalled=false
+2025-02-04T12:41:19.921Z debug local-workspace/remote_map/remote_map finished writing to persistent db naclFileSource-salto.config/adapters-static_files_index, writeRes=false
+2025-02-04T12:41:19.922Z debug local-workspace/remote_map/remote_map cleared temp db naclFileSource-salto.config/adapters-static_files_index
+2025-02-04T12:41:19.922Z debug local-workspace/remote_map/remote_map flushed naclFileSource-salto.config/adapters-static_files_index. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.922Z debug local-workspace/remote_map/remote_map flushing naclFileSource-salto.config/adapters-metadata, wasClearCalled=false
+2025-02-04T12:41:19.922Z debug local-workspace/remote_map/remote_map finished writing to persistent db naclFileSource-salto.config/adapters-metadata, writeRes=true
+2025-02-04T12:41:19.922Z debug local-workspace/remote_map/remote_map cleared temp db naclFileSource-salto.config/adapters-metadata
+2025-02-04T12:41:19.922Z debug local-workspace/remote_map/remote_map flushed naclFileSource-salto.config/adapters-metadata. results { writeRes: true, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.922Z debug local-workspace/remote_map/remote_map creating remote map for loc: /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache, namespace: naclFileSource-salto.config/adapters-referenced_index
+2025-02-04T12:41:19.922Z debug local-workspace/remote_map/remote_map flushing workspace-salto.config/adapters-validationErrors, wasClearCalled=true
+2025-02-04T12:41:19.922Z debug local-workspace/remote_map/remote_map cleared persistent db workspace-salto.config/adapters-validationErrors
+2025-02-04T12:41:19.922Z debug local-workspace/remote_map/remote_map finished writing to persistent db workspace-salto.config/adapters-validationErrors, writeRes=false
+2025-02-04T12:41:19.922Z debug local-workspace/remote_map/remote_map cleared temp db workspace-salto.config/adapters-validationErrors
+2025-02-04T12:41:19.922Z debug local-workspace/remote_map/remote_map flushed workspace-salto.config/adapters-validationErrors. results { writeRes: false, deleteRes: false, wasClearCalled: true }
+2025-02-04T12:41:19.922Z debug local-workspace/state/content_providers/common Calculating hash from hashes a26b328a0d9214a9f42d8cd14798020b, got 1ca1d3d4cce7cd69d25b90eeb3b3078a
+2025-02-04T12:41:19.922Z debug local-workspace/state/state Writing state content, hash=1ca1d3d4cce7cd69d25b90eeb3b3078a, account_hashes={ salesforce: 'a26b328a0d9214a9f42d8cd14798020b' }
+2025-02-04T12:41:19.923Z debug local-workspace/remote_map/remote_map flushing state-env1-elements, wasClearCalled=false
+2025-02-04T12:41:19.923Z debug local-workspace/remote_map/remote_map finished writing to persistent db state-env1-elements, writeRes=true
+2025-02-04T12:41:19.923Z debug local-workspace/remote_map/remote_map cleared temp db state-env1-elements
+2025-02-04T12:41:19.923Z debug local-workspace/remote_map/remote_map flushed state-env1-elements. results { writeRes: true, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.923Z debug local-workspace/remote_map/remote_map flushing state-env1-path_index, wasClearCalled=false
+2025-02-04T12:41:19.924Z debug local-workspace/remote_map/remote_map finished writing to persistent db state-env1-path_index, writeRes=true
+2025-02-04T12:41:19.926Z debug local-workspace/remote_map/remote_map cleared temp db state-env1-path_index
+2025-02-04T12:41:19.926Z debug local-workspace/remote_map/remote_map flushed state-env1-path_index. results { writeRes: true, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.926Z debug local-workspace/remote_map/remote_map flushing state-env1-top_level_path_index, wasClearCalled=false
+2025-02-04T12:41:19.926Z debug local-workspace/remote_map/remote_map finished writing to persistent db state-env1-top_level_path_index, writeRes=true
+2025-02-04T12:41:19.927Z debug local-workspace/remote_map/remote_map cleared temp db state-env1-top_level_path_index
+2025-02-04T12:41:19.928Z debug local-workspace/remote_map/remote_map flushed state-env1-top_level_path_index. results { writeRes: true, deleteRes: true, wasClearCalled: false }
+2025-02-04T12:41:19.928Z debug local-workspace/remote_map/remote_map flushing state-env1-accounts, wasClearCalled=false
+2025-02-04T12:41:19.928Z debug local-workspace/remote_map/remote_map finished writing to persistent db state-env1-accounts, writeRes=true
+2025-02-04T12:41:19.928Z debug local-workspace/remote_map/remote_map cleared temp db state-env1-accounts
+2025-02-04T12:41:19.928Z debug local-workspace/remote_map/remote_map flushed state-env1-accounts. results { writeRes: true, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.928Z debug local-workspace/remote_map/remote_map flushing state-env1-service_update_date, wasClearCalled=false
+2025-02-04T12:41:19.928Z debug local-workspace/remote_map/remote_map finished writing to persistent db state-env1-service_update_date, writeRes=false
+2025-02-04T12:41:19.928Z debug local-workspace/remote_map/remote_map cleared temp db state-env1-service_update_date
+2025-02-04T12:41:19.928Z debug local-workspace/remote_map/remote_map flushed state-env1-service_update_date. results { writeRes: false, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.928Z debug local-workspace/remote_map/remote_map flushing state-env1-salto_metadata, wasClearCalled=false
+2025-02-04T12:41:19.928Z debug local-workspace/remote_map/remote_map finished writing to persistent db state-env1-salto_metadata, writeRes=true
+2025-02-04T12:41:19.928Z debug local-workspace/remote_map/remote_map cleared temp db state-env1-salto_metadata
+2025-02-04T12:41:19.928Z debug local-workspace/remote_map/remote_map flushed state-env1-salto_metadata. results { writeRes: true, deleteRes: false, wasClearCalled: false }
+2025-02-04T12:41:19.928Z debug workspace/workspace/state/static_files_sources/override_static_files_source Flushing override static state files source starting
+2025-02-04T12:41:19.928Z debug workspace/workspace/state/static_files_sources/override_static_files_source Flushing override static state files source took 0 ms
+2025-02-04T12:41:19.928Z debug local-workspace/state/state finished flushing state
+2025-02-04T12:41:19.928Z debug cli/workspace/workspace finished updating workspace
+  vvv 17 changes were applied to the local workspace
+2025-02-04T12:41:19.928Z debug cli/outputer   vvv 17 changes were applied to the local workspace
+2025-02-04T12:41:19.929Z debug cli/workspace/workspace Total size of the workspace is 12974 bytes
+
+Done! Your workspace is now updated with the latest changes.
+2025-02-04T12:41:19.929Z debug cli/outputer 
+Done! Your workspace is now updated with the latest changes.
+2025-02-04T12:41:19.929Z debug local-workspace/remote_map/remote_map closing all remote maps
+2025-02-04T12:41:19.929Z debug local-workspace/remote_map/remote_map closeRemoteMapsOfLocation with location /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache starting
+2025-02-04T12:41:19.930Z debug local-workspace/remote_map/remote_map closed connection to /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache
+2025-02-04T12:41:19.931Z debug local-workspace/remote_map/remote_map closed temporary connection to /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache/tmp-dbs/eaa08a74-c0d1-4050-be6a-176b861ce83b
+2025-02-04T12:41:19.931Z debug local-workspace/remote_map/location_cache Last location closed. Max location cache pool size: 1
+2025-02-04T12:41:19.931Z debug local-workspace/remote_map/counters Remote Map Stats for location '/Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache': {
+  LocationCacheCreated: 1,
+  LocationCacheReuse: 0,
+  LocationCacheHit: 1887,
+  LocationCacheMiss: 641,
+  RemoteMapCreated: 64,
+  RemoteMapHit: 1583,
+  RemoteMapMiss: 336,
+  PersistentDbConnectionCreated: 1,
+  PersistentDbConnectionReuse: 63,
+  TmpDbConnectionReuse: 63,
+  DBIteratorCreated: 191
+}
+2025-02-04T12:41:19.931Z debug local-workspace/remote_map/remote_map closeRemoteMapsOfLocation with location /Users/almogmesilaty/.salto/4673fc09-feb0-4186-8f74-45d498cfd20c/cache took 2 ms
+2025-02-04T12:41:19.931Z info cli/cli ran "fetch -f -v" in 10783 ms
