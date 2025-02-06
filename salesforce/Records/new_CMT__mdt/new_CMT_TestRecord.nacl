@@ -2,10 +2,6 @@ salesforce.new_CMT__mdt new_CMT_TestRecord@uv {
   label = "TestRecord"
   protected = false
   fullName = "new_CMT.TestRecord"
-  Almog_MDT_Relationship_Field__c = "Account"
-  Is_Cool__c = true
-  MDT_Relationship_Field_Definition__c = "Name"
-  MDT_Relationship_Particle__c = "RelationshipToAsset__c"
-  Name__c = "CMT Record"
   _alias = "TestRecord"
+  internalId = "m00WU00000Y43jjYAB"
 }

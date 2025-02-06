@@ -4,11 +4,15 @@ type salesforce.SecondCMT__mdt {
     fieldManageability = "DeveloperControlled"
     label = "new CMT"
     referenceTo = [
-      "new_CMT__mdt",
+      salesforce.new_CMT__mdt,
     ]
     relationshipLabel = "SecondCMTs"
     relationshipName = "SecondCMTs"
     _required = true
     unique = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
   }
 }

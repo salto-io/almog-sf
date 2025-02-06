@@ -2,7 +2,7 @@ salesforce.ValidationRule new_CMT__mdt_Must_Be_Cool {
   fullName = "new_CMT__mdt.Must_Be_Cool"
   active = true
   errorConditionFormula = "Is_Cool__c = false"
-  errorMessage = "This instance is not cool enough"
+  errorMessage = "This instance is not cool enough CHANGE"
   _parent = [
     salesforce.new_CMT__mdt,
   ]

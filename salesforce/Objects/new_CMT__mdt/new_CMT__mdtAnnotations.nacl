@@ -92,7 +92,7 @@ type salesforce.new_CMT__mdt {
     }
   }
   apiName = "new_CMT__mdt"
-  metadataType = "CustomMetadata"
+  metadataType = "CustomObject"
   label = "new CMT"
   description = ""
   pluralLabel = "new CMTS"

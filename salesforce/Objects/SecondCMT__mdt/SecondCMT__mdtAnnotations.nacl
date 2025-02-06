@@ -92,7 +92,7 @@ type salesforce.SecondCMT__mdt {
     }
   }
   apiName = "SecondCMT__mdt"
-  metadataType = "CustomMetadata"
+  metadataType = "CustomObject"
   label = "SecondCMT"
   description = ""
   pluralLabel = "SecondCMTs"

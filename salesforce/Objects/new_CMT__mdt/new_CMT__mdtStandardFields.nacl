@@ -1,14 +1,83 @@
 type salesforce.new_CMT__mdt {
-  serviceid fullName {
-  }
-  string description {
-  }
-  string label {
-  }
-  boolean protected {
-  }
-  string internalId {
+  serviceid Id {
+    apiName = "new_CMT__mdt.Id"
+    label = "Custom Metadata Record ID"
+    queryable = true
     _hidden_value = true
-    localOnly = true
+  }
+  salesforce.Text DeveloperName {
+    apiName = "new_CMT__mdt.DeveloperName"
+    length = 40
+    _required = true
+    label = "Custom Metadata Record Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text MasterLabel {
+    apiName = "new_CMT__mdt.MasterLabel"
+    length = 40
+    _required = true
+    label = "Label"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Picklist Language {
+    apiName = "new_CMT__mdt.Language"
+    restricted = true
+    _required = true
+    label = "Master Language"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text NamespacePrefix {
+    apiName = "new_CMT__mdt.NamespacePrefix"
+    length = 15
+    label = "Namespace Prefix"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text Label {
+    apiName = "new_CMT__mdt.Label"
+    length = 40
+    label = "Label"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Text QualifiedApiName {
+    apiName = "new_CMT__mdt.QualifiedApiName"
+    length = 70
+    label = "Qualified API Name"
+    createable = false
+    updateable = false
+    unique = false
+    caseSensitive = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "new_CMT__mdt.SystemModstamp"
+    label = "System Modstamp"
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
   }
 }

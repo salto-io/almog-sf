@@ -1,7 +1,7 @@
 salesforce.ValidationRule new_CMT__mdt_Invalid_Name {
   fullName = "new_CMT__mdt.Invalid_Name"
   active = true
-  errorConditionFormula = "Name__c = \"invalid\""
+  errorConditionFormula = "Name__c = \"invalidCHANGE\""
   errorMessage = "Name is invalid"
   _parent = [
     salesforce.new_CMT__mdt,
