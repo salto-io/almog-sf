@@ -77,7 +77,7 @@ salesforce.Bot CC_Service_Agent {
     citationsEnabled = false
     company = "Coral Cloud Resorts provides customers with exceptional destination activities, unforgettable experiences, and reservation services, all backed by a commitment to top-notch customer service."
     conversationDefinitionPlanners = {
-      genAiPlannerName = "CC_Service_Agent"
+      genAiPlannerName = salesforce.GenAiPlanner.instance.CC_Service_Agent
     }
     conversationVariables = [
       {

@@ -52,7 +52,7 @@ salesforce.Bot Copilot_for_Salesforce {
     ]
     citationsEnabled = false
     conversationDefinitionPlanners = {
-      genAiPlannerName = "EmployeeCopilotPlanner"
+      genAiPlannerName = salesforce.GenAiPlanner.instance.EmployeeCopilotPlanner
     }
     conversationSystemDialogs = {
       dialog = "Rich_Content_Error_Handling"
