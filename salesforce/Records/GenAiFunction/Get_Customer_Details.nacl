@@ -1,0 +1,19 @@
+salesforce.GenAiFunction Get_Customer_Details {
+  description = "Validate a Customers details by passing their email and memberNumber to see if their is a related contact."
+  invocationTarget = salesforce.Flow.instance.Get_Customer_Details
+  invocationTargetType = "flow"
+  isConfirmationRequired = false
+  masterLabel = "Get Customer Details"
+  fullName = "Get_Customer_Details"
+  schemas = {
+    input_schema_json@dv = {
+      source = file("salesforce/Records/GenAiFunction/Get_Customer_Details/input/schema.json")
+      filePath = "genAiFunctions/Get_Customer_Details/input/schema.json"
+    }
+    output_schema_json@dv = {
+      source = file("salesforce/Records/GenAiFunction/Get_Customer_Details/output/schema.json")
+      filePath = "genAiFunctions/Get_Customer_Details/output/schema.json"
+    }
+  }
+  _alias = "Get_Customer_Details"
+}

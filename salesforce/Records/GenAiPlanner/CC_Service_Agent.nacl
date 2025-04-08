@@ -1,0 +1,21 @@
+salesforce.GenAiPlanner CC_Service_Agent {
+  description = "Deliver personalized customer interactions with an autonomous AI agent. Agentforce Service Agent intelligently supports your customers with common inquiries and escalates complex issues."
+  genAiFunctions = {
+    genAiFunctionName = "EmployeeCopilot__AnswerQuestionsWithKnowledge"
+  }
+  genAiPlugins = [
+    {
+      genAiPluginName = salesforce.GenAiPlugin.instance.Experience_Management
+    },
+    {
+      genAiPluginName = "SvcCopilotTmpl__Escalation"
+    },
+    {
+      genAiPluginName = "SvcCopilotTmpl__GeneralFAQ"
+    },
+  ]
+  masterLabel = "CC Service Agent"
+  plannerType = "AiCopilot__ReAct"
+  fullName = "CC_Service_Agent"
+  _alias = "CC_Service_Agent"
+}

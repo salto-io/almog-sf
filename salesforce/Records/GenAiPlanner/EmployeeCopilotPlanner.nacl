@@ -1,0 +1,15 @@
+salesforce.GenAiPlanner EmployeeCopilotPlanner {
+  description = "Planner for ReAct-based Employee copilot."
+  genAiPlugins = [
+    {
+      genAiPluginName = "EmployeeCopilot__GeneralCRM"
+    },
+    {
+      genAiPluginName = "EmployeeCopilot__OOTBSingleRecordSummary"
+    },
+  ]
+  masterLabel = "EmployeeCopilotPlanner"
+  plannerType = "AiCopilot__ReAct"
+  fullName = "EmployeeCopilotPlanner"
+  _alias = "EmployeeCopilotPlanner"
+}

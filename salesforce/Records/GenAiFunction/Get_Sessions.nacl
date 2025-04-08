@@ -1,0 +1,19 @@
+salesforce.GenAiFunction Get_Sessions {
+  description = "Get the Sessions__c based on the provided specific Date and the Id of the Experience__c"
+  invocationTarget = salesforce.Flow.instance.Get_Sessions
+  invocationTargetType = "flow"
+  isConfirmationRequired = false
+  masterLabel = "Get Sessions"
+  fullName = "Get_Sessions"
+  schemas = {
+    input_schema_json@dv = {
+      source = file("salesforce/Records/GenAiFunction/Get_Sessions/input/schema.json")
+      filePath = "genAiFunctions/Get_Sessions/input/schema.json"
+    }
+    output_schema_json@dv = {
+      source = file("salesforce/Records/GenAiFunction/Get_Sessions/output/schema.json")
+      filePath = "genAiFunctions/Get_Sessions/output/schema.json"
+    }
+  }
+  _alias = "Get_Sessions"
+}
