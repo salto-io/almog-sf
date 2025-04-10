@@ -1,0 +1,7 @@
+salesforce.ApexClass AgentForceOpportunityHelper {
+  apiVersion = 63
+  status = "Active"
+  fullName = "AgentForceOpportunityHelper"
+  content = file("salesforce/Records/ApexClass/AgentForceOpportunityHelper.cls")
+  _alias = "AgentForceOpportunityHelper"
+}

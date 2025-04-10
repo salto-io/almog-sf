@@ -1,0 +1,7 @@
+salesforce.ApexClass MyProfilePageController {
+  apiVersion = 63
+  status = "Active"
+  fullName = "MyProfilePageController"
+  content = file("salesforce/Records/ApexClass/MyProfilePageController.cls")
+  _alias = "MyProfilePageController"
+}

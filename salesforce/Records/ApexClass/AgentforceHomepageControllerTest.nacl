@@ -1,0 +1,12 @@
+salesforce.ApexClass AgentforceHomepageControllerTest {
+  apiVersion = 62
+  status = "Active"
+  fullName = "AgentforceHomepageControllerTest"
+  content = file("salesforce/Records/ApexClass/AgentforceHomepageControllerTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.AgentforceHomepageController
+    },
+  ]
+  _alias = "AgentforceHomepageControllerTest"
+}

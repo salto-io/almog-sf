@@ -1,0 +1,7 @@
+salesforce.ApexClass AgentforceHomepageController {
+  apiVersion = 62
+  status = "Active"
+  fullName = "AgentforceHomepageController"
+  content = file("salesforce/Records/ApexClass/AgentforceHomepageController.cls")
+  _alias = "AgentforceHomepageController"
+}

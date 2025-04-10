@@ -1,0 +1,7 @@
+salesforce.ApexClass AgentAction_LookupContact {
+  apiVersion = 63
+  status = "Active"
+  fullName = "AgentAction_LookupContact"
+  content = file("salesforce/Records/ApexClass/AgentAction_LookupContact.cls")
+  _alias = "AgentAction_LookupContact"
+}

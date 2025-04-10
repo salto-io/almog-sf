@@ -1,0 +1,7 @@
+salesforce.ApexClass SiteRegisterController {
+  apiVersion = 63
+  status = "Active"
+  fullName = "SiteRegisterController"
+  content = file("salesforce/Records/ApexClass/SiteRegisterController.cls")
+  _alias = "SiteRegisterController"
+}

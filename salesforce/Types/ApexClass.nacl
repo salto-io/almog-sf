@@ -1,4 +1,4 @@
-type salesforce.GenAiPromptTemplateVersion {
+type salesforce.ApexClass {
   annotations {
     serviceid metadataType {
     }
@@ -13,46 +13,47 @@ type salesforce.GenAiPromptTemplateVersion {
     string dirName {
     }
   }
-  string classification {
+  serviceid fullName {
   }
   string content {
   }
-  string defaultLanguageScope {
+  number apiVersion {
   }
-  string description {
-  }
-  salesforce.GenAiPromptTemplateGenerationConfig generationTemplateConfigs {
-  }
-  "List<salesforce.GenAiPromptTemplateInput>" inputs {
-  }
-  string keywords {
-  }
-  string primaryModel {
+  "List<salesforce.PackageVersion>" packageVersions {
   }
   string status {
     _restriction = {
       enforce_value = false
       values = [
-        "Draft",
-        "Published",
+        "Active",
+        "Deleted",
+        "Inactive",
       ]
     }
   }
-  "List<salesforce.GenAiPromptTemplateDataProvider>" templateDataProviders {
+  string internalId {
+    _hidden_value = true
+    localOnly = true
   }
-  number versionNumber {
-  }
-  metadataType = "GenAiPromptTemplateVersion"
+  hasMetaFile = true
+  suffix = "cls"
+  dirName = "classes"
+  metadataType = "ApexClass"
   _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
     {
       value = "content"
       highlighted = true
       indexed = false
     },
     {
-      value = "description"
+      value = "apiVersion"
       highlighted = true
-      indexed = false
+      indexed = true
     },
     {
       value = "status"

@@ -1,0 +1,12 @@
+salesforce.ApexClass MyProfilePageControllerTest {
+  apiVersion = 63
+  status = "Active"
+  fullName = "MyProfilePageControllerTest"
+  content = file("salesforce/Records/ApexClass/MyProfilePageControllerTest.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.ApexClass.instance.MyProfilePageController
+    },
+  ]
+  _alias = "MyProfilePageControllerTest"
+}

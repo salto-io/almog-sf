@@ -1,4 +1,4 @@
-type salesforce.GenAiPromptTemplateVersion {
+type salesforce.BotBlockVersion {
   annotations {
     serviceid metadataType {
     }
@@ -13,39 +13,44 @@ type salesforce.GenAiPromptTemplateVersion {
     string dirName {
     }
   }
-  string classification {
+  serviceid fullName {
   }
-  string content {
+  salesforce.BotDialog botDialogs {
   }
-  string defaultLanguageScope {
+  salesforce.ConversationDefinitionGoal conversationGoals {
+  }
+  string conversationLanguages {
+  }
+  salesforce.ConversationVariable conversationVariables {
   }
   string description {
   }
-  salesforce.GenAiPromptTemplateGenerationConfig generationTemplateConfigs {
+  salesforce.LocalMlDomain mlDomain {
+    foreignKeyDomain = [
+      "MlDomain",
+    ]
   }
-  "List<salesforce.GenAiPromptTemplateInput>" inputs {
-  }
-  string keywords {
-  }
-  string primaryModel {
+  string permissionSet {
+    foreignKeyDomain = [
+      "PermissionSet",
+    ]
   }
   string status {
     _restriction = {
       enforce_value = false
       values = [
-        "Draft",
         "Published",
       ]
     }
   }
-  "List<salesforce.GenAiPromptTemplateDataProvider>" templateDataProviders {
+  string internalId {
+    _hidden_value = true
+    localOnly = true
   }
-  number versionNumber {
-  }
-  metadataType = "GenAiPromptTemplateVersion"
+  metadataType = "BotBlockVersion"
   _important_values = [
     {
-      value = "content"
+      value = "fullName"
       highlighted = true
       indexed = false
     },
