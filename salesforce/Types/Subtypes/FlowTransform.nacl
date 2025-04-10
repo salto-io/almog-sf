@@ -51,7 +51,7 @@ type salesforce.FlowTransform {
   }
   string apexClass {
     foreignKeyDomain = [
-      "ApexClass",
+      salesforce.ApexClass,
       "ExternalServiceObjectType",
     ]
   }

@@ -1,7 +1,7 @@
 salesforce.GenAiPromptTemplate RecordSummaryTest {
   developerName = "RecordSummaryTest"
   masterLabel = "RecordSummaryTest"
-  relatedEntity = "Account"
+  relatedEntity = salesforce.Account
   templateVersions = {
     content = '''
 Flow result: {!$Flow:TemplateTriggeredPromptTest.Prompt}

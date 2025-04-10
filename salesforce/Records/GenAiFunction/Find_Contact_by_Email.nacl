@@ -1,6 +1,6 @@
 salesforce.GenAiFunction Find_Contact_by_Email {
   description = "Returns Contact Id and Name by Email"
-  invocationTarget = "AgentAction_LookupContact"
+  invocationTarget = salesforce.ApexClass.instance.AgentAction_LookupContact
   invocationTargetType = "apex"
   isConfirmationRequired = false
   masterLabel = "Find Contact by Email"

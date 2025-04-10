@@ -53,7 +53,7 @@ salesforce.Flow Get_Account_Details {
       filterLogic = "and"
       filters = [
         {
-          field = "Name"
+          field = salesforce.Account.field.Name
           operator = "EqualTo"
           value = {
             elementReference = "accountName"
@@ -61,7 +61,7 @@ salesforce.Flow Get_Account_Details {
         },
       ]
       getFirstRecordOnly = true
-      object = "Account"
+      object = salesforce.Account
       storeOutputAutomatically = true
     },
   ]
@@ -87,7 +87,7 @@ salesforce.Flow Get_Account_Details {
       isCollection = false
       isInput = false
       isOutput = true
-      objectType = "Account"
+      objectType = salesforce.Account
     },
   ]
   _alias = "Get Account Details"
