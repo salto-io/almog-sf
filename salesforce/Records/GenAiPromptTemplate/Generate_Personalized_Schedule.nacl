@@ -9,13 +9,15 @@ For each activity, include name, time, location and duration on a single line. D
 Tell the guest to reach out if they'd like to book any of these activities.
 List of activities happening today that match the guest's interests:
 '''
-    inputs = {
-      apiName = "Contact"
-      definition = "SOBJECT://Contact"
-      masterLabel = "Contact"
-      referenceName = "Input:Contact"
-      required = true
-    }
+    inputs = [
+      {
+        apiName = "Contact"
+        definition = "SOBJECT://Contact"
+        masterLabel = "Contact"
+        referenceName = "Input:Contact"
+        required = true
+      },
+    ]
     primaryModel = "sfdc_ai__DefaultOpenAIGPT35Turbo"
     status = "Published"
   }

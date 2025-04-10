@@ -3,13 +3,15 @@ salesforce.GenAiPromptTemplate Generate_Upsell_Opportunities {
   masterLabel = "Generate Upsell Opportunities"
   templateVersions = {
     content = "booking trends of the guests associated with the account. Avoid suggesting any experiences or services that have already been booked. Prioritize high-value, premium, or exclusive experiences that would enhance the guest's stay. Include reasons why each upsell might be a good fit, referencing loyalty tier, previous purchases, or interests if available."
-    inputs = {
-      apiName = "Account"
-      definition = "SOBJECT://Account"
-      masterLabel = "Account"
-      referenceName = "Input:Account"
-      required = true
-    }
+    inputs = [
+      {
+        apiName = "Account"
+        definition = "SOBJECT://Account"
+        masterLabel = "Account"
+        referenceName = "Input:Account"
+        required = true
+      },
+    ]
     primaryModel = "sfdc_ai__DefaultOpenAIGPT35Turbo"
     status = "Published"
   }

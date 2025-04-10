@@ -23,8 +23,6 @@ type salesforce.GenAiPromptTemplateVersion {
   }
   salesforce.GenAiPromptTemplateGenerationConfig generationTemplateConfigs {
   }
-  salesforce.GenAiPromptTemplateInput inputs {
-  }
   string keywords {
   }
   string primaryModel {
@@ -37,8 +35,6 @@ type salesforce.GenAiPromptTemplateVersion {
         "Published",
       ]
     }
-  }
-  salesforce.GenAiPromptTemplateDataProvider templateDataProviders {
   }
   number versionNumber {
   }
@@ -60,4 +56,8 @@ type salesforce.GenAiPromptTemplateVersion {
       indexed = true
     },
   ]
+  "List<salesforce.GenAiPromptTemplateInput>" inputs {
+  }
+  "List<salesforce.GenAiPromptTemplateDataProvider>" templateDataProviders {
+  }
 }
