@@ -29,7 +29,7 @@ Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}
           parameterName = "VariableForFirstPromptInstruction"
           valueExpression = "{!$Input:Account}"
         }
-        referenceName = "Flow:TemplateTriggeredPromptTest"
+        referenceName = salesforce.Flow.instance.TemplateTriggeredPromptTest
       },
       {
         definition = "apex://AgentAction_LookupAccount"
@@ -39,7 +39,7 @@ Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}
           parameterName = "objectToSummarize"
           valueExpression = "{!$Input:Account}"
         }
-        referenceName = "Apex:AgentAction_LookupAccount"
+        referenceName = salesforce.ApexClass.instance.AgentAction_LookupAccount
       },
     ]
   }

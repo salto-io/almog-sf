@@ -5,43 +5,28 @@ settings salesforce.Organization {
   salesforce.Text Division {
     apiName = "Organization.Division"
     label = "Division"
-    createable = false
-    updateable = true
     unique = false
     caseSensitive = false
     length = 80
-    queryable = true
   }
   salesforce.Address Address {
     apiName = "Organization.Address"
     label = "Address"
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Phone Phone {
     apiName = "Organization.Phone"
     label = "Phone"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Phone Fax {
     apiName = "Organization.Fax"
     label = "Fax"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Text PrimaryContact {
     apiName = "Organization.PrimaryContact"
     label = "Primary Contact"
-    createable = false
-    updateable = true
     unique = false
     caseSensitive = false
     length = 80
-    queryable = true
   }
   salesforce.Picklist DefaultLocaleSidKey {
     apiName = "Organization.DefaultLocaleSidKey"
@@ -1526,9 +1511,6 @@ settings salesforce.Organization {
       },
     ]
     restricted = true
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist TimeZoneSidKey {
     apiName = "Organization.TimeZoneSidKey"
@@ -4081,9 +4063,6 @@ settings salesforce.Organization {
       },
     ]
     restricted = true
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Picklist LanguageLocaleKey {
     apiName = "Organization.LanguageLocaleKey"
@@ -4200,85 +4179,52 @@ settings salesforce.Organization {
       },
     ]
     restricted = true
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox ReceivesInfoEmails {
     apiName = "Organization.ReceivesInfoEmails"
     label = "Info Emails"
     defaultValue = false
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox ReceivesAdminInfoEmails {
     apiName = "Organization.ReceivesAdminInfoEmails"
     label = "Info Emails Admin"
     defaultValue = false
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox PreferencesRequireOpportunityProducts {
     apiName = "Organization.PreferencesRequireOpportunityProducts"
     label = "RequireOpportunityProducts"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox PreferencesTransactionSecurityPolicy {
     apiName = "Organization.PreferencesTransactionSecurityPolicy"
     label = "TransactionSecurityPolicy"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox PreferencesConsentManagementEnabled {
     apiName = "Organization.PreferencesConsentManagementEnabled"
     label = "ConsentManagementEnabled"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox PreferencesAutoSelectIndividualOnMerge {
     apiName = "Organization.PreferencesAutoSelectIndividualOnMerge"
     label = "AutoSelectIndividualOnMerge"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox PreferencesLightningLoginEnabled {
     apiName = "Organization.PreferencesLightningLoginEnabled"
     label = "LightningLoginEnabled"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Checkbox PreferencesOnlyLLPermUserAllowed {
     apiName = "Organization.PreferencesOnlyLLPermUserAllowed"
     label = "OnlyLLPermUserAllowed"
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Number FiscalYearStartMonth {
     apiName = "Organization.FiscalYearStartMonth"
     label = "Fiscal Year Starts In"
     precision = 9
-    createable = false
-    updateable = false
     scale = 0
     unique = false
-    queryable = true
   }
   salesforce.Checkbox UsesStartDateAsFiscalYearName {
     apiName = "Organization.UsesStartDateAsFiscalYearName"
     label = "Fiscal Year Name by Start"
     defaultValue = false
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Picklist DefaultAccountAccess {
     apiName = "Organization.DefaultAccountAccess"
@@ -4316,9 +4262,6 @@ settings salesforce.Organization {
       },
     ]
     restricted = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Picklist DefaultContactAccess {
     apiName = "Organization.DefaultContactAccess"
@@ -4350,9 +4293,6 @@ settings salesforce.Organization {
       },
     ]
     restricted = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Picklist DefaultOpportunityAccess {
     apiName = "Organization.DefaultOpportunityAccess"
@@ -4390,9 +4330,6 @@ settings salesforce.Organization {
       },
     ]
     restricted = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Picklist DefaultLeadAccess {
     apiName = "Organization.DefaultLeadAccess"
@@ -4424,9 +4361,6 @@ settings salesforce.Organization {
       },
     ]
     restricted = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Picklist DefaultCaseAccess {
     apiName = "Organization.DefaultCaseAccess"
@@ -4458,9 +4392,6 @@ settings salesforce.Organization {
       },
     ]
     restricted = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Picklist DefaultCalendarAccess {
     apiName = "Organization.DefaultCalendarAccess"
@@ -4498,9 +4429,6 @@ settings salesforce.Organization {
       },
     ]
     restricted = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Picklist DefaultPricebookAccess {
     apiName = "Organization.DefaultPricebookAccess"
@@ -4526,9 +4454,6 @@ settings salesforce.Organization {
       },
     ]
     restricted = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Picklist DefaultCampaignAccess {
     apiName = "Organization.DefaultCampaignAccess"
@@ -4560,17 +4485,11 @@ settings salesforce.Organization {
       },
     ]
     restricted = true
-    createable = false
-    updateable = false
-    queryable = true
   }
   salesforce.Email ComplianceBccEmail {
     apiName = "Organization.ComplianceBccEmail"
     label = "Compliance BCC Email"
-    createable = false
-    updateable = false
     unique = false
-    queryable = true
   }
   salesforce.Picklist UiSkin {
     apiName = "Organization.UiSkin"
@@ -4608,57 +4527,39 @@ settings salesforce.Organization {
       },
     ]
     restricted = true
-    createable = false
-    updateable = true
-    queryable = true
   }
   salesforce.Text SignupCountryIsoCode {
     apiName = "Organization.SignupCountryIsoCode"
     label = "Signup Country"
-    createable = false
-    updateable = false
     unique = false
     caseSensitive = false
     length = 2
-    queryable = true
   }
   salesforce.Number NumKnowledgeService {
     apiName = "Organization.NumKnowledgeService"
     label = "Knowledge Licenses"
     precision = 9
-    createable = false
-    updateable = false
     scale = 0
     unique = false
-    queryable = true
   }
   salesforce.Text NamespacePrefix {
     apiName = "Organization.NamespacePrefix"
     label = "Namespace Prefix"
-    createable = false
-    updateable = false
     unique = false
     caseSensitive = false
     length = 15
-    queryable = true
   }
   salesforce.Text WebToCaseDefaultOrigin {
     apiName = "Organization.WebToCaseDefaultOrigin"
     label = "Web to Cases Default Origin"
-    createable = false
-    updateable = true
     unique = false
     caseSensitive = false
     length = 40
-    queryable = true
   }
   salesforce.Checkbox IsReadOnly {
     apiName = "Organization.IsReadOnly"
     label = "Is Read Only"
     defaultValue = false
-    createable = false
-    updateable = false
-    queryable = true
   }
   apiName = "Organization"
 }
