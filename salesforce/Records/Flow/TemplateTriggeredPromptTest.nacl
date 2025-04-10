@@ -1,0 +1,65 @@
+salesforce.Flow TemplateTriggeredPromptTest {
+  fullName = "TemplateTriggeredPromptTest"
+  apiVersion = 63
+  assignments = [
+    {
+      name = "FirstPromptInstruction"
+      elementSubtype = "AddPromptInstructions"
+      label = "FirstPromptInstruction"
+      assignmentItems = [
+        {
+          assignToReference = "$Output.Prompt"
+          operator = "Add"
+          value = {
+            stringValue = '''
+{!VariableForFirstPromptInstruction.Name}
+
+'''
+          }
+        },
+      ]
+    },
+  ]
+  environments = "Default"
+  interviewLabel = "TemplateTriggeredPromptTest {!$Flow.CurrentDateTime}"
+  label = "TemplateTriggeredPromptTest"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "PromptFlow"
+  start = {
+    connector = {
+      targetReference = "FirstPromptInstruction"
+    }
+    triggerType = "Capability"
+  }
+  status = "Active"
+  variables = [
+    {
+      name = "VariableForFirstPromptInstruction"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = false
+      objectType = "Account"
+    },
+  ]
+  _alias = "TemplateTriggeredPromptTest"
+}

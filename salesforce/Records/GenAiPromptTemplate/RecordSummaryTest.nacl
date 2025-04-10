@@ -1,0 +1,50 @@
+salesforce.GenAiPromptTemplate RecordSummaryTest {
+  developerName = "RecordSummaryTest"
+  masterLabel = "RecordSummaryTest"
+  relatedEntity = "Account"
+  templateVersions = {
+    content = '''
+Flow result: {!$Flow:TemplateTriggeredPromptTest.Prompt}
+Organization city: {!$Organization.City}
+Current user: {!$User.Alias}
+Account name: {!$Input:Account.Name}
+Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}
+'''
+    inputs = [
+      {
+        apiName = "objectToSummarize"
+        definition = "SOBJECT://Account"
+        referenceName = "Input:Account"
+        required = true
+      },
+    ]
+    primaryModel = "sfdc_ai__DefaultOpenAIGPT35Turbo"
+    status = "Published"
+    templateDataProviders = [
+      {
+        definition = "flow://TemplateTriggeredPromptTest"
+        parameters = {
+          definition = "SOBJECT://Account"
+          isRequired = true
+          parameterName = "VariableForFirstPromptInstruction"
+          valueExpression = "{!$Input:Account}"
+        }
+        referenceName = "Flow:TemplateTriggeredPromptTest"
+      },
+      {
+        definition = "apex://AgentAction_LookupAccount"
+        parameters = {
+          definition = "SOBJECT://Account"
+          isRequired = true
+          parameterName = "objectToSummarize"
+          valueExpression = "{!$Input:Account}"
+        }
+        referenceName = "Apex:AgentAction_LookupAccount"
+      },
+    ]
+  }
+  type = "einstein_gpt__recordSummary"
+  visibility = "Global"
+  fullName = "RecordSummaryTest"
+  _alias = "RecordSummaryTest"
+}
