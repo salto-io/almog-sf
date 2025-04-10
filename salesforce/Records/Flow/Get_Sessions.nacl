@@ -1,0 +1,104 @@
+salesforce.Flow Get_Sessions {
+  fullName = "Get_Sessions"
+  apiVersion = 61
+  description = "Get the Sessions__c based on the provided specific Date and the Id of the Experience__c"
+  environments = "Default"
+  interviewLabel = "Get Sessions {!$Flow.CurrentDateTime}"
+  label = "Get Sessions"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  recordLookups = [
+    {
+      description = "Get Experience Session records based on the Experience Id and the Date."
+      name = "Get_Sessions_by_Date"
+      label = "Get Sessions by Date"
+      assignNullValuesIfNoRecordsFound = false
+      filterLogic = "and"
+      filters = [
+        {
+          field = "Date__c"
+          operator = "EqualTo"
+          value = {
+            elementReference = "startDate"
+          }
+        },
+        {
+          field = "Experience__c"
+          operator = "EqualTo"
+          value = {
+            elementReference = "experienceId"
+          }
+        },
+        {
+          field = "Available_Slots__c"
+          operator = "GreaterThan"
+          value = {
+            numberValue = 0
+          }
+        },
+      ]
+      object = "Session__c"
+      outputReference = "sessions"
+      queriedFields = [
+        "Id",
+        "Start_Time__c",
+        "End_Time__c",
+        "Available_Slots__c",
+      ]
+    },
+  ]
+  runInMode = "SystemModeWithSharing"
+  start = {
+    connector = {
+      targetReference = "Get_Sessions_by_Date"
+    }
+  }
+  status = "Active"
+  variables = [
+    {
+      description = "The Id of the Experience__c that you would like to check for."
+      name = "experienceId"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+    {
+      description = "The available Session__c records for the Experience__c"
+      name = "sessions"
+      dataType = "SObject"
+      isCollection = true
+      isInput = false
+      isOutput = true
+      objectType = "Session__c"
+    },
+    {
+      description = "The date that the user would like to view the Session__c for."
+      name = "startDate"
+      dataType = "Date"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+  ]
+  _alias = "Get Sessions"
+}

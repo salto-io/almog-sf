@@ -1,0 +1,19 @@
+salesforce.GenAiFunction Find_Contact_by_Email {
+  description = "Returns Contact Id and Name by Email"
+  invocationTarget = "AgentAction_LookupContact"
+  invocationTargetType = "apex"
+  isConfirmationRequired = false
+  masterLabel = "Find Contact by Email"
+  fullName = "Find_Contact_by_Email"
+  schemas = {
+    input_schema_json@dv = {
+      source = file("salesforce/Records/GenAiFunction/Find_Contact_by_Email/input/schema.json")
+      filePath = "genAiFunctions/Find_Contact_by_Email/input/schema.json"
+    }
+    output_schema_json@dv = {
+      source = file("salesforce/Records/GenAiFunction/Find_Contact_by_Email/output/schema.json")
+      filePath = "genAiFunctions/Find_Contact_by_Email/output/schema.json"
+    }
+  }
+  _alias = "Find_Contact_by_Email"
+}

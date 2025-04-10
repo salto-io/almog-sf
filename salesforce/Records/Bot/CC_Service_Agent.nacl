@@ -1,0 +1,276 @@
+salesforce.Bot CC_Service_Agent {
+  fullName = "CC_Service_Agent"
+  agentType = "EinsteinServiceAgent"
+  botMlDomain = {
+    label = "CC Service Agent"
+    name = "CC_Service_Agent"
+  }
+  botUser = "cc_service_agent@00dgl000001vau1.ext"
+  botVersions = {
+    fullName = "v1"
+    articleAnswersGPTEnabled = false
+    botDialogs = [
+      {
+        botSteps = [
+          {
+            botMessages = {
+              message = "Hi, I'm an AI service assistant. How can I help you?"
+              messageIdentifier = "961743fe-66e7-42a3-be9a-54b629e17e60"
+            }
+            stepIdentifier = "b4a1ae84-7995-4bef-bcd7-8dda71bb4428"
+            type = "Message"
+          },
+          {
+            stepIdentifier = "fcd2a3f1-528e-4a94-9851-20507c55cc05"
+            type = "Wait"
+          },
+        ]
+        developerName = "Welcome"
+        isPlaceholderDialog = false
+        label = "Hi! I'm your helpful bot."
+        showInFooterMenu = false
+      },
+      {
+        botSteps = [
+          {
+            botMessages = {
+              message = "Sorry, it looks like something has gone wrong."
+              messageIdentifier = "2bf672d8-cf45-4740-923a-85e9695976c0"
+            }
+            stepIdentifier = "365f09da-2661-48ff-8c92-340e2fa7953e"
+            type = "Message"
+          },
+          {
+            stepIdentifier = "81e6b744-1959-44b4-9e0a-c8c7f0cc5265"
+            type = "Wait"
+          },
+        ]
+        developerName = "Error_Handling"
+        isPlaceholderDialog = false
+        label = "Unfortunately, a system error occurred. Let us start again."
+        showInFooterMenu = false
+      },
+      {
+        botSteps = [
+          {
+            botMessages = {
+              message = "One moment while I connect you to the next available service representative."
+              messageIdentifier = "0cc87cd9-19f4-41a1-b9bd-4571654a7c55"
+            }
+            stepIdentifier = "d67df372-7602-4074-aa41-4b28a8d3efaf"
+            type = "Message"
+          },
+          {
+            conversationSystemMessage = {
+              type = "Transfer"
+            }
+            stepIdentifier = "ce7031c8-3024-4689-9c91-48b6c9acf3fb"
+            type = "SystemMessage"
+          },
+        ]
+        developerName = "Transfer_To_Agent"
+        isPlaceholderDialog = false
+        label = "Transfer To Agent"
+        showInFooterMenu = false
+      },
+    ]
+    citationsEnabled = false
+    company = "Coral Cloud Resorts provides customers with exceptional destination activities, unforgettable experiences, and reservation services, all backed by a commitment to top-notch customer service."
+    conversationDefinitionPlanners = {
+      genAiPlannerName = salesforce.GenAiPlanner.instance.CC_Service_Agent
+    }
+    conversationVariables = [
+      {
+        dataType = "Text"
+        developerName = "VerifiedCustomerId"
+        label = "VerifiedCustomerId"
+        visibility = "Internal"
+      },
+    ]
+    entryDialog = "Welcome"
+    intentDisambiguationEnabled = false
+    intentV3Enabled = false
+    knowledgeActionEnabled = false
+    knowledgeFallbackEnabled = false
+    role = "You are a customer service representative, helping our guests make reservations, update bookings, and navigate all that Coral Cloud Resorts has to offer."
+    smallTalkEnabled = false
+    toneType = "Casual"
+  }
+  contextVariables = [
+    {
+      contextVariableMappings = [
+        {
+          SObjectType = "MessagingEndUser"
+          fieldName = "MessagingEndUser.ContactId"
+          messageType = "EmbeddedMessaging"
+        },
+        {
+          SObjectType = "MessagingEndUser"
+          fieldName = "MessagingEndUser.ContactId"
+          messageType = "Text"
+        },
+        {
+          SObjectType = "MessagingEndUser"
+          fieldName = "MessagingEndUser.ContactId"
+          messageType = "Facebook"
+        },
+        {
+          SObjectType = "MessagingEndUser"
+          fieldName = "MessagingEndUser.ContactId"
+          messageType = "Custom"
+        },
+        {
+          SObjectType = "MessagingEndUser"
+          fieldName = "MessagingEndUser.ContactId"
+          messageType = "WhatsApp"
+        },
+        {
+          SObjectType = "MessagingEndUser"
+          fieldName = "MessagingEndUser.ContactId"
+          messageType = "AppleBusinessChat"
+        },
+        {
+          SObjectType = "MessagingEndUser"
+          fieldName = "MessagingEndUser.ContactId"
+          messageType = "Line"
+        },
+      ]
+      dataType = "Id"
+      developerName = "ContactId"
+      label = "Contact Id"
+    },
+    {
+      contextVariableMappings = [
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.MessagingEndUserId"
+          messageType = "Line"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.MessagingEndUserId"
+          messageType = "Text"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.MessagingEndUserId"
+          messageType = "Facebook"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.MessagingEndUserId"
+          messageType = "Custom"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.MessagingEndUserId"
+          messageType = "WhatsApp"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.MessagingEndUserId"
+          messageType = "AppleBusinessChat"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.MessagingEndUserId"
+          messageType = "EmbeddedMessaging"
+        },
+      ]
+      dataType = "Id"
+      developerName = "EndUserId"
+      label = "End User Id"
+    },
+    {
+      contextVariableMappings = [
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.EndUserLanguage"
+          messageType = "EmbeddedMessaging"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.EndUserLanguage"
+          messageType = "Text"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.EndUserLanguage"
+          messageType = "Facebook"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.EndUserLanguage"
+          messageType = "Custom"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.EndUserLanguage"
+          messageType = "WhatsApp"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.EndUserLanguage"
+          messageType = "AppleBusinessChat"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.EndUserLanguage"
+          messageType = "Line"
+        },
+      ]
+      dataType = "Text"
+      developerName = "EndUserLanguage"
+      label = "End User Language"
+    },
+    {
+      contextVariableMappings = [
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.Id"
+          messageType = "EmbeddedMessaging"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.Id"
+          messageType = "Text"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.Id"
+          messageType = "Facebook"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.Id"
+          messageType = "Custom"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.Id"
+          messageType = "WhatsApp"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.Id"
+          messageType = "AppleBusinessChat"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.Id"
+          messageType = "Line"
+        },
+      ]
+      dataType = "Id"
+      developerName = "RoutableId"
+      label = "Routable Id"
+    },
+  ]
+  description = "Deliver personalized customer interactions with an autonomous AI agent. Agentforce Service Agent intelligently supports your customers with common inquiries and escalates complex issues."
+  label = "CC Service Agent"
+  logPrivateConversationData = true
+  richContentEnabled = true
+  sessionTimeout = 0
+  type = "ExternalCopilot"
+  _alias = "CC Service Agent"
+}

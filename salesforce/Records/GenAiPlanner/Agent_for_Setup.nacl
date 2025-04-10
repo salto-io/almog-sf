@@ -1,0 +1,24 @@
+salesforce.GenAiPlanner Agent_for_Setup {
+  description = "Simplify administrative tasks with Agent for Setup. Customize and manage your org and quickly find documentation with Agent for Setup."
+  genAiFunctions = {
+    genAiFunctionName = "EmployeeCopilot__AnswerQuestionsWithKnowledge"
+  }
+  genAiPlugins = [
+    {
+      genAiPluginName = salesforce.GenAiPlugin.instance.Contact_Email
+    },
+    {
+      genAiPluginName = "SvcCopilotTmpl__CustomerVerification"
+    },
+    {
+      genAiPluginName = "SvcCopilotTmpl__DeliveryIssues"
+    },
+    {
+      genAiPluginName = "SvcCopilotTmpl__GeneralFAQ"
+    },
+  ]
+  masterLabel = "Agent for Setup"
+  plannerType = "AiCopilot__ReAct"
+  fullName = "Agent_for_Setup"
+  _alias = "Agent_for_Setup"
+}

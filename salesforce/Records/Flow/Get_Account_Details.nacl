@@ -1,0 +1,94 @@
+salesforce.Flow Get_Account_Details {
+  fullName = "Get_Account_Details"
+  apiVersion = 63
+  assignments = [
+    {
+      description = "Assign an Account record for presentation back to the user"
+      name = "Assign_Account_Record"
+      label = "Assign Account Record"
+      assignmentItems = [
+        {
+          assignToReference = "accountRecord"
+          operator = "Assign"
+          value = {
+            elementReference = "Get_Account_by_Name"
+          }
+        },
+      ]
+    },
+  ]
+  environments = "Default"
+  interviewLabel = "Get Account Details {!$Flow.CurrentDateTime}"
+  label = "Get Account Details"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  recordLookups = [
+    {
+      description = "Search for available Accounts by Name"
+      name = "Get_Account_by_Name"
+      label = "Get Account by Name"
+      assignNullValuesIfNoRecordsFound = false
+      connector = {
+        targetReference = "Assign_Account_Record"
+      }
+      filterLogic = "and"
+      filters = [
+        {
+          field = "Name"
+          operator = "EqualTo"
+          value = {
+            elementReference = "accountName"
+          }
+        },
+      ]
+      getFirstRecordOnly = true
+      object = "Account"
+      storeOutputAutomatically = true
+    },
+  ]
+  start = {
+    connector = {
+      targetReference = "Get_Account_by_Name"
+    }
+  }
+  status = "Active"
+  variables = [
+    {
+      description = "The Name of the Account that the user would like more information on."
+      name = "accountName"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+    {
+      description = "The Account record to be summarized to the user."
+      name = "accountRecord"
+      dataType = "SObject"
+      isCollection = false
+      isInput = false
+      isOutput = true
+      objectType = "Account"
+    },
+  ]
+  _alias = "Get Account Details"
+}

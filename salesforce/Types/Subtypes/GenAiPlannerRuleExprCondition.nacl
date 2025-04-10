@@ -1,0 +1,46 @@
+type salesforce.GenAiPlannerRuleExprCondition {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string leftOperand {
+  }
+  string leftOperandType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Attribute",
+        "ContextVariable",
+        "Variable",
+      ]
+    }
+  }
+  string operator {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "equal",
+        "greaterThan",
+        "greaterThanOrEqual",
+        "isEmpty",
+        "isNotEmpty",
+        "lessThan",
+        "lessThanOrEqual",
+        "notEqual",
+      ]
+    }
+  }
+  string rightOperandValue {
+  }
+  metadataType = "GenAiPlannerRuleExprCondition"
+}
