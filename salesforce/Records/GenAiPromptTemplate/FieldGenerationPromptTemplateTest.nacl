@@ -1,0 +1,53 @@
+salesforce.GenAiPromptTemplate FieldGenerationPromptTemplateTest {
+  developerName = "FieldGenerationPromptTemplateTest"
+  masterLabel = "FieldGenerationPromptTemplateTest"
+  relatedEntity = salesforce.Account
+  relatedField = "Account.AccountNumber"
+  templateVersions = [
+    {
+      content = '''
+First source: {!$Flow:TemplateTriggeredPromptTest.Prompt}
+Second source: {!$Apex:AgentAction_LookupAccount.Prompt}
+Third source: {!$Organization.City}
+Fourth source: {!$User.Alias}
+Fifth source: {!$Input:Account.Id}
+'''
+      inputs = [
+        {
+          apiName = "RelatedEntity"
+          definition = "SOBJECT://Account"
+          referenceName = "Input:Account"
+          required = true
+        },
+      ]
+      primaryModel = "sfdc_ai__DefaultOpenAIGPT35Turbo"
+      status = "Published"
+      templateDataProviders = [
+        {
+          definition = "flow://TemplateTriggeredPromptTest"
+          parameters = {
+            definition = "SOBJECT://Account"
+            isRequired = true
+            parameterName = "VariableForFirstPromptInstruction"
+            valueExpression = "{!$Input:Account}"
+          }
+          referenceName = salesforce.Flow.instance.TemplateTriggeredPromptTest
+        },
+        {
+          definition = "apex://AgentAction_LookupAccount"
+          parameters = {
+            definition = "SOBJECT://Account"
+            isRequired = true
+            parameterName = "objectToSummarize"
+            valueExpression = "{!$Input:Account}"
+          }
+          referenceName = salesforce.ApexClass.instance.AgentAction_LookupAccount
+        },
+      ]
+    },
+  ]
+  type = "einstein_gpt__fieldCompletion"
+  visibility = "Global"
+  fullName = "FieldGenerationPromptTemplateTest"
+  _alias = "FieldGenerationPromptTemplateTest"
+}

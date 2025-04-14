@@ -1,0 +1,57 @@
+salesforce.GenAiPromptTemplate ExtractProductMentionsPromptTest {
+  developerName = "ExtractProductMentionsPromptTest"
+  masterLabel = "ExtractProductMentionsPromptTest"
+  templateVersions = [
+    {
+      content = '''
+First source:{!$Organization.CreatedBy.AccountId}
+Second source: {!$User.IsActive}
+Third source: {!$Input:userInstructions}
+'''
+      inputs = [
+        {
+          apiName = "userInstructions"
+          definition = "primitive://String"
+          referenceName = "Input:userInstructions"
+          required = true
+        },
+      ]
+      primaryModel = "sfdc_ai__DefaultOpenAIGPT35Turbo"
+      status = "Published"
+    },
+    {
+      content = '''
+First source:{!$Organization.CreatedBy.AccountId}
+Second source: {!$User.IsActive}
+Third source: {!$Input:userInstructions}
+Fourth source: {!$Apex:AgentAction_LookupProduct.Prompt}
+'''
+      inputs = [
+        {
+          apiName = "userInstructions"
+          definition = "primitive://String"
+          referenceName = "Input:userInstructions"
+          required = true
+        },
+      ]
+      primaryModel = "sfdc_ai__DefaultOpenAIGPT35Turbo"
+      status = "Draft"
+      templateDataProviders = [
+        {
+          definition = "apex://AgentAction_LookupProduct"
+          parameters = {
+            definition = "primitive://String"
+            isRequired = true
+            parameterName = "userInstructions"
+            valueExpression = "{!$Input:userInstructions}"
+          }
+          referenceName = salesforce.ApexClass.instance.AgentAction_LookupProduct
+        },
+      ]
+    },
+  ]
+  type = "einstein_gpt__extractProduct"
+  visibility = "Global"
+  fullName = "ExtractProductMentionsPromptTest"
+  _alias = "ExtractProductMentionsPromptTest"
+}

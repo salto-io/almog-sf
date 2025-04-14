@@ -2352,6 +2352,18 @@ settings salesforce.Organization {
         isActive = true
       },
       {
+        fullName = "Asia/Gaza"
+        default = false
+        label = "(GMT+03:00) Eastern European Summer Time (Asia/Gaza)"
+        isActive = true
+      },
+      {
+        fullName = "Asia/Hebron"
+        default = false
+        label = "(GMT+03:00) Eastern European Summer Time (Asia/Hebron)"
+        isActive = true
+      },
+      {
         fullName = "Asia/Jerusalem"
         default = false
         label = "(GMT+03:00) Israel Daylight Time (Asia/Jerusalem)"
@@ -2613,18 +2625,6 @@ settings salesforce.Organization {
         fullName = "Arctic/Longyearbyen"
         default = false
         label = "(GMT+02:00) Central European Summer Time (Arctic/Longyearbyen)"
-        isActive = true
-      },
-      {
-        fullName = "Asia/Gaza"
-        default = false
-        label = "(GMT+02:00) Eastern European Standard Time (Asia/Gaza)"
-        isActive = true
-      },
-      {
-        fullName = "Asia/Hebron"
-        default = false
-        label = "(GMT+02:00) Eastern European Standard Time (Asia/Hebron)"
         isActive = true
       },
       {

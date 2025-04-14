@@ -12,12 +12,21 @@ salesforce.Flow TemplateTriggeredPromptTest {
           operator = "Add"
           value = {
             stringValue = '''
-{!VariableForFirstPromptInstruction.Name}
+{!NewConstant}{!VariableForFirstPromptInstruction.Type}
 
 '''
           }
         },
       ]
+    },
+  ]
+  constants = [
+    {
+      name = "NewConstant"
+      dataType = "String"
+      value = {
+        stringValue = "true"
+      }
     },
   ]
   environments = "Default"
