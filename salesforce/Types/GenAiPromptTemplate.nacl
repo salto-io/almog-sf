@@ -76,6 +76,8 @@ type salesforce.GenAiPromptTemplate {
       "FieldDefinition",
     ]
   }
+  "List<salesforce.GenAiPromptTemplateVersion>" templateVersions {
+  }
   string type {
     _restriction = {
       enforce_value = false
@@ -190,6 +192,4 @@ type salesforce.GenAiPromptTemplate {
       indexed = false
     },
   ]
-  "List<salesforce.GenAiPromptTemplateVersion>" templateVersions {
-  }
 }
