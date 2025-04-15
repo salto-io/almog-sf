@@ -8,6 +8,9 @@ salesforce.GenAiPlanner CC_Service_Agent {
       genAiPluginName = salesforce.GenAiPlugin.instance.Experience_Management
     },
     {
+      genAiPluginName = "Slack__Slack"
+    },
+    {
       genAiPluginName = "SvcCopilotTmpl__DeliveryIssues"
     },
     {

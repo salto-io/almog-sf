@@ -15,7 +15,7 @@ salesforce.Bot CC_Service_Agent {
           botSteps = [
             {
               botMessages = {
-                message = "Hi, I'm an AI service assistant. How can I help you?"
+                message = "Hi, I'm an AI service assistant. How can I help you? I AM VERSION 1"
                 messageIdentifier = "961743fe-66e7-42a3-be9a-54b629e17e60"
               }
               stepIdentifier = "b4a1ae84-7995-4bef-bcd7-8dda71bb4428"
@@ -105,7 +105,7 @@ salesforce.Bot CC_Service_Agent {
           botSteps = [
             {
               botMessages = {
-                message = "Hi, I'm an AI service assistant. How can I help you? change"
+                message = "Hi, I'm an AI service assistant. How can I help you? I AM VERSION 2"
                 messageIdentifier = "961743fe-66e7-42a3-be9a-54b629e17e60"
               }
               stepIdentifier = "b4a1ae84-7995-4bef-bcd7-8dda71bb4428"
@@ -195,7 +195,7 @@ salesforce.Bot CC_Service_Agent {
           botSteps = [
             {
               botMessages = {
-                message = "Hi, I'm an AI service assistant. How can I help you?"
+                message = "Hi, I'm an AI service assistant. How can I help you? I AM VERSION 3"
                 messageIdentifier = "961743fe-66e7-42a3-be9a-54b629e17e60"
               }
               stepIdentifier = "b4a1ae84-7995-4bef-bcd7-8dda71bb4428"
@@ -284,6 +284,11 @@ salesforce.Bot CC_Service_Agent {
         {
           SObjectType = "MessagingEndUser"
           fieldName = "MessagingEndUser.ContactId"
+          messageType = "Line"
+        },
+        {
+          SObjectType = "MessagingEndUser"
+          fieldName = "MessagingEndUser.ContactId"
           messageType = "EmbeddedMessaging"
         },
         {
@@ -310,11 +315,6 @@ salesforce.Bot CC_Service_Agent {
           SObjectType = "MessagingEndUser"
           fieldName = "MessagingEndUser.ContactId"
           messageType = "AppleBusinessChat"
-        },
-        {
-          SObjectType = "MessagingEndUser"
-          fieldName = "MessagingEndUser.ContactId"
-          messageType = "Line"
         },
       ]
       dataType = "Id"
@@ -326,27 +326,7 @@ salesforce.Bot CC_Service_Agent {
         {
           SObjectType = "MessagingSession"
           fieldName = "MessagingSession.MessagingEndUserId"
-          messageType = "Line"
-        },
-        {
-          SObjectType = "MessagingSession"
-          fieldName = "MessagingSession.MessagingEndUserId"
-          messageType = "Text"
-        },
-        {
-          SObjectType = "MessagingSession"
-          fieldName = "MessagingSession.MessagingEndUserId"
-          messageType = "Facebook"
-        },
-        {
-          SObjectType = "MessagingSession"
-          fieldName = "MessagingSession.MessagingEndUserId"
-          messageType = "Custom"
-        },
-        {
-          SObjectType = "MessagingSession"
-          fieldName = "MessagingSession.MessagingEndUserId"
-          messageType = "WhatsApp"
+          messageType = "EmbeddedMessaging"
         },
         {
           SObjectType = "MessagingSession"
@@ -356,7 +336,27 @@ salesforce.Bot CC_Service_Agent {
         {
           SObjectType = "MessagingSession"
           fieldName = "MessagingSession.MessagingEndUserId"
-          messageType = "EmbeddedMessaging"
+          messageType = "WhatsApp"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.MessagingEndUserId"
+          messageType = "Custom"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.MessagingEndUserId"
+          messageType = "Facebook"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.MessagingEndUserId"
+          messageType = "Text"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.MessagingEndUserId"
+          messageType = "Line"
         },
       ]
       dataType = "Id"
@@ -368,27 +368,7 @@ salesforce.Bot CC_Service_Agent {
         {
           SObjectType = "MessagingSession"
           fieldName = "MessagingSession.EndUserLanguage"
-          messageType = "EmbeddedMessaging"
-        },
-        {
-          SObjectType = "MessagingSession"
-          fieldName = "MessagingSession.EndUserLanguage"
-          messageType = "Text"
-        },
-        {
-          SObjectType = "MessagingSession"
-          fieldName = "MessagingSession.EndUserLanguage"
-          messageType = "Facebook"
-        },
-        {
-          SObjectType = "MessagingSession"
-          fieldName = "MessagingSession.EndUserLanguage"
-          messageType = "Custom"
-        },
-        {
-          SObjectType = "MessagingSession"
-          fieldName = "MessagingSession.EndUserLanguage"
-          messageType = "WhatsApp"
+          messageType = "Line"
         },
         {
           SObjectType = "MessagingSession"
@@ -398,7 +378,27 @@ salesforce.Bot CC_Service_Agent {
         {
           SObjectType = "MessagingSession"
           fieldName = "MessagingSession.EndUserLanguage"
-          messageType = "Line"
+          messageType = "WhatsApp"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.EndUserLanguage"
+          messageType = "Custom"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.EndUserLanguage"
+          messageType = "Facebook"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.EndUserLanguage"
+          messageType = "Text"
+        },
+        {
+          SObjectType = "MessagingSession"
+          fieldName = "MessagingSession.EndUserLanguage"
+          messageType = "EmbeddedMessaging"
         },
       ]
       dataType = "Text"

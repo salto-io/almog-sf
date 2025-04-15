@@ -1,6 +1,6 @@
 salesforce.Flow Get_Sessions {
   fullName = "Get_Sessions"
-  apiVersion = 61
+  apiVersion = 63
   description = "Get the Sessions__c based on the provided specific Date and the Id of the Experience__c"
   environments = "Default"
   interviewLabel = "Get Sessions {!$Flow.CurrentDateTime}"
