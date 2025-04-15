@@ -5,98 +5,100 @@ salesforce.Bot Copilot_for_Salesforce {
     label = "Agentforce (Default)"
     name = "Copilot_for_Salesforce"
   }
-  botVersions = {
-    fullName = "v1"
-    articleAnswersGPTEnabled = false
-    botDialogs = [
-      {
-        botSteps = [
-          {
-            botMessages = {
-              message = "Hi! I'm Agentforce, an AI assistant. I can do things like search your Salesforce data or the internet, edit your Salesforce records, and draft or revise emails and fields. Ask me \"What else can you do?\" to see how I can help simplify your work day."
-              messageIdentifier = "8d565fe1-6195-46aa-b5aa-175c003f867d"
-            }
-            stepIdentifier = "9859e06c-67a4-4cf5-85c7-9909d97db4d0"
-            type = "Message"
-          },
-          {
-            stepIdentifier = "2d00e383-3caa-4555-8110-d4ccac24e525"
-            type = "Wait"
-          },
-        ]
-        developerName = "Welcome"
-        isPlaceholderDialog = false
-        label = "Welcome"
-        showInFooterMenu = false
-      },
-      {
-        botSteps = [
-          {
-            botMessages = {
-              message = "Something went wrong. Try again."
-              messageIdentifier = "4b0a982c-8092-45a5-9a56-bca5f1681044"
-            }
-            stepIdentifier = "490de400-56fe-4f03-92a3-9b8e8472a274"
-            type = "Message"
-          },
-          {
-            stepIdentifier = "bbf79cbb-d597-4c5a-95ac-33010677cc58"
-            type = "Wait"
-          },
-        ]
-        developerName = "Rich_Content_Error_Handling"
-        isPlaceholderDialog = false
-        label = "Error Handler"
-        showInFooterMenu = false
-      },
-    ]
-    citationsEnabled = false
-    conversationDefinitionPlanners = {
-      genAiPlannerName = salesforce.GenAiPlanner.instance.EmployeeCopilotPlanner
-    }
-    conversationSystemDialogs = {
-      dialog = "Rich_Content_Error_Handling"
-      type = "ErrorHandling"
-    }
-    conversationVariables = [
-      {
-        dataType = "Text"
-        developerName = "currentAppName"
-        label = "Current App Name"
-        visibility = "External"
-      },
-      {
-        dataType = "Text"
-        developerName = "currentObjectApiName"
-        label = "Current Object Api Name"
-        visibility = "External"
-      },
-      {
-        dataType = "Text"
-        developerName = "currentPageType"
-        label = "Current Page Type"
-        visibility = "External"
-      },
-      {
-        dataType = "Text"
-        developerName = "currentRecordId"
-        label = "Current Record Id"
-        visibility = "External"
-      },
-      {
-        dataType = "Text"
-        developerName = "VerifiedCustomerId"
-        label = "Verified Customer ID"
-        visibility = "Internal"
-      },
-    ]
-    entryDialog = "Welcome"
-    intentDisambiguationEnabled = false
-    intentV3Enabled = false
-    knowledgeActionEnabled = false
-    knowledgeFallbackEnabled = false
-    smallTalkEnabled = false
-  }
+  botVersions = [
+    {
+      fullName = "v1"
+      articleAnswersGPTEnabled = false
+      botDialogs = [
+        {
+          botSteps = [
+            {
+              botMessages = {
+                message = "Hi! I'm Agentforce, an AI assistant. I can do things like search your Salesforce data or the internet, edit your Salesforce records, and draft or revise emails and fields. Ask me \"What else can you do?\" to see how I can help simplify your work day."
+                messageIdentifier = "8d565fe1-6195-46aa-b5aa-175c003f867d"
+              }
+              stepIdentifier = "9859e06c-67a4-4cf5-85c7-9909d97db4d0"
+              type = "Message"
+            },
+            {
+              stepIdentifier = "2d00e383-3caa-4555-8110-d4ccac24e525"
+              type = "Wait"
+            },
+          ]
+          developerName = "Welcome"
+          isPlaceholderDialog = false
+          label = "Welcome"
+          showInFooterMenu = false
+        },
+        {
+          botSteps = [
+            {
+              botMessages = {
+                message = "Something went wrong. Try again."
+                messageIdentifier = "4b0a982c-8092-45a5-9a56-bca5f1681044"
+              }
+              stepIdentifier = "490de400-56fe-4f03-92a3-9b8e8472a274"
+              type = "Message"
+            },
+            {
+              stepIdentifier = "bbf79cbb-d597-4c5a-95ac-33010677cc58"
+              type = "Wait"
+            },
+          ]
+          developerName = "Rich_Content_Error_Handling"
+          isPlaceholderDialog = false
+          label = "Error Handler"
+          showInFooterMenu = false
+        },
+      ]
+      citationsEnabled = false
+      conversationDefinitionPlanners = {
+        genAiPlannerName = salesforce.GenAiPlanner.instance.EmployeeCopilotPlanner
+      }
+      conversationSystemDialogs = {
+        dialog = "Rich_Content_Error_Handling"
+        type = "ErrorHandling"
+      }
+      conversationVariables = [
+        {
+          dataType = "Text"
+          developerName = "currentAppName"
+          label = "Current App Name"
+          visibility = "External"
+        },
+        {
+          dataType = "Text"
+          developerName = "currentObjectApiName"
+          label = "Current Object Api Name"
+          visibility = "External"
+        },
+        {
+          dataType = "Text"
+          developerName = "currentPageType"
+          label = "Current Page Type"
+          visibility = "External"
+        },
+        {
+          dataType = "Text"
+          developerName = "currentRecordId"
+          label = "Current Record Id"
+          visibility = "External"
+        },
+        {
+          dataType = "Text"
+          developerName = "VerifiedCustomerId"
+          label = "Verified Customer ID"
+          visibility = "Internal"
+        },
+      ]
+      entryDialog = "Welcome"
+      intentDisambiguationEnabled = false
+      intentV3Enabled = false
+      knowledgeActionEnabled = false
+      knowledgeFallbackEnabled = false
+      smallTalkEnabled = false
+    },
+  ]
   contextVariables = [
     {
       contextVariableMappings = [

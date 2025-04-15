@@ -1,5 +1,5 @@
 salesforce.GenAiPlugin Experience_Management {
-  description = "This topic addresses customer inquiries and issues related to booking experiences at Coral Cloud Resorts, including making reservations, modifying bookings, and answering queries about experience details."
+  description = "This topic addresses customer inquiries related to booking experiences at Coral Cloud Resorts, including making reservations, modifying bookings, and answering queries about experience details."
   developerName = "Experience_Management"
   genAiFunctions = [
     {

@@ -5,103 +5,105 @@ salesforce.Bot Agent_for_Setup {
     label = "Agent for Setup"
     name = "Agent_for_Setup"
   }
-  botVersions = {
-    fullName = "v1"
-    articleAnswersGPTEnabled = false
-    botDialogs = [
-      {
-        botSteps = [
-          {
-            botMessages = {
-              message = "Hi! I’m an AI assistant, here to help you troubleshoot user access, look for answers in Salesforce Help, easily create report types, and more."
-              messageIdentifier = "b65461b5-fb91-435b-9526-0285d0f1e126"
-            }
-            stepIdentifier = "24b164d7-9834-4682-8e6e-ab61d897a480"
-            type = "Message"
-          },
-          {
-            stepIdentifier = "39d9cdd9-18f5-4162-bb31-8422bbed0de3"
-            type = "Wait"
-          },
-        ]
-        developerName = "Welcome"
-        isPlaceholderDialog = false
-        label = "Hi! I'm your helpful bot."
-        showInFooterMenu = false
-      },
-      {
-        botSteps = [
-          {
-            botMessages = {
-              message = "Unfortunately, a system error occurred. Let us start again."
-              messageIdentifier = "b7849a98-6e84-4b31-8e78-2362420250e5"
-            }
-            stepIdentifier = "6c34c272-2e06-4e68-8ccc-831ba481aaee"
-            type = "Message"
-          },
-          {
-            stepIdentifier = "1a2bcd7e-7b69-496a-910d-5bd1ee1b5e08"
-            type = "Wait"
-          },
-        ]
-        developerName = "Error_Handling"
-        isPlaceholderDialog = false
-        label = "Unfortunately, a system error occurred. Let us start again."
-        showInFooterMenu = false
-      },
-    ]
-    citationsEnabled = false
-    company = "Your Company"
-    conversationDefinitionPlanners = {
-      genAiPlannerName = salesforce.GenAiPlanner.instance.Agent_for_Setup
-    }
-    conversationVariables = [
-      {
-        dataType = "Text"
-        developerName = "VerifiedCustomerId"
-        label = "VerifiedCustomerId"
-        visibility = "Internal"
-      },
-      {
-        dataType = "Text"
-        developerName = "setupPageId"
-        label = "setupPageId"
-        visibility = "External"
-      },
-      {
-        dataType = "Text"
-        developerName = "currentObjectApiName"
-        label = "currentObjectApiName"
-        visibility = "External"
-      },
-      {
-        dataType = "Text"
-        developerName = "currentField"
-        label = "currentField"
-        visibility = "External"
-      },
-      {
-        dataType = "Text"
-        developerName = "applicationId"
-        label = "applicationId"
-        visibility = "External"
-      },
-      {
-        dataType = "Text"
-        developerName = "userId"
-        label = "userId"
-        visibility = "External"
-      },
-    ]
-    entryDialog = "Welcome"
-    intentDisambiguationEnabled = false
-    intentV3Enabled = false
-    knowledgeActionEnabled = false
-    knowledgeFallbackEnabled = false
-    role = "You help users with administrative tasks in setup, such as troubleshooting user access and finding answers in Salesforce Help."
-    smallTalkEnabled = false
-    toneType = "Casual"
-  }
+  botVersions = [
+    {
+      fullName = "v1"
+      articleAnswersGPTEnabled = false
+      botDialogs = [
+        {
+          botSteps = [
+            {
+              botMessages = {
+                message = "Hi! I’m an AI assistant, here to help you troubleshoot user access, look for answers in Salesforce Help, easily create report types, and more."
+                messageIdentifier = "b65461b5-fb91-435b-9526-0285d0f1e126"
+              }
+              stepIdentifier = "24b164d7-9834-4682-8e6e-ab61d897a480"
+              type = "Message"
+            },
+            {
+              stepIdentifier = "39d9cdd9-18f5-4162-bb31-8422bbed0de3"
+              type = "Wait"
+            },
+          ]
+          developerName = "Welcome"
+          isPlaceholderDialog = false
+          label = "Hi! I'm your helpful bot."
+          showInFooterMenu = false
+        },
+        {
+          botSteps = [
+            {
+              botMessages = {
+                message = "Unfortunately, a system error occurred. Let us start again."
+                messageIdentifier = "b7849a98-6e84-4b31-8e78-2362420250e5"
+              }
+              stepIdentifier = "6c34c272-2e06-4e68-8ccc-831ba481aaee"
+              type = "Message"
+            },
+            {
+              stepIdentifier = "1a2bcd7e-7b69-496a-910d-5bd1ee1b5e08"
+              type = "Wait"
+            },
+          ]
+          developerName = "Error_Handling"
+          isPlaceholderDialog = false
+          label = "Unfortunately, a system error occurred. Let us start again."
+          showInFooterMenu = false
+        },
+      ]
+      citationsEnabled = false
+      company = "Your Company"
+      conversationDefinitionPlanners = {
+        genAiPlannerName = salesforce.GenAiPlanner.instance.Agent_for_Setup
+      }
+      conversationVariables = [
+        {
+          dataType = "Text"
+          developerName = "VerifiedCustomerId"
+          label = "VerifiedCustomerId"
+          visibility = "Internal"
+        },
+        {
+          dataType = "Text"
+          developerName = "setupPageId"
+          label = "setupPageId"
+          visibility = "External"
+        },
+        {
+          dataType = "Text"
+          developerName = "currentObjectApiName"
+          label = "currentObjectApiName"
+          visibility = "External"
+        },
+        {
+          dataType = "Text"
+          developerName = "currentField"
+          label = "currentField"
+          visibility = "External"
+        },
+        {
+          dataType = "Text"
+          developerName = "applicationId"
+          label = "applicationId"
+          visibility = "External"
+        },
+        {
+          dataType = "Text"
+          developerName = "userId"
+          label = "userId"
+          visibility = "External"
+        },
+      ]
+      entryDialog = "Welcome"
+      intentDisambiguationEnabled = false
+      intentV3Enabled = false
+      knowledgeActionEnabled = false
+      knowledgeFallbackEnabled = false
+      role = "You help users with administrative tasks in setup, such as troubleshooting user access and finding answers in Salesforce Help."
+      smallTalkEnabled = false
+      toneType = "Casual"
+    },
+  ]
   contextVariables = [
     {
       contextVariableMappings = [

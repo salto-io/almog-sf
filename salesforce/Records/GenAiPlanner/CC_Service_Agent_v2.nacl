@@ -1,4 +1,4 @@
-salesforce.GenAiPlanner CC_Service_Agent {
+salesforce.GenAiPlanner CC_Service_Agent_v2 {
   description = "Deliver personalized customer interactions with an autonomous AI agent. Agentforce Service Agent intelligently supports your customers with common inquiries and escalates complex issues."
   genAiFunctions = {
     genAiFunctionName = "EmployeeCopilot__AnswerQuestionsWithKnowledge"
@@ -19,6 +19,6 @@ salesforce.GenAiPlanner CC_Service_Agent {
   ]
   masterLabel = "CC Service Agent"
   plannerType = "AiCopilot__ReAct"
-  fullName = "CC_Service_Agent"
-  _alias = "CC_Service_Agent"
+  fullName = "CC_Service_Agent_v2"
+  _alias = "CC_Service_Agent_v2"
 }
