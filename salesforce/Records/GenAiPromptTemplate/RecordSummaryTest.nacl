@@ -1,7 +1,7 @@
 salesforce.GenAiPromptTemplate RecordSummaryTest {
   developerName = "RecordSummaryTest"
   masterLabel = "RecordSummaryTest"
-  relatedEntity = salesforce.Account
+  relatedEntity = "Account"
   templateVersions = [
     {
       content = '''
@@ -30,7 +30,7 @@ Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}
             parameterName = "VariableForFirstPromptInstruction"
             valueExpression = "{!$Input:Account}"
           }
-          referenceName = salesforce.Flow.instance.TemplateTriggeredPromptTest
+          referenceName = "Flow:TemplateTriggeredPromptTest"
         },
         {
           definition = "apex://AgentAction_LookupAccount"
@@ -40,7 +40,7 @@ Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}
             parameterName = "objectToSummarize"
             valueExpression = "{!$Input:Account}"
           }
-          referenceName = salesforce.ApexClass.instance.AgentAction_LookupAccount
+          referenceName = "Apex:AgentAction_LookupAccount"
         },
       ]
     },
@@ -72,7 +72,7 @@ Another Input: {!$Input:Account.Sic}
             parameterName = "VariableForFirstPromptInstruction"
             valueExpression = "{!$Input:Account}"
           }
-          referenceName = salesforce.Flow.instance.TemplateTriggeredPromptTest
+          referenceName = "Flow:TemplateTriggeredPromptTest"
         },
         {
           definition = "apex://AgentAction_LookupAccount"
@@ -82,7 +82,7 @@ Another Input: {!$Input:Account.Sic}
             parameterName = "objectToSummarize"
             valueExpression = "{!$Input:Account}"
           }
-          referenceName = salesforce.ApexClass.instance.AgentAction_LookupAccount
+          referenceName = "Apex:AgentAction_LookupAccount"
         },
       ]
     },

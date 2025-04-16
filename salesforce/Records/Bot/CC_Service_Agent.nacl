@@ -77,9 +77,11 @@ salesforce.Bot CC_Service_Agent {
       ]
       citationsEnabled = false
       company = "Coral Cloud Resorts provides customers with exceptional destination activities, unforgettable experiences, and reservation services, all backed by a commitment to top-notch customer service."
-      conversationDefinitionPlanners = {
-        genAiPlannerName = salesforce.GenAiPlanner.instance.CC_Service_Agent
-      }
+      conversationDefinitionPlanners = [
+        {
+          genAiPlannerName = salesforce.GenAiPlanner.instance.CC_Service_Agent
+        },
+      ]
       conversationVariables = [
         {
           dataType = "Text"
@@ -167,9 +169,11 @@ salesforce.Bot CC_Service_Agent {
       ]
       citationsEnabled = false
       company = "Coral Cloud Resorts provides customers with exceptional destination activities, unforgettable experiences, and reservation services, all backed by a commitment to top-notch customer service."
-      conversationDefinitionPlanners = {
-        genAiPlannerName = salesforce.GenAiPlanner.instance.CC_Service_Agent_v2
-      }
+      conversationDefinitionPlanners = [
+        {
+          genAiPlannerName = salesforce.GenAiPlanner.instance.CC_Service_Agent_v2
+        },
+      ]
       conversationVariables = [
         {
           dataType = "Text"
@@ -257,9 +261,11 @@ salesforce.Bot CC_Service_Agent {
       ]
       citationsEnabled = false
       company = "Coral Cloud Resorts provides customers with exceptional destination activities, unforgettable experiences, and reservation services, all backed by a commitment to top-notch customer service."
-      conversationDefinitionPlanners = {
-        genAiPlannerName = salesforce.GenAiPlanner.instance.CC_Service_Agent_v2_v3
-      }
+      conversationDefinitionPlanners = [
+        {
+          genAiPlannerName = salesforce.GenAiPlanner.instance.CC_Service_Agent_v2_v3
+        },
+      ]
       conversationVariables = [
         {
           dataType = "Text"

@@ -45,7 +45,7 @@ Fourth source: {!$Apex:AgentAction_LookupProduct.Prompt}
             parameterName = "userInstructions"
             valueExpression = "{!$Input:userInstructions}"
           }
-          referenceName = salesforce.ApexClass.instance.AgentAction_LookupProduct
+          referenceName = "Apex:AgentAction_LookupProduct"
         },
       ]
     },
