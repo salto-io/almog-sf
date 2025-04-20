@@ -14,7 +14,7 @@ salesforce.Bot Agent_for_Setup {
           botSteps = [
             {
               botMessages = {
-                message = "Hi! I’m an AI assistant, here to help you troubleshoot user access, look for answers in Salesforce Help, easily create report types, and more."
+                message = "Hi! I’m an AI assistant, here to help you troubleshoot user access, look for answers in Salesforce Help, easily create report types, and more. CHANGE"
                 messageIdentifier = "b65461b5-fb91-435b-9526-0285d0f1e126"
               }
               stepIdentifier = "24b164d7-9834-4682-8e6e-ab61d897a480"
@@ -104,6 +104,7 @@ salesforce.Bot Agent_for_Setup {
       role = "You help users with administrative tasks in setup, such as troubleshooting user access and finding answers in Salesforce Help."
       smallTalkEnabled = false
       toneType = "Casual"
+      status = "Active"
     },
   ]
   contextVariables = [

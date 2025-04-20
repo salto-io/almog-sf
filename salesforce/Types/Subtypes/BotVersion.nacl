@@ -110,4 +110,7 @@ type salesforce.BotVersion {
   ]
   "List<salesforce.ConversationDefinitionPlanner>" conversationDefinitionPlanners {
   }
+  string status {
+    _hidden = false
+  }
 }
