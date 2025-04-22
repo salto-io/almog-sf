@@ -1,0 +1,48 @@
+salesforce.Flow Account_Triggered_Flow {
+  fullName = "Account_Triggered_Flow"
+  apiVersion = 63
+  environments = "Default"
+  interviewLabel = "Account Triggered Flow {!$Flow.CurrentDateTime}"
+  label = "Account Triggered Flow"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  recordCreates = [
+    {
+      name = "Create_Records"
+      label = "Create Records"
+      inputReference = "$Record"
+    },
+  ]
+  start = {
+    connector = {
+      targetReference = "Create_Records"
+    }
+    object = salesforce.Account
+    recordTriggerType = "Create"
+    triggerType = "RecordAfterSave"
+  }
+  status = "Active"
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "Account Triggered Flow"
+}

@@ -53,28 +53,14 @@ salesforce.Bot Agent_for_Setup {
       ]
       citationsEnabled = false
       company = "Your Company"
-      conversationDefinitionPlanners = [
-        {
-          genAiPlannerName = salesforce.GenAiPlanner.instance.Agent_for_Setup
-        },
-      ]
+      conversationDefinitionPlanners = {
+        genAiPlannerName = salesforce.GenAiPlanner.instance.Agent_for_Setup
+      }
       conversationVariables = [
         {
           dataType = "Text"
-          developerName = "VerifiedCustomerId"
-          label = "VerifiedCustomerId"
-          visibility = "Internal"
-        },
-        {
-          dataType = "Text"
-          developerName = "setupPageId"
-          label = "setupPageId"
-          visibility = "External"
-        },
-        {
-          dataType = "Text"
-          developerName = "currentObjectApiName"
-          label = "currentObjectApiName"
+          developerName = "applicationId"
+          label = "applicationId"
           visibility = "External"
         },
         {
@@ -85,8 +71,14 @@ salesforce.Bot Agent_for_Setup {
         },
         {
           dataType = "Text"
-          developerName = "applicationId"
-          label = "applicationId"
+          developerName = "currentObjectApiName"
+          label = "currentObjectApiName"
+          visibility = "External"
+        },
+        {
+          dataType = "Text"
+          developerName = "setupPageId"
+          label = "setupPageId"
           visibility = "External"
         },
         {
@@ -94,6 +86,12 @@ salesforce.Bot Agent_for_Setup {
           developerName = "userId"
           label = "userId"
           visibility = "External"
+        },
+        {
+          dataType = "Text"
+          developerName = "VerifiedCustomerId"
+          label = "VerifiedCustomerId"
+          visibility = "Internal"
         },
       ]
       entryDialog = "Welcome"
@@ -104,7 +102,6 @@ salesforce.Bot Agent_for_Setup {
       role = "You help users with administrative tasks in setup, such as troubleshooting user access and finding answers in Salesforce Help."
       smallTalkEnabled = false
       toneType = "Casual"
-      status = "Active"
     },
   ]
   contextVariables = [
