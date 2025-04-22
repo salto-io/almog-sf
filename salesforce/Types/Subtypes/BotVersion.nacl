@@ -108,8 +108,6 @@ type salesforce.BotVersion {
       indexed = false
     },
   ]
-  "List<salesforce.ConversationDefinitionPlanner>" conversationDefinitionPlanners {
-  }
-  string status {
+  salesforce.ConversationDefinitionPlanner conversationDefinitionPlanners {
   }
 }

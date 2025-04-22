@@ -2,7 +2,7 @@ salesforce.GenAiPromptTemplate FieldGenerationPromptTemplateTest {
   developerName = "FieldGenerationPromptTemplateTest"
   masterLabel = "FieldGenerationPromptTemplateTest"
   relatedEntity = "Account"
-  relatedField = "Account.AccountNumber"
+  relatedField = salesforce.Account.field.AccountNumber
   templateVersions = [
     {
       content = '''

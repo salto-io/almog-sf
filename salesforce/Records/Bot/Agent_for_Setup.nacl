@@ -53,11 +53,9 @@ salesforce.Bot Agent_for_Setup {
       ]
       citationsEnabled = false
       company = "Your Company"
-      conversationDefinitionPlanners = [
-        {
-          genAiPlannerName = salesforce.GenAiPlanner.instance.Agent_for_Setup
-        },
-      ]
+      conversationDefinitionPlanners = {
+        genAiPlannerName = salesforce.GenAiPlanner.instance.Agent_for_Setup
+      }
       conversationVariables = [
         {
           dataType = "Text"
@@ -104,7 +102,6 @@ salesforce.Bot Agent_for_Setup {
       role = "You help users with administrative tasks in setup, such as troubleshooting user access and finding answers in Salesforce Help."
       smallTalkEnabled = false
       toneType = "Casual"
-      status = "Inactive"
     },
   ]
   contextVariables = [
