@@ -1,5 +1,5 @@
 salesforce.GenAiPlanner CC_Service_Agent {
-  description = "Deliver personalized customer interactions with an autonomous AI agent. Agentforce Service Agent intelligently supports your customers with common inquiries and escalates complex issues. Change"
+  description = "Deliver personalized customer interactions with an autonomous AI agent. Agentforce Service Agent intelligently supports your customers with common inquiries and escalates complex issues."
   genAiFunctions = {
     genAiFunctionName = "EmployeeCopilot__AnswerQuestionsWithKnowledge"
   }

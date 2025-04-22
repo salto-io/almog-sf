@@ -14,7 +14,7 @@ salesforce.Bot Copilot_for_Salesforce {
           botSteps = [
             {
               botMessages = {
-                message = "Hi! I'm Agentforce, an AI assistant. I can do things like search your Salesforce data or the internet, edit your Salesforce records, and draft or revise emails and fields. Ask me \"What else can you do?\" to see how I can help simplify your work day. CHANGE"
+                message = "Hi! I'm Agentforce, an AI assistant. I can do things like search your Salesforce data or the internet, edit your Salesforce records, and draft or revise emails and fields. Ask me \"What else can you do?\" to see how I can help simplify your work day."
                 messageIdentifier = "8d565fe1-6195-46aa-b5aa-175c003f867d"
               }
               stepIdentifier = "9859e06c-67a4-4cf5-85c7-9909d97db4d0"

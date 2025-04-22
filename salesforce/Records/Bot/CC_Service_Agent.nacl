@@ -15,7 +15,7 @@ salesforce.Bot CC_Service_Agent {
           botSteps = [
             {
               botMessages = {
-                message = "Hi, I'm an AI service assistant. How can I help you?"
+                message = "Hi, I'm an AI service assistant. How can I help you? I AM VERSION 1"
                 messageIdentifier = "961743fe-66e7-42a3-be9a-54b629e17e60"
               }
               stepIdentifier = "b4a1ae84-7995-4bef-bcd7-8dda71bb4428"
