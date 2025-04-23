@@ -2,7 +2,7 @@ salesforce.GenAiPromptTemplate FieldGenerationPromptTemplateTest {
   developerName = "FieldGenerationPromptTemplateTest"
   masterLabel = "FieldGenerationPromptTemplateTest"
   relatedEntity = "Account"
-  relatedField = "Account.AccountNumber"
+  relatedField = salesforce.Account.field.AccountNumber
   templateVersions = [
     {
       content = '''
@@ -15,7 +15,7 @@ Fifth source: {!$Input:Account.Id}
       inputs = [
         {
           apiName = "RelatedEntity"
-          definition = "SOBJECT://Account"
+          definition = salesforce.Account
           referenceName = "Input:Account"
           required = true
         },
@@ -27,25 +27,25 @@ Fifth source: {!$Input:Account.Id}
           definition = "flow://TemplateTriggeredPromptTest"
           parameters = [
             {
-              definition = "SOBJECT://Account"
+              definition = salesforce.Account
               isRequired = true
               parameterName = "VariableForFirstPromptInstruction"
               valueExpression = "{!$Input:Account}"
             },
           ]
-          referenceName = "Flow:TemplateTriggeredPromptTest"
+          referenceName = salesforce.Flow.instance.TemplateTriggeredPromptTest
         },
         {
           definition = "apex://AgentAction_LookupAccount"
           parameters = [
             {
-              definition = "SOBJECT://Account"
+              definition = salesforce.Account
               isRequired = true
               parameterName = "objectToSummarize"
               valueExpression = "{!$Input:Account}"
             },
           ]
-          referenceName = "Apex:AgentAction_LookupAccount"
+          referenceName = salesforce.ApexClass.instance.AgentAction_LookupAccount
         },
       ]
     },

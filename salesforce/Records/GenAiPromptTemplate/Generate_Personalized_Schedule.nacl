@@ -13,7 +13,7 @@ List of activities happening today that match the guest's interests:
       inputs = [
         {
           apiName = "Contact"
-          definition = "SOBJECT://Contact"
+          definition = salesforce.Contact
           masterLabel = "Contact"
           referenceName = "Input:Contact"
           required = true

@@ -7,7 +7,7 @@ salesforce.GenAiPromptTemplate Generate_Upsell_Opportunities {
       inputs = [
         {
           apiName = "Account"
-          definition = "SOBJECT://Account"
+          definition = salesforce.Account
           masterLabel = "Account"
           referenceName = "Input:Account"
           required = true
@@ -21,7 +21,7 @@ salesforce.GenAiPromptTemplate Generate_Upsell_Opportunities {
       inputs = [
         {
           apiName = "Account"
-          definition = "SOBJECT://Account"
+          definition = salesforce.Account
           masterLabel = "Account"
           referenceName = "Input:Account"
           required = true
