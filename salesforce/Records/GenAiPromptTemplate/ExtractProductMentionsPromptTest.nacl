@@ -39,12 +39,14 @@ Fourth source: {!$Apex:AgentAction_LookupProduct.Prompt}
       templateDataProviders = [
         {
           definition = "apex://AgentAction_LookupProduct"
-          parameters = {
-            definition = "primitive://String"
-            isRequired = true
-            parameterName = "userInstructions"
-            valueExpression = "{!$Input:userInstructions}"
-          }
+          parameters = [
+            {
+              definition = "primitive://String"
+              isRequired = true
+              parameterName = "userInstructions"
+              valueExpression = "{!$Input:userInstructions}"
+            },
+          ]
           referenceName = "Apex:AgentAction_LookupProduct"
         },
       ]

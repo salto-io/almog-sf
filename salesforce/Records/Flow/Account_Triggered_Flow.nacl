@@ -41,5 +41,8 @@ salesforce.Flow Account_Triggered_Flow {
     triggerType = "RecordAfterSave"
   }
   status = "Active"
+  _parent = [
+    salesforce.Account,
+  ]
   _alias = "Account Triggered Flow"
 }

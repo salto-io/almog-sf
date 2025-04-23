@@ -11,7 +11,7 @@ salesforce {
         {
           metadataType = "CustomObject" 
           namespace = ""
-          name = "Account"
+          name = "Account|Contact"
         },
       ]
       exclude = [

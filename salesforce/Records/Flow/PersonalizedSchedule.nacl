@@ -57,7 +57,7 @@ salesforce.Flow PersonalizedSchedule {
       filterLogic = "and"
       filters = [
         {
-          field = "Id"
+          field = salesforce.Contact.field.Id
           operator = "EqualTo"
           value = {
             elementReference = "recordId"
@@ -65,7 +65,7 @@ salesforce.Flow PersonalizedSchedule {
         },
       ]
       getFirstRecordOnly = true
-      object = "Contact"
+      object = salesforce.Contact
       storeOutputAutomatically = true
     },
   ]

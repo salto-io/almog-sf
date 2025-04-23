@@ -24,22 +24,26 @@ Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}
       templateDataProviders = [
         {
           definition = "flow://TemplateTriggeredPromptTest"
-          parameters = {
-            definition = "SOBJECT://Account"
-            isRequired = true
-            parameterName = "VariableForFirstPromptInstruction"
-            valueExpression = "{!$Input:Account}"
-          }
+          parameters = [
+            {
+              definition = "SOBJECT://Account"
+              isRequired = true
+              parameterName = "VariableForFirstPromptInstruction"
+              valueExpression = "{!$Input:Account}"
+            },
+          ]
           referenceName = "Flow:TemplateTriggeredPromptTest"
         },
         {
           definition = "apex://AgentAction_LookupAccount"
-          parameters = {
-            definition = "SOBJECT://Account"
-            isRequired = true
-            parameterName = "objectToSummarize"
-            valueExpression = "{!$Input:Account}"
-          }
+          parameters = [
+            {
+              definition = "SOBJECT://Account"
+              isRequired = true
+              parameterName = "objectToSummarize"
+              valueExpression = "{!$Input:Account}"
+            },
+          ]
           referenceName = "Apex:AgentAction_LookupAccount"
         },
       ]
@@ -52,6 +56,7 @@ Current user: {!$User.Alias}
 Account name: {!$Input:Account.Name}
 Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}
 Another Input: {!$Input:Account.Sic}
+Field Input: {!$Input:Account.Description}
 '''
       inputs = [
         {
@@ -62,27 +67,96 @@ Another Input: {!$Input:Account.Sic}
         },
       ]
       primaryModel = "sfdc_ai__DefaultOpenAIGPT35Turbo"
-      status = "Draft"
+      status = "Published"
       templateDataProviders = [
         {
           definition = "flow://TemplateTriggeredPromptTest"
-          parameters = {
-            definition = "SOBJECT://Account"
-            isRequired = true
-            parameterName = "VariableForFirstPromptInstruction"
-            valueExpression = "{!$Input:Account}"
-          }
+          parameters = [
+            {
+              definition = "SOBJECT://Account"
+              isRequired = true
+              parameterName = "VariableForFirstPromptInstruction"
+              valueExpression = "{!$Input:Account}"
+            },
+          ]
           referenceName = "Flow:TemplateTriggeredPromptTest"
         },
         {
           definition = "apex://AgentAction_LookupAccount"
-          parameters = {
-            definition = "SOBJECT://Account"
-            isRequired = true
-            parameterName = "objectToSummarize"
-            valueExpression = "{!$Input:Account}"
-          }
+          parameters = [
+            {
+              definition = "SOBJECT://Account"
+              isRequired = true
+              parameterName = "objectToSummarize"
+              valueExpression = "{!$Input:Account}"
+            },
+          ]
           referenceName = "Apex:AgentAction_LookupAccount"
+        },
+      ]
+    },
+    {
+      content = '''
+Flow result: {!$Flow:TemplateTriggeredPromptTest.Prompt}
+Organization city: {!$Organization.City}
+Current user: {!$User.Alias}
+Account name: {!$Input:Account.Name}
+Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}
+Another Input: {!$Input:Account.Sic}
+Field Input: {!$RelatedList:Account.Cases.Records}
+'''
+      inputs = [
+        {
+          apiName = "objectToSummarize"
+          definition = "SOBJECT://Account"
+          referenceName = "Input:Account"
+          required = true
+        },
+      ]
+      primaryModel = "sfdc_ai__DefaultOpenAIGPT35Turbo"
+      status = "Published"
+      templateDataProviders = [
+        {
+          definition = "flow://TemplateTriggeredPromptTest"
+          parameters = [
+            {
+              definition = "SOBJECT://Account"
+              isRequired = true
+              parameterName = "VariableForFirstPromptInstruction"
+              valueExpression = "{!$Input:Account}"
+            },
+          ]
+          referenceName = "Flow:TemplateTriggeredPromptTest"
+        },
+        {
+          definition = "apex://AgentAction_LookupAccount"
+          parameters = [
+            {
+              definition = "SOBJECT://Account"
+              isRequired = true
+              parameterName = "objectToSummarize"
+              valueExpression = "{!$Input:Account}"
+            },
+          ]
+          referenceName = "Apex:AgentAction_LookupAccount"
+        },
+        {
+          definition = "invocable://getRelatedList"
+          parameters = [
+            {
+              definition = "primitive://String"
+              isRequired = true
+              parameterName = "parentRecordId"
+              valueExpression = "{!$Input:Account.Id}"
+            },
+            {
+              definition = "primitive://String"
+              isRequired = true
+              parameterName = "relatedListName"
+              valueExpression = "Cases"
+            },
+          ]
+          referenceName = "RelatedList:Account.Cases.Records"
         },
       ]
     },

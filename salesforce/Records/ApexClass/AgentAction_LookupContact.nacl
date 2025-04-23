@@ -3,5 +3,10 @@ salesforce.ApexClass AgentAction_LookupContact {
   status = "Active"
   fullName = "AgentAction_LookupContact"
   content = file("salesforce/Records/ApexClass/AgentAction_LookupContact.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Contact
+    },
+  ]
   _alias = "AgentAction_LookupContact"
 }

@@ -3,5 +3,10 @@ salesforce.ApexClass MyProfilePageController {
   status = "Active"
   fullName = "MyProfilePageController"
   content = file("salesforce/Records/ApexClass/MyProfilePageController.cls")
+  _generated_dependencies = [
+    {
+      reference = salesforce.Contact
+    },
+  ]
   _alias = "MyProfilePageController"
 }
