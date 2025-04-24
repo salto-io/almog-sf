@@ -1,5 +1,5 @@
 salesforce.GenAiPromptTemplate EinsteinAiGenSearchTest {
-  description = "Just a test template trying to see which references from this type of template we can support."
+  description = "Just a test template trying to see which references from this type of template we can support. CHANGED"
   developerName = "EinsteinAiGenSearchTest"
   masterLabel = "EinsteinAiGenSearchTest"
   templateVersions = [
