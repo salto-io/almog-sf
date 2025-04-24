@@ -4,21 +4,21 @@
   "properties" : {
     "Contact_Id" : {
       "title" : "Contact_Id",
-      "description" : "The Id of a Contact record that you would like to create the booking for.",
+      "description" : "The Id of a Contact record that you would like to create the booking for. CHANGED",
       "lightning:type" : "lightning__textType",
       "lightning:isPII" : false,
       "copilotAction:isUserInput" : false
     },
     "Guests" : {
       "title" : "Guests",
-      "description" : "The number of guests that you would like to make the booking for.",
+      "description" : "The number of guests that you would like to make the booking for. CHANGED",
       "lightning:type" : "lightning__numberType",
       "lightning:isPII" : false,
       "copilotAction:isUserInput" : false
     },
     "Session_Id" : {
       "title" : "Session_Id",
-      "description" : "The Session Id is an Id for the Session__c record that you would like book for a customer.",
+      "description" : "The Session Id is an Id for the Session__c record that you would like book for a customer. CHANGED",
       "lightning:type" : "lightning__textType",
       "lightning:isPII" : false,
       "copilotAction:isUserInput" : false

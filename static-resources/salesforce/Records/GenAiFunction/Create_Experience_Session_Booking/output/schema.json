@@ -3,7 +3,7 @@
   "properties" : {
     "Booking" : {
       "title" : "Booking",
-      "description" : "The booking that has been created.",
+      "description" : "The booking that has been created. CHANGED",
       "lightning:type" : "lightning__recordInfoType",
       "lightning:sObjectInfo" : {
         "apiName" : "Booking__c"
@@ -15,7 +15,7 @@
     },
     "Output_Message" : {
       "title" : "Output_Message",
-      "description" : "The message that you would like to display to the user after the action has run.",
+      "description" : "The message that you would like to display to the user after the action has run. CHANGED",
       "lightning:type" : "lightning__textType",
       "lightning:isPII" : false,
       "copilotAction:isDisplayable" : true,
