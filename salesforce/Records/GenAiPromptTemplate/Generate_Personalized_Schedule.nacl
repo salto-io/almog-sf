@@ -3,7 +3,13 @@ salesforce.GenAiPromptTemplate Generate_Personalized_Schedule {
   masterLabel = "Generate Personalized Schedule"
   templateVersions = [
     {
-      content = file("salesforce/Records/GenAiPromptTemplate/Generate_Personalized_Schedule/version_1.txt")
+      content = '''
+Present the list of resort activities happening today that match the guest's interests.
+For clarity, use a bullet list.
+For each activity, include name, time, location and duration on a single line. Do not include the date.
+Tell the guest to reach out if they'd like to book any of these activities.
+List of activities happening today that match the guest's interests:
+'''
       inputs = [
         {
           apiName = "Contact"

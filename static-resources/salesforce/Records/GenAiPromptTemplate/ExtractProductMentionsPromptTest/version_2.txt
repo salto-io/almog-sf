@@ -1,4 +1,0 @@
-First source:{!$Organization.CreatedBy.AccountId}
-Second source: {!$User.IsActive}
-Third source: {!$Input:userInstructions}
-Fourth source: {!$Apex:AgentAction_LookupProduct.Prompt}

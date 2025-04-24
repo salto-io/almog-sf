@@ -4,7 +4,13 @@ salesforce.GenAiPromptTemplate RecordSummaryTest {
   relatedEntity = "Account"
   templateVersions = [
     {
-      content = file("salesforce/Records/GenAiPromptTemplate/RecordSummaryTest/version_1.txt")
+      content = '''
+Flow result: {!$Flow:TemplateTriggeredPromptTest.Prompt}
+Organization city: {!$Organization.City}
+Current user: {!$User.Alias}
+Account name: {!$Input:Account.Name}
+Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}
+'''
       inputs = [
         {
           apiName = "objectToSummarize"
@@ -43,7 +49,15 @@ salesforce.GenAiPromptTemplate RecordSummaryTest {
       ]
     },
     {
-      content = file("salesforce/Records/GenAiPromptTemplate/RecordSummaryTest/version_2.txt")
+      content = '''
+Flow result: {!$Flow:TemplateTriggeredPromptTest.Prompt}
+Organization city: {!$Organization.City}
+Current user: {!$User.Alias}
+Account name: {!$Input:Account.Name}
+Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}
+Another Input: {!$Input:Account.Sic}
+Field Input: {!$Input:Account.Description}
+'''
       inputs = [
         {
           apiName = "objectToSummarize"
@@ -82,7 +96,15 @@ salesforce.GenAiPromptTemplate RecordSummaryTest {
       ]
     },
     {
-      content = file("salesforce/Records/GenAiPromptTemplate/RecordSummaryTest/version_3.txt")
+      content = '''
+Flow result: {!$Flow:TemplateTriggeredPromptTest.Prompt}
+Organization city: {!$Organization.City}
+Current user: {!$User.Alias}
+Account name: {!$Input:Account.Name}
+Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}
+Another Input: {!$Input:Account.Sic}
+Field Input: {!$RelatedList:Account.Cases.Records}
+'''
       inputs = [
         {
           apiName = "objectToSummarize"

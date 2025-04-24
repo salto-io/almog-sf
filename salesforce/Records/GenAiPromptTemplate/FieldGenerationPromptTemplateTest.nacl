@@ -5,7 +5,13 @@ salesforce.GenAiPromptTemplate FieldGenerationPromptTemplateTest {
   relatedField = "Account.AccountNumber"
   templateVersions = [
     {
-      content = file("salesforce/Records/GenAiPromptTemplate/FieldGenerationPromptTemplateTest/version_1.txt")
+      content = '''
+First source: {!$Flow:TemplateTriggeredPromptTest.Prompt}
+Second source: {!$Apex:AgentAction_LookupAccount.Prompt}
+Third source: {!$Organization.City}
+Fourth source: {!$User.Alias}
+Fifth source: {!$Input:Account.Id}
+'''
       inputs = [
         {
           apiName = "RelatedEntity"
