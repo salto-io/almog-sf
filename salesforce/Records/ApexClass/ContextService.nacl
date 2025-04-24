@@ -1,7 +1,0 @@
-salesforce.ApexClass ContextService {
-  apiVersion = 61
-  status = "Active"
-  fullName = "ContextService"
-  content = file("salesforce/Records/ApexClass/ContextService.cls")
-  _alias = "ContextService"
-}

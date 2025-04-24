@@ -1,0 +1,5 @@
+First source: {!$Flow:TemplateTriggeredPromptTest.Prompt}
+Second source: {!$Apex:AgentAction_LookupAccount.Prompt}
+Third source: {!$Organization.City}
+Fourth source: {!$User.Alias}
+Fifth source: {!$Input:Account.Id}

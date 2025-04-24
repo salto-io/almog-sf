@@ -233,7 +233,7 @@ type salesforce.GenAiFunction {
       ]
     }
     foreignKeyDomain = [
-      salesforce.ApexClass,
+      "ApexClass",
       "ExternalServiceOperation",
       salesforce.FlowDefinition,
       salesforce.GenAiPromptTemplate,

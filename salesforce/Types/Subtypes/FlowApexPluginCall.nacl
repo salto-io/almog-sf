@@ -54,7 +54,7 @@ type salesforce.FlowApexPluginCall {
   }
   string apexClass {
     foreignKeyDomain = [
-      salesforce.ApexClass,
+      "ApexClass",
     ]
   }
   salesforce.FlowConnector connector {

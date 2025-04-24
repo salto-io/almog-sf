@@ -1,7 +1,7 @@
 envs {
   envs = [
     {
-      name = "trailhead"
+      name = "env1"
       accountToServiceName = {
         salesforce = "salesforce"
       }

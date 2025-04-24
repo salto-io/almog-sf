@@ -1,7 +1,0 @@
-salesforce.ApexClass AgentAction_LookupProduct {
-  apiVersion = 63
-  status = "Active"
-  fullName = "AgentAction_LookupProduct"
-  content = file("salesforce/Records/ApexClass/AgentAction_LookupProduct.cls")
-  _alias = "AgentAction_LookupProduct"
-}

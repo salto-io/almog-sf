@@ -4,7 +4,7 @@ salesforce {
     metadata = {
       include = [
         {
-          metadataType = "GenAiPlugin|GenAiFunction|GenAiPlanner|GenAiPromptTemplate|Flow|Bot|ApexClass|LiveAgentSettings"
+          metadataType = "GenAiPlugin|GenAiFunction|GenAiPlanner|GenAiPromptTemplate|Flow|Bot"
           namespace = ""
           name = ".*"
         },
@@ -97,18 +97,6 @@ salesforce {
         },
         {
           metadataType = "PermissionSetGroup"
-        },
-        {
-          metadataType = "StandardValueSetTranslation"
-          name = "AddressStateCode-nl"
-        },
-        {
-          metadataType = "StandardValueSetTranslation"
-          name = "AddressCountryCode-nl"
-        },
-        {
-          metadataType = "DigitalExperienceBundle"
-          name = "enablement/sfdcEnablement_EnablementWorkspace"
         },
       ]
     }

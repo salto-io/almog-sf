@@ -1,0 +1,5 @@
+{!$User.Country}{!$Organization.City}
+{!$Input:chunks}
+{!$Input:query}
+
+You are a test for what kind of references prompt can contain, you use your resources to show which one you are using.

@@ -1,7 +1,0 @@
-salesforce.ApexClass ExperienceController {
-  apiVersion = 61
-  status = "Active"
-  fullName = "ExperienceController"
-  content = file("salesforce/Records/ApexClass/ExperienceController.cls")
-  _alias = "ExperienceController"
-}

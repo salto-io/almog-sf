@@ -4,17 +4,11 @@ salesforce.GenAiPromptTemplate RecordSummaryTest {
   relatedEntity = "Account"
   templateVersions = [
     {
-      content = '''
-Flow result: {!$Flow:TemplateTriggeredPromptTest.Prompt}
-Organization city: {!$Organization.City}
-Current user: {!$User.Alias}
-Account name: {!$Input:Account.Name}
-Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}
-'''
+      content = file("salesforce/Records/GenAiPromptTemplate/RecordSummaryTest/version_1.txt")
       inputs = [
         {
           apiName = "objectToSummarize"
-          definition = salesforce.Account
+          definition = "SOBJECT://Account"
           referenceName = "Input:Account"
           required = true
         },
@@ -26,42 +20,34 @@ Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}
           definition = "flow://TemplateTriggeredPromptTest"
           parameters = [
             {
-              definition = salesforce.Account
+              definition = "SOBJECT://Account"
               isRequired = true
               parameterName = "VariableForFirstPromptInstruction"
               valueExpression = "{!$Input:Account}"
             },
           ]
-          referenceName = salesforce.Flow.instance.TemplateTriggeredPromptTest
+          referenceName = "Flow:TemplateTriggeredPromptTest"
         },
         {
           definition = "apex://AgentAction_LookupAccount"
           parameters = [
             {
-              definition = salesforce.Account
+              definition = "SOBJECT://Account"
               isRequired = true
               parameterName = "objectToSummarize"
               valueExpression = "{!$Input:Account}"
             },
           ]
-          referenceName = salesforce.ApexClass.instance.AgentAction_LookupAccount
+          referenceName = "Apex:AgentAction_LookupAccount"
         },
       ]
     },
     {
-      content = '''
-Flow result: {!$Flow:TemplateTriggeredPromptTest.Prompt}
-Organization city: {!$Organization.City}
-Current user: {!$User.Alias}
-Account name: {!$Input:Account.Name}
-Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}
-Another Input: {!$Input:Account.Sic}
-Field Input: {!$Input:Account.Description}
-'''
+      content = file("salesforce/Records/GenAiPromptTemplate/RecordSummaryTest/version_2.txt")
       inputs = [
         {
           apiName = "objectToSummarize"
-          definition = salesforce.Account
+          definition = "SOBJECT://Account"
           referenceName = "Input:Account"
           required = true
         },
@@ -73,42 +59,34 @@ Field Input: {!$Input:Account.Description}
           definition = "flow://TemplateTriggeredPromptTest"
           parameters = [
             {
-              definition = salesforce.Account
+              definition = "SOBJECT://Account"
               isRequired = true
               parameterName = "VariableForFirstPromptInstruction"
               valueExpression = "{!$Input:Account}"
             },
           ]
-          referenceName = salesforce.Flow.instance.TemplateTriggeredPromptTest
+          referenceName = "Flow:TemplateTriggeredPromptTest"
         },
         {
           definition = "apex://AgentAction_LookupAccount"
           parameters = [
             {
-              definition = salesforce.Account
+              definition = "SOBJECT://Account"
               isRequired = true
               parameterName = "objectToSummarize"
               valueExpression = "{!$Input:Account}"
             },
           ]
-          referenceName = salesforce.ApexClass.instance.AgentAction_LookupAccount
+          referenceName = "Apex:AgentAction_LookupAccount"
         },
       ]
     },
     {
-      content = '''
-Flow result: {!$Flow:TemplateTriggeredPromptTest.Prompt}
-Organization city: {!$Organization.City}
-Current user: {!$User.Alias}
-Account name: {!$Input:Account.Name}
-Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}
-Another Input: {!$Input:Account.Sic}
-Field Input: {!$RelatedList:Account.Cases.Records}
-'''
+      content = file("salesforce/Records/GenAiPromptTemplate/RecordSummaryTest/version_3.txt")
       inputs = [
         {
           apiName = "objectToSummarize"
-          definition = salesforce.Account
+          definition = "SOBJECT://Account"
           referenceName = "Input:Account"
           required = true
         },
@@ -120,25 +98,25 @@ Field Input: {!$RelatedList:Account.Cases.Records}
           definition = "flow://TemplateTriggeredPromptTest"
           parameters = [
             {
-              definition = salesforce.Account
+              definition = "SOBJECT://Account"
               isRequired = true
               parameterName = "VariableForFirstPromptInstruction"
               valueExpression = "{!$Input:Account}"
             },
           ]
-          referenceName = salesforce.Flow.instance.TemplateTriggeredPromptTest
+          referenceName = "Flow:TemplateTriggeredPromptTest"
         },
         {
           definition = "apex://AgentAction_LookupAccount"
           parameters = [
             {
-              definition = salesforce.Account
+              definition = "SOBJECT://Account"
               isRequired = true
               parameterName = "objectToSummarize"
               valueExpression = "{!$Input:Account}"
             },
           ]
-          referenceName = salesforce.ApexClass.instance.AgentAction_LookupAccount
+          referenceName = "Apex:AgentAction_LookupAccount"
         },
         {
           definition = "invocable://getRelatedList"
