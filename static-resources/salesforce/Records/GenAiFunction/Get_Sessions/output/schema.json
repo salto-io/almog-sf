@@ -3,7 +3,7 @@
   "properties" : {
     "sessions" : {
       "title" : "sessions",
-      "description" : "The available Session__c records for the Experience__c",
+      "description" : "The available Session__c records for the Experience__c CHANGED",
       "maxItems" : 2000,
       "items" : {
         "lightning:type" : "lightning__recordInfoType",
