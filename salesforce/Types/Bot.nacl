@@ -45,8 +45,6 @@ type salesforce.Bot {
       "User",
     ]
   }
-  "List<salesforce.BotVersion>" botVersions {
-  }
   "List<salesforce.ConversationContextVariable>" contextVariables {
   }
   salesforce.ConversationDefinitionChannelProvider conversationChannelProviders {
@@ -102,4 +100,6 @@ type salesforce.Bot {
       indexed = false
     },
   ]
+  "Map<salesforce.BotVersion>" botVersions {
+  }
 }
