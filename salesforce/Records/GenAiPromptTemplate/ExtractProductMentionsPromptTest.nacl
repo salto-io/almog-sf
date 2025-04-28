@@ -3,11 +3,7 @@ salesforce.GenAiPromptTemplate ExtractProductMentionsPromptTest {
   masterLabel = "ExtractProductMentionsPromptTest"
   templateVersions = [
     {
-      content = '''
-First source:{!$Organization.CreatedBy.AccountId}
-Second source: {!$User.IsActive}
-Third source: {!$Input:userInstructions}
-'''
+      content = file("salesforce/Records/GenAiPromptTemplate/ExtractProductMentionsPromptTest/version_1.txt")
       inputs = [
         {
           apiName = "userInstructions"
@@ -20,12 +16,7 @@ Third source: {!$Input:userInstructions}
       status = "Published"
     },
     {
-      content = '''
-First source:{!$Organization.CreatedBy.AccountId}
-Second source: {!$User.IsActive}
-Third source: {!$Input:userInstructions}
-Fourth source: {!$Apex:AgentAction_LookupProduct.Prompt}
-'''
+      content = file("salesforce/Records/GenAiPromptTemplate/ExtractProductMentionsPromptTest/version_2.txt")
       inputs = [
         {
           apiName = "userInstructions"

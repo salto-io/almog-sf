@@ -1,0 +1,5 @@
+Flow result: {!$Flow:TemplateTriggeredPromptTest.Prompt}
+Organization city: {!$Organization.City}
+Current user: {!$User.Alias}
+Account name: {!$Input:Account.Name}
+Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}

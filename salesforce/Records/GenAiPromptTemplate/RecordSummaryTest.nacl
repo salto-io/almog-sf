@@ -4,13 +4,7 @@ salesforce.GenAiPromptTemplate RecordSummaryTest {
   relatedEntity = "Account"
   templateVersions = [
     {
-      content = '''
-Flow result: {!$Flow:TemplateTriggeredPromptTest.Prompt}
-Organization city: {!$Organization.City}
-Current user: {!$User.Alias}
-Account name: {!$Input:Account.Name}
-Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}
-'''
+      content = file("salesforce/Records/GenAiPromptTemplate/RecordSummaryTest/version_1.txt")
       inputs = [
         {
           apiName = "objectToSummarize"
@@ -49,15 +43,7 @@ Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}
       ]
     },
     {
-      content = '''
-Flow result: {!$Flow:TemplateTriggeredPromptTest.Prompt}
-Organization city: {!$Organization.City}
-Current user: {!$User.Alias}
-Account name: {!$Input:Account.Name}
-Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}
-Another Input: {!$Input:Account.Sic}
-Field Input: {!$Input:Account.Description}
-'''
+      content = file("salesforce/Records/GenAiPromptTemplate/RecordSummaryTest/version_2.txt")
       inputs = [
         {
           apiName = "objectToSummarize"
@@ -96,15 +82,7 @@ Field Input: {!$Input:Account.Description}
       ]
     },
     {
-      content = '''
-Flow result: {!$Flow:TemplateTriggeredPromptTest.Prompt}
-Organization city: {!$Organization.City}
-Current user: {!$User.Alias}
-Account name: {!$Input:Account.Name}
-Apex result: {!$Apex:AgentAction_LookupAccount.Prompt}
-Another Input: {!$Input:Account.Sic}
-Field Input: {!$RelatedList:Account.Cases.Records}
-'''
+      content = file("salesforce/Records/GenAiPromptTemplate/RecordSummaryTest/version_3.txt")
       inputs = [
         {
           apiName = "objectToSummarize"
@@ -164,5 +142,8 @@ Field Input: {!$RelatedList:Account.Cases.Records}
   type = "einstein_gpt__recordSummary"
   visibility = "Global"
   fullName = "RecordSummaryTest"
+  _parent = [
+    salesforce.Account,
+  ]
   _alias = "RecordSummaryTest"
 }

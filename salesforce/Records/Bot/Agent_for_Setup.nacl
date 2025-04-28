@@ -53,9 +53,11 @@ salesforce.Bot Agent_for_Setup {
       ]
       citationsEnabled = false
       company = "Your Company"
-      conversationDefinitionPlanners = {
-        genAiPlannerName = salesforce.GenAiPlanner.instance.Agent_for_Setup
-      }
+      conversationDefinitionPlanners = [
+        {
+          genAiPlannerName = salesforce.GenAiPlanner.instance.Agent_for_Setup
+        },
+      ]
       conversationVariables = [
         {
           dataType = "Text"

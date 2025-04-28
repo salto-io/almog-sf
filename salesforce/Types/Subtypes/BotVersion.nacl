@@ -25,8 +25,6 @@ type salesforce.BotVersion {
   }
   string company {
   }
-  salesforce.ConversationDefinitionPlanner conversationDefinitionPlanners {
-  }
   salesforce.ConversationDefinitionGoal conversationGoals {
   }
   salesforce.ConversationSystemDialog conversationSystemDialogs {
@@ -109,5 +107,14 @@ type salesforce.BotVersion {
       highlighted = true
       indexed = false
     },
+    {
+      value = "status"
+      highlighted = true
+      indexed = true
+    },
   ]
+  "List<salesforce.ConversationDefinitionPlanner>" conversationDefinitionPlanners {
+  }
+  string status {
+  }
 }

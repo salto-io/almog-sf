@@ -2280,6 +2280,12 @@ settings salesforce.Organization {
         isActive = true
       },
       {
+        fullName = "Africa/Cairo"
+        default = false
+        label = "(GMT+03:00) Eastern European Standard Time (Africa/Cairo)"
+        isActive = true
+      },
+      {
         fullName = "Africa/Dar_es_Salaam"
         default = false
         label = "(GMT+03:00) East Africa Time (Africa/Dar_es_Salaam)"
@@ -2523,12 +2529,6 @@ settings salesforce.Organization {
         fullName = "Africa/Bujumbura"
         default = false
         label = "(GMT+02:00) Central Africa Time (Africa/Bujumbura)"
-        isActive = true
-      },
-      {
-        fullName = "Africa/Cairo"
-        default = false
-        label = "(GMT+02:00) Eastern European Standard Time (Africa/Cairo)"
         isActive = true
       },
       {

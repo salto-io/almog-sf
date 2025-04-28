@@ -3,7 +3,7 @@ salesforce.GenAiPromptTemplate Generate_Upsell_Opportunities {
   masterLabel = "Generate Upsell Opportunities"
   templateVersions = [
     {
-      content = "booking trends of the guests associated with the account. Avoid suggesting any experiences or services that have already been booked. Prioritize high-value, premium, or exclusive experiences that would enhance the guest's stay. Include reasons why each upsell might be a good fit, referencing loyalty tier, previous purchases, or interests if available."
+      content = file("salesforce/Records/GenAiPromptTemplate/Generate_Upsell_Opportunities/version_1.txt")
       inputs = [
         {
           apiName = "Account"
@@ -17,7 +17,7 @@ salesforce.GenAiPromptTemplate Generate_Upsell_Opportunities {
       status = "Published"
     },
     {
-      content = "booking trends of the guests associated with the account. Avoid suggesting any experiences or services that have already been booked. Prioritize high-value, premium, or exclusive experiences that would enhance the guest's stay. Include reasons why each upsell might be a good fit, referencing loyalty tier, previous purchases, or interests if available."
+      content = file("salesforce/Records/GenAiPromptTemplate/Generate_Upsell_Opportunities/version_2.txt")
       inputs = [
         {
           apiName = "Account"
