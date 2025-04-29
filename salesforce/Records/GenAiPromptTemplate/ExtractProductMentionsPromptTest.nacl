@@ -4,27 +4,23 @@ salesforce.GenAiPromptTemplate ExtractProductMentionsPromptTest {
   templateVersions = [
     {
       content = file("salesforce/Records/GenAiPromptTemplate/ExtractProductMentionsPromptTest/version_1.txt")
-      inputs = [
-        {
-          apiName = "userInstructions"
-          definition = "primitive://String"
-          referenceName = "Input:userInstructions"
-          required = true
-        },
-      ]
+      inputs = {
+        apiName = "userInstructions"
+        definition = "primitive://String"
+        referenceName = "Input:userInstructions"
+        required = true
+      }
       primaryModel = "sfdc_ai__DefaultOpenAIGPT35Turbo"
       status = "Published"
     },
     {
       content = file("salesforce/Records/GenAiPromptTemplate/ExtractProductMentionsPromptTest/version_2.txt")
-      inputs = [
-        {
-          apiName = "userInstructions"
-          definition = "primitive://String"
-          referenceName = "Input:userInstructions"
-          required = true
-        },
-      ]
+      inputs = {
+        apiName = "userInstructions"
+        definition = "primitive://String"
+        referenceName = "Input:userInstructions"
+        required = true
+      }
       primaryModel = "sfdc_ai__DefaultOpenAIGPT35Turbo"
       status = "Draft"
       templateDataProviders = [
