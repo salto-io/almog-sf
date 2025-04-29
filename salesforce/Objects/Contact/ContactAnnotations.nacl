@@ -386,7 +386,7 @@ type salesforce.Contact {
       type = "Default"
     },
   ]
-  compactLayoutAssignment = "SYSTEM"
+  compactLayoutAssignment = "TestLayout"
   enableFeeds = true
   enableHistory = false
   externalSharingModel = "ControlledByParent"
