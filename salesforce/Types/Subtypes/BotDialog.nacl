@@ -48,6 +48,6 @@ type salesforce.BotDialog {
       indexed = false
     },
   ]
-  "List<salesforce.BotStep>" botSteps {
+  salesforce.BotStep botSteps {
   }
 }

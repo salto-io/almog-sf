@@ -14,6 +14,7 @@ type salesforce.BotVersion {
     }
   }
   serviceid fullName {
+    _required = true
   }
   boolean articleAnswersGPTEnabled {
   }
@@ -113,8 +114,8 @@ type salesforce.BotVersion {
   }
   "List<salesforce.ConversationDefinitionPlanner>" conversationDefinitionPlanners {
   }
-  "List<salesforce.BotDialog>" botDialogs {
+  salesforce.BotDialog botDialogs {
   }
-  "List<salesforce.ConversationVariable>" conversationVariables {
+  salesforce.ConversationVariable conversationVariables {
   }
 }
