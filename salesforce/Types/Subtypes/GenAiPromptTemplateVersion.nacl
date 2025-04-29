@@ -23,8 +23,6 @@ type salesforce.GenAiPromptTemplateVersion {
   }
   salesforce.GenAiPromptTemplateGenerationConfig generationTemplateConfigs {
   }
-  "List<salesforce.GenAiPromptTemplateInput>" inputs {
-  }
   string keywords {
   }
   string primaryModel {
@@ -60,4 +58,6 @@ type salesforce.GenAiPromptTemplateVersion {
       indexed = true
     },
   ]
+  "List<salesforce.GenAiPromptTemplateInput>" inputs {
+  }
 }

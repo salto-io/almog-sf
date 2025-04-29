@@ -5,8 +5,8 @@ salesforce.Bot Copilot_for_Salesforce {
     label = "Agentforce (Default)"
     name = "Copilot_for_Salesforce"
   }
-  botVersions = {
-    v1 = {
+  botVersions = [
+    {
       fullName = "v1"
       articleAnswersGPTEnabled = false
       botDialogs = [
@@ -52,9 +52,11 @@ salesforce.Bot Copilot_for_Salesforce {
         },
       ]
       citationsEnabled = false
-      conversationDefinitionPlanners = {
-        genAiPlannerName = salesforce.GenAiPlanner.instance.EmployeeCopilotPlanner
-      }
+      conversationDefinitionPlanners = [
+        {
+          genAiPlannerName = salesforce.GenAiPlanner.instance.EmployeeCopilotPlanner
+        },
+      ]
       conversationSystemDialogs = {
         dialog = "Rich_Content_Error_Handling"
         type = "ErrorHandling"
@@ -97,9 +99,8 @@ salesforce.Bot Copilot_for_Salesforce {
       knowledgeActionEnabled = false
       knowledgeFallbackEnabled = false
       smallTalkEnabled = false
-      status = "Active"
-    }
-  }
+    },
+  ]
   contextVariables = [
     {
       contextVariableMappings = [
