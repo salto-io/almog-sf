@@ -6,14 +6,12 @@ salesforce.GenAiPromptTemplate FieldGenerationPromptTemplateTest {
   templateVersions = [
     {
       content = file("salesforce/Records/GenAiPromptTemplate/FieldGenerationPromptTemplateTest/version_1.txt")
-      inputs = [
-        {
-          apiName = "RelatedEntity"
-          definition = salesforce.Account
-          referenceName = "Input:Account"
-          required = true
-        },
-      ]
+      inputs = {
+        apiName = "RelatedEntity"
+        definition = salesforce.Account
+        referenceName = "Input:Account"
+        required = true
+      }
       primaryModel = "sfdc_ai__DefaultOpenAIGPT35Turbo"
       status = "Published"
       templateDataProviders = [

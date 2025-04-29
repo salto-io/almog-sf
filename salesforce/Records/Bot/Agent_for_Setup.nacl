@@ -5,8 +5,8 @@ salesforce.Bot Agent_for_Setup {
     label = "Agent for Setup"
     name = "Agent_for_Setup"
   }
-  botVersions = [
-    {
+  botVersions = {
+    v1 = {
       fullName = "v1"
       articleAnswersGPTEnabled = false
       botDialogs = [
@@ -104,8 +104,9 @@ salesforce.Bot Agent_for_Setup {
       role = "You help users with administrative tasks in setup, such as troubleshooting user access and finding answers in Salesforce Help."
       smallTalkEnabled = false
       toneType = "Casual"
-    },
-  ]
+      status = "Inactive"
+    }
+  }
   contextVariables = [
     {
       contextVariableMappings = [
