@@ -6,8 +6,8 @@ salesforce.Bot CC_Service_Agent {
     name = "CC_Service_Agent"
   }
   botUser = "cc_service_agent@00dgl000001vau1.ext"
-  botVersions = {
-    v1 = {
+  botVersions = [
+    {
       fullName = "v1"
       articleAnswersGPTEnabled = false
       botDialogs = [
@@ -99,8 +99,8 @@ salesforce.Bot CC_Service_Agent {
       smallTalkEnabled = false
       toneType = "Casual"
       status = "Inactive"
-    }
-    v2 = {
+    },
+    {
       fullName = "v2"
       articleAnswersGPTEnabled = false
       botDialogs = [
@@ -192,8 +192,8 @@ salesforce.Bot CC_Service_Agent {
       smallTalkEnabled = false
       toneType = "Casual"
       status = "Active"
-    }
-    v3 = {
+    },
+    {
       fullName = "v3"
       articleAnswersGPTEnabled = false
       botDialogs = [
@@ -285,8 +285,8 @@ salesforce.Bot CC_Service_Agent {
       smallTalkEnabled = false
       toneType = "Casual"
       status = "Inactive"
-    }
-  }
+    },
+  ]
   contextVariables = [
     {
       contextVariableMappings = [
