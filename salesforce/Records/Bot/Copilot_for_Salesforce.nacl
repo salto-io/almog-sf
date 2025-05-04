@@ -99,7 +99,6 @@ salesforce.Bot Copilot_for_Salesforce {
       knowledgeActionEnabled = false
       knowledgeFallbackEnabled = false
       smallTalkEnabled = false
-      status = "Active"
     }
   }
   contextVariables = [

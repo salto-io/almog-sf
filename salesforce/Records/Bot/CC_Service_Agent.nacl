@@ -98,7 +98,6 @@ salesforce.Bot CC_Service_Agent {
       role = "You are a customer service representative, helping our guests make reservations, update bookings, and navigate all that Coral Cloud Resorts has to offer."
       smallTalkEnabled = false
       toneType = "Casual"
-      status = "Inactive"
     }
     v2 = {
       fullName = "v2"
@@ -191,7 +190,6 @@ salesforce.Bot CC_Service_Agent {
       role = "You are a customer service representative, helping our guests make reservations, update bookings, and navigate all that Coral Cloud Resorts has to offer."
       smallTalkEnabled = false
       toneType = "Casual"
-      status = "Active"
     }
     v3 = {
       fullName = "v3"
@@ -284,7 +282,6 @@ salesforce.Bot CC_Service_Agent {
       role = "You are a customer service representative, helping our guests make reservations, update bookings, and navigate all that Coral Cloud Resorts has to offer."
       smallTalkEnabled = false
       toneType = "Casual"
-      status = "Inactive"
     }
   }
   contextVariables = [

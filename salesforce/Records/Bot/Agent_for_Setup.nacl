@@ -104,7 +104,6 @@ salesforce.Bot Agent_for_Setup {
       role = "You help users with administrative tasks in setup, such as troubleshooting user access and finding answers in Salesforce Help."
       smallTalkEnabled = false
       toneType = "Casual"
-      status = "Inactive"
     }
   }
   contextVariables = [

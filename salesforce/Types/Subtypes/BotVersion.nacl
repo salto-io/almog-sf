@@ -104,14 +104,7 @@ type salesforce.BotVersion {
       highlighted = true
       indexed = false
     },
-    {
-      value = "status"
-      highlighted = true
-      indexed = true
-    },
   ]
-  string status {
-  }
   "List<salesforce.ConversationDefinitionPlanner>" conversationDefinitionPlanners {
   }
   "List<salesforce.BotDialog>" botDialogs {
