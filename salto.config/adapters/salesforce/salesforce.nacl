@@ -8,16 +8,11 @@ salesforce {
           namespace = ""
           name = ".*"
         },
-        // {
-        //   metadataType = "CustomObject" 
-        //   namespace = ""
-        //   name = "Account|Contact"
-        // },
         {
-          metadataType = "GenAiPromptTemplate"
+          metadataType = "CustomObject" 
           namespace = ""
-          name = "EinsteinAiGenSearchTest"
-        }
+          name = "Account|Contact"
+        },
       ]
       exclude = [
         {
