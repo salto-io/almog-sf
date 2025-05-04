@@ -9,12 +9,14 @@ salesforce.Flow PersonalizedSchedule {
       targetReference = "Display_Result"
     }
     flowTransactionModel = "CurrentTransaction"
-    inputParameters = {
-      name = "Input:Contact"
-      value = {
-        elementReference = "Get_Contact"
-      }
-    }
+    inputParameters = [
+      {
+        name = "Input:Contact"
+        value = {
+          elementReference = "Get_Contact"
+        }
+      },
+    ]
     nameSegment = "Generate_Personalized_Schedule"
     offset = 0
     storeOutputAutomatically = true
