@@ -56,8 +56,8 @@ type salesforce.GenAiPromptTemplateVersion {
       indexed = true
     },
   ]
-  "List<salesforce.GenAiPromptTemplateInput>" inputs {
-  }
   "List<salesforce.GenAiPromptTemplateDataProvider>" templateDataProviders {
+  }
+  salesforce.GenAiPromptTemplateInput inputs {
   }
 }
