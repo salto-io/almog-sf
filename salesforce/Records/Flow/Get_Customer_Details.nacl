@@ -54,14 +54,14 @@ salesforce.Flow Get_Customer_Details {
       filterLogic = "and"
       filters = [
         {
-          field = salesforce.Contact.field.Email
+          field = "Email"
           operator = "EqualTo"
           value = {
             elementReference = "email"
           }
         },
         {
-          field = salesforce.Contact.field.Membership_Number__c
+          field = "Membership_Number__c"
           operator = "EqualTo"
           value = {
             elementReference = "memberNumber"
@@ -69,10 +69,10 @@ salesforce.Flow Get_Customer_Details {
         },
       ]
       getFirstRecordOnly = true
-      object = salesforce.Contact
+      object = "Contact"
       queriedFields = [
-        salesforce.Contact.field.Id,
-        salesforce.Contact.field.Name,
+        "Id",
+        "Name",
       ]
       storeOutputAutomatically = true
     },
@@ -92,7 +92,7 @@ salesforce.Flow Get_Customer_Details {
       isCollection = false
       isInput = false
       isOutput = true
-      objectType = salesforce.Contact
+      objectType = "Contact"
     },
     {
       description = "The Email Address of the customer that is validating their identity."

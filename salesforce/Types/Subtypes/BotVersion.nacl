@@ -20,13 +20,19 @@ type salesforce.BotVersion {
   }
   salesforce.BotDialogGroup botDialogGroups {
   }
+  salesforce.BotDialog botDialogs {
+  }
   boolean citationsEnabled {
   }
   string company {
   }
+  "List<salesforce.ConversationDefinitionPlanner>" conversationDefinitionPlanners {
+  }
   salesforce.ConversationDefinitionGoal conversationGoals {
   }
   salesforce.ConversationSystemDialog conversationSystemDialogs {
+  }
+  salesforce.ConversationVariable conversationVariables {
   }
   string copilotPrimaryLanguage {
     _restriction = {
@@ -97,6 +103,8 @@ type salesforce.BotVersion {
     _hidden_value = true
     localOnly = true
   }
+  string status {
+  }
   metadataType = "BotVersion"
   _important_values = [
     {
@@ -104,11 +112,10 @@ type salesforce.BotVersion {
       highlighted = true
       indexed = false
     },
+    {
+      value = "status"
+      highlighted = true
+      indexed = true
+    },
   ]
-  "List<salesforce.ConversationDefinitionPlanner>" conversationDefinitionPlanners {
-  }
-  "List<salesforce.BotDialog>" botDialogs {
-  }
-  "List<salesforce.ConversationVariable>" conversationVariables {
-  }
 }

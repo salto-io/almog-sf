@@ -36,13 +36,10 @@ salesforce.Flow Account_Triggered_Flow {
     connector = {
       targetReference = "Create_Records"
     }
-    object = salesforce.Account
+    object = "Account"
     recordTriggerType = "Create"
     triggerType = "RecordAfterSave"
   }
   status = "Active"
-  _parent = [
-    salesforce.Account,
-  ]
   _alias = "Account Triggered Flow"
 }

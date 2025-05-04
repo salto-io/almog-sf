@@ -67,7 +67,7 @@ salesforce.Flow TemplateTriggeredPromptTest {
       isCollection = false
       isInput = true
       isOutput = false
-      objectType = salesforce.Account
+      objectType = "Account"
     },
   ]
   _alias = "TemplateTriggeredPromptTest"

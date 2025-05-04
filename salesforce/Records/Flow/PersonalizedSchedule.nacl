@@ -9,12 +9,14 @@ salesforce.Flow PersonalizedSchedule {
       targetReference = "Display_Result"
     }
     flowTransactionModel = "CurrentTransaction"
-    inputParameters = {
-      name = "Input:Contact"
-      value = {
-        elementReference = "Get_Contact"
-      }
-    }
+    inputParameters = [
+      {
+        name = "Input:Contact"
+        value = {
+          elementReference = "Get_Contact"
+        }
+      },
+    ]
     nameSegment = "Generate_Personalized_Schedule"
     offset = 0
     storeOutputAutomatically = true
@@ -55,7 +57,7 @@ salesforce.Flow PersonalizedSchedule {
       filterLogic = "and"
       filters = [
         {
-          field = salesforce.Contact.field.Id
+          field = "Id"
           operator = "EqualTo"
           value = {
             elementReference = "recordId"
@@ -63,7 +65,7 @@ salesforce.Flow PersonalizedSchedule {
         },
       ]
       getFirstRecordOnly = true
-      object = salesforce.Contact
+      object = "Contact"
       storeOutputAutomatically = true
     },
   ]

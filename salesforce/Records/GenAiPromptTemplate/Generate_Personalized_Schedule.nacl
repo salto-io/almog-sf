@@ -4,13 +4,15 @@ salesforce.GenAiPromptTemplate Generate_Personalized_Schedule {
   templateVersions = [
     {
       content = file("salesforce/Records/GenAiPromptTemplate/Generate_Personalized_Schedule/version_1.txt")
-      inputs = {
-        apiName = "Contact"
-        definition = salesforce.Contact
-        masterLabel = "Contact"
-        referenceName = "Input:Contact"
-        required = true
-      }
+      inputs = [
+        {
+          apiName = "Contact"
+          definition = "SOBJECT://Contact"
+          masterLabel = "Contact"
+          referenceName = "Input:Contact"
+          required = true
+        },
+      ]
       primaryModel = "sfdc_ai__DefaultOpenAIGPT35Turbo"
       status = "Published"
     },

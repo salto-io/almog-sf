@@ -15,9 +15,9 @@ type salesforce.GenAiPromptTemplateDataProvider {
   }
   string definition {
   }
-  "List<salesforce.GenAiPromptTemplateDataProviderParam>" parameters {
-  }
   string referenceName {
   }
   metadataType = "GenAiPromptTemplateDataProvider"
+  "List<salesforce.GenAiPromptTemplateDataProviderParam>" parameters {
+  }
 }
