@@ -5,12 +5,14 @@ salesforce.GenAiPromptTemplate RecordSummaryTest {
   templateVersions = [
     {
       content = file("salesforce/Records/GenAiPromptTemplate/RecordSummaryTest/version_1.txt")
-      inputs = {
-        apiName = "objectToSummarize"
-        definition = salesforce.Account
-        referenceName = "Input:Account"
-        required = true
-      }
+      inputs = [
+        {
+          apiName = "objectToSummarize"
+          definition = salesforce.Account
+          referenceName = "Input:Account"
+          required = true
+        },
+      ]
       primaryModel = "sfdc_ai__DefaultOpenAIGPT35Turbo"
       status = "Published"
       templateDataProviders = [
@@ -42,12 +44,14 @@ salesforce.GenAiPromptTemplate RecordSummaryTest {
     },
     {
       content = file("salesforce/Records/GenAiPromptTemplate/RecordSummaryTest/version_2.txt")
-      inputs = {
-        apiName = "objectToSummarize"
-        definition = salesforce.Account
-        referenceName = "Input:Account"
-        required = true
-      }
+      inputs = [
+        {
+          apiName = "objectToSummarize"
+          definition = salesforce.Account
+          referenceName = "Input:Account"
+          required = true
+        },
+      ]
       primaryModel = "sfdc_ai__DefaultOpenAIGPT35Turbo"
       status = "Published"
       templateDataProviders = [
@@ -79,12 +83,14 @@ salesforce.GenAiPromptTemplate RecordSummaryTest {
     },
     {
       content = file("salesforce/Records/GenAiPromptTemplate/RecordSummaryTest/version_3.txt")
-      inputs = {
-        apiName = "objectToSummarize"
-        definition = salesforce.Account
-        referenceName = "Input:Account"
-        required = true
-      }
+      inputs = [
+        {
+          apiName = "objectToSummarize"
+          definition = salesforce.Account
+          referenceName = "Input:Account"
+          required = true
+        },
+      ]
       primaryModel = "sfdc_ai__DefaultOpenAIGPT35Turbo"
       status = "Published"
       templateDataProviders = [
