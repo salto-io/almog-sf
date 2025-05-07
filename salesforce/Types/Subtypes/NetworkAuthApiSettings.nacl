@@ -25,7 +25,7 @@ type salesforce.NetworkAuthApiSettings {
   }
   string headlessDiscoveryExecutionUser {
     foreignKeyDomain = [
-      salesforce.User,
+      "User",
     ]
   }
   string headlessDiscoveryHandler {
@@ -59,7 +59,7 @@ type salesforce.NetworkAuthApiSettings {
   }
   string registrationExecutionUser {
     foreignKeyDomain = [
-      salesforce.User,
+      "User",
     ]
   }
   string registrationHandler {

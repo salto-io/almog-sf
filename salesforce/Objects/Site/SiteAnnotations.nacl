@@ -1,7 +1,0 @@
-type salesforce.Site {
-  annotations {
-    serviceid metadataType {
-    }
-  }
-  metadataType = "Site"
-}

@@ -1,7 +1,0 @@
-salesforce.UserCriteria Web_Chat_Customer_Members@svu {
-  fullName = "Web Chat.Customer_Members"
-  description = "Member criteria matches customer members"
-  masterLabel = "Customer Members"
-  userTypes = "Customer"
-  _alias = "Web Chat.Customer_Members"
-}

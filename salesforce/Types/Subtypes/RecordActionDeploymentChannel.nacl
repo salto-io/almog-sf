@@ -23,9 +23,9 @@ type salesforce.RecordActionDeploymentChannel {
       ]
     }
   }
+  salesforce.RecordActionDefaultItem channelItems {
+  }
   boolean isAutopopEnabled {
   }
   metadataType = "RecordActionDeploymentChannel"
-  "List<salesforce.RecordActionDefaultItem>" channelItems {
-  }
 }

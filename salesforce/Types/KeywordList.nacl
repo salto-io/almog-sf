@@ -17,7 +17,7 @@ type salesforce.KeywordList {
   }
   serviceid fullName {
   }
-  "List<salesforce.Keyword>" keywords {
+  salesforce.Keyword keywords {
   }
   string masterLabel {
   }

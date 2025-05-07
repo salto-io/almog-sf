@@ -33,6 +33,8 @@ type salesforce.FlowWaitEvent {
   }
   salesforce.FlowRecordFilter filters {
   }
+  salesforce.FlowWaitEventInputParameter inputParameters {
+  }
   string interactionType {
     _restriction = {
       enforce_value = false
@@ -64,6 +66,8 @@ type salesforce.FlowWaitEvent {
         "Weeks",
       ]
     }
+  }
+  salesforce.FlowWaitEventOutputParameter outputParameters {
   }
   string recordTriggerType {
     _restriction = {
@@ -101,8 +105,4 @@ type salesforce.FlowWaitEvent {
       indexed = false
     },
   ]
-  "List<salesforce.FlowWaitEventInputParameter>" inputParameters {
-  }
-  "List<salesforce.FlowWaitEventOutputParameter>" outputParameters {
-  }
 }

@@ -1,5 +1,7 @@
 type salesforce.Site {
   annotations {
+    serviceid metadataType {
+    }
     boolean hasMetaFile {
     }
     string folderType {
@@ -13,4 +15,5 @@ type salesforce.Site {
   }
   string urlPathPrefix {
   }
+  metadataType = "Site"
 }

@@ -75,7 +75,7 @@ type salesforce.Account {
     deleteConstraint = "Restrict"
     label = "TestCustomObject"
     referenceTo = [
-      salesforce.TestCustomObject__c,
+      "TestCustomObject__c",
     ]
     relationshipLabel = "Accounts"
     relationshipName = "testCustoms"
@@ -189,7 +189,7 @@ type salesforce.Account {
     inlineHelpText = "Default opportunity for this account used by an e-Commerce module to obtain the customer's price book and associate with \"shopping cart\" quotes."
     label = "Default Opportunity"
     referenceTo = [
-      salesforce.Opportunity,
+      "Opportunity",
     ]
     relationshipLabel = "Accounts"
     relationshipName = "WebAccounts"

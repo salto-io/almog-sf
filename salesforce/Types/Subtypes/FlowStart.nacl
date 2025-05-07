@@ -74,6 +74,8 @@ type salesforce.FlowStart {
   }
   string filterLogic {
   }
+  salesforce.FlowRecordFilter filters {
+  }
   string flowRunAsUser {
     _restriction = {
       enforce_value = false
@@ -150,6 +152,4 @@ type salesforce.FlowStart {
       indexed = false
     },
   ]
-  "List<salesforce.FlowRecordFilter>" filters {
-  }
 }

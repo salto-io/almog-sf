@@ -10,7 +10,6 @@ type salesforce.Account {
     apiName = "Account.AccountSource"
     label = "Account Source"
     restricted = false
-    valueSetName = salesforce.StandardValueSet.instance.LeadSource
   }
   salesforce.Currency AnnualRevenue {
     apiName = "Account.AnnualRevenue"
@@ -69,7 +68,6 @@ type salesforce.Account {
     apiName = "Account.Industry"
     label = "Industry"
     restricted = false
-    valueSetName = salesforce.StandardValueSet.instance.Industry
   }
   salesforce.Checkbox IsCustomerPortal {
     apiName = "Account.IsCustomerPortal"
@@ -132,7 +130,6 @@ type salesforce.Account {
     apiName = "Account.Ownership"
     label = "Ownership"
     restricted = false
-    valueSetName = salesforce.StandardValueSet.instance.AccountOwnership
   }
   salesforce.Hierarchy ParentId {
     apiName = "Account.ParentId"
@@ -147,7 +144,6 @@ type salesforce.Account {
     apiName = "Account.Rating"
     label = "Account Rating"
     restricted = false
-    valueSetName = salesforce.StandardValueSet.instance.AccountRating
   }
   salesforce.Address ShippingAddress {
     apiName = "Account.ShippingAddress"
@@ -197,7 +193,6 @@ type salesforce.Account {
     apiName = "Account.Type"
     label = "Account Type"
     restricted = false
-    valueSetName = salesforce.StandardValueSet.instance.AccountType
   }
   salesforce.Url Website {
     apiName = "Account.Website"

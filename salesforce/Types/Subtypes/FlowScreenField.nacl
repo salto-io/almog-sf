@@ -13,6 +13,8 @@ type salesforce.FlowScreenField {
     string dirName {
     }
   }
+  string choiceReferences {
+  }
   salesforce.FlowDataTypeMapping dataTypeMappings {
   }
   string defaultSelectedChoiceReference {
@@ -28,6 +30,8 @@ type salesforce.FlowScreenField {
   salesforce.FlowScreenField fields {
   }
   string helpText {
+  }
+  salesforce.FlowScreenFieldInputParameter inputParameters {
   }
   string inputsOnNextNavToAssocScrn {
     _restriction = {
@@ -49,6 +53,10 @@ type salesforce.FlowScreenField {
   string name {
   }
   string objectFieldReference {
+  }
+  salesforce.FlowScreenFieldOutputParameter outputParameters {
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
   }
   string regionContainerType {
     _restriction = {
@@ -115,12 +123,4 @@ type salesforce.FlowScreenField {
       indexed = false
     },
   ]
-  "List<string>" choiceReferences {
-  }
-  "List<salesforce.FlowScreenFieldInputParameter>" inputParameters {
-  }
-  "List<salesforce.FlowScreenFieldOutputParameter>" outputParameters {
-  }
-  "List<salesforce.FlowMetadataValue>" processMetadataValues {
-  }
 }

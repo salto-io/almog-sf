@@ -1,5 +1,0 @@
-salesforce.InstalledPackage sbaa {
-  versionNumber = "244.0"
-  fullName = "sbaa"
-  _alias = "sbaa"
-}

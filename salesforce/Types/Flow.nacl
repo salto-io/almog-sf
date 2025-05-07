@@ -15,11 +15,15 @@ type salesforce.Flow {
   }
   serviceid fullName {
   }
+  salesforce.FlowActionCall actionCalls {
+  }
   salesforce.FlowApexPluginCall apexPluginCalls {
   }
   number apiVersion {
   }
   "List<salesforce.FlowAssignment>" assignments {
+  }
+  salesforce.FlowChoice choices {
   }
   salesforce.FlowCollectionProcessor collectionProcessors {
   }
@@ -62,6 +66,8 @@ type salesforce.Flow {
   "List<salesforce.FlowLoop>" loops {
   }
   string migratedFromWorkflowRuleName {
+  }
+  salesforce.FlowOrchestratedStage orchestratedStages {
   }
   string overriddenFlow {
     _restriction = {
@@ -223,6 +229,8 @@ type salesforce.Flow {
       ]
     }
   }
+  salesforce.FlowScreen screens {
+  }
   string sourceTemplate {
     _restriction = {
       enforce_value = false
@@ -310,6 +318,8 @@ type salesforce.Flow {
       salesforce.FlowDefinition,
     ]
   }
+  salesforce.FlowStage stages {
+  }
   salesforce.FlowStart start {
   }
   string startElementReference {
@@ -328,6 +338,8 @@ type salesforce.Flow {
   salesforce.FlowStep steps {
   }
   salesforce.FlowSubflow subflows {
+  }
+  salesforce.FlowTextTemplate textTemplates {
   }
   string timeZoneSidKey {
     _restriction = {
@@ -765,9 +777,13 @@ type salesforce.Flow {
       ]
     }
   }
+  salesforce.FlowTransform transforms {
+  }
   number triggerOrder {
   }
   "List<salesforce.FlowVariable>" variables {
+  }
+  salesforce.FlowWait waits {
   }
   string internalId {
     _hidden_value = true
@@ -808,20 +824,4 @@ type salesforce.Flow {
       indexed = true
     },
   ]
-  "List<salesforce.FlowActionCall>" actionCalls {
-  }
-  "List<salesforce.FlowChoice>" choices {
-  }
-  "List<salesforce.FlowOrchestratedStage>" orchestratedStages {
-  }
-  "List<salesforce.FlowScreen>" screens {
-  }
-  "List<salesforce.FlowStage>" stages {
-  }
-  "List<salesforce.FlowTextTemplate>" textTemplates {
-  }
-  "List<salesforce.FlowTransform>" transforms {
-  }
-  "List<salesforce.FlowWait>" waits {
-  }
 }

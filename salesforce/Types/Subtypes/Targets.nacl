@@ -13,7 +13,7 @@ type salesforce.Targets {
     string dirName {
     }
   }
-  metadataType = "Targets"
   string target {
   }
+  metadataType = "Targets"
 }

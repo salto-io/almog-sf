@@ -1,7 +1,0 @@
-salesforce.SurveySettings {
-  enableIndustriesCxmEnabled = false
-  enableSurvey = true
-  enableSurveyOwnerCanManageResponse = true
-  fullName = "Survey"
-  _alias = "Survey"
-}

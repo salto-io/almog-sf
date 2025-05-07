@@ -23,6 +23,8 @@ type salesforce.ChannelLayout {
   }
   string label {
   }
+  salesforce.ChannelLayoutItem layoutItems {
+  }
   string recordType {
   }
   string internalId {
@@ -44,6 +46,4 @@ type salesforce.ChannelLayout {
       indexed = false
     },
   ]
-  "List<salesforce.ChannelLayoutItem>" layoutItems {
-  }
 }

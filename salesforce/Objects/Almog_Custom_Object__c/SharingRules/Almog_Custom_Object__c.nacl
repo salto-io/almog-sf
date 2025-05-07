@@ -1,7 +1,0 @@
-salesforce.SharingRules Almog_Custom_Object__c {
-  fullName = "Almog_Custom_Object__c"
-  _parent = [
-    salesforce.Almog_Custom_Object__c,
-  ]
-  _alias = "Almog_Custom_Object__c"
-}

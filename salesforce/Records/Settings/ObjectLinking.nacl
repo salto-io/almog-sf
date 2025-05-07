@@ -1,5 +1,0 @@
-salesforce.ObjectLinkingSettings {
-  enableObjectLinking = false
-  fullName = "ObjectLinking"
-  _alias = "ObjectLinking"
-}

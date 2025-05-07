@@ -190,7 +190,6 @@ type salesforce.Asset {
     apiName = "Asset.Status"
     label = "Status"
     restricted = false
-    valueSetName = salesforce.StandardValueSet.instance.AssetStatus
   }
   salesforce.Picklist StatusReason {
     apiName = "Asset.StatusReason"

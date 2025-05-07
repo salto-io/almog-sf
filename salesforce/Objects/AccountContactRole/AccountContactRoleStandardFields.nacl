@@ -3,7 +3,6 @@ type salesforce.AccountContactRole {
     apiName = "AccountContactRole.Role"
     label = "Role"
     restricted = false
-    valueSetName = salesforce.StandardValueSet.instance.ContractContactRole
   }
   serviceid Id {
     apiName = "AccountContactRole.Id"

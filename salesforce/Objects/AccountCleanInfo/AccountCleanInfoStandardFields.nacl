@@ -3,14 +3,12 @@ type salesforce.AccountCleanInfo {
     apiName = "AccountCleanInfo.Industry"
     label = "Industry"
     restricted = false
-    valueSetName = salesforce.StandardValueSet.instance.Industry
     _hidden_value = true
   }
   salesforce.Picklist Ownership {
     apiName = "AccountCleanInfo.Ownership"
     label = "Ownership"
     restricted = false
-    valueSetName = salesforce.StandardValueSet.instance.AccountOwnership
     _hidden_value = true
   }
   serviceid Id {

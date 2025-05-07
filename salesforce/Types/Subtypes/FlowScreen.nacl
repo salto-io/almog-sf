@@ -54,6 +54,8 @@ type salesforce.FlowScreen {
       "FlowElementSubtypeDefinition",
     ]
   }
+  salesforce.FlowScreenField fields {
+  }
   string helpText {
   }
   string label {
@@ -98,6 +100,4 @@ type salesforce.FlowScreen {
       indexed = false
     },
   ]
-  "List<salesforce.FlowScreenField>" fields {
-  }
 }

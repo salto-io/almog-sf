@@ -13,7 +13,7 @@ type salesforce.Asset {
     deleteConstraint = "Restrict"
     label = "LookupToCart"
     referenceTo = [
-      salesforce.WebCart,
+      "WebCart",
     ]
     relationshipLabel = "Assets"
     relationshipName = "Assets"
@@ -112,12 +112,6 @@ type salesforce.Asset {
     _generated_dependencies = [
       {
         reference = salesforce.Asset.field.Product2Id
-      },
-      {
-        reference = salesforce.Product2
-      },
-      {
-        reference = salesforce.Product2.field.SBQQ__UpgradeCredit__c
       },
     ]
   }
@@ -333,7 +327,7 @@ type salesforce.Asset {
     deprecated = false
     label = "Order Product"
     referenceTo = [
-      salesforce.OrderItem,
+      "OrderItem",
     ]
     relationshipLabel = "Assets"
     relationshipName = "Assets"
@@ -496,7 +490,7 @@ type salesforce.Asset {
     inlineHelpText = "Parent Product of this Asset."
     label = "Parent Product"
     referenceTo = [
-      salesforce.Product2,
+      "Product2",
     ]
     relationshipLabel = "Child Assets"
     relationshipName = "ChildAssets"
@@ -606,7 +600,7 @@ type salesforce.Asset {
     deprecated = false
     label = "Subscribed Product"
     referenceTo = [
-      salesforce.Product2,
+      "Product2",
     ]
     relationshipLabel = "Assets"
     relationshipName = "Assets"

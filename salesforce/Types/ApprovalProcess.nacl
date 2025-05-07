@@ -19,6 +19,8 @@ type salesforce.ApprovalProcess {
   }
   boolean allowRecall {
   }
+  salesforce.ApprovalSubmitter allowedSubmitters {
+  }
   salesforce.ApprovalPageField approvalPageFields {
   }
   "List<salesforce.ApprovalStep>" approvalStep {
@@ -91,6 +93,4 @@ type salesforce.ApprovalProcess {
       indexed = true
     },
   ]
-  "List<salesforce.ApprovalSubmitter>" allowedSubmitters {
-  }
 }

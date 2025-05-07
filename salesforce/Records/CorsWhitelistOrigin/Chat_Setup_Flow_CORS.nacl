@@ -1,5 +1,0 @@
-salesforce.CorsWhitelistOrigin Chat_Setup_Flow_CORS {
-  fullName = "Chat_Setup_Flow_CORS"
-  urlPattern = "https://salto52-dev-ed.develop.my.site.com"
-  _alias = "Chat_Setup_Flow_CORS"
-}

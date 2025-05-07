@@ -32,7 +32,7 @@ type salesforce.PersonAccountOwnerPowerUser {
   }
   string user {
     foreignKeyDomain = [
-      salesforce.User,
+      "User",
     ]
   }
   string internalId {

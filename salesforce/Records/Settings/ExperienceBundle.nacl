@@ -1,5 +1,0 @@
-salesforce.ExperienceBundleSettings {
-  enableExperienceBundleMetadata = true
-  fullName = "ExperienceBundle"
-  _alias = "ExperienceBundle"
-}

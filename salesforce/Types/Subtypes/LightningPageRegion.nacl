@@ -22,7 +22,7 @@ type salesforce.LightningPageRegion {
       ]
     }
   }
-  "List<salesforce.ItemInstance>" itemInstances {
+  salesforce.ItemInstance itemInstances {
   }
   string mode {
     _restriction = {

@@ -19,6 +19,8 @@ type salesforce.Container {
   }
   string region {
   }
+  salesforce.SidebarComponent sidebarComponents {
+  }
   string style {
   }
   string unit {
@@ -26,6 +28,4 @@ type salesforce.Container {
   number width {
   }
   metadataType = "Container"
-  "List<salesforce.SidebarComponent>" sidebarComponents {
-  }
 }

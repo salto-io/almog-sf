@@ -31,6 +31,10 @@ type salesforce.FlowSubflow {
   }
   string flowName {
   }
+  salesforce.FlowSubflowInputAssignment inputAssignments {
+  }
+  salesforce.FlowSubflowOutputAssignment outputAssignments {
+  }
   boolean storeOutputAutomatically {
   }
   metadataType = "FlowSubflow"
@@ -51,8 +55,4 @@ type salesforce.FlowSubflow {
       indexed = false
     },
   ]
-  "List<salesforce.FlowSubflowInputAssignment>" inputAssignments {
-  }
-  "List<salesforce.FlowSubflowOutputAssignment>" outputAssignments {
-  }
 }

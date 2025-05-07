@@ -51,6 +51,8 @@ type salesforce.FlowStageStep {
   }
   salesforce.FlowCondition exitConditions {
   }
+  salesforce.FlowStageStepInputParameter inputParameters {
+  }
   string label {
   }
   salesforce.FlowStageStepOutputParameter outputParameters {
@@ -81,6 +83,4 @@ type salesforce.FlowStageStep {
       indexed = false
     },
   ]
-  "List<salesforce.FlowStageStepInputParameter>" inputParameters {
-  }
 }

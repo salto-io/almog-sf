@@ -41,6 +41,8 @@ type salesforce.RecordActionDeployment {
   }
   salesforce.RecordActionRecommendation recommendation {
   }
+  salesforce.RecordActionSelectableItem selectableItems {
+  }
   string internalId {
     _hidden_value = true
     localOnly = true
@@ -60,6 +62,4 @@ type salesforce.RecordActionDeployment {
       indexed = false
     },
   ]
-  "List<salesforce.RecordActionSelectableItem>" selectableItems {
-  }
 }

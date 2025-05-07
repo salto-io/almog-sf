@@ -15,7 +15,7 @@ type salesforce.NotificationTypeConfig {
   }
   serviceid fullName {
   }
-  "List<salesforce.NotificationTypeSettings>" notificationTypeSettings {
+  salesforce.NotificationTypeSettings notificationTypeSettings {
   }
   string internalId {
     _hidden_value = true

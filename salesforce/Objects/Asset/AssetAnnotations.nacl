@@ -194,9 +194,6 @@ type salesforce.Asset {
     ]
   }
   _alias = "Asset"
-  topicsForObjects = {
-    enableTopics = true
-  }
   historyTrackedFields = {
   }
 }

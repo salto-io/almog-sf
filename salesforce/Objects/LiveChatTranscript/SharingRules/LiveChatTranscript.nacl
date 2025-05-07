@@ -1,7 +1,0 @@
-salesforce.SharingRules LiveChatTranscript {
-  fullName = "LiveChatTranscript"
-  _parent = [
-    salesforce.LiveChatTranscript,
-  ]
-  _alias = "LiveChatTranscript"
-}

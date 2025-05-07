@@ -51,6 +51,8 @@ type salesforce.FlowOrchestratedStage {
   }
   salesforce.FlowConnector connector {
   }
+  salesforce.FlowStageStepExitActionInputParameter exitActionInputParameters {
+  }
   string exitActionName {
   }
   salesforce.FlowStageStepExitActionOutputParameter exitActionOutputParameters {
@@ -62,6 +64,8 @@ type salesforce.FlowOrchestratedStage {
   salesforce.FlowCondition exitConditions {
   }
   salesforce.FlowConnector faultConnector {
+  }
+  salesforce.FlowStageStep stageSteps {
   }
   metadataType = "FlowOrchestratedStage"
   _important_values = [
@@ -81,8 +85,4 @@ type salesforce.FlowOrchestratedStage {
       indexed = false
     },
   ]
-  "List<salesforce.FlowStageStepExitActionInputParameter>" exitActionInputParameters {
-  }
-  "List<salesforce.FlowStageStep>" stageSteps {
-  }
 }

@@ -92,6 +92,8 @@ type salesforce.FlowActionCall {
       ]
     }
   }
+  salesforce.FlowActionCallOutputParameter outputParameters {
+  }
   boolean storeOutputAutomatically {
   }
   salesforce.FlowConnector timeoutConnector {
@@ -118,6 +120,4 @@ type salesforce.FlowActionCall {
       indexed = false
     },
   ]
-  "List<salesforce.FlowActionCallOutputParameter>" outputParameters {
-  }
 }

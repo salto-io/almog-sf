@@ -27,7 +27,7 @@ type salesforce.FeedLayout {
       ]
     }
   }
-  "List<salesforce.FeedLayoutFilter>" feedFilters {
+  salesforce.FeedLayoutFilter feedFilters {
   }
   boolean fullWidthFeed {
   }
@@ -37,7 +37,7 @@ type salesforce.FeedLayout {
   }
   salesforce.FeedLayoutComponent leftComponents {
   }
-  "List<salesforce.FeedLayoutComponent>" rightComponents {
+  salesforce.FeedLayoutComponent rightComponents {
   }
   boolean useInlineFiltersInConsole {
   }

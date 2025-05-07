@@ -1,9 +1,0 @@
-salesforce.CustomTab Knowledge__kav {
-  fullName = "Knowledge__kav"
-  customObject = true
-  motif = "Custom55: Books"
-  _parent = [
-    salesforce.Knowledge__kav,
-  ]
-  _alias = "Knowledge__kav"
-}

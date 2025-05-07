@@ -22,7 +22,7 @@ type salesforce.EmbeddedServiceLiveAgent {
       salesforce.EmbeddedServiceConfig,
     ]
   }
-  "List<salesforce.EmbeddedServiceQuickAction>" embeddedServiceQuickActions {
+  salesforce.EmbeddedServiceQuickAction embeddedServiceQuickActions {
   }
   boolean enabled {
   }

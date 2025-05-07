@@ -1,9 +1,0 @@
-salesforce.RecordType Almog_Custom_Object__c_TestRecordType {
-  fullName = "Almog_Custom_Object__c.TestRecordType"
-  active = true
-  label = "TestRecordType"
-  _parent = [
-    salesforce.Almog_Custom_Object__c,
-  ]
-  _alias = "TestRecordType"
-}

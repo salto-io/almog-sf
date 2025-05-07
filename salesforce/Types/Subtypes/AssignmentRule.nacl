@@ -17,7 +17,7 @@ type salesforce.AssignmentRule {
   }
   serviceid fullName {
   }
-  "List<salesforce.RuleEntry>" ruleEntry {
+  salesforce.RuleEntry ruleEntry {
   }
   string internalId {
     _hidden_value = true
