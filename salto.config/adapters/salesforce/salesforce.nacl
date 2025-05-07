@@ -1,0 +1,126 @@
+salesforce {
+  fetch = {
+    optionalFeatures = {
+      hideTypesFolder = false
+    }
+    metadata = {
+      include = [
+        {
+          metadataType = "CustomObject"
+          namespace = ""
+          name = "Account|Asset"
+        },
+        {
+          metadataType = ".*"
+          namespace = ""
+          name = "new_CMT__mdt|SecondCMT__mdt"
+        },
+        {
+          metadataType = "CustomMetadata"
+          namespace = ""
+          name = "TestRecord|Test_CMT_instance|Test_secondCMT_record"
+        }
+      ]
+      exclude = [
+        {
+          metadataType = "Report"
+        },
+        {
+          metadataType = "ReportType"
+        },
+        {
+          metadataType = "ReportFolder"
+        },
+        {
+          metadataType = "Dashboard"
+        },
+        {
+          metadataType = "DashboardFolder"
+        },
+        {
+          metadataType = "Document"
+        },
+        {
+          metadataType = "DocumentFolder"
+        },
+        {
+          metadataType = "SiteDotCom"
+        },
+        {
+          metadataType = "EmailTemplate"
+          name = "Marketo_?Email_?Templates/.*"
+        },
+        {
+          metadataType = "ContentAsset"
+        },
+        {
+          metadataType = "CustomObjectTranslation"
+        },
+        {
+          metadataType = "AnalyticSnapshot"
+        },
+        {
+          metadataType = "WaveDashboard"
+        },
+        {
+          metadataType = "WaveDataflow"
+        },
+        {
+          metadataType = "StandardValueSet"
+          name = "^(AddressCountryCode)|(AddressStateCode)$"
+          namespace = ""
+        },
+        {
+          metadataType = "Layout"
+          name = "CollaborationGroup-Group Layout"
+        },
+        {
+          metadataType = "Layout"
+          name = "CaseInteraction-Case Feed Layout"
+        },
+        {
+          metadataType = "EclairGeoData"
+        },
+        {
+          metadataType = "OmniUiCard|OmniDataTransform|OmniIntegrationProcedure|OmniInteractionAccessConfig|OmniInteractionConfig|OmniScript"
+        },
+        {
+          metadataType = "DiscoveryAIModel"
+        },
+        {
+          metadataType = "Translations"
+        },
+        {
+          metadataType = "ManagedEventSubscription"
+        },
+        {
+          metadataType = "Profile"
+        },
+        {
+          metadataType = "PermissionSet"
+        },
+        {
+          metadataType = "MutingPermissionSet"
+        },
+        {
+          metadataType = "PermissionSetGroup"
+        },
+        {
+          metadataType = "StandardValueSetTranslation"
+          name = "AddressCountryCode-nl"
+        },
+        {
+          metadataType = "StandardValueSetTranslation"
+          name = "AddressStateCode-nl"
+        },
+        {
+          metadataType = "DigitalExperienceBundle"
+          name = "enablement/sfdcEnablement_EnablementWorkspace"
+        },
+      ]
+    }
+    fetchAllCustomSettings = false
+    maxInstancesPerType = 5000
+  }
+  maxItemsInRetrieveRequest = 2500
+}
