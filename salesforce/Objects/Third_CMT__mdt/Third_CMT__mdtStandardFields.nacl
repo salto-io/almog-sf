@@ -1,12 +1,12 @@
-type salesforce.SecondCMT__mdt {
+type salesforce.Third_CMT__mdt {
   serviceid Id {
-    apiName = "SecondCMT__mdt.Id"
+    apiName = "Third_CMT__mdt.Id"
     label = "Custom Metadata Record ID"
     queryable = true
     _hidden_value = true
   }
   salesforce.Text DeveloperName {
-    apiName = "SecondCMT__mdt.DeveloperName"
+    apiName = "Third_CMT__mdt.DeveloperName"
     label = "Custom Metadata Record Name"
     _required = true
     length = 40
@@ -15,7 +15,7 @@ type salesforce.SecondCMT__mdt {
     _hidden_value = true
   }
   salesforce.Text MasterLabel {
-    apiName = "SecondCMT__mdt.MasterLabel"
+    apiName = "Third_CMT__mdt.MasterLabel"
     label = "Label"
     _required = true
     length = 40
@@ -24,14 +24,14 @@ type salesforce.SecondCMT__mdt {
     _hidden_value = true
   }
   salesforce.Picklist Language {
-    apiName = "SecondCMT__mdt.Language"
+    apiName = "Third_CMT__mdt.Language"
     label = "Master Language"
     _required = true
     restricted = true
     _hidden_value = true
   }
   salesforce.Text NamespacePrefix {
-    apiName = "SecondCMT__mdt.NamespacePrefix"
+    apiName = "Third_CMT__mdt.NamespacePrefix"
     label = "Namespace Prefix"
     length = 15
     unique = false
@@ -39,7 +39,7 @@ type salesforce.SecondCMT__mdt {
     _hidden_value = true
   }
   salesforce.Text Label {
-    apiName = "SecondCMT__mdt.Label"
+    apiName = "Third_CMT__mdt.Label"
     label = "Label"
     length = 40
     unique = false
@@ -47,7 +47,7 @@ type salesforce.SecondCMT__mdt {
     _hidden_value = true
   }
   salesforce.Text QualifiedApiName {
-    apiName = "SecondCMT__mdt.QualifiedApiName"
+    apiName = "Third_CMT__mdt.QualifiedApiName"
     label = "Qualified API Name"
     length = 70
     unique = false
@@ -55,7 +55,7 @@ type salesforce.SecondCMT__mdt {
     _hidden_value = true
   }
   salesforce.DateTime SystemModstamp {
-    apiName = "SecondCMT__mdt.SystemModstamp"
+    apiName = "Third_CMT__mdt.SystemModstamp"
     label = "System Modstamp"
     _hidden_value = true
   }

@@ -8,13 +8,13 @@ salesforce {
         {
           metadataType = "CustomObject"
           namespace = ""
-          name = "Account|Asset|new_CMT__mdt|SecondCMT__mdt"
+          name = "new_CMT__mdt|SecondCMT__mdt|Third_CMT__mdt"
         },
-        {
-          metadataType = "CustomMetadata"
-          namespace = ""
-          name = ".*"
-        }
+        // {
+        //   metadataType = "CustomMetadata"
+        //   namespace = ""
+        //   name = "TestRecord|Test_CMT_instance|Test_secondCMT_record"
+        // }
       ]
       exclude = [
         {
