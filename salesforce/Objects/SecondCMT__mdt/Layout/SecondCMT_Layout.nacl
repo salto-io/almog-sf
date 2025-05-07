@@ -20,6 +20,14 @@ salesforce.Layout SecondCMT__mdt_SecondCMT_Layout@uubs {
               behavior = "Required"
               field = salesforce.SecondCMT__mdt.field.CMT_Relationship_To_newCMT__c
             },
+            {
+              behavior = "Required"
+              field = salesforce.SecondCMT__mdt.field.Field_referencing_entity__c
+            },
+            {
+              behavior = "Required"
+              field = salesforce.SecondCMT__mdt.field.Field_referencing_field__c
+            },
           ]
         },
         {

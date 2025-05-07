@@ -36,6 +36,10 @@ salesforce.Layout new_CMT__mdt_new_CMT_Layout@uuubss {
               behavior = "Required"
               field = salesforce.new_CMT__mdt.field.MDT_Relationship_Particle__c
             },
+            {
+              behavior = "Required"
+              field = salesforce.new_CMT__mdt.field.testField__c
+            },
           ]
         },
         {

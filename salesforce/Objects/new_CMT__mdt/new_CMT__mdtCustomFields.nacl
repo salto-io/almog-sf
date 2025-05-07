@@ -49,4 +49,17 @@ type salesforce.new_CMT__mdt {
     length = 100
     unique = false
   }
+  salesforce.MetadataRelationship testField__c {
+    apiName = "new_CMT__mdt.testField__c"
+    fieldManageability = "DeveloperControlled"
+    label = "testField"
+    metadataRelationshipControllingField = "new_CMT__mdt.Almog_MDT_Relationship_Field__c"
+    referenceTo = [
+      "FieldDefinition",
+    ]
+    relationshipLabel = "new_CMTS1"
+    relationshipName = "new_CMTS1"
+    _required = true
+    unique = false
+  }
 }
