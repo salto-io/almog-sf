@@ -97,9 +97,9 @@ type salesforce.WebLink {
   }
   string scontrol {
     foreignKeyDomain = [
-      salesforce.ApexPage,
-      salesforce.FlowDefinition,
-      salesforce.Scontrol,
+      "ApexPage",
+      "FlowDefinition",
+      "Scontrol",
     ]
   }
   boolean showsLocation {
