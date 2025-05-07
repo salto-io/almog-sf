@@ -1,0 +1,14 @@
+type salesforce.SecondCMT__mdt {
+  salesforce.MetadataRelationship CMT_Relationship_To_newCMT__c {
+    apiName = "SecondCMT__mdt.CMT_Relationship_To_newCMT__c"
+    fieldManageability = "DeveloperControlled"
+    label = "new CMT"
+    referenceTo = [
+      "new_CMT__mdt",
+    ]
+    relationshipLabel = "SecondCMTs"
+    relationshipName = "SecondCMTs"
+    _required = true
+    unique = false
+  }
+}

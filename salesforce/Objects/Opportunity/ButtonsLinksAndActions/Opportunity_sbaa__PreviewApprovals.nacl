@@ -1,0 +1,15 @@
+salesforce.WebLink Opportunity_sbaa__PreviewApprovals {
+  fullName = "Opportunity.sbaa__PreviewApprovals"
+  availability = "online"
+  displayType = "button"
+  encodingKey = "UTF-8"
+  linkType = "url"
+  masterLabel = "Preview Approvals"
+  openType = "replace"
+  protected = false
+  url = "/apex/SBAA__PreviewApprovals?id={!Opportunity.Id}"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+  _alias = "Opportunity.sbaa__PreviewApprovals"
+}

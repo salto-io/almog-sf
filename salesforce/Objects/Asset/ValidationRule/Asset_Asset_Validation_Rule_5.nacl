@@ -1,0 +1,15 @@
+salesforce.ValidationRule Asset_Asset_Validation_Rule_5 {
+  fullName = "Asset.Asset_Validation_Rule_5"
+  active = true
+  errorConditionFormula = "Description = \"invalid\""
+  errorMessage = "Invalid input"
+  _parent = [
+    salesforce.Asset,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Asset.field.Description
+    },
+  ]
+  _alias = "Asset.Asset_Validation_Rule_5"
+}

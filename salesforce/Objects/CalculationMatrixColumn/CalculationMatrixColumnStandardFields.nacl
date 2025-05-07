@@ -1,0 +1,103 @@
+type salesforce.CalculationMatrixColumn {
+  salesforce.Text ApiName {
+    apiName = "CalculationMatrixColumn.ApiName"
+    label = "API Name"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.MasterDetail CalculationMatrixId {
+    apiName = "CalculationMatrixColumn.CalculationMatrixId"
+    label = "Decision Matrix ID"
+    _required = true
+    relationshipName = "CalculationMatrix"
+  }
+  salesforce.Picklist ColumnType {
+    apiName = "CalculationMatrixColumn.ColumnType"
+    label = "Column Type"
+    restricted = true
+  }
+  salesforce.Picklist DataType {
+    apiName = "CalculationMatrixColumn.DataType"
+    label = "Data Type"
+    restricted = true
+  }
+  salesforce.Number DisplaySequence {
+    apiName = "CalculationMatrixColumn.DisplaySequence"
+    label = "Display Sequence"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Checkbox IsWildcardColumn {
+    apiName = "CalculationMatrixColumn.IsWildcardColumn"
+    label = "Wildcard Column"
+    defaultValue = false
+  }
+  salesforce.Text Name {
+    apiName = "CalculationMatrixColumn.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text Namespace {
+    apiName = "CalculationMatrixColumn.Namespace"
+    label = "Namespace"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.LongTextArea RangeValues {
+    apiName = "CalculationMatrixColumn.RangeValues"
+    label = "Range Values"
+    length = 32768
+  }
+  salesforce.Text WildcardColumnValue {
+    apiName = "CalculationMatrixColumn.WildcardColumnValue"
+    label = "Wildcard Column Value"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  serviceid Id {
+    apiName = "CalculationMatrixColumn.Id"
+    label = "Decision Matrix Column ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "CalculationMatrixColumn.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "CalculationMatrixColumn.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "CalculationMatrixColumn.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "CalculationMatrixColumn.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "CalculationMatrixColumn.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "CalculationMatrixColumn.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

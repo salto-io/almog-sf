@@ -1,0 +1,8 @@
+salesforce.ServicePresenceStatus Available_Case {
+  fullName = "Available_Case"
+  channels = {
+    channel = "Omni_Setup_Flow_Cases"
+  }
+  label = "Available - Case"
+  _alias = "Available - Case"
+}

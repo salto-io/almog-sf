@@ -1,0 +1,6 @@
+salesforce.PlatformEventChannelMember FlowRecordChangeListenerChannel_AssetChangeEvent {
+  fullName = "FlowRecordChangeListenerChannel_AssetChangeEvent"
+  eventChannel = "FlowRecordChangeListenerChannel"
+  selectedEntity = "AssetChangeEvent"
+  _alias = "FlowRecordChangeListenerChannel_AssetChangeEvent"
+}

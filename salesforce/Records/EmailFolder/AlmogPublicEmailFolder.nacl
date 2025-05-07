@@ -1,0 +1,7 @@
+salesforce.EmailFolder AlmogPublicEmailFolder {
+  accessType = "Public"
+  name = "AlmogPublicEmailFolder"
+  publicFolderAccess = "ReadOnly"
+  fullName = "AlmogPublicEmailFolder"
+  _alias = "AlmogPublicEmailFolder"
+}

@@ -1,0 +1,15 @@
+salesforce.WebLink Opportunity_sbaa__RecallApprovals {
+  fullName = "Opportunity.sbaa__RecallApprovals"
+  availability = "online"
+  displayType = "button"
+  encodingKey = "UTF-8"
+  linkType = "url"
+  masterLabel = "Recall Approvals"
+  openType = "replace"
+  protected = false
+  url = "/apex/SBAA__RecallOpportunity?id={!Opportunity.Id}"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+  _alias = "Opportunity.sbaa__RecallApprovals"
+}

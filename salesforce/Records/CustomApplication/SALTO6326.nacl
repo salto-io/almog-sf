@@ -1,0 +1,90 @@
+salesforce.CustomApplication SALTO6326 {
+  actionOverrides = [
+    {
+      actionName = "View"
+      comment = "Action override created by Lightning App Builder during activation."
+      content = "Record_Page_2"
+      formFactor = "Large"
+      skipRecordTypeSelect = false
+      type = "Flexipage"
+      pageOrSobjectType = "Almog_Custom_Object__c"
+    },
+    {
+      actionName = "View"
+      comment = "Action override created by Lightning App Builder during activation."
+      content = "Record_Page_2"
+      formFactor = "Small"
+      skipRecordTypeSelect = false
+      type = "Flexipage"
+      pageOrSobjectType = "Almog_Custom_Object__c"
+    },
+  ]
+  brand = {
+    headerColor = "#0070D2"
+    shouldOverrideOrgTheme = false
+  }
+  description = "Recreating incident"
+  formFactors = [
+    "Small",
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
+  label = "SALTO-6326"
+  navType = "Standard"
+  profileActionOverrides = [
+    {
+      actionName = "View"
+      content = "Record_Page_2"
+      formFactor = "Large"
+      pageOrSobjectType = "Almog_Custom_Object__c"
+      recordType = salesforce.RecordType.instance.Almog_Custom_Object__c_TestRecordType
+      type = "Flexipage"
+      profile = "Admin"
+    },
+    {
+      actionName = "View"
+      content = "Record_Page_2"
+      formFactor = "Large"
+      pageOrSobjectType = "Almog_Custom_Object__c"
+      recordType = salesforce.RecordType.instance.Almog_Custom_Object__c_SecondRecordType
+      type = "Flexipage"
+      profile = "Admin"
+    },
+    {
+      actionName = "View"
+      content = "Record_Page_2"
+      formFactor = "Small"
+      pageOrSobjectType = "Almog_Custom_Object__c"
+      recordType = salesforce.RecordType.instance.Almog_Custom_Object__c_TestRecordType
+      type = "Flexipage"
+      profile = "Standard"
+    },
+    {
+      actionName = "View"
+      content = "Record_Page_2"
+      formFactor = "Small"
+      pageOrSobjectType = "Almog_Custom_Object__c"
+      recordType = salesforce.RecordType.instance.Almog_Custom_Object__c_SecondRecordType
+      type = "Flexipage"
+      profile = "Standard"
+    },
+  ]
+  tabs = [
+    "standard-Account",
+    "standard-CmsExperiences",
+    salesforce.CustomTab.instance.SALTO_6326,
+    "standard-Case",
+  ]
+  uiType = "Lightning"
+  utilityBar = "SALTO_6326_UtilityBar"
+  fullName = "SALTO6326"
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningPage.instance.SALTO_6326_UtilityBar
+    },
+  ]
+  _alias = "SALTO-6326"
+}

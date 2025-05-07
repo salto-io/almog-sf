@@ -1,0 +1,11 @@
+salesforce.Certificate SecurityRuleTestCertificate {
+  caSigned = true
+  encryptedWithPlatformEncryption = false
+  expirationDate = "2027-03-31T12:00:00.000Z"
+  keySize = 4096
+  masterLabel = "SecurityRuleTestCertificate"
+  privateKeyExportable = false
+  fullName = "SecurityRuleTestCertificate"
+  content = file("salesforce/Records/Certificate/SecurityRuleTestCertificate.crt")
+  _alias = "SecurityRuleTestCertificate"
+}

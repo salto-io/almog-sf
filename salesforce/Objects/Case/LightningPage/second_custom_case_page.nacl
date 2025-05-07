@@ -1,0 +1,41 @@
+salesforce.LightningPage second_custom_case_page {
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "decorate"
+                value = "true"
+              },
+              {
+                name = "richTextValue"
+                value = "<p>SECOND CUSTOM CASE PAGE</p>"
+              },
+            ]
+            componentName = "flexipage:richText"
+            identifier = "flexipage_richText"
+          }
+        },
+      ]
+      name = "main"
+      type = "Region"
+    },
+  ]
+  masterLabel = "second_custom_case_page"
+  sobjectType = "Case"
+  template = {
+    name = "flexipage:recordHomeSingleColNoHeaderTemplateDesktop"
+    properties = {
+      name = "enablePageActionConfig"
+      value = "false"
+    }
+  }
+  type = "RecordPage"
+  fullName = "second_custom_case_page"
+  _parent = [
+    salesforce.Case,
+  ]
+  _alias = "second_custom_case_page"
+}

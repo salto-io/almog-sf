@@ -1,0 +1,5 @@
+salesforce.ServicePresenceStatus On_Break {
+  fullName = "On_Break"
+  label = "On Break"
+  _alias = "On Break"
+}

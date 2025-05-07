@@ -1,0 +1,60 @@
+type salesforce.Almog_Custom_Object__c {
+  serviceid Id {
+    apiName = "Almog_Custom_Object__c.Id"
+    label = "Record ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Almog_Custom_Object__c.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Almog_Custom_Object__c.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "Almog_Custom_Object__c.Name"
+    label = "Almog Custom Object Name"
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup RecordTypeId {
+    apiName = "Almog_Custom_Object__c.RecordTypeId"
+    label = "Record Type ID"
+    relationshipName = "RecordType"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Almog_Custom_Object__c.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Almog_Custom_Object__c.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Almog_Custom_Object__c.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Almog_Custom_Object__c.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Almog_Custom_Object__c.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

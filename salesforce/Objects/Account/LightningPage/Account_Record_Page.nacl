@@ -1,0 +1,79 @@
+salesforce.LightningPage Account_Record_Page {
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "decorate"
+                value = "true"
+              },
+              {
+                name = "richTextValue"
+                value = "<h6 style=\"text-align: center;\">Account Record Page Title</h6>"
+              },
+            ]
+            componentName = "flexipage:richText"
+            identifier = "flexipage_richText"
+            visibilityRule = {
+              booleanFilter = "1 AND 2 AND 3"
+              criteria = [
+                {
+                  leftValue = "{!Record.Parent.Name}"
+                  operator = "CONTAINS"
+                  rightValue = "Valid"
+                },
+                {
+                  leftValue = "{!Record.Owner.FirstName}"
+                  operator = "CONTAINS"
+                  rightValue = "Name"
+                },
+                {
+                  leftValue = "{!Record.Owner.City}"
+                  operator = "CONTAINS"
+                  rightValue = "gggg"
+                },
+              ]
+            }
+          }
+        },
+      ]
+      name = "header"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "decorate"
+                value = "true"
+              },
+            ]
+            componentName = "flexipage:richText"
+            identifier = "flexipage_richText2"
+          }
+        },
+      ]
+      name = "main"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Account Record Page"
+  sobjectType = "Account"
+  template = {
+    name = "flexipage:recordHomeSimpleViewTemplate"
+    properties = {
+      name = "enablePageActionConfig"
+      value = "false"
+    }
+  }
+  type = "RecordPage"
+  fullName = "Account_Record_Page"
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "Account_Record_Page"
+}

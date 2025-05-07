@@ -1,0 +1,92 @@
+type salesforce.ExpressionSet {
+  salesforce.Text ApiName {
+    apiName = "ExpressionSet.ApiName"
+    label = "API Name"
+    length = 80
+    unique = true
+    caseSensitive = false
+  }
+  salesforce.Text Description {
+    apiName = "ExpressionSet.Description"
+    label = "Description"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text Name {
+    apiName = "ExpressionSet.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "ExpressionSet.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Picklist UsageType {
+    apiName = "ExpressionSet.UsageType"
+    label = "Usage Type"
+    _required = true
+    restricted = true
+  }
+  serviceid Id {
+    apiName = "ExpressionSet.Id"
+    label = "Expression Set ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ExpressionSet.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ExpressionSet.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ExpressionSet.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ExpressionSet.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ExpressionSet.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ExpressionSet.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup ExpressionSetDefinitionId {
+    apiName = "ExpressionSet.ExpressionSetDefinitionId"
+    label = "ExpressionSetDefinition ID"
+    _required = true
+    relationshipName = "ExpressionSetDefinition"
+  }
+  salesforce.Picklist InterfaceSourceType {
+    apiName = "ExpressionSet.InterfaceSourceType"
+    label = "Interface Source Type"
+    restricted = true
+  }
+  salesforce.Picklist ExecutionScale {
+    apiName = "ExpressionSet.ExecutionScale"
+    label = "Execution Scale"
+    restricted = true
+    _hidden_value = true
+  }
+}

@@ -1,0 +1,13 @@
+salesforce.ListView LiveChatTranscript_New_queue_not_omni_LiveChatTranscript {
+  fullName = "LiveChatTranscript.New_queue_not_omni_LiveChatTranscript"
+  filterScope = "Queue"
+  label = "New queue not omni"
+  queue = salesforce.Queue.instance.New_queue_not_omni
+  sharedTo = {
+    allInternalUsers = ""
+  }
+  _parent = [
+    salesforce.LiveChatTranscript,
+  ]
+  _alias = "New queue not omni"
+}

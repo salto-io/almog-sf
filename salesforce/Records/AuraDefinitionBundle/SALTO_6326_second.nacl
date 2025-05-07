@@ -1,0 +1,8 @@
+salesforce.AuraDefinitionBundle SALTO_6326_second {
+  apiVersion = 62
+  description = "A Lightning Component Bundle"
+  fullName = "SALTO_6326_second"
+  type = "Component"
+  markup = file("salesforce/Records/AuraDefinitionBundle/SALTO_6326_second/SALTO_6326_second.cmp")
+  _alias = "SALTO_6326_second"
+}

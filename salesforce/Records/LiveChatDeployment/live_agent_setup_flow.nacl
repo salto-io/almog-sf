@@ -1,0 +1,11 @@
+salesforce.LiveChatDeployment live_agent_setup_flow {
+  fullName = "live_agent_setup_flow"
+  connectionTimeoutDuration = 0
+  connectionWarningDuration = 0
+  displayQueuePosition = false
+  enablePrechatApi = false
+  enableTranscriptSave = false
+  label = "Chat Setup Flow"
+  windowTitle = "Live Chat"
+  _alias = "Chat Setup Flow"
+}

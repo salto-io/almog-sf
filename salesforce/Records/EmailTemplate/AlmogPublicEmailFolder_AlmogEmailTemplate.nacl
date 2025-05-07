@@ -1,0 +1,16 @@
+salesforce.EmailTemplate AlmogPublicEmailFolder_AlmogEmailTemplate@d {
+  available = false
+  description = "This should be retrieved"
+  encodingKey = "UTF-8"
+  name = "AlmogEmailTemplate"
+  style = "none"
+  subject = "None"
+  type = "text"
+  uiType = "Aloha"
+  fullName = "AlmogPublicEmailFolder/AlmogEmailTemplate"
+  content = file("salesforce/Records/EmailTemplate/AlmogPublicEmailFolder/AlmogEmailTemplate/AlmogEmailTemplate.email")
+  _parent = [
+    salesforce.EmailFolder.instance.AlmogPublicEmailFolder,
+  ]
+  _alias = "AlmogPublicEmailFolder/AlmogEmailTemplate"
+}

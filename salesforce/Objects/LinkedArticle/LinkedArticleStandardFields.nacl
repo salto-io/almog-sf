@@ -1,0 +1,72 @@
+type salesforce.LinkedArticle {
+  salesforce.Lookup KnowledgeArticleId {
+    apiName = "LinkedArticle.KnowledgeArticleId"
+    label = "Article ID"
+    relationshipName = "KnowledgeArticle"
+  }
+  salesforce.Lookup KnowledgeArticleVersionId {
+    apiName = "LinkedArticle.KnowledgeArticleVersionId"
+    label = "Knowledge Article Version ID"
+    relationshipName = "KnowledgeArticleVersion"
+  }
+  salesforce.Lookup LinkedEntityId {
+    apiName = "LinkedArticle.LinkedEntityId"
+    label = "Linked Entity ID"
+    relationshipName = "LinkedEntity"
+  }
+  salesforce.Text Type {
+    apiName = "LinkedArticle.Type"
+    label = "Linked Object Type"
+    length = 50
+    unique = false
+    caseSensitive = false
+    _hidden_value = true
+  }
+  serviceid Id {
+    apiName = "LinkedArticle.Id"
+    label = "Linked Article ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LinkedArticle.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "LinkedArticle.Name"
+    label = "Linked Article Title"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LinkedArticle.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LinkedArticle.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LinkedArticle.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LinkedArticle.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LinkedArticle.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

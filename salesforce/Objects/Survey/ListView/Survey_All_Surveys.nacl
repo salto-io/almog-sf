@@ -1,0 +1,15 @@
+salesforce.ListView Survey_All_Surveys {
+  fullName = "Survey.All_Surveys"
+  columns = [
+    salesforce.Survey.field.Name,
+    salesforce.Survey.field.LastModifiedDate,
+    "LastModifiedBy",
+    salesforce.Survey.field.TotalVersionsCount,
+  ]
+  filterScope = "Everything"
+  label = "All Surveys"
+  _parent = [
+    salesforce.Survey,
+  ]
+  _alias = "All Surveys"
+}

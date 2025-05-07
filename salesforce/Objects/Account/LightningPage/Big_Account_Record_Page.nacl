@@ -1,0 +1,56 @@
+salesforce.LightningPage Big_Account_Record_Page {
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "decorate"
+                value = "true"
+              },
+            ]
+            componentName = "flexipage:richText"
+            identifier = "flexipage_richText"
+            visibilityRule = {
+              booleanFilter = "1 AND 2"
+              criteria = [
+                {
+                  leftValue = "{!Record.RecordType.DeveloperName}"
+                  operator = "CONTAINS"
+                  rightValue = "had"
+                },
+                {
+                  leftValue = "{!Record.AccountLookup__r.AccountLookup__r.Name}"
+                  operator = "CONTAINS"
+                  rightValue = "hhh"
+                },
+              ]
+            }
+          }
+        },
+      ]
+      name = "header"
+      type = "Region"
+    },
+    {
+      name = "main"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Big Account Record Page"
+  sobjectType = "Account"
+  template = {
+    name = "flexipage:recordHomeSimpleViewTemplate"
+    properties = {
+      name = "enablePageActionConfig"
+      value = "false"
+    }
+  }
+  type = "RecordPage"
+  fullName = "Big_Account_Record_Page"
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "Big_Account_Record_Page"
+}

@@ -1,0 +1,9 @@
+salesforce.Queue my_queue2 {
+  fullName = "my_queue2"
+  doesSendEmailToMembers = false
+  name = "my_queue2"
+  queueSobject = {
+    sobjectType = "Task"
+  }
+  _alias = "my_queue2"
+}

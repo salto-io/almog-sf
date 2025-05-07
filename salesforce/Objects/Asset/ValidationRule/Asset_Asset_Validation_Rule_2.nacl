@@ -1,0 +1,15 @@
+salesforce.ValidationRule Asset_Asset_Validation_Rule_2 {
+  fullName = "Asset.Asset_Validation_Rule_2"
+  active = true
+  errorConditionFormula = "Quantity  > 100"
+  errorMessage = "Quantity must be lower than 100"
+  _parent = [
+    salesforce.Asset,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Asset.field.Quantity
+    },
+  ]
+  _alias = "Asset.Asset_Validation_Rule_2"
+}

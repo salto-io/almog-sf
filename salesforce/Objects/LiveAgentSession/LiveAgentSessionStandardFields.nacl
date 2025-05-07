@@ -1,0 +1,152 @@
+type salesforce.LiveAgentSession {
+  salesforce.Lookup AgentId {
+    apiName = "LiveAgentSession.AgentId"
+    label = "User ID"
+    _required = true
+    relationshipName = "Agent"
+  }
+  salesforce.Number ChatReqAssigned {
+    apiName = "LiveAgentSession.ChatReqAssigned"
+    label = "Chat Requests Assigned"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number ChatReqDeclined {
+    apiName = "LiveAgentSession.ChatReqDeclined"
+    label = "Chat Requests Declined (Manually)"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number ChatReqEngaged {
+    apiName = "LiveAgentSession.ChatReqEngaged"
+    label = "Chat Requests Engaged"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number ChatReqTimedOut {
+    apiName = "LiveAgentSession.ChatReqTimedOut"
+    label = "Chat Requests Declined (Push Timeout)"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.DateTime LoginTime {
+    apiName = "LiveAgentSession.LoginTime"
+    label = "Login Time"
+    _required = true
+  }
+  salesforce.DateTime LogoutTime {
+    apiName = "LiveAgentSession.LogoutTime"
+    label = "Logout Time"
+    _required = true
+  }
+  salesforce.Number NumFlagLoweredAgent {
+    apiName = "LiveAgentSession.NumFlagLoweredAgent"
+    label = "Assistance Flags Lowered (Agent)"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number NumFlagLoweredSupervisor {
+    apiName = "LiveAgentSession.NumFlagLoweredSupervisor"
+    label = "Assistance Flags Lowered (Supervisor)"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number NumFlagRaised {
+    apiName = "LiveAgentSession.NumFlagRaised"
+    label = "Assistance Flags Raised"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "LiveAgentSession.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Number TimeAtCapacity {
+    apiName = "LiveAgentSession.TimeAtCapacity"
+    label = "Time Spent at Capacity"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number TimeIdle {
+    apiName = "LiveAgentSession.TimeIdle"
+    label = "Time Idle"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number TimeInAwayStatus {
+    apiName = "LiveAgentSession.TimeInAwayStatus"
+    label = "Time Spent Away"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number TimeInChats {
+    apiName = "LiveAgentSession.TimeInChats"
+    label = "Time Spent in Chats"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number TimeInOnlineStatus {
+    apiName = "LiveAgentSession.TimeInOnlineStatus"
+    label = "Time Spent Online"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  serviceid Id {
+    apiName = "LiveAgentSession.Id"
+    label = "Chat Session ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LiveAgentSession.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "LiveAgentSession.Name"
+    label = "Chat Session Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LiveAgentSession.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LiveAgentSession.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LiveAgentSession.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LiveAgentSession.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LiveAgentSession.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+}

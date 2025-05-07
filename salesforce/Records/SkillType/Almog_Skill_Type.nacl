@@ -1,0 +1,5 @@
+salesforce.SkillType Almog_Skill_Type {
+  fullName = "Almog_Skill_Type"
+  masterLabel = "Almog Skill Type"
+  _alias = "Almog_Skill_Type"
+}

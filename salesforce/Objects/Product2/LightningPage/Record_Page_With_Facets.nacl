@@ -1,0 +1,148 @@
+salesforce.LightningPage Record_Page_With_Facets {
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "WithFacets"
+            identifier = "c_WithFacets2"
+          }
+        },
+      ]
+      name = "header"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          fieldInstance = {
+            fieldInstanceProperties = {
+              name = "uiBehavior"
+              value = "none"
+            }
+            fieldItem = salesforce.Product2.field.IsActive
+            identifier = "RecordIsActiveField"
+          }
+        },
+      ]
+      name = "Facet-149cc160-0d7a-4e3c-b56d-bffe12bdb2a9"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          fieldInstance = {
+            fieldInstanceProperties = {
+              name = "uiBehavior"
+              value = "none"
+            }
+            fieldItem = salesforce.Product2.field.SellerId
+            identifier = "RecordSellerIdField"
+          }
+        },
+      ]
+      name = "Facet-e4f809ac-b1a9-4d7e-8f19-1c293ff87e28"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "Facet-149cc160-0d7a-4e3c-b56d-bffe12bdb2a9"
+              },
+            ]
+            componentName = "flexipage:column"
+            identifier = "flexipage_column"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "Facet-e4f809ac-b1a9-4d7e-8f19-1c293ff87e28"
+              },
+            ]
+            componentName = "flexipage:column"
+            identifier = "flexipage_column2"
+          }
+        },
+      ]
+      name = "Facet-ab310a01-79d7-4a62-8d1d-e3123e040d01"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "columns"
+                value = "Facet-ab310a01-79d7-4a62-8d1d-e3123e040d01"
+              },
+              {
+                name = "horizontalAlignment"
+                value = "false"
+              },
+              {
+                name = "label"
+                value = "Section"
+              },
+            ]
+            componentName = "flexipage:fieldSection"
+            identifier = "flexipage_fieldSection"
+          }
+        },
+      ]
+      name = "leftsidebar"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "force:detailPanel"
+            identifier = "force_detailPanel"
+          }
+        },
+      ]
+      name = "main"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "WithFacets"
+            identifier = "c_WithFacets"
+          }
+        },
+      ]
+      name = "rightsidebar"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Record Page With Facets"
+  sobjectType = "Product2"
+  template = {
+    name = "flexipage:recordHomeThreeColHeaderTemplateDesktop"
+    properties = {
+      name = "enablePageActionConfig"
+      value = "false"
+    }
+  }
+  type = "RecordPage"
+  fullName = "Record_Page_With_Facets"
+  _parent = [
+    salesforce.Product2,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.AuraDefinitionBundle.instance.WithFacets
+    },
+  ]
+  _alias = "Record_Page_With_Facets"
+}

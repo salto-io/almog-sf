@@ -1,0 +1,8 @@
+settings salesforce.FetchTargets {
+  "List<string>" customObjects {
+  }
+  "Map<List<string>>" customObjectsLookups {
+  }
+  "Map<string>" customObjectAliases {
+  }
+}

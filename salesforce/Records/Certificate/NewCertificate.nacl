@@ -1,0 +1,11 @@
+salesforce.Certificate NewCertificate {
+  caSigned = true
+  encryptedWithPlatformEncryption = false
+  expirationDate = "2027-03-31T12:00:00.000Z"
+  keySize = 4096
+  masterLabel = "NewCertificate"
+  privateKeyExportable = false
+  fullName = "NewCertificate"
+  content = file("salesforce/Records/Certificate/NewCertificate.crt")
+  _alias = "NewCertificate"
+}

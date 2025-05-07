@@ -1,0 +1,11 @@
+type salesforce.Almog_Custom_Object__c {
+  salesforce.Text Favorite_word__c {
+    apiName = "Almog_Custom_Object__c.Favorite_word__c"
+    externalId = false
+    label = "Favorite word"
+    length = 100
+    trackTrending = false
+    unique = false
+    caseSensitive = false
+  }
+}

@@ -1,0 +1,15 @@
+salesforce.WebLink Opportunity_sbaa__ResendRequestEmail {
+  fullName = "Opportunity.sbaa__ResendRequestEmail"
+  availability = "online"
+  displayType = "button"
+  encodingKey = "UTF-8"
+  linkType = "url"
+  masterLabel = "Resend Request"
+  openType = "replace"
+  protected = false
+  url = "/apex/SBAA__ListRequests?id={!Opportunity.Id}"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+  _alias = "Opportunity.sbaa__ResendRequestEmail"
+}

@@ -1,0 +1,13 @@
+salesforce.ListView Case_Web_Chat_Omni_Support_Case {
+  fullName = "Case.Web_Chat_Omni_Support_Case"
+  filterScope = "Queue"
+  label = "Web Chat Omni Support"
+  queue = salesforce.Queue.instance.Web_Chat_Omni_Support
+  sharedTo = {
+    allInternalUsers = ""
+  }
+  _parent = [
+    salesforce.Case,
+  ]
+  _alias = "Web Chat Omni Support"
+}

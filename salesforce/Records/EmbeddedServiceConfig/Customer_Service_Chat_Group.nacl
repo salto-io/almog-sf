@@ -1,0 +1,13 @@
+salesforce.EmbeddedServiceConfig Customer_Service_Chat_Group {
+  areGuestUsersAllowed = false
+  deploymentFeature = "LiveAgent"
+  deploymentType = "Web"
+  isEnabled = true
+  isTermsAndConditionsEnabled = false
+  isTermsAndConditionsRequired = false
+  masterLabel = "Customer Service Chat Group"
+  shouldHideAuthDialog = false
+  site = salesforce.CustomSite.instance.CustomersService
+  fullName = "Customer_Service_Chat_Group"
+  _alias = "Customer_Service_Chat_Group"
+}

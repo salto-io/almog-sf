@@ -1,0 +1,15 @@
+salesforce.ValidationRule Asset_Asset_Validation_Rule_3 {
+  fullName = "Asset.Asset_Validation_Rule_3"
+  active = true
+  errorConditionFormula = "InstallDate >  DATE(2030,01,01)"
+  errorMessage = "Installation date is invalid"
+  _parent = [
+    salesforce.Asset,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Asset.field.InstallDate
+    },
+  ]
+  _alias = "Asset.Asset_Validation_Rule_3"
+}

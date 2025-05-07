@@ -1,0 +1,4 @@
+salesforce.ManagedTopics Web_Chat@s {
+  fullName = "Web Chat"
+  _alias = "Web Chat"
+}

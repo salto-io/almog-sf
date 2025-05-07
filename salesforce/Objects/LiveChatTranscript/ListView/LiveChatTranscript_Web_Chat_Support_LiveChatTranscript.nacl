@@ -1,0 +1,13 @@
+salesforce.ListView LiveChatTranscript_Web_Chat_Support_LiveChatTranscript {
+  fullName = "LiveChatTranscript.Web_Chat_Support_LiveChatTranscript"
+  filterScope = "Queue"
+  label = "Web Chat Support"
+  queue = salesforce.Queue.instance.Web_Chat_Support
+  sharedTo = {
+    allInternalUsers = ""
+  }
+  _parent = [
+    salesforce.LiveChatTranscript,
+  ]
+  _alias = "Web Chat Support"
+}

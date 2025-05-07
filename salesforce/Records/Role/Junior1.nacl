@@ -1,0 +1,11 @@
+salesforce.Role Junior1 {
+  fullName = "Junior1"
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  description = "Junior1"
+  mayForecastManagerShare = false
+  name = "Junior1"
+  opportunityAccessLevel = "Edit"
+  parentRole = salesforce.Role.instance.Junior
+  _alias = "Junior1"
+}

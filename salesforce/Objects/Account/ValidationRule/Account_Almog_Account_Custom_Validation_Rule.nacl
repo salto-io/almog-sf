@@ -1,0 +1,15 @@
+salesforce.ValidationRule Account_Almog_Account_Custom_Validation_Rule {
+  fullName = "Account.Almog_Account_Custom_Validation_Rule"
+  active = true
+  errorConditionFormula = "Name  = \"invalid\""
+  errorMessage = "Account name is invalid"
+  _parent = [
+    salesforce.Account,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account.field.Name
+    },
+  ]
+  _alias = "Account.Almog_Account_Custom_Validation_Rule"
+}
