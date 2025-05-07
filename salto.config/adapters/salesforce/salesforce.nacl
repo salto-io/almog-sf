@@ -18,7 +18,7 @@ salesforce {
         {
           metadataType = "CustomMetadata"
           namespace = ""
-          name = "lala|TestRecord|Test_CMT_instance|Test_secondCMT_record"
+          name = "TestRecord|Test_CMT_instance|Test_secondCMT_record"
         }
       ]
       exclude = [
