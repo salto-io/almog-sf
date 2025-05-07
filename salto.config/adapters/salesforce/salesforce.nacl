@@ -6,7 +6,7 @@ salesforce {
     metadata = {
       include = [
         {
-          metadataType = "CustomObject"
+          metadataType = ".*"
           namespace = ""
           name = "new_CMT__mdt|SecondCMT__mdt|Third_CMT__mdt"
         },

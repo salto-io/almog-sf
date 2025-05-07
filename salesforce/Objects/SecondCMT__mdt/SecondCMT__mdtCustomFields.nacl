@@ -4,13 +4,12 @@ type salesforce.SecondCMT__mdt {
     fieldManageability = "DeveloperControlled"
     label = "new CMT"
     referenceTo = [
-      salesforce.new_CMT__mdt,
+      "new_CMT__mdt",
     ]
     relationshipLabel = "SecondCMTs"
     relationshipName = "SecondCMTs"
     _required = true
     unique = false
-    _hidden_value = true
   }
   salesforce.MetadataRelationship Field_referencing_entity__c {
     apiName = "SecondCMT__mdt.Field_referencing_entity__c"
@@ -23,9 +22,6 @@ type salesforce.SecondCMT__mdt {
     relationshipName = "SecondCMTs"
     _required = true
     unique = false
-    length = 255
-    caseSensitive = false
-    _hidden_value = true
   }
   salesforce.MetadataRelationship Field_referencing_field__c {
     apiName = "SecondCMT__mdt.Field_referencing_field__c"
@@ -39,8 +35,5 @@ type salesforce.SecondCMT__mdt {
     relationshipName = "SecondCMTs"
     _required = true
     unique = false
-    length = 255
-    caseSensitive = false
-    _hidden_value = true
   }
 }

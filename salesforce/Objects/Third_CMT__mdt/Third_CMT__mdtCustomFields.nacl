@@ -4,12 +4,11 @@ type salesforce.Third_CMT__mdt {
     fieldManageability = "DeveloperControlled"
     label = "SecondCMT"
     referenceTo = [
-      salesforce.SecondCMT__mdt,
+      "SecondCMT__mdt",
     ]
     relationshipLabel = "Third_CMTs"
     relationshipName = "Third_CMTs"
     _required = true
     unique = false
-    _hidden_value = true
   }
 }

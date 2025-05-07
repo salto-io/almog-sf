@@ -1,62 +1,14 @@
 type salesforce.SecondCMT__mdt {
-  serviceid Id {
-    apiName = "SecondCMT__mdt.Id"
-    label = "Custom Metadata Record ID"
-    queryable = true
-    _hidden_value = true
+  serviceid fullName {
   }
-  salesforce.Text DeveloperName {
-    apiName = "SecondCMT__mdt.DeveloperName"
-    label = "Custom Metadata Record Name"
-    _required = true
-    length = 40
-    unique = false
-    caseSensitive = false
-    _hidden_value = true
+  string description {
   }
-  salesforce.Text MasterLabel {
-    apiName = "SecondCMT__mdt.MasterLabel"
-    label = "Label"
-    _required = true
-    length = 40
-    unique = false
-    caseSensitive = false
-    _hidden_value = true
+  string label {
   }
-  salesforce.Picklist Language {
-    apiName = "SecondCMT__mdt.Language"
-    label = "Master Language"
-    _required = true
-    restricted = true
-    _hidden_value = true
+  boolean protected {
   }
-  salesforce.Text NamespacePrefix {
-    apiName = "SecondCMT__mdt.NamespacePrefix"
-    label = "Namespace Prefix"
-    length = 15
-    unique = false
-    caseSensitive = false
+  string internalId {
     _hidden_value = true
-  }
-  salesforce.Text Label {
-    apiName = "SecondCMT__mdt.Label"
-    label = "Label"
-    length = 40
-    unique = false
-    caseSensitive = false
-    _hidden_value = true
-  }
-  salesforce.Text QualifiedApiName {
-    apiName = "SecondCMT__mdt.QualifiedApiName"
-    label = "Qualified API Name"
-    length = 70
-    unique = false
-    caseSensitive = false
-    _hidden_value = true
-  }
-  salesforce.DateTime SystemModstamp {
-    apiName = "SecondCMT__mdt.SystemModstamp"
-    label = "System Modstamp"
-    _hidden_value = true
+    localOnly = true
   }
 }
