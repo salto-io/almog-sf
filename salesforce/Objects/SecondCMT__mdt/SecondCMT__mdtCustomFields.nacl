@@ -1,0 +1,39 @@
+type salesforce.SecondCMT__mdt {
+  salesforce.MetadataRelationship CMT_Relationship_To_newCMT__c {
+    apiName = "SecondCMT__mdt.CMT_Relationship_To_newCMT__c"
+    fieldManageability = "DeveloperControlled"
+    label = "new CMT"
+    referenceTo = [
+      "new_CMT__mdt",
+    ]
+    relationshipLabel = "SecondCMTs"
+    relationshipName = "SecondCMTs"
+    _required = true
+    unique = false
+  }
+  salesforce.MetadataRelationship Field_referencing_entity__c {
+    apiName = "SecondCMT__mdt.Field_referencing_entity__c"
+    fieldManageability = "DeveloperControlled"
+    label = "Field referencing entity"
+    referenceTo = [
+      "EntityDefinition",
+    ]
+    relationshipLabel = "SecondCMTs"
+    relationshipName = "SecondCMTs"
+    _required = true
+    unique = false
+  }
+  salesforce.MetadataRelationship Field_referencing_field__c {
+    apiName = "SecondCMT__mdt.Field_referencing_field__c"
+    fieldManageability = "DeveloperControlled"
+    label = "Field referencing field"
+    metadataRelationshipControllingField = "SecondCMT__mdt.Field_referencing_entity__c"
+    referenceTo = [
+      "FieldDefinition",
+    ]
+    relationshipLabel = "SecondCMTs"
+    relationshipName = "SecondCMTs"
+    _required = true
+    unique = false
+  }
+}

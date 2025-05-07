@@ -1,0 +1,90 @@
+type salesforce.ChannelObjectLinkingRule {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string actionForNoRecordFound {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "CreateNewRecordAndLink",
+        "PromptAgent",
+      ]
+    }
+  }
+  string actionForSingleRecordFound {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AutoLink",
+        "PromptAgent",
+      ]
+    }
+  }
+  string channelType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "FacebookMessenger",
+        "Phone",
+        "Text",
+        "WeChat",
+        "WhatsApp",
+      ]
+    }
+  }
+  string description {
+  }
+  boolean isLinkedRecordOpenedAsSubTab {
+  }
+  boolean isRuleActive {
+  }
+  string masterLabel {
+  }
+  string objectToLink {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Contact",
+      ]
+    }
+  }
+  string ruleName {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "ChannelObjectLinkingRule"
+  dirName = "ChannelObjectLinkingRules"
+  metadataType = "ChannelObjectLinkingRule"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "description"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}
