@@ -14,6 +14,7 @@ type salesforce.BotVersion {
     }
   }
   serviceid fullName {
+    _required = true
   }
   boolean articleAnswersGPTEnabled {
   }
@@ -105,9 +106,16 @@ type salesforce.BotVersion {
       highlighted = true
       indexed = false
     },
+    {
+      value = "status"
+      highlighted = true
+      indexed = true
+    },
   ]
   "List<salesforce.BotDialog>" botDialogs {
   }
   "List<salesforce.ConversationVariable>" conversationVariables {
+  }
+  string status {
   }
 }
