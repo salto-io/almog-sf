@@ -5,8 +5,8 @@ salesforce.Bot Copilot_for_Salesforce {
     label = "Agentforce (Default)"
     name = "Copilot_for_Salesforce"
   }
-  botVersions = {
-    v1 = {
+  botVersions = [
+    {
       fullName = "v1"
       articleAnswersGPTEnabled = false
       botDialogs = [
@@ -99,9 +99,8 @@ salesforce.Bot Copilot_for_Salesforce {
       knowledgeActionEnabled = false
       knowledgeFallbackEnabled = false
       smallTalkEnabled = false
-      status = "Active"
-    }
-  }
+    },
+  ]
   contextVariables = [
     {
       contextVariableMappings = [

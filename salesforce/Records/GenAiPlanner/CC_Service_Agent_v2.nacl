@@ -5,7 +5,7 @@ salesforce.GenAiPlanner CC_Service_Agent_v2 {
   }
   genAiPlugins = [
     {
-      genAiPluginName = salesforce.GenAiPlugin.instance.Experience_Management
+      genAiPluginName = "Experience_Management"
     },
     {
       genAiPluginName = "SvcCopilotTmpl__DeliveryIssues"

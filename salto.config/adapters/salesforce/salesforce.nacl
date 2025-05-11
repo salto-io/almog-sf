@@ -4,7 +4,7 @@ salesforce {
     metadata = {
       include = [
         {
-          metadataType = "GenAiPlugin|GenAiFunction|GenAiPlanner|GenAiPromptTemplate|Flow|Bot"
+          metadataType = "GenAiPlanner|Bot"
           namespace = ""
           name = ".*"
         },

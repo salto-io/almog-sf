@@ -14,11 +14,12 @@ type salesforce.BotVersion {
     }
   }
   serviceid fullName {
-    _required = true
   }
   boolean articleAnswersGPTEnabled {
   }
   salesforce.BotDialogGroup botDialogGroups {
+  }
+  "List<salesforce.BotDialog>" botDialogs {
   }
   boolean citationsEnabled {
   }
@@ -29,6 +30,8 @@ type salesforce.BotVersion {
   salesforce.ConversationDefinitionGoal conversationGoals {
   }
   salesforce.ConversationSystemDialog conversationSystemDialogs {
+  }
+  "List<salesforce.ConversationVariable>" conversationVariables {
   }
   string copilotPrimaryLanguage {
     _restriction = {
@@ -106,16 +109,5 @@ type salesforce.BotVersion {
       highlighted = true
       indexed = false
     },
-    {
-      value = "status"
-      highlighted = true
-      indexed = true
-    },
   ]
-  "List<salesforce.BotDialog>" botDialogs {
-  }
-  "List<salesforce.ConversationVariable>" conversationVariables {
-  }
-  string status {
-  }
 }

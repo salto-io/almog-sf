@@ -45,13 +45,15 @@ type salesforce.Bot {
       "User",
     ]
   }
+  "List<salesforce.BotVersion>" botVersions {
+  }
   "List<salesforce.ConversationContextVariable>" contextVariables {
   }
   salesforce.ConversationDefinitionChannelProvider conversationChannelProviders {
   }
   string defaultOutboundFlow {
     foreignKeyDomain = [
-      salesforce.FlowDefinition,
+      "FlowDefinition",
     ]
   }
   string description {
@@ -100,6 +102,4 @@ type salesforce.Bot {
       indexed = false
     },
   ]
-  "Map<salesforce.BotVersion>" botVersions {
-  }
 }

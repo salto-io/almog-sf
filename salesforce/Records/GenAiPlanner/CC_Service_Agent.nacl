@@ -5,7 +5,7 @@ salesforce.GenAiPlanner CC_Service_Agent {
   }
   genAiPlugins = [
     {
-      genAiPluginName = salesforce.GenAiPlugin.instance.Experience_Management
+      genAiPluginName = "Experience_Management"
     },
     {
       genAiPluginName = "Slack__Slack"

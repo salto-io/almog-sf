@@ -18,6 +18,8 @@ type salesforce.BotDialog {
       "ConversationDefinitionDialogGroup",
     ]
   }
+  "List<salesforce.BotStep>" botSteps {
+  }
   string description {
   }
   string developerName {
@@ -48,6 +50,4 @@ type salesforce.BotDialog {
       indexed = false
     },
   ]
-  "List<salesforce.BotStep>" botSteps {
-  }
 }
