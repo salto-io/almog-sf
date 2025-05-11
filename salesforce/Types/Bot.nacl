@@ -100,6 +100,6 @@ type salesforce.Bot {
       indexed = false
     },
   ]
-  "Map<salesforce.BotVersion>" botVersions {
+  "List<salesforce.BotVersion>" botVersions {
   }
 }

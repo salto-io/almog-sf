@@ -2,16 +2,18 @@ salesforce.GenAiPromptTemplate FieldGenerationPromptTemplateTest {
   developerName = "FieldGenerationPromptTemplateTest"
   masterLabel = "FieldGenerationPromptTemplateTest"
   relatedEntity = "Account"
-  relatedField = salesforce.Account.field.AccountNumber
+  relatedField = "Account.AccountNumber"
   templateVersions = [
     {
       content = file("salesforce/Records/GenAiPromptTemplate/FieldGenerationPromptTemplateTest/version_1.txt")
-      inputs = {
-        apiName = "RelatedEntity"
-        definition = salesforce.Account
-        referenceName = "Input:Account"
-        required = true
-      }
+      inputs = [
+        {
+          apiName = "RelatedEntity"
+          definition = "SOBJECT://Account"
+          referenceName = "Input:Account"
+          required = true
+        },
+      ]
       primaryModel = "sfdc_ai__DefaultOpenAIGPT35Turbo"
       status = "Published"
       templateDataProviders = [
@@ -19,7 +21,7 @@ salesforce.GenAiPromptTemplate FieldGenerationPromptTemplateTest {
           definition = "flow://TemplateTriggeredPromptTest"
           parameters = [
             {
-              definition = salesforce.Account
+              definition = "SOBJECT://Account"
               isRequired = true
               parameterName = "VariableForFirstPromptInstruction"
               valueExpression = "{!$Input:Account}"
@@ -31,7 +33,7 @@ salesforce.GenAiPromptTemplate FieldGenerationPromptTemplateTest {
           definition = "apex://AgentAction_LookupAccount"
           parameters = [
             {
-              definition = salesforce.Account
+              definition = "SOBJECT://Account"
               isRequired = true
               parameterName = "objectToSummarize"
               valueExpression = "{!$Input:Account}"
@@ -45,8 +47,5 @@ salesforce.GenAiPromptTemplate FieldGenerationPromptTemplateTest {
   type = "einstein_gpt__fieldCompletion"
   visibility = "Global"
   fullName = "FieldGenerationPromptTemplateTest"
-  _parent = [
-    salesforce.Account,
-  ]
   _alias = "FieldGenerationPromptTemplateTest"
 }

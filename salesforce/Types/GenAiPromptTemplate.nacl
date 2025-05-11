@@ -32,6 +32,8 @@ type salesforce.GenAiPromptTemplate {
       values = [
         "Search__copilotHelpDocumentationPrompt",
         "Search__searchAnswersDefaultPrompt",
+        "SvcCopilotTmpl__caseDescriptionFromTranscript",
+        "SvcCopilotTmpl__caseSubjectFromTranscript",
         "einstein_gpt__answerWithKnowledge",
         "einstein_gpt__conductPostConvoAnalysis",
         "einstein_gpt__ragBasicAnswerGeneration",
@@ -99,6 +101,7 @@ type salesforce.GenAiPromptTemplate {
         "Atlas__ConcurrentMultiAgentOrchestrationPlannerType",
         "Atlas__ReflectivePlannerType",
         "Atlas__SimpleReflectivePlannerType",
+        "SvcCopilotTmpl__createCaseWithEnhancedData",
         "einstein_gpt__arConvoQueryGenType",
         "einstein_gpt__arConvoTextHighlightType",
         "einstein_gpt__briefGenerationType",

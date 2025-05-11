@@ -14,7 +14,6 @@ type salesforce.BotVersion {
     }
   }
   serviceid fullName {
-    _required = true
   }
   boolean articleAnswersGPTEnabled {
   }
@@ -99,19 +98,12 @@ type salesforce.BotVersion {
     _hidden_value = true
     localOnly = true
   }
-  string status {
-  }
   metadataType = "BotVersion"
   _important_values = [
     {
       value = "fullName"
       highlighted = true
       indexed = false
-    },
-    {
-      value = "status"
-      highlighted = true
-      indexed = true
     },
   ]
   "List<salesforce.BotDialog>" botDialogs {
