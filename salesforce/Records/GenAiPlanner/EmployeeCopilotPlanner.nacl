@@ -11,5 +11,10 @@ salesforce.GenAiPlanner EmployeeCopilotPlanner {
   masterLabel = "EmployeeCopilotPlanner"
   plannerType = "AiCopilot__ReAct"
   fullName = "EmployeeCopilotPlanner"
+  _generated_dependencies = [
+    {
+      reference = salesforce.Bot.instance.Copilot_for_Salesforce.botVersions.v1
+    },
+  ]
   _alias = "EmployeeCopilotPlanner"
 }

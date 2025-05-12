@@ -20,5 +20,10 @@ salesforce.GenAiPlanner CC_Service_Agent_v2 {
   masterLabel = "CC Service Agent"
   plannerType = "AiCopilot__ReAct"
   fullName = "CC_Service_Agent_v2"
+  _generated_dependencies = [
+    {
+      reference = salesforce.Bot.instance.CC_Service_Agent.botVersions.v2
+    },
+  ]
   _alias = "CC_Service_Agent_v2"
 }

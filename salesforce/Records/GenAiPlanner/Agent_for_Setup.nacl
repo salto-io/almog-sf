@@ -20,5 +20,10 @@ salesforce.GenAiPlanner Agent_for_Setup {
   masterLabel = "Agent for Setup"
   plannerType = "AiCopilot__ReAct"
   fullName = "Agent_for_Setup"
+  _generated_dependencies = [
+    {
+      reference = salesforce.Bot.instance.Agent_for_Setup.botVersions.v1
+    },
+  ]
   _alias = "Agent_for_Setup"
 }
