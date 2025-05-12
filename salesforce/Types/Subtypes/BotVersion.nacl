@@ -103,6 +103,8 @@ type salesforce.BotVersion {
     _hidden_value = true
     localOnly = true
   }
+  string status {
+  }
   metadataType = "BotVersion"
   _important_values = [
     {
@@ -116,6 +118,4 @@ type salesforce.BotVersion {
       indexed = true
     },
   ]
-  string status {
-  }
 }
