@@ -18,11 +18,11 @@ type salesforce.Text is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -66,11 +66,11 @@ type salesforce.Number is number {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -114,11 +114,11 @@ type salesforce.AutoNumber is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -156,11 +156,11 @@ type salesforce.Checkbox is boolean {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -198,11 +198,11 @@ type salesforce.Date is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -240,11 +240,11 @@ type salesforce.Time is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -282,11 +282,11 @@ type salesforce.DateTime is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -324,11 +324,11 @@ type salesforce.Currency is number {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -370,11 +370,11 @@ type salesforce.Picklist is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -390,7 +390,7 @@ type salesforce.Picklist is string {
     }
     salesforce.FieldDependency fieldDependency {
     }
-    "List<salesforce.valueSet>" valueSet {
+    salesforce.OrderedMapOfvalueSet valueSet {
     }
     boolean restricted {
     }
@@ -422,11 +422,11 @@ type salesforce.MultiselectPicklist is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -476,11 +476,11 @@ type salesforce.Email is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -520,11 +520,11 @@ type salesforce.Percent is number {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -566,11 +566,11 @@ type salesforce.Phone is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -608,11 +608,11 @@ type salesforce.LongTextArea is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -654,11 +654,11 @@ type salesforce.Html is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -698,11 +698,11 @@ type salesforce.TextArea is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -740,11 +740,11 @@ type salesforce.EncryptedText is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -786,11 +786,11 @@ type salesforce.Url is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -828,11 +828,11 @@ type salesforce.Lookup is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -878,11 +878,11 @@ type salesforce.MasterDetail is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -932,11 +932,11 @@ type salesforce.Summary is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -980,11 +980,11 @@ type salesforce.Hierarchy is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -1030,11 +1030,11 @@ type salesforce.MetadataRelationship is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -1080,11 +1080,11 @@ type salesforce.ExternalLookup is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -1130,11 +1130,11 @@ type salesforce.IndirectLookup is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -1180,11 +1180,11 @@ type salesforce.File is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -1220,11 +1220,11 @@ type salesforce.Unknown is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -1260,11 +1260,11 @@ type salesforce.AnyType is unknown {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -1300,11 +1300,11 @@ type salesforce.Address {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -1356,11 +1356,11 @@ type salesforce.Name {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -1406,11 +1406,11 @@ type salesforce.Name2 {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -1458,11 +1458,11 @@ type salesforce.Geolocation {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -1502,11 +1502,11 @@ type salesforce.FormulaCheckbox is boolean {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -1548,11 +1548,11 @@ type salesforce.FormulaCurrency is number {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -1598,11 +1598,11 @@ type salesforce.FormulaDate is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -1644,11 +1644,11 @@ type salesforce.FormulaDateTime is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -1690,11 +1690,11 @@ type salesforce.FormulaNumber is number {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -1742,11 +1742,11 @@ type salesforce.FormulaPercent is number {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -1792,11 +1792,11 @@ type salesforce.FormulaText is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }
@@ -1844,11 +1844,11 @@ type salesforce.FormulaTime is string {
     }
     string complianceGroup {
     }
-    boolean createable {
+    hidden_boolean createable {
     }
-    boolean updateable {
+    hidden_boolean updateable {
     }
-    boolean queryable {
+    hidden_boolean queryable {
     }
     hidden_string internalId {
     }

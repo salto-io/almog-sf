@@ -1,0 +1,9 @@
+salesforce.SecondCMT__mdt SecondCMT_Test_secondCMT_record@vuu {
+  label = "Test secondCMT record"
+  protected = false
+  fullName = "SecondCMT.Test_secondCMT_record"
+  CMT_Relationship_To_newCMT__c = "Test_CMT_instance"
+  Field_referencing_entity__c = "Invoice"
+  Field_referencing_field__c = "InvoiceNumber"
+  _alias = "Test secondCMT record"
+}

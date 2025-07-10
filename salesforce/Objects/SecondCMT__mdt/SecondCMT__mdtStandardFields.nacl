@@ -1,83 +1,14 @@
 type salesforce.SecondCMT__mdt {
-  serviceid Id {
-    apiName = "SecondCMT__mdt.Id"
-    label = "Custom Metadata Record ID"
-    queryable = true
-    _hidden_value = true
+  serviceid fullName {
   }
-  salesforce.Text DeveloperName {
-    apiName = "SecondCMT__mdt.DeveloperName"
-    length = 40
-    _required = true
-    label = "Custom Metadata Record Name"
-    createable = false
-    updateable = false
-    unique = false
-    caseSensitive = false
-    queryable = true
-    _hidden_value = true
+  string description {
   }
-  salesforce.Text MasterLabel {
-    apiName = "SecondCMT__mdt.MasterLabel"
-    length = 40
-    _required = true
-    label = "Label"
-    createable = false
-    updateable = false
-    unique = false
-    caseSensitive = false
-    queryable = true
-    _hidden_value = true
+  string label {
   }
-  salesforce.Picklist Language {
-    apiName = "SecondCMT__mdt.Language"
-    restricted = true
-    _required = true
-    label = "Master Language"
-    createable = false
-    updateable = false
-    queryable = true
-    _hidden_value = true
+  boolean protected {
   }
-  salesforce.Text NamespacePrefix {
-    apiName = "SecondCMT__mdt.NamespacePrefix"
-    length = 15
-    label = "Namespace Prefix"
-    createable = false
-    updateable = false
-    unique = false
-    caseSensitive = false
-    queryable = true
+  string internalId {
     _hidden_value = true
-  }
-  salesforce.Text Label {
-    apiName = "SecondCMT__mdt.Label"
-    length = 40
-    label = "Label"
-    createable = false
-    updateable = false
-    unique = false
-    caseSensitive = false
-    queryable = true
-    _hidden_value = true
-  }
-  salesforce.Text QualifiedApiName {
-    apiName = "SecondCMT__mdt.QualifiedApiName"
-    length = 70
-    label = "Qualified API Name"
-    createable = false
-    updateable = false
-    unique = false
-    caseSensitive = false
-    queryable = true
-    _hidden_value = true
-  }
-  salesforce.DateTime SystemModstamp {
-    apiName = "SecondCMT__mdt.SystemModstamp"
-    label = "System Modstamp"
-    createable = false
-    updateable = false
-    queryable = true
-    _hidden_value = true
+    localOnly = true
   }
 }

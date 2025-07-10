@@ -1,4 +1,4 @@
-type salesforce.new_CMT__mdt {
+type salesforce.Third_CMT__mdt {
   serviceid fullName {
   }
   string description {

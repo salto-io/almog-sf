@@ -1,0 +1,14 @@
+type salesforce.Third_CMT__mdt {
+  salesforce.MetadataRelationship SecondCMT__c {
+    apiName = "Third_CMT__mdt.SecondCMT__c"
+    fieldManageability = "DeveloperControlled"
+    label = "SecondCMT"
+    referenceTo = [
+      salesforce.SecondCMT__mdt,
+    ]
+    relationshipLabel = "Third_CMTs"
+    relationshipName = "Third_CMTs"
+    _required = true
+    unique = false
+  }
+}

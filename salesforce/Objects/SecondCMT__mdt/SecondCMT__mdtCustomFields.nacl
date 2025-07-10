@@ -10,9 +10,30 @@ type salesforce.SecondCMT__mdt {
     relationshipName = "SecondCMTs"
     _required = true
     unique = false
-    createable = false
-    updateable = false
-    queryable = true
-    _hidden_value = true
+  }
+  salesforce.MetadataRelationship Field_referencing_entity__c {
+    apiName = "SecondCMT__mdt.Field_referencing_entity__c"
+    fieldManageability = "DeveloperControlled"
+    label = "Field referencing entity"
+    referenceTo = [
+      "EntityDefinition",
+    ]
+    relationshipLabel = "SecondCMTs"
+    relationshipName = "SecondCMTs"
+    _required = true
+    unique = false
+  }
+  salesforce.MetadataRelationship Field_referencing_field__c {
+    apiName = "SecondCMT__mdt.Field_referencing_field__c"
+    fieldManageability = "DeveloperControlled"
+    label = "Field referencing field"
+    metadataRelationshipControllingField = "SecondCMT__mdt.Field_referencing_entity__c"
+    referenceTo = [
+      "FieldDefinition",
+    ]
+    relationshipLabel = "SecondCMTs"
+    relationshipName = "SecondCMTs"
+    _required = true
+    unique = false
   }
 }

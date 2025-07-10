@@ -1,0 +1,8 @@
+type salesforce.OrderedMapOfvalueSet {
+  "Map<salesforce.valueSet>" values {
+    _required = true
+  }
+  "List<salesforce.valueSet>" order {
+    _required = true
+  }
+}
