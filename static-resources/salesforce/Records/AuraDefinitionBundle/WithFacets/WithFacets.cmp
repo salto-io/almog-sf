@@ -1,0 +1,25 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    
+    <lightning:card title="Facets Example">
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem flexibility="auto" padding="around-small">
+                <lightning:card title="Facet1">
+                    <p>Content for Facet1</p>
+                </lightning:card>
+            </lightning:layoutItem>
+            
+            <lightning:layoutItem flexibility="auto" padding="around-small">
+                <lightning:card title="Facet2">
+                    <p>Content for Facet2</p>
+                </lightning:card>
+            </lightning:layoutItem>
+
+            <lightning:layoutItem flexibility="auto" padding="around-small">
+                <lightning:card title="Facet3">
+                    <p>Content for Facet3</p>
+                </lightning:card>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+
+</aura:component>

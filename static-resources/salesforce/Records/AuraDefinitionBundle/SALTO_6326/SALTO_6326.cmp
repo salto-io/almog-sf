@@ -1,0 +1,10 @@
+<aura:component implements="force:hasRecordId,lightning:actionOverride,flexipage:availableForAllPageTypes,lightning:isUrlAddressable" 
+                 access="global" >
+    <!-- Example component content -->
+    <lightning:card title="Case Action Override">
+        <aura:set attribute="actions">
+            <!-- You can place your custom buttons or actions here -->
+        </aura:set>
+        <lightning:button label="Custom Action" onclick="{!c.handleActionClick}" />
+    </lightning:card>
+</aura:component>
