@@ -1,0 +1,10 @@
+salesforce.ValidationRule SecondCMT__mdt_ValidLabel {
+  fullName = "SecondCMT__mdt.ValidLabel"
+  active = true
+  errorConditionFormula = "MasterLabel = \"InvalidChange\""
+  errorMessage = "Label name is invalid."
+  _parent = [
+    salesforce.SecondCMT__mdt,
+  ]
+  _alias = "SecondCMT__mdt.ValidLabel"
+}

@@ -1,0 +1,15 @@
+salesforce.ValidationRule new_CMT__mdt_Invalid_Name {
+  fullName = "new_CMT__mdt.Invalid_Name"
+  active = true
+  errorConditionFormula = "Name__c = \"invalidchange\""
+  errorMessage = "Name is invalid"
+  _parent = [
+    salesforce.new_CMT__mdt,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.new_CMT__mdt.field.Name__c
+    },
+  ]
+  _alias = "new_CMT__mdt.Invalid_Name"
+}
