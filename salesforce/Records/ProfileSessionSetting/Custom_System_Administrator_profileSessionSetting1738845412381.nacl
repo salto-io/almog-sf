@@ -1,0 +1,10 @@
+salesforce.ProfileSessionSetting Custom_System_Administrator_profileSessionSetting1738845412381 {
+  externalCommunityUserIdentityVerif = false
+  forceLogout = false
+  profile = "custom system administrator"
+  sessionPersistence = false
+  sessionTimeout = 0
+  sessionTimeoutWarning = false
+  fullName = "Custom_System_Administrator_profileSessionSetting1738845412381"
+  _alias = "Custom_System_Administrator_profileSessionSetting1738845412381"
+}

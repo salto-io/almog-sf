@@ -1,0 +1,10 @@
+salesforce.QueueRoutingConfig New_queue_not_omni {
+  capacityType = "INHERITED"
+  capacityWeight = 5
+  isAttributeBased = false
+  label = "New queue not omni"
+  routingModel = "MOST_AVAILABLE"
+  routingPriority = 1
+  fullName = "New_queue_not_omni"
+  _alias = "New queue not omni"
+}

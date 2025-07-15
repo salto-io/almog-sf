@@ -6,12 +6,7 @@ salesforce {
     metadata = {
       include = [
         {
-          metadataType = "CustomObject"
-          namespace = ""
-          name = ".*__mdt"
-        },
-        {
-          metadataType = "CustomMetadata"
+          metadataType = ".*"
           namespace = ""
           name = ".*"
         },

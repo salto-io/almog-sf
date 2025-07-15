@@ -1,0 +1,22 @@
+salesforce.LiveChatButton New_Chat_Button {
+  deployments = {
+  }
+  enableQueue = false
+  isActive = true
+  label = "New Chat Button"
+  optionsCustomRoutingIsEnabled = false
+  optionsHasChasitorIdleTimeout = false
+  optionsHasInviteAfterAccept = false
+  optionsHasInviteAfterReject = false
+  optionsHasRerouteDeclinedRequest = false
+  optionsIsAutoAccept = false
+  optionsIsInviteAutoRemove = false
+  routingType = "MostAvailable"
+  skills = {
+    skill = "Almog_Skill"
+  }
+  type = "Standard"
+  windowLanguage = "en_US"
+  fullName = "New_Chat_Button"
+  _alias = "New Chat Button"
+}

@@ -1,0 +1,17 @@
+salesforce.LiveChatButton Customer_Service_Chat_Group_2 {
+  deployments = {
+  }
+  enableQueue = false
+  isActive = true
+  label = "Customer Service Chat Group 2"
+  optionsCustomRoutingIsEnabled = false
+  optionsHasChasitorIdleTimeout = false
+  optionsHasInviteAfterAccept = false
+  optionsHasInviteAfterReject = false
+  optionsHasRerouteDeclinedRequest = false
+  optionsIsAutoAccept = false
+  optionsIsInviteAutoRemove = false
+  type = "Standard"
+  fullName = "Customer_Service_Chat_Group_2"
+  _alias = "Customer Service Chat Group 2"
+}

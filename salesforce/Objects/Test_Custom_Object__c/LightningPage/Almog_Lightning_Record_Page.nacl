@@ -1,0 +1,98 @@
+salesforce.LightningPage Almog_Lightning_Record_Page {
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "decorate"
+                value = "true"
+              },
+              {
+                name = "richTextValue"
+                value = "<h1 style=\"text-align: center;\"><strong>Amazing Lightning Page!<span class=\"ql-cursor\">﻿</span></strong></h1>"
+              },
+            ]
+            componentName = "flexipage:richText"
+            identifier = "flexipage_richText"
+            visibilityRule = {
+              booleanFilter = "1 AND 2 AND 3 AND 4 AND 5 AND 6"
+              criteria = [
+                {
+                  leftValue = salesforce.Test_Custom_Object__c.field.Name
+                  operator = "CONTAINS"
+                  rightValue = "Almog"
+                },
+                {
+                  leftValue = "{!Record.LastModifiedBy.FirstName}"
+                  operator = "CONTAINS"
+                  rightValue = "Almog"
+                },
+                {
+                  leftValue = "{!$Permission.StandardPermission.ActivitiesAccess}"
+                  operator = "EQUAL"
+                  rightValue = "true"
+                },
+                {
+                  leftValue = "{!$User.City}"
+                  operator = "CONTAINS"
+                  rightValue = "K"
+                },
+                {
+                  leftValue = "{!Record.LastModifiedBy.Contact.Owner.Contact.Title}"
+                  operator = "CONTAINS"
+                  rightValue = "^^^"
+                },
+                {
+                  leftValue = "{!$Client.formFactor}"
+                  operator = "EQUAL"
+                  rightValue = "Large"
+                },
+              ]
+            }
+          }
+        },
+      ]
+      name = "header"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "decorate"
+                value = "true"
+              },
+              {
+                name = "richTextValue"
+                value = "<p>Second section</p>"
+              },
+            ]
+            componentName = "flexipage:richText"
+            identifier = "flexipage_richText2"
+          }
+        },
+      ]
+      name = "main"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Almog Lightning Record Page"
+  sobjectType = "Test_Custom_Object__c"
+  template = {
+    name = "flexipage:recordHomeSingleColTemplateDesktop"
+    properties = {
+      name = "enablePageActionConfig"
+      value = "false"
+    }
+  }
+  type = "RecordPage"
+  fullName = "Almog_Lightning_Record_Page"
+  _parent = [
+    salesforce.Test_Custom_Object__c,
+  ]
+  _alias = "Almog_Lightning_Record_Page"
+}

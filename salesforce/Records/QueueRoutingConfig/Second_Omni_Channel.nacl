@@ -1,0 +1,10 @@
+salesforce.QueueRoutingConfig Second_Omni_Channel {
+  capacityType = "INHERITED"
+  capacityWeight = 5
+  isAttributeBased = false
+  label = "Second Omni Channel"
+  routingModel = "MOST_AVAILABLE"
+  routingPriority = 2
+  fullName = "Second_Omni_Channel"
+  _alias = "Second Omni Channel"
+}

@@ -1,0 +1,23 @@
+type salesforce.FlowActionCallPath {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  salesforce.FlowMetadataValue processMetadataValues {
+  }
+  salesforce.FlowConnector connector {
+  }
+  string pathName {
+  }
+  metadataType = "FlowActionCallPath"
+}

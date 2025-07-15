@@ -1,0 +1,69 @@
+salesforce.LightningPage custom_home_page {
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "SALTO_6326"
+            identifier = "c_SALTO_6326"
+          }
+        },
+      ]
+      name = "top"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "dashboardName"
+                value = "Sales_dashboard"
+              },
+              {
+                name = "hideOnError"
+                value = "true"
+              },
+            ]
+            componentName = "desktopDashboards:embeddedDashboard"
+            identifier = "desktopDashboards_embeddedDashboard"
+          }
+        },
+      ]
+      name = "bottomLeft"
+      type = "Region"
+    },
+    {
+      name = "bottomRight"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "SALTO_6326_second"
+            identifier = "c_SALTO_6326_second"
+          }
+        },
+      ]
+      name = "sidebar"
+      type = "Region"
+    },
+  ]
+  masterLabel = "custom_home_page"
+  template = {
+    name = "home:desktopTemplate"
+  }
+  type = "HomePage"
+  fullName = "custom_home_page"
+  _generated_dependencies = [
+    {
+      reference = salesforce.AuraDefinitionBundle.instance.SALTO_6326
+    },
+    {
+      reference = salesforce.AuraDefinitionBundle.instance.SALTO_6326_second
+    },
+  ]
+  _alias = "custom_home_page"
+}

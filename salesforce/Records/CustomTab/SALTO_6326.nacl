@@ -1,0 +1,13 @@
+salesforce.CustomTab SALTO_6326 {
+  description = "Created by Lightning App Builder"
+  flexiPage = "SALTO_6326"
+  label = "SALTO-6326"
+  motif = "Custom5: Leaf"
+  fullName = "SALTO_6326"
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningPage.instance.SALTO_6326
+    },
+  ]
+  _alias = "SALTO-6326"
+}

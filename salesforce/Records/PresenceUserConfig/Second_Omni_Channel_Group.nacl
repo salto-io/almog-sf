@@ -1,0 +1,11 @@
+salesforce.PresenceUserConfig Second_Omni_Channel_Group {
+  capacity = 20
+  enableAutoAccept = false
+  enableDecline = false
+  enableDeclineReason = false
+  enableDisconnectSound = true
+  enableRequestSound = true
+  label = "Second Omni Channel Group"
+  fullName = "Second_Omni_Channel_Group"
+  _alias = "Second Omni Channel Group"
+}

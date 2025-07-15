@@ -1,0 +1,141 @@
+salesforce.Flow F {
+  fullName = "F"
+  apiVersion = 63
+  areMetricsLoggedToDataCloud = false
+  decisions = [
+    {
+      name = "Flow_F_Decision_2"
+      label = "Flow F Decision 2"
+      defaultConnectorLabel = "Default Outcome"
+      rules = [
+        {
+          name = "Flow_F_decision"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "Varfordecision.Name"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "\"Valid name\""
+              }
+            },
+            {
+              leftValueReference = "SecondVariableForDecision.Price"
+              operator = "LessThan"
+              rightValue = {
+                numberValue = 100
+              }
+            },
+            {
+              leftValueReference = "Varfordecision.RelationshipToAsset__r.RelationshipToCart__r.CartCustomName__c"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "\"Valid Name\""
+              }
+            },
+            {
+              leftValueReference = "ThirdVariable.MasterRecord.IsDeleted"
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = false
+              }
+            },
+            {
+              leftValueReference = "ThirdVariable.CustomTextField__c"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "\"Custom!\""
+              }
+            },
+          ]
+          label = "Flow F decision"
+        },
+      ]
+    },
+  ]
+  environments = "Default"
+  interviewLabel = "E {!$Flow.CurrentDateTime}"
+  label = "F"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  screens = [
+    {
+      name = "F"
+      label = "F"
+      allowBack = true
+      allowFinish = true
+      allowPause = true
+      connector = {
+        targetReference = "Flow_F_Decision_2"
+      }
+      showFooter = true
+      showHeader = true
+    },
+  ]
+  start = {
+    connector = {
+      targetReference = "F"
+    }
+  }
+  status = "Draft"
+  variables = [
+    {
+      name = "SecondVariableForDecision"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Asset
+    },
+    {
+      name = "ThirdVariable"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Contact
+    },
+    {
+      name = "Varfordecision"
+      dataType = "SObject"
+      isCollection = false
+      isInput = false
+      isOutput = true
+      objectType = salesforce.Account
+    },
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account.field.RelationshipToAsset__c
+    },
+    {
+      reference = salesforce.Asset.field.RelationshipToCart__c
+    },
+    {
+      reference = salesforce.Contact.field.CustomTextField__c
+    },
+    {
+      reference = salesforce.WebCart.field.CartCustomName__c
+    },
+  ]
+  _alias = "F"
+}

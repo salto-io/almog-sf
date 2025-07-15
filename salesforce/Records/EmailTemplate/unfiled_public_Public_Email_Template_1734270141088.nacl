@@ -1,0 +1,14 @@
+salesforce.EmailTemplate unfiled_public_Public_Email_Template_1734270141088@zcduuu {
+  available = true
+  description = "This should appear in the nacls"
+  encodingKey = "UTF-8"
+  name = "Public Email Template"
+  relatedEntityType = "Asset"
+  style = "none"
+  subject = "Ta dam"
+  type = "custom"
+  uiType = "SFX"
+  fullName = "unfiled$public/Public_Email_Template_1734270141088"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/Public_Email_Template_1734270141088/Public_Email_Template_1734270141088.email")
+  _alias = "unfiled$public/Public_Email_Template_1734270141088"
+}

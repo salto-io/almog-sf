@@ -1,0 +1,11 @@
+salesforce.PresenceUserConfig Web_Chat_Support_Group {
+  capacity = 20
+  enableAutoAccept = false
+  enableDecline = false
+  enableDeclineReason = false
+  enableDisconnectSound = false
+  enableRequestSound = false
+  label = "Web Chat Support Group"
+  fullName = "Web_Chat_Support_Group"
+  _alias = "Web Chat Support Group"
+}

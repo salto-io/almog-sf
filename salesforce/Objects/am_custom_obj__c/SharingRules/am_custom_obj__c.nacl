@@ -1,0 +1,7 @@
+salesforce.SharingRules am_custom_obj__c {
+  fullName = "am_custom_obj__c"
+  _parent = [
+    salesforce.am_custom_obj__c,
+  ]
+  _alias = "am_custom_obj__c"
+}

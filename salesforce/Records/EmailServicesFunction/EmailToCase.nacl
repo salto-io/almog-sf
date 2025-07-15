@@ -1,0 +1,15 @@
+salesforce.EmailServicesFunction EmailToCase {
+  attachmentOption = "All"
+  authenticationFailureAction = "Bounce"
+  authorizationFailureAction = "Discard"
+  functionInactiveAction = "Bounce"
+  functionName = "EmailToCase"
+  isActive = true
+  isAuthenticationRequired = false
+  isErrorRoutingEnabled = false
+  isTextAttachmentsAsBinary = true
+  isTlsRequired = false
+  overLimitAction = "Bounce"
+  fullName = "EmailToCase"
+  _alias = "EmailToCase"
+}

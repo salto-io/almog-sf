@@ -1,0 +1,14 @@
+salesforce.EmailTemplate unfiled_public_Case_Closed_Sample_1735735062724@zcduuu {
+  available = true
+  description = "Sent to case contact when case is closed"
+  encodingKey = "UTF-8"
+  name = "Case Closed (Sample)"
+  relatedEntityType = "Case"
+  style = "none"
+  subject = "You’re all set!"
+  type = "custom"
+  uiType = "SFX"
+  fullName = "unfiled$public/Case_Closed_Sample_1735735062724"
+  content = file("salesforce/Records/EmailTemplate/unfiled$public/Case_Closed_Sample_1735735062724/Case_Closed_Sample_1735735062724.email")
+  _alias = "unfiled$public/Case_Closed_Sample_1735735062724"
+}

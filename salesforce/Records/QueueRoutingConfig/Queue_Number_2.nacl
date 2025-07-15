@@ -1,0 +1,10 @@
+salesforce.QueueRoutingConfig Queue_Number_2 {
+  capacityType = "INHERITED"
+  capacityWeight = 5
+  isAttributeBased = false
+  label = "Queue Number 2"
+  routingModel = "MOST_AVAILABLE"
+  routingPriority = 2
+  fullName = "Queue_Number_2"
+  _alias = "Queue Number 2"
+}

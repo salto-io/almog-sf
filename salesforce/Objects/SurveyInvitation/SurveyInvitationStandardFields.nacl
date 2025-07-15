@@ -1,0 +1,129 @@
+type salesforce.SurveyInvitation {
+  salesforce.Lookup CommunityId {
+    apiName = "SurveyInvitation.CommunityId"
+    label = "Network ID"
+    relationshipName = "Community"
+  }
+  salesforce.Lookup EmailBrandingId {
+    apiName = "SurveyInvitation.EmailBrandingId"
+    label = "Survey Email Branding ID"
+    relationshipName = "EmailBranding"
+  }
+  salesforce.Url InvitationLink {
+    apiName = "SurveyInvitation.InvitationLink"
+    label = "Invitation Link"
+  }
+  salesforce.DateTime InviteExpiryDateTime {
+    apiName = "SurveyInvitation.InviteExpiryDateTime"
+    label = "Invitation Expires On"
+  }
+  salesforce.Text Name {
+    apiName = "SurveyInvitation.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "SurveyInvitation.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Lookup ParticipantId {
+    apiName = "SurveyInvitation.ParticipantId"
+    label = "Participant ID"
+    relationshipName = "Participant"
+  }
+  salesforce.Picklist ResponseStatus {
+    apiName = "SurveyInvitation.ResponseStatus"
+    label = "Response Status"
+    _required = true
+    restricted = true
+  }
+  salesforce.Lookup SurveyId {
+    apiName = "SurveyInvitation.SurveyId"
+    label = "Survey ID"
+    _required = true
+    relationshipName = "Survey"
+  }
+  serviceid Id {
+    apiName = "SurveyInvitation.Id"
+    label = "Survey Invitation ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SurveyInvitation.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SurveyInvitation.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SurveyInvitation.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SurveyInvitation.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SurveyInvitation.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SurveyInvitation.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Checkbox OptionsAllowParticipantAccessTheirResponse {
+    apiName = "SurveyInvitation.OptionsAllowParticipantAccessTheirResponse"
+    label = "Can See Their Response"
+  }
+  salesforce.Checkbox OptionsCollectAnonymousResponse {
+    apiName = "SurveyInvitation.OptionsCollectAnonymousResponse"
+    label = "Can Respond Anonymously"
+  }
+  salesforce.Checkbox OptionsAllowGuestUserResponse {
+    apiName = "SurveyInvitation.OptionsAllowGuestUserResponse"
+    label = "Let Guests Respond"
+  }
+  salesforce.Checkbox IsDefault {
+    apiName = "SurveyInvitation.IsDefault"
+    label = "Is Default"
+    defaultValue = false
+  }
+  salesforce.Text UUID {
+    apiName = "SurveyInvitation.UUID"
+    label = "UUID"
+    length = 36
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup UserId {
+    apiName = "SurveyInvitation.UserId"
+    label = "User ID"
+    relationshipName = "User"
+  }
+  salesforce.Lookup LeadId {
+    apiName = "SurveyInvitation.LeadId"
+    label = "Lead ID"
+    relationshipName = "Lead"
+  }
+  salesforce.Lookup ContactId {
+    apiName = "SurveyInvitation.ContactId"
+    label = "Contact ID"
+    relationshipName = "Contact"
+  }
+}

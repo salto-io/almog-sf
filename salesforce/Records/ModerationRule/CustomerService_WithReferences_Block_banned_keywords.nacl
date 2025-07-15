@@ -1,0 +1,37 @@
+salesforce.ModerationRule CustomerService_WithReferences_Block_banned_keywords@uvuu {
+  action = "Block"
+  active = false
+  description = "Posts or comments with banned words aren't saved to the community feed"
+  entitiesAndFields = [
+    {
+      entityName = "FeedComment"
+      fieldName = "RawCommentBody"
+      keywordList = "CustomerService_WithReferences.Banned"
+    },
+    {
+      entityName = "FeedItem"
+      fieldName = "LinkUrl"
+      keywordList = "CustomerService_WithReferences.Banned"
+    },
+    {
+      entityName = "FeedItem"
+      fieldName = "RawBody"
+      keywordList = "CustomerService_WithReferences.Banned"
+    },
+    {
+      entityName = "FeedItem"
+      fieldName = "Title"
+      keywordList = "CustomerService_WithReferences.Banned"
+    },
+    {
+      entityName = "FeedPollChoice"
+      fieldName = "ChoiceBody"
+      keywordList = "CustomerService_WithReferences.Banned"
+    },
+  ]
+  masterLabel = "Block posts or comments containing banned keywords"
+  type = "Content"
+  userMessage = "You can't use %BLOCKED_KEYWORD% or other inappropriate words in this community. Review your content and try again."
+  fullName = "CustomerService_WithReferences.Block_banned_keywords"
+  _alias = "CustomerService_WithReferences.Block_banned_keywords"
+}

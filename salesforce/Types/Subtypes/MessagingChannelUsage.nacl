@@ -1,0 +1,27 @@
+type salesforce.MessagingChannelUsage {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string channelConsentType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "DoubleOptIn",
+        "ExplicitOptIn",
+        "ImplicitOptIn",
+      ]
+    }
+  }
+  metadataType = "MessagingChannelUsage"
+}

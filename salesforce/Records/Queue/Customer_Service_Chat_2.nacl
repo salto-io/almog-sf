@@ -1,0 +1,17 @@
+salesforce.Queue Customer_Service_Chat_2 {
+  doesSendEmailToMembers = false
+  name = "Customer Service Chat 2"
+  queueMembers = {
+    users = {
+      user = [
+        "almog.mesilaty+dev1@salto.io",
+      ]
+    }
+  }
+  queueRoutingConfig = salesforce.QueueRoutingConfig.instance.Customer_Service_Chat_2
+  queueSobject = {
+    sobjectType = "LiveChatTranscript"
+  }
+  fullName = "Customer_Service_Chat_2"
+  _alias = "Customer_Service_Chat_2"
+}

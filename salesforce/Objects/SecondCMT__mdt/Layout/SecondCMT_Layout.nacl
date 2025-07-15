@@ -1,0 +1,104 @@
+salesforce.Layout SecondCMT__mdt_SecondCMT_Layout@uubs {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = "MasterLabel"
+            },
+            {
+              behavior = "Required"
+              field = "DeveloperName"
+            },
+            {
+              behavior = "Required"
+              field = salesforce.SecondCMT__mdt.field.CMT_Relationship_To_newCMT__c
+            },
+            {
+              behavior = "Required"
+              field = salesforce.SecondCMT__mdt.field.Field_referencing_entity__c
+            },
+            {
+              behavior = "Required"
+              field = salesforce.SecondCMT__mdt.field.Field_referencing_field__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = "IsProtected"
+            },
+            {
+              behavior = "Required"
+              field = "NamespacePrefix"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = "CreatedById"
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = "LastModifiedById"
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = false
+      layoutColumns = [
+        {
+        },
+      ]
+      style = "CustomLinks"
+    },
+  ]
+  relatedLists = [
+    {
+      fields = [
+        "MasterLabel",
+        "DeveloperName",
+        "NamespacePrefix",
+      ]
+      relatedList = salesforce.Third_CMT__mdt.field.SecondCMT__c
+    },
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "SecondCMT__mdt-SecondCMT Layout"
+  _parent = [
+    salesforce.SecondCMT__mdt,
+  ]
+  _alias = "SecondCMT__mdt-SecondCMT Layout"
+}

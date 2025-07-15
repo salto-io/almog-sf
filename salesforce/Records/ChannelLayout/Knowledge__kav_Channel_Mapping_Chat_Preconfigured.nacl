@@ -1,0 +1,14 @@
+salesforce.ChannelLayout Knowledge__kav_Channel_Mapping_Chat_Preconfigured@uuvuuu {
+  doesExcludeFieldLabels = true
+  doesExcludeFiles = true
+  enabledChannels = "Chat"
+  label = "Chat (Preconfigured)"
+  layoutItems = [
+    {
+      field = "DigitalEngagementResponse__c"
+    },
+  ]
+  recordType = "--Master--"
+  fullName = "Knowledge__kav.Channel_Mapping_Chat_Preconfigured"
+  _alias = "Chat (Preconfigured)"
+}

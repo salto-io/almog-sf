@@ -1,0 +1,11 @@
+salesforce.PresenceUserConfig Customer_Service_Chat_Group {
+  capacity = 20
+  enableAutoAccept = false
+  enableDecline = false
+  enableDeclineReason = false
+  enableDisconnectSound = false
+  enableRequestSound = false
+  label = "Customer Service Chat Group"
+  fullName = "Customer_Service_Chat_Group"
+  _alias = "Customer Service Chat Group"
+}

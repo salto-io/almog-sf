@@ -1,0 +1,1519 @@
+salesforce.Flow Book_Appointment_from_Invitation {
+  fullName = "Book_Appointment_from_Invitation"
+  actionCalls = [
+    {
+      description = "Calls an invocable action to book the appointment for a standard or credentialed Experience Cloud user and stores the new service appointment ID in ServiceAppointment."
+      name = "SaveAppointment"
+      label = "Save Appointment"
+      actionName = "saveAppointment"
+      actionType = "saveAppointment"
+      connector = {
+        isGoTo = true
+        targetReference = "Appointment_Conformation"
+      }
+      faultConnector = {
+        isGoTo = true
+        targetReference = "ScreenReviewAppointment"
+      }
+      flowTransactionModel = "CurrentTransaction"
+      inputParameters = [
+        {
+          name = "serviceAppointmentFields"
+          value = {
+            elementReference = "ServiceAppointmentFields"
+          }
+        },
+        {
+          name = "serviceResources"
+          value = {
+            elementReference = "ServiceResources"
+          }
+        },
+      ]
+      nameSegment = "saveAppointment"
+      offset = 0
+      outputParameters = [
+        {
+          assignToReference = "ServiceAppointment.Id"
+          name = "serviceAppointmentId"
+        },
+      ]
+    },
+    {
+      description = "Calls an invocable action to book the appointment for a guest Experience Cloud user and stores the new service appointment ID in ServiceAppointment."
+      name = "SaveGuestAppointment"
+      label = "Save Guest Appointment"
+      actionName = "saveAppointment"
+      actionType = "saveAppointment"
+      connector = {
+        isGoTo = true
+        targetReference = "Appointment_Conformation"
+      }
+      faultConnector = {
+        isGoTo = true
+        targetReference = "SetStageToGuest"
+      }
+      flowTransactionModel = "CurrentTransaction"
+      inputParameters = [
+        {
+          name = "lead"
+          value = {
+            elementReference = "GuestLead"
+          }
+        },
+        {
+          name = "serviceAppointmentFields"
+          value = {
+            elementReference = "ServiceAppointmentFields"
+          }
+        },
+        {
+          name = "serviceResources"
+          value = {
+            elementReference = "ServiceResources"
+          }
+        },
+      ]
+      nameSegment = "saveAppointment"
+      offset = 0
+      outputParameters = [
+        {
+          assignToReference = "ServiceAppointment.Id"
+          name = "serviceAppointmentId"
+        },
+      ]
+    },
+  ]
+  apiVersion = 63
+  areMetricsLoggedToDataCloud = false
+  assignments = [
+    {
+      description = "Sets ValidationErrors to \"Error in Get Records.\""
+      name = "Fault_Message"
+      label = "Fault Message"
+      assignmentItems = [
+        {
+          assignToReference = "$Flow.CurrentStage"
+          operator = "Assign"
+          value = {
+            elementReference = "FaultMessageStage"
+          }
+        },
+      ]
+      connector = {
+        isGoTo = true
+        targetReference = "ScreenSelectAppointmentTimeSlot"
+      }
+    },
+    {
+      description = "Sets attributes for the GuestLead record variable to null."
+      name = "InitializeGuestLead"
+      label = "Initialize GuestLead"
+      assignmentItems = [
+        {
+          assignToReference = "GuestLead.FirstName"
+          operator = "Assign"
+          value = {
+            stringValue = ""
+          }
+        },
+        {
+          assignToReference = "GuestLead.LastName"
+          operator = "Assign"
+          value = {
+            stringValue = ""
+          }
+        },
+        {
+          assignToReference = "GuestLead.Email"
+          operator = "Assign"
+          value = {
+            stringValue = ""
+          }
+        },
+        {
+          assignToReference = "GuestLead.Phone"
+          operator = "Assign"
+          value = {
+            stringValue = ""
+          }
+        },
+        {
+          assignToReference = "GuestLead.Company"
+          operator = "Assign"
+          value = {
+            stringValue = ""
+          }
+        },
+      ]
+      connector = {
+        targetReference = "SetStageToGuest"
+      }
+    },
+    {
+      description = "Sets the ServiceAppointment record variable's parent record ID to the parentRecordId passed into the flow. Sets other Service Appointment attributes to null."
+      name = "InitializeServiceAppointment"
+      label = "Initialize ServiceAppointment"
+      assignmentItems = [
+        {
+          assignToReference = "ServiceAppointment.ParentRecordId"
+          operator = "Assign"
+          value = {
+            elementReference = "parentRecordId"
+          }
+        },
+        {
+          assignToReference = "ServiceAppointment.AdditionalInformation"
+          operator = "Assign"
+        },
+        {
+          assignToReference = "ServiceAppointment.ContactId"
+          operator = "Assign"
+        },
+        {
+          assignToReference = "ServiceAppointment.Comments"
+          operator = "Assign"
+        },
+        {
+          assignToReference = "ServiceAppointment.AppointmentType"
+          operator = "Assign"
+        },
+        {
+          assignToReference = "ServiceAppointment.Street"
+          operator = "Assign"
+        },
+        {
+          assignToReference = "ServiceAppointment.City"
+          operator = "Assign"
+        },
+        {
+          assignToReference = "ServiceAppointment.State"
+          operator = "Assign"
+        },
+        {
+          assignToReference = "ServiceAppointment.PostalCode"
+          operator = "Assign"
+        },
+        {
+          assignToReference = "ServiceAppointment.Country"
+          operator = "Assign"
+        },
+        {
+          assignToReference = "ServiceAppointment.ServiceTerritoryId"
+          operator = "Assign"
+        },
+        {
+          assignToReference = "ServiceAppointment.SchedStartTime"
+          operator = "Assign"
+        },
+        {
+          assignToReference = "ServiceAppointment.SchedEndTime"
+          operator = "Assign"
+        },
+        {
+          assignToReference = "ServiceAppointment.ArrivalWindowStartTime"
+          operator = "Assign"
+        },
+        {
+          assignToReference = "ServiceAppointment.ArrivalWindowEndTime"
+          operator = "Assign"
+        },
+        {
+          assignToReference = "ServiceAppointment.IsAnonymousBooking"
+          operator = "Assign"
+        },
+        {
+          assignToReference = "ServiceAppointment.EngagementChannelTypeId"
+          operator = "Assign"
+        },
+      ]
+      connector = {
+        targetReference = "SetStageToInvitatioin"
+      }
+    },
+    {
+      description = "Set WorkTypeGroupId as Invitation Topic"
+      name = "Set_Work_Type_Group_Id"
+      label = "Set Work Type Group Id"
+      assignmentItems = [
+        {
+          assignToReference = "WorkTypeGroupId"
+          operator = "Assign"
+          value = {
+            elementReference = "AppointmentInvitation.AppointmentTopicId"
+          }
+        },
+      ]
+      connector = {
+        targetReference = "ScreenSelectAppointmentTimeSlot"
+      }
+    },
+    {
+      description = "Sets the Company field for LeadGuest to the DefaultCompanyValue constant."
+      name = "SetLeadGuestCompanyToDefault"
+      label = "Set LeadGuest Company to Default"
+      assignmentItems = [
+        {
+          assignToReference = "GuestLead.Company"
+          operator = "Assign"
+          value = {
+            elementReference = "DefaultCompanyValue"
+          }
+        },
+      ]
+      connector = {
+        targetReference = "CreateLead"
+      }
+    },
+    {
+      description = "Set the flow's current stage to the GuestUserStage"
+      name = "SetStageToGuest"
+      label = "Set Stage to Guest"
+      assignmentItems = [
+        {
+          assignToReference = "$Flow.CurrentStage"
+          operator = "Assign"
+          value = {
+            elementReference = "GuestUserStage"
+          }
+        },
+      ]
+      connector = {
+        targetReference = "ScreenReviewGuestAppointment"
+      }
+    },
+    {
+      description = "Sets the flow's current stage to the InvitationStage."
+      name = "SetStageToInvitatioin"
+      label = "Set Stage to Invitation"
+      assignmentItems = [
+        {
+          assignToReference = "$Flow.CurrentStage"
+          operator = "Assign"
+          value = {
+            elementReference = "InvitationStage"
+          }
+        },
+      ]
+      connector = {
+        targetReference = "IsInvitationKeyFormatValid"
+      }
+    },
+    {
+      description = "This will populate the fault message from Get Appointment Invitation action. The validation is fed to the confirmation screen."
+      name = "SetValidationErrors"
+      label = "Set Validation Errors"
+      assignmentItems = [
+        {
+          assignToReference = "StatusCatagory"
+          operator = "Assign"
+          value = {
+            elementReference = "ErrorMessageType"
+          }
+        },
+      ]
+      connector = {
+        targetReference = "Appointment_Conformation"
+      }
+    },
+  ]
+  constants = [
+    {
+      description = "Stores the default value for GuestLead's company name. The default value is \"Not Provided\"."
+      name = "DefaultCompanyValue"
+      dataType = "String"
+      value = {
+        stringValue = "Not Provided"
+      }
+    },
+  ]
+  decisions = [
+    {
+      description = "Determines whether the appointment invitation topic type is WorkTypeGroup or WorkType. Depending on the type, set the appropriate variable."
+      name = "CheckAppointmentInvitationTopicType"
+      label = "What Type of Topic?"
+      defaultConnector = {
+        targetReference = "ScreenSelectAppointmentTimeSlot"
+      }
+      defaultConnectorLabel = "Invalid (Default)"
+      rules = [
+        {
+          name = "WorkTypeGroup"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "AppointmentInvitation.AppointmentTopicType"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "WorkTypeGroup"
+              }
+            },
+          ]
+          connector = {
+            targetReference = "Set_Work_Type_Group_Id"
+          }
+          label = "Work Type Group"
+        },
+        {
+          name = "Work_Type"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "AppointmentInvitation.AppointmentTopicType"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "WorkType"
+              }
+            },
+          ]
+          connector = {
+            targetReference = "GetWorkType"
+          }
+          label = "Work Type"
+        },
+      ]
+    },
+    {
+      description = "Determines whether the GuestLead has a value for the Company field."
+      name = "DoesGuestHaveAssociatedCompany"
+      label = "Does Guest Have Associated Company?"
+      defaultConnector = {
+        targetReference = "CreateLead"
+      }
+      defaultConnectorLabel = "Yes (Default)"
+      rules = [
+        {
+          name = "NoAssociatedCompany"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "GuestLead.Company"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = ""
+              }
+            },
+          ]
+          connector = {
+            targetReference = "SetLeadGuestCompanyToDefault"
+          }
+          label = "No"
+        },
+      ]
+    },
+    {
+      description = "Determines whether the invitation key format is valid."
+      name = "IsInvitationKeyFormatValid"
+      label = "Is Invitation Key Format Valid?"
+      defaultConnector = {
+        isGoTo = true
+        targetReference = "SetValidationErrors"
+      }
+      defaultConnectorLabel = "No (Default)"
+      rules = [
+        {
+          name = "ValidInvitationKeyFormat"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "InvitationKeyRegex"
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = true
+              }
+            },
+          ]
+          connector = {
+            targetReference = "GetAppointmentInvitation"
+          }
+          label = "Yes"
+        },
+      ]
+    },
+    {
+      description = "Determines whether the invitation is active or expired."
+      name = "IsInvitationValid"
+      label = "Is Invitation Valid?"
+      defaultConnector = {
+        targetReference = "CheckAppointmentInvitationTopicType"
+      }
+      defaultConnectorLabel = "Yes (Default)"
+      rules = [
+        {
+          name = "InvalidInvitation"
+          conditionLogic = "(1 AND 2) OR 3"
+          conditions = [
+            {
+              leftValueReference = "AppointmentInvitation.UrlExpiryDate"
+              operator = "LessThan"
+              rightValue = {
+                elementReference = "$Flow.CurrentDate"
+              }
+            },
+            {
+              leftValueReference = "AppointmentInvitation.UrlExpiryDate"
+              operator = "NotEqualTo"
+            },
+            {
+              leftValueReference = "AppointmentInvitation.IsActive"
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = false
+              }
+            },
+          ]
+          connector = {
+            targetReference = "SetValidationErrors"
+          }
+          label = "Invalid"
+        },
+      ]
+    },
+    {
+      description = "Determines whether the user is a guest user, a standard user, or a credentialed Experience cloud user."
+      name = "WhatTypeUser"
+      label = "What Type of User?"
+      defaultConnector = {
+        targetReference = "GetContactRecord"
+      }
+      defaultConnectorLabel = "Credentialed Experience Cloud (Default)"
+      rules = [
+        {
+          name = "GuestUser"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "$User.UserType"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "Guest"
+              }
+            },
+          ]
+          connector = {
+            targetReference = "InitializeGuestLead"
+          }
+          label = "Guest"
+        },
+        {
+          name = "StandardUser"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "$User.UserType"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "Standard"
+              }
+            },
+          ]
+          connector = {
+            targetReference = "ScreenReviewAppointment"
+          }
+          label = "Standard"
+        },
+      ]
+    },
+  ]
+  description = "Use an appointment invitation to book an appointment."
+  environments = "Default"
+  formulas = [
+    {
+      description = "Define the error message type to be shown on the screen. This formula will validate the invitation record."
+      name = "ErrorMessageType"
+      dataType = "String"
+      expression = '''
+IF(
+            !{!InvitationKeyRegex},
+            'InvalidInvitation',
+            IF(
+            !{!AppointmentInvitation.IsActive},
+            'InactiveInvitation',
+            IF(
+            {!AppointmentInvitation.UrlExpiryDate} <  {!$Flow.CurrentDate},
+            'ExpiredInvitation',
+            'InvalidInvitation'
+            )
+            )
+            )
+'''
+    },
+    {
+      description = "Compares the invitation key to a valid invitation key format and returns True if it matches."
+      name = "InvitationKeyRegex"
+      dataType = "Boolean"
+      expression = "REGEX({!invitationKey}, \"[0-9a-fA-F]{8}\\\\-[0-9a-fA-F]{4}\\\\-[0-9a-fA-F]{4}\\\\-[0-9a-fA-F]{4}\\\\-[0-9a-fA-F]{12}\")"
+    },
+    {
+      description = "Gets the contact ID of the credentialed Experience Cloud user running the flow."
+      name = "UserContactId"
+      dataType = "String"
+      expression = "{!$User.ContactId}"
+    },
+  ]
+  interviewLabel = "$Label.Industries_LightningSchedulerFileFlow.Inv_Book {!$Flow.CurrentDateTime}"
+  label = "Book Appointment from Invitation"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Appointments"
+  recordCreates = [
+    {
+      description = "Creates a lead record with the company, email, first name, last name, and phone stored in GuestUser and stores the new lead ID in GuestUser."
+      name = "CreateLead"
+      label = "Create Lead"
+      assignRecordIdToReference = "GuestLead.Id"
+      connector = {
+        targetReference = "SaveGuestAppointment"
+      }
+      faultConnector = {
+        isGoTo = true
+        targetReference = "SetStageToGuest"
+      }
+      inputAssignments = [
+        {
+          field = salesforce.Lead.field.Company
+          value = {
+            elementReference = "GuestLead.Company"
+          }
+        },
+        {
+          field = salesforce.Lead.field.Email
+          value = {
+            elementReference = "GuestLead.Email"
+          }
+        },
+        {
+          field = "FirstName"
+          value = {
+            elementReference = "GuestLead.FirstName"
+          }
+        },
+        {
+          field = "LastName"
+          value = {
+            elementReference = "GuestLead.LastName"
+          }
+        },
+        {
+          field = salesforce.Lead.field.Phone
+          value = {
+            elementReference = "GuestLead.Phone"
+          }
+        },
+      ]
+      object = salesforce.Lead
+    },
+  ]
+  recordLookups = [
+    {
+      description = "Gets the active, unexpired appointment invitation with the invitation key specified as an input parameter when the flow is called."
+      name = "GetAppointmentInvitation"
+      label = "Get Appointment Invitation"
+      assignNullValuesIfNoRecordsFound = true
+      connector = {
+        targetReference = "IsInvitationValid"
+      }
+      faultConnector = {
+        isGoTo = true
+        targetReference = "Fault_Message"
+      }
+      filterLogic = "and"
+      filters = [
+        {
+          field = salesforce.AppointmentInvitation.field.InvitationIdentifier
+          operator = "EqualTo"
+          value = {
+            elementReference = "invitationKey"
+          }
+        },
+      ]
+      object = salesforce.AppointmentInvitation
+      outputReference = "AppointmentInvitation"
+      queriedFields = [
+        salesforce.AppointmentInvitation.field.Id,
+        salesforce.AppointmentInvitation.field.AppointmentTopicId,
+        salesforce.AppointmentInvitation.field.BookingStartDate,
+        salesforce.AppointmentInvitation.field.BookingEndDate,
+        salesforce.AppointmentInvitation.field.AppointmentTopicType,
+        salesforce.AppointmentInvitation.field.IsActive,
+        salesforce.AppointmentInvitation.field.UrlExpiryDate,
+        salesforce.AppointmentInvitation.field.ServiceTerritoryId,
+        salesforce.AppointmentInvitation.field.AppointmentType,
+      ]
+    },
+    {
+      description = "Gets the ID of the contact that matches the UserContactID of the credentialed Experience Cloud user and stores the associated account ID in the Service Appointment's parent record ID field."
+      name = "GetContactRecord"
+      label = "Get Contact for Experience Cloud User"
+      assignNullValuesIfNoRecordsFound = true
+      connector = {
+        targetReference = "ScreenReviewAppointment"
+      }
+      faultConnector = {
+        targetReference = "Fault_Message"
+      }
+      filterLogic = "and"
+      filters = [
+        {
+          field = salesforce.Contact.field.Id
+          operator = "EqualTo"
+          value = {
+            elementReference = "UserContactId"
+          }
+        },
+      ]
+      object = salesforce.Contact
+      outputAssignments = [
+        {
+          assignToReference = "ServiceAppointment.ParentRecordId"
+          field = salesforce.Contact.field.AccountId
+        },
+        {
+          assignToReference = "ServiceAppointment.ContactId"
+          field = salesforce.Contact.field.Id
+        },
+      ]
+    },
+    {
+      description = "Get Work Type record if appointment invitation topic type is Work Type"
+      name = "GetWorkType"
+      label = "Get Work Type"
+      assignNullValuesIfNoRecordsFound = false
+      connector = {
+        targetReference = "ScreenSelectAppointmentTimeSlot"
+      }
+      faultConnector = {
+        isGoTo = true
+        targetReference = "Fault_Message"
+      }
+      filterLogic = "and"
+      filters = [
+        {
+          field = salesforce.WorkType.field.Id
+          operator = "EqualTo"
+          value = {
+            elementReference = "AppointmentInvitation.AppointmentTopicId"
+          }
+        },
+      ]
+      object = salesforce.WorkType
+      outputReference = "WorkType"
+      queriedFields = [
+        salesforce.WorkType.field.Id,
+        salesforce.WorkType.field.BlockTimeAfterAppointment,
+        salesforce.WorkType.field.BlockTimeBeforeAppointment,
+      ]
+    },
+  ]
+  runInMode = "DefaultMode"
+  screens = [
+    {
+      description = "Appointment Confirmation Screen. This screen is displayed if the appointment is created successfully."
+      name = "Appointment_Conformation"
+      label = "Appointment Conformation"
+      allowBack = true
+      allowFinish = true
+      allowPause = true
+      fields = [
+        {
+          name = "Confirm_Appointment"
+          extensionName = "runtime_appointmentbooking:flowConfirm"
+          fieldType = "ComponentInstance"
+          inputParameters = [
+            {
+              name = "category"
+              value = {
+                elementReference = "StatusCatagory"
+              }
+            },
+          ]
+          inputsOnNextNavToAssocScrn = "UseStoredValues"
+          isRequired = true
+          storeOutputAutomatically = true
+        },
+      ]
+      showFooter = true
+      showHeader = true
+    },
+    {
+      description = "Allows the flow user who's a standard or credentialed Experience Cloud user to review the appointment settings and stores a JSON string containing the appointment fields in ServiceAppointmentFields."
+      name = "ScreenReviewAppointment"
+      label = "Review Appointment"
+      allowBack = false
+      allowFinish = true
+      allowPause = true
+      connector = {
+        targetReference = "SaveAppointment"
+      }
+      fields = [
+        {
+          name = "ComponentReviewAppointment"
+          extensionName = "runtime_appointmentbooking:flowReviewIO"
+          fieldType = "ComponentInstance"
+          inputParameters = [
+            {
+              name = "appointmentType"
+              value = {
+                elementReference = "AppointmentInvitation.AppointmentType"
+              }
+            },
+            {
+              name = "contactId"
+              value = {
+                elementReference = "ServiceAppointment.ContactId"
+              }
+            },
+            {
+              name = "parentRecordId"
+              value = {
+                elementReference = "ServiceAppointment.ParentRecordId"
+              }
+            },
+            {
+              name = "additionalInformation"
+              value = {
+                elementReference = "ServiceAppointment.AdditionalInformation"
+              }
+            },
+            {
+              name = "city"
+              value = {
+                elementReference = "ServiceAppointment.City"
+              }
+            },
+            {
+              name = "comments"
+              value = {
+                elementReference = "ServiceAppointment.Comments"
+              }
+            },
+            {
+              name = "country"
+              value = {
+                elementReference = "ServiceAppointment.Country"
+              }
+            },
+            {
+              name = "endDateTime"
+              value = {
+                elementReference = "ServiceAppointment.SchedEndTime"
+              }
+            },
+            {
+              name = "postalCode"
+              value = {
+                elementReference = "ServiceAppointment.PostalCode"
+              }
+            },
+            {
+              name = "startDateTime"
+              value = {
+                elementReference = "ServiceAppointment.SchedStartTime"
+              }
+            },
+            {
+              name = "state"
+              value = {
+                elementReference = "ServiceAppointment.State"
+              }
+            },
+            {
+              name = "street"
+              value = {
+                elementReference = "ServiceAppointment.Street"
+              }
+            },
+            {
+              name = "serviceResourceId"
+              value = {
+                elementReference = "ServiceResourceId"
+              }
+            },
+            {
+              name = "serviceTerritoryId"
+              value = {
+                elementReference = "ServiceAppointment.ServiceTerritoryId"
+              }
+            },
+            {
+              name = "workTypeGroupId"
+              value = {
+                elementReference = "WorkTypeGroupId"
+              }
+            },
+            {
+              name = "isAnonymousBooking"
+              value = {
+                elementReference = "ServiceAppointment.IsAnonymousBooking"
+              }
+            },
+            {
+              name = "saveErrors"
+              value = {
+                elementReference = "$Flow.FaultMessage"
+              }
+            },
+            {
+              name = "serviceAppointmentFields"
+              value = {
+                elementReference = "ServiceAppointmentFields"
+              }
+            },
+            {
+              name = "serviceResources"
+              value = {
+                elementReference = "ServiceResources"
+              }
+            },
+            {
+              name = "isShowResourceSection"
+              value = {
+                booleanValue = true
+              }
+            },
+            {
+              name = "validationErrors"
+              value = {
+                elementReference = "ValidationErrors"
+              }
+            },
+            {
+              name = "appointmentInvitationId"
+              value = {
+                elementReference = "AppointmentInvitation.Id"
+              }
+            },
+            {
+              name = "workTypeId"
+              value = {
+                elementReference = "WorkType.Id"
+              }
+            },
+            {
+              name = "engagementChannelType"
+              value = {
+                elementReference = "engagementChannelTypeId"
+              }
+            },
+            {
+              name = "schedulingPolicyName"
+              value = {
+                elementReference = "SchedulingPolicyName"
+              }
+            },
+          ]
+          inputsOnNextNavToAssocScrn = "UseStoredValues"
+          isRequired = true
+          outputParameters = [
+            {
+              assignToReference = "ServiceAppointmentFields"
+              name = "serviceAppointmentFields"
+            },
+            {
+              assignToReference = "ServiceResources"
+              name = "serviceResources"
+            },
+            {
+              assignToReference = "ValidationErrors"
+              name = "validationErrors"
+            },
+            {
+              assignToReference = "engagementChannelTypeId"
+              name = "engagementChannelType"
+            },
+          ]
+        },
+      ]
+      showFooter = true
+      showHeader = true
+    },
+    {
+      description = "Allows an Experience Cloud guest user to review the appointment settings and stores a JSON string containing the appointment fields in ServiceAppointmentFields."
+      name = "ScreenReviewGuestAppointment"
+      label = "Review Guest Appointment"
+      allowBack = true
+      allowFinish = true
+      allowPause = true
+      connector = {
+        targetReference = "DoesGuestHaveAssociatedCompany"
+      }
+      fields = [
+        {
+          name = "ComponentReviewGuestAppointment"
+          extensionName = "runtime_appointmentbooking:flowReview"
+          fieldType = "ComponentInstance"
+          inputParameters = [
+            {
+              name = "appointmentType"
+              value = {
+                elementReference = "AppointmentInvitation.AppointmentType"
+              }
+            },
+            {
+              name = "contactId"
+              value = {
+                stringValue = ""
+              }
+            },
+            {
+              name = "parentRecordId"
+              value = {
+                elementReference = "ServiceAppointment.ParentRecordId"
+              }
+            },
+            {
+              name = "additionalInformation"
+              value = {
+                elementReference = "ServiceAppointment.AdditionalInformation"
+              }
+            },
+            {
+              name = "city"
+              value = {
+                elementReference = "ServiceAppointment.City"
+              }
+            },
+            {
+              name = "comments"
+              value = {
+                elementReference = "ServiceAppointment.Comments"
+              }
+            },
+            {
+              name = "country"
+              value = {
+                elementReference = "ServiceAppointment.Country"
+              }
+            },
+            {
+              name = "endDateTime"
+              value = {
+                elementReference = "ServiceAppointment.SchedEndTime"
+              }
+            },
+            {
+              name = "postalCode"
+              value = {
+                elementReference = "ServiceAppointment.PostalCode"
+              }
+            },
+            {
+              name = "startDateTime"
+              value = {
+                elementReference = "ServiceAppointment.SchedStartTime"
+              }
+            },
+            {
+              name = "state"
+              value = {
+                elementReference = "ServiceAppointment.State"
+              }
+            },
+            {
+              name = "street"
+              value = {
+                elementReference = "ServiceAppointment.Street"
+              }
+            },
+            {
+              name = "serviceResourceId"
+              value = {
+                elementReference = "ServiceResourceId"
+              }
+            },
+            {
+              name = "serviceTerritoryId"
+              value = {
+                elementReference = "ServiceAppointment.ServiceTerritoryId"
+              }
+            },
+            {
+              name = "workTypeGroupId"
+              value = {
+                elementReference = "WorkTypeGroupId"
+              }
+            },
+            {
+              name = "isAnonymousBooking"
+              value = {
+                elementReference = "ServiceAppointment.IsAnonymousBooking"
+              }
+            },
+            {
+              name = "saveErrors"
+              value = {
+                elementReference = "$Flow.FaultMessage"
+              }
+            },
+            {
+              name = "serviceAppointmentFields"
+              value = {
+                elementReference = "ServiceAppointmentFields"
+              }
+            },
+            {
+              name = "isGuestUser"
+              value = {
+                booleanValue = true
+              }
+            },
+            {
+              name = "lead"
+              value = {
+                elementReference = "GuestLead"
+              }
+            },
+            {
+              name = "serviceResources"
+              value = {
+                elementReference = "ServiceResources"
+              }
+            },
+            {
+              name = "validationErrors"
+              value = {
+                elementReference = "ValidationErrors"
+              }
+            },
+            {
+              name = "appointmentInvitationId"
+              value = {
+                elementReference = "AppointmentInvitation.Id"
+              }
+            },
+            {
+              name = "engagementChannelType"
+              value = {
+                elementReference = "engagementChannelTypeId"
+              }
+            },
+            {
+              name = "schedulingPolicyName"
+              value = {
+                elementReference = "SchedulingPolicyName"
+              }
+            },
+          ]
+          inputsOnNextNavToAssocScrn = "UseStoredValues"
+          isRequired = true
+          outputParameters = [
+            {
+              assignToReference = "ServiceAppointmentFields"
+              name = "serviceAppointmentFields"
+            },
+            {
+              assignToReference = "GuestLead"
+              name = "lead"
+            },
+            {
+              assignToReference = "ValidationErrors"
+              name = "validationErrors"
+            },
+            {
+              assignToReference = "engagementChannelTypeId"
+              name = "engagementChannelType"
+            },
+          ]
+        },
+      ]
+      showFooter = true
+      showHeader = true
+    },
+    {
+      description = "Displays the time slots associated with the appointment invitation and stores the results in ServiceAppointment, ServiceResourceId, ServiceResources, and WorkTypeGroup. Stores validation errors in ValidationErrors."
+      name = "ScreenSelectAppointmentTimeSlot"
+      label = "Set Appointment Time Slot"
+      allowBack = true
+      allowFinish = true
+      allowPause = true
+      connector = {
+        targetReference = "WhatTypeUser"
+      }
+      fields = [
+        {
+          name = "ComponentSelectAppointmentTimeSlot"
+          extensionName = "runtime_appointmentbooking:flowTimeslot"
+          fieldType = "ComponentInstance"
+          inputParameters = [
+            {
+              name = "serviceTerritoryId"
+              value = {
+                elementReference = "AppointmentInvitation.ServiceTerritoryId"
+              }
+            },
+            {
+              name = "workTypeGroupId"
+              value = {
+                elementReference = "WorkTypeGroupId"
+              }
+            },
+            {
+              name = "isAnonymousBooking"
+              value = {
+                elementReference = "ServiceAppointment.IsAnonymousBooking"
+              }
+            },
+            {
+              name = "parentRecordId"
+              value = {
+                elementReference = "ServiceAppointment.ParentRecordId"
+              }
+            },
+            {
+              name = "selectedStartTime"
+              value = {
+                elementReference = "ServiceAppointment.SchedStartTime"
+              }
+            },
+            {
+              name = "selectedEndTime"
+              value = {
+                elementReference = "ServiceAppointment.SchedEndTime"
+              }
+            },
+            {
+              name = "isHideSkip"
+              value = {
+                booleanValue = true
+              }
+            },
+            {
+              name = "showTimeZonePicklist"
+              value = {
+                booleanValue = true
+              }
+            },
+            {
+              name = "isInbound"
+              value = {
+                booleanValue = true
+              }
+            },
+            {
+              name = "validationErrors"
+              value = {
+                elementReference = "ValidationErrors"
+              }
+            },
+            {
+              name = "availabilityEndDate"
+              value = {
+                elementReference = "AppointmentInvitation.BookingEndDate"
+              }
+            },
+            {
+              name = "availabilityStartDate"
+              value = {
+                elementReference = "AppointmentInvitation.BookingStartDate"
+              }
+            },
+            {
+              name = "changePrimary"
+              value = {
+                booleanValue = false
+              }
+            },
+            {
+              name = "serviceResourceId"
+              value = {
+                elementReference = "ServiceResourceId"
+              }
+            },
+            {
+              name = "appointmentInvitationId"
+              value = {
+                elementReference = "AppointmentInvitation.Id"
+              }
+            },
+            {
+              name = "serviceResources"
+              value = {
+                elementReference = "ServiceResources"
+              }
+            },
+            {
+              name = "invitationFlowType"
+              value = {
+                stringValue = "InvitationBooking"
+              }
+            },
+            {
+              name = "workType"
+              value = {
+                elementReference = "WorkType"
+              }
+            },
+            {
+              name = "saveErrors"
+              value = {
+                elementReference = "$Flow.FaultMessage"
+              }
+            },
+            {
+              name = "engagementChannelType"
+              value = {
+                elementReference = "engagementChannelTypeId"
+              }
+            },
+            {
+              name = "schedulingPolicyName"
+              value = {
+                elementReference = "SchedulingPolicyName"
+              }
+            },
+          ]
+          inputsOnNextNavToAssocScrn = "UseStoredValues"
+          isRequired = true
+          outputParameters = [
+            {
+              assignToReference = "ServiceAppointment.SchedEndTime"
+              name = "selectedEndTime"
+            },
+            {
+              assignToReference = "ServiceAppointment.SchedStartTime"
+              name = "selectedStartTime"
+            },
+            {
+              assignToReference = "ServiceResourceId"
+              name = "serviceResourceId"
+            },
+            {
+              assignToReference = "ServiceAppointment.ServiceTerritoryId"
+              name = "serviceTerritoryId"
+            },
+            {
+              assignToReference = "WorkTypeGroupId"
+              name = "workTypeGroupId"
+            },
+            {
+              assignToReference = "ServiceResources"
+              name = "serviceResources"
+            },
+            {
+              assignToReference = "ValidationErrors"
+              name = "validationErrors"
+            },
+            {
+              assignToReference = "engagementChannelTypeId"
+              name = "engagementChannelType"
+            },
+          ]
+        },
+      ]
+      showFooter = true
+      showHeader = true
+    },
+  ]
+  sourceTemplate = "runtime_appointmentbooking__Inv_Book"
+  stages = [
+    {
+      name = "AppointmentInviteeStage"
+      isActive = true
+      label = "Appointment Invitee Stage"
+      stageOrder = 2
+    },
+    {
+      name = "ConfirmationStage"
+      isActive = true
+      label = "Confirmation Stage"
+      stageOrder = 7
+    },
+    {
+      name = "FaultMessageStage"
+      isActive = true
+      label = "FaultMessageStage"
+      stageOrder = 10
+    },
+    {
+      description = "Stores the label displayed to the flow user for the Guest"
+      name = "GuestUserStage"
+      isActive = true
+      label = "Review Guest Appointment"
+      stageOrder = 5
+    },
+    {
+      description = "Stores the label displayed to the flow user for the first stage on the flow screen progress indicator."
+      name = "InvitationStage"
+      isActive = true
+      label = "Get Appointment Invitation"
+      stageOrder = 1
+    },
+    {
+      name = "InviteeIterationStage"
+      isActive = true
+      label = "Invitee Iteration Stage"
+      stageOrder = 3
+    },
+    {
+      name = "ReviewStage"
+      isActive = true
+      label = "Review Stage"
+      stageOrder = 6
+    },
+    {
+      name = "TimeSlotStage"
+      isActive = true
+      label = "Time Slot Stage"
+      stageOrder = 4
+    },
+  ]
+  start = {
+    connector = {
+      targetReference = "InitializeServiceAppointment"
+    }
+  }
+  status = "Draft"
+  variables = [
+    {
+      description = "Stores the appointment invitation to book an appointment from."
+      name = "AppointmentInvitation"
+      dataType = "SObject"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      objectType = salesforce.AppointmentInvitation
+    },
+    {
+      description = "This variable holds Appointment Invitation Id"
+      name = "AppointmentInvitationId"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "The ID of the selected Engagement Channel Type."
+      name = "engagementChannelTypeId"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "Stores information about a guest Experience Cloud user."
+      name = "GuestLead"
+      dataType = "SObject"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      objectType = salesforce.Lead
+    },
+    {
+      description = "Stores the appointment invitation key specified as an input parameter when the flow is called."
+      name = "invitationKey"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+    {
+      description = "This variable is set to true when there are participants present for a given appointment invitation."
+      name = "IsParticipantPresent"
+      dataType = "Boolean"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "Stores the ID of the account, opportunity, or lead record that's specified as an input parameter when the flow is called. This record is a parent record for the service appointment."
+      name = "parentRecordId"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+    {
+      description = "Stores the API name of the scheduling policy to use to book appointments from an invitation. You can customize the default appointment scheduling policy. Or create your own scheduling policy and enter its name instead of Default Appointment Scheduling Policy."
+      name = "SchedulingPolicyName"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "Stores the service appointment to be booked."
+      name = "ServiceAppointment"
+      dataType = "SObject"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      objectType = salesforce.ServiceAppointment
+    },
+    {
+      description = "Stores a JSON string containing the field-value pairs for a service appointment."
+      name = "ServiceAppointmentFields"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "Stores the ID of the required (multi-resource scheduling not enabled) or the primary (multi-resource scheduling enabled) service resource for the appointment booking."
+      name = "ServiceResourceId"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "Stores information about additional service resources from the appointment invitation in JSON format when multi-resource scheduling is enabled."
+      name = "ServiceResources"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "Status Catagory of the message we want to display on the final screen."
+      name = "StatusCatagory"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "Stores a string when the invitation key has an invalid format, when the appointment invitation can't be found, or when there's no Contact ID for the currently user. Stores a JSON string if an error occurs in ScreenSelectAppointmentTimeSlot, ScreenReviewGuestAppointment, or ScreenReviewAppointment."
+      name = "ValidationErrors"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "This flow variable holds the Work Type used in the time slot screen to calculate availability."
+      name = "WorkType"
+      dataType = "SObject"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      objectType = salesforce.WorkType
+    },
+    {
+      description = "Stores the ID of the work type group (appointment topic) that ComponentSelectAppointmentTimeSlot uses to calculate appointment availability."
+      name = "WorkTypeGroupId"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+  ]
+  _alias = "Book Appointment from Invitation"
+}

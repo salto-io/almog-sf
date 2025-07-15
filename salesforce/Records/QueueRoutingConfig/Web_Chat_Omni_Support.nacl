@@ -1,0 +1,10 @@
+salesforce.QueueRoutingConfig Web_Chat_Omni_Support {
+  capacityType = "INHERITED"
+  capacityWeight = 5
+  isAttributeBased = false
+  label = "Web Chat Omni Support"
+  routingModel = "MOST_AVAILABLE"
+  routingPriority = 1
+  fullName = "Web_Chat_Omni_Support"
+  _alias = "Web Chat Omni Support"
+}

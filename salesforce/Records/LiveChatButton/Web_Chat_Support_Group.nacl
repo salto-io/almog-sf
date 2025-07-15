@@ -1,0 +1,21 @@
+salesforce.LiveChatButton Web_Chat_Support_Group {
+  deployments = {
+  }
+  enableQueue = false
+  isActive = true
+  label = "Web Chat Support Group"
+  optionsCustomRoutingIsEnabled = false
+  optionsHasChasitorIdleTimeout = false
+  optionsHasInviteAfterAccept = false
+  optionsHasInviteAfterReject = false
+  optionsHasRerouteDeclinedRequest = false
+  optionsIsAutoAccept = false
+  optionsIsInviteAutoRemove = false
+  routingType = "Choice"
+  skills = {
+    skill = "Almog_Skill"
+  }
+  type = "Standard"
+  fullName = "Web_Chat_Support_Group"
+  _alias = "Web Chat Support Group"
+}

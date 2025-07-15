@@ -1,0 +1,122 @@
+salesforce.RecordType Opportunity_AM_opportunity_record_type {
+  fullName = "Opportunity.AM_opportunity_record_type"
+  active = true
+  businessProcess = salesforce.BusinessProcess.instance.Opportunity_AM_test_sale_process@usss
+  description = "This is a test record type"
+  label = "AM opportunity record type"
+  picklistValues = [
+    {
+      picklist = salesforce.Opportunity.field.DeliveryInstallationStatus__c
+      values = [
+        {
+          fullName = salesforce.Opportunity.field.DeliveryInstallationStatus__c.valueSet.values.Completed.fullName
+          default = false
+        },
+        {
+          fullName = salesforce.Opportunity.field.DeliveryInstallationStatus__c.valueSet.values.In_progress@s.fullName
+          default = false
+        },
+        {
+          fullName = salesforce.Opportunity.field.DeliveryInstallationStatus__c.valueSet.values.Yet_to_begin@s.fullName
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Opportunity.field.ForecastCategoryName
+      values = [
+        {
+          fullName = "Best Case"
+          default = false
+        },
+        {
+          fullName = "Closed"
+          default = false
+        },
+        {
+          fullName = "Commit"
+          default = false
+        },
+        {
+          fullName = "Omitted"
+          default = false
+        },
+        {
+          fullName = "Pipeline"
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Opportunity.field.LeadSource
+      values = [
+        {
+          fullName = salesforce.StandardValueSet.instance.LeadSource.standardValue.values.Other.fullName
+          default = false
+        },
+        {
+          fullName = salesforce.StandardValueSet.instance.LeadSource.standardValue.values.Partner_Referral@s.fullName
+          default = false
+        },
+        {
+          fullName = salesforce.StandardValueSet.instance.LeadSource.standardValue.values.Phone_Inquiry@s.fullName
+          default = false
+        },
+        {
+          fullName = salesforce.StandardValueSet.instance.LeadSource.standardValue.values.Purchased_List@s.fullName
+          default = false
+        },
+        {
+          fullName = salesforce.StandardValueSet.instance.LeadSource.standardValue.values.Web.fullName
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Opportunity.field.Type
+      values = [
+        {
+          fullName = salesforce.StandardValueSet.instance.OpportunityType.standardValue.values.Existing_Customer___Downgrade@ssbs.fullName
+          default = false
+        },
+        {
+          fullName = salesforce.StandardValueSet.instance.OpportunityType.standardValue.values.Existing_Customer___Replacement@ssbs.fullName
+          default = false
+        },
+        {
+          fullName = salesforce.StandardValueSet.instance.OpportunityType.standardValue.values.Existing_Customer___Upgrade@ssbs.fullName
+          default = false
+        },
+        {
+          fullName = salesforce.StandardValueSet.instance.OpportunityType.standardValue.values.New_Customer@s.fullName
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Opportunity.field.sbaa__ApprovalStatus__c
+      values = [
+        {
+          fullName = salesforce.Opportunity.field.sbaa__ApprovalStatus__c.valueSet.values.Approved.fullName
+          default = false
+        },
+        {
+          fullName = salesforce.Opportunity.field.sbaa__ApprovalStatus__c.valueSet.values.Pending.fullName
+          default = false
+        },
+        {
+          fullName = salesforce.Opportunity.field.sbaa__ApprovalStatus__c.valueSet.values.Recalled.fullName
+          default = false
+        },
+        {
+          fullName = salesforce.Opportunity.field.sbaa__ApprovalStatus__c.valueSet.values.Rejected.fullName
+          default = false
+        },
+      ]
+    },
+  ]
+  _parent = [
+    salesforce.Opportunity,
+  ]
+  _alias = "AM opportunity record type"
+}

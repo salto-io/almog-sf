@@ -1,0 +1,10 @@
+salesforce.ProfileSessionSetting Custom_Sales_Profile_profileSessionSetting1732028968263 {
+  externalCommunityUserIdentityVerif = false
+  forceLogout = false
+  profile = "custom: sales profile"
+  sessionPersistence = false
+  sessionTimeout = 0
+  sessionTimeoutWarning = false
+  fullName = "Custom_Sales_Profile_profileSessionSetting1732028968263"
+  _alias = "Custom_Sales_Profile_profileSessionSetting1732028968263"
+}

@@ -1,0 +1,101 @@
+salesforce.LightningPage test_2 {
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "decorate"
+                value = "true"
+              },
+              {
+                name = "richTextValue"
+                value = "<p>hHHFGSDFGsd</p>"
+              },
+            ]
+            componentName = "flexipage:richText"
+            identifier = "flexipage_richText"
+          }
+        },
+      ]
+      name = "Facet-bee6b442-ab8e-431d-8a0b-1d2ea734faa1"
+      type = "Facet"
+    },
+    {
+      name = "Facet-00f5936d-0ab0-4630-b45a-2afec9cb3ead"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "Facet-bee6b442-ab8e-431d-8a0b-1d2ea734faa1"
+              },
+              {
+                name = "label"
+                value = "Standard.Tab.collaborate"
+              },
+              {
+                name = "name"
+                value = "accordionSection1"
+              },
+            ]
+            componentName = "flexipage:accordionSection"
+            identifier = "flexipage_accordionSection"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "Facet-00f5936d-0ab0-4630-b45a-2afec9cb3ead"
+              },
+              {
+                name = "label"
+                value = "Standard.Tab.dashboard"
+              },
+              {
+                name = "name"
+                value = "accordionSection2"
+              },
+            ]
+            componentName = "flexipage:accordionSection"
+            identifier = "flexipage_accordionSection2"
+          }
+        },
+      ]
+      name = "Facet-cec8fb8c-b320-452a-b6bb-827f0c29d7cd"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "accordionSections"
+                value = "Facet-cec8fb8c-b320-452a-b6bb-827f0c29d7cd"
+              },
+            ]
+            componentName = "flexipage:accordion"
+            identifier = "flexipage_accordion"
+          }
+        },
+      ]
+      name = "main"
+      type = "Region"
+    },
+  ]
+  masterLabel = "test 2"
+  template = {
+    name = "flexipage:defaultAppHomeTemplate"
+  }
+  type = "AppPage"
+  fullName = "test_2"
+  _alias = "test_2"
+}

@@ -1,0 +1,31 @@
+salesforce.FieldSet Opportunity_sbaa__DealDesk {
+  fullName = "Opportunity.sbaa__DealDesk"
+  description = "Fields displayed on Deal Desk page."
+  displayedFields = [
+    {
+      field = salesforce.Opportunity.field.AccountId
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = salesforce.Opportunity.field.Amount
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = salesforce.Opportunity.field.CloseDate
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = salesforce.Opportunity.field.StageName
+      isFieldManaged = false
+      isRequired = false
+    },
+  ]
+  label = "Deal Desk"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+  _alias = "Deal Desk (sbaa)"
+}

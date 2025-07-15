@@ -1,0 +1,11 @@
+salesforce.Certificate TestCertificate {
+  caSigned = false
+  encryptedWithPlatformEncryption = false
+  expirationDate = "2026-03-31T00:00:00.000Z"
+  keySize = 2048
+  masterLabel = "TestCertificate"
+  privateKeyExportable = true
+  fullName = "TestCertificate"
+  content = file("salesforce/Records/Certificate/TestCertificate.crt")
+  _alias = "TestCertificate"
+}

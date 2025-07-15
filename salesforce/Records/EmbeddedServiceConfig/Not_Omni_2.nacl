@@ -1,0 +1,13 @@
+salesforce.EmbeddedServiceConfig Not_Omni_2 {
+  areGuestUsersAllowed = false
+  deploymentFeature = "LiveAgent"
+  deploymentType = "Web"
+  isEnabled = true
+  isTermsAndConditionsEnabled = false
+  isTermsAndConditionsRequired = false
+  masterLabel = "Not Omni 2"
+  shouldHideAuthDialog = false
+  site = salesforce.CustomSite.instance.CustomersService
+  fullName = "Not_Omni_2"
+  _alias = "Not_Omni_2"
+}

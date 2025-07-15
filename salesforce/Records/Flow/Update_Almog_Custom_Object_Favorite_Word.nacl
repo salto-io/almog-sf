@@ -1,0 +1,90 @@
+salesforce.Flow Update_Almog_Custom_Object_Favorite_Word {
+  fullName = "Update_Almog_Custom_Object_Favorite_Word"
+  apiVersion = 63
+  areMetricsLoggedToDataCloud = false
+  assignments = [
+    {
+      name = "Update_Favorite_Word"
+      label = "Update Favorite Word"
+      assignmentItems = [
+        {
+          assignToReference = salesforce.Almog_Custom_Object__c.field.Favorite_word__c
+          operator = "Assign"
+          value = {
+            elementReference = "ConcatSign"
+          }
+        },
+      ]
+      connector = {
+        targetReference = "Almog_Decision"
+      }
+    },
+  ]
+  decisions = [
+    {
+      name = "Almog_Decision"
+      label = "Almog Decision"
+      defaultConnectorLabel = "Default Outcome"
+      rules = [
+        {
+          name = "Almog_Decision_Outcome"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "$Profile.Name"
+              operator = "EqualTo"
+              rightValue = {
+                elementReference = salesforce.Almog_Custom_Object__c.field.Name
+              }
+            },
+          ]
+          label = "Almog Decision Outcome"
+        },
+      ]
+    },
+  ]
+  environments = "Default"
+  formulas = [
+    {
+      name = "ConcatSign"
+      dataType = "String"
+      expression = "{!$Record.Favorite_word__c}& \"&!\""
+    },
+  ]
+  interviewLabel = "Update Almog Custom Object Favorite Word {!$Flow.CurrentDateTime}"
+  label = "Update Almog Custom Object Favorite Word"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  start = {
+    connector = {
+      targetReference = "Update_Favorite_Word"
+    }
+    object = salesforce.Almog_Custom_Object__c
+    recordTriggerType = "CreateAndUpdate"
+    triggerType = "RecordAfterSave"
+  }
+  status = "Active"
+  _parent = [
+    salesforce.Almog_Custom_Object__c,
+  ]
+  _alias = "Update Almog Custom Object Favorite Word"
+}

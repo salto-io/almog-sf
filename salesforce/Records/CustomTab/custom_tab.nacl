@@ -1,0 +1,13 @@
+salesforce.CustomTab custom_tab {
+  description = "Created by Lightning App Builder"
+  flexiPage = "custom_tab"
+  label = "custom_tab"
+  motif = "Custom58: Caduceus"
+  fullName = "custom_tab"
+  _generated_dependencies = [
+    {
+      reference = salesforce.LightningPage.instance.custom_tab
+    },
+  ]
+  _alias = "custom_tab"
+}

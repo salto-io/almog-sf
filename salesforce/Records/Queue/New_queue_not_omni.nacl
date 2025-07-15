@@ -1,0 +1,17 @@
+salesforce.Queue New_queue_not_omni {
+  doesSendEmailToMembers = false
+  name = "New queue not omni"
+  queueMembers = {
+    users = {
+      user = [
+        "almog.mesilaty+dev1@salto.io",
+      ]
+    }
+  }
+  queueRoutingConfig = salesforce.QueueRoutingConfig.instance.New_queue_not_omni
+  queueSobject = {
+    sobjectType = "LiveChatTranscript"
+  }
+  fullName = "New_queue_not_omni"
+  _alias = "New_queue_not_omni"
+}

@@ -1,0 +1,188 @@
+salesforce.Flow TestOrchestration {
+  fullName = "TestOrchestration"
+  apiVersion = 63
+  areMetricsLoggedToDataCloud = false
+  constants = [
+    {
+      name = "ConstantToEqualTo"
+      dataType = "Currency"
+      value = {
+        numberValue = 101
+      }
+    },
+  ]
+  decisions = [
+    {
+      name = "FirstDecision"
+      label = "FirstDecision"
+      defaultConnectorLabel = "Default Outcome"
+      rules = [
+        {
+          name = "FirstOutcome"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "VariableForFirstOutcome.IsDeleted"
+              operator = "EqualTo"
+              rightValue = {
+                elementReference = "VariableForFirstOutcome.IsClosed"
+              }
+            },
+          ]
+          label = "FirstOutcome"
+        },
+      ]
+    },
+  ]
+  environments = "Default"
+  interviewLabel = "TestOrchestration {!$Flow.CurrentDateTime}"
+  label = "TestOrchestration"
+  orchestratedStages = [
+    {
+      name = "FirstStage"
+      label = "FirstStage"
+      connector = {
+        targetReference = "FirstDecision"
+      }
+      exitConditionLogic = "and"
+      stageSteps = [
+        {
+          name = "FirstApprovalStep"
+          actionName = "G"
+          actionType = "stepApproval"
+          assignees = {
+            assignee = {
+              elementReference = "$User.Email"
+            }
+            assigneeType = "User"
+          }
+          canAssigneeEdit = true
+          entryConditionLogic = "and"
+          exitConditionLogic = "and"
+          exitConditions = {
+            conditionType = "ExitCondition"
+            leftValueReference = "VariableForRecordToApprove.Price"
+            operator = "EqualTo"
+            rightValue = {
+              elementReference = "ConstantToEqualTo"
+            }
+          }
+          inputParameters = [
+            {
+              name = "ActionInput__RecordId"
+              value = {
+                elementReference = "VariableForRecordToApprove.Account.IsDeleted"
+              }
+            },
+            {
+              name = "ActionInput__CustomEmailSubject"
+            },
+            {
+              name = "ActionInput__CustomEmailBody"
+            },
+          ]
+          label = "FirstApprovalStep"
+          requiresAsyncProcessing = false
+          runAsUser = false
+          shouldLock = true
+          stepSubtype = "ApprovalStep"
+        },
+        {
+          name = "FirstBackgroundStep"
+          actionName = "runtime_service_fieldservice__CrSerAppNotFound"
+          actionType = "stepBackground"
+          canAssigneeEdit = false
+          entryConditionLogic = "and"
+          exitConditionLogic = "and"
+          inputParameters = [
+            {
+              name = "contactId"
+              value = {
+                elementReference = "recordId"
+              }
+            },
+            {
+              name = "workTypeId"
+              value = {
+                elementReference = "submitter"
+              }
+            },
+          ]
+          label = "FirstBackgroundStep"
+          requiresAsyncProcessing = false
+          runAsUser = false
+          shouldLock = false
+          stepSubtype = "BackgroundStep"
+        },
+      ]
+    },
+  ]
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "ApprovalWorkflow"
+  runInMode = "SystemModeWithoutSharing"
+  start = {
+    connector = {
+      targetReference = "FirstStage"
+    }
+  }
+  status = "Active"
+  variables = [
+    {
+      name = "recordId"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+    {
+      name = "submissionComments"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+    {
+      name = "submitter"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+    {
+      name = "VariableForFirstOutcome"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Case
+    },
+    {
+      name = "VariableForRecordToApprove"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Asset
+    },
+  ]
+  _alias = "TestOrchestration"
+}

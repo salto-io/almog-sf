@@ -1,0 +1,15 @@
+salesforce.ValidationRule Asset_Asset_Validation_Rule_1 {
+  fullName = "Asset.Asset_Validation_Rule_1"
+  active = true
+  errorConditionFormula = "SerialNumber = \"0\""
+  errorMessage = "Serial number can not be 0 ^&%$!!!!!"
+  _parent = [
+    salesforce.Asset,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Asset.field.SerialNumber
+    },
+  ]
+  _alias = "Asset.Asset_Validation_Rule_1"
+}

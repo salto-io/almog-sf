@@ -1,0 +1,21 @@
+salesforce.LiveChatButton Customer_Service_Chat_Group {
+  deployments = {
+  }
+  enableQueue = false
+  isActive = true
+  label = "Customer Service Chat Group"
+  optionsCustomRoutingIsEnabled = false
+  optionsHasChasitorIdleTimeout = false
+  optionsHasInviteAfterAccept = false
+  optionsHasInviteAfterReject = false
+  optionsHasRerouteDeclinedRequest = false
+  optionsIsAutoAccept = false
+  optionsIsInviteAutoRemove = false
+  routingType = "Choice"
+  skills = {
+    skill = "Almog_Skill"
+  }
+  type = "Standard"
+  fullName = "Customer_Service_Chat_Group"
+  _alias = "Customer Service Chat Group"
+}

@@ -1,0 +1,10 @@
+salesforce.Role COO_helper {
+  caseAccessLevel = "Edit"
+  contactAccessLevel = "Edit"
+  mayForecastManagerShare = false
+  name = "helper"
+  opportunityAccessLevel = "Edit"
+  parentRole = salesforce.Role.instance.COO
+  fullName = "COO_helper"
+  _alias = "COO_helper"
+}

@@ -1,0 +1,9 @@
+salesforce.RecordType Test_Custom_Object__c_record_type_addition_test {
+  fullName = "Test_Custom_Object__c.record_type_addition_test"
+  active = true
+  label = "record type addition test"
+  _parent = [
+    salesforce.Test_Custom_Object__c,
+  ]
+  _alias = "record type addition test"
+}

@@ -1,0 +1,19 @@
+salesforce.WorkflowOutboundMessage Account_D@v {
+  fullName = "Account.D"
+  apiVersion = 61
+  endpointUrl = "https://unsplash.com/s/photos/cute-dog"
+  fields = [
+    salesforce.Account.field.AnnualRevenue,
+    salesforce.Account.field.Id,
+    salesforce.Account.field.UpsellOpportunity__c,
+  ]
+  includeSessionId = false
+  integrationUser = "almog.mesilaty+dev1@salto.io"
+  name = "D"
+  protected = false
+  useDeadLetterQueue = false
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "Account.D"
+}

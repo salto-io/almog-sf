@@ -1,0 +1,74 @@
+salesforce.Layout Almog_Custom_Object__c_Almog_Custom_Object_Layout@uuuubsss {
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.Almog_Custom_Object__c.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.Almog_Custom_Object__c.field.Favorite_word__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.Almog_Custom_Object__c.field.OwnerId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Almog_Custom_Object__c.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.Almog_Custom_Object__c.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  fullName = "Almog_Custom_Object__c-Almog Custom Object Layout"
+  _parent = [
+    salesforce.Almog_Custom_Object__c,
+  ]
+  _alias = "Almog_Custom_Object__c-Almog Custom Object Layout"
+}

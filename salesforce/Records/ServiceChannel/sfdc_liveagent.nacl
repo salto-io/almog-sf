@@ -1,0 +1,9 @@
+salesforce.ServiceChannel sfdc_liveagent {
+  doesMinimizeWidgetOnAccept = false
+  hasAutoAcceptEnabled = false
+  isInterruptible = false
+  label = "Chat"
+  relatedEntityType = salesforce.LiveChatTranscript
+  fullName = "sfdc_liveagent"
+  _alias = "Chat"
+}

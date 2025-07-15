@@ -1,0 +1,5 @@
+salesforce.ServicePresenceStatus Busy {
+  label = "Busy"
+  fullName = "Busy"
+  _alias = "Busy"
+}

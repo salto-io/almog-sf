@@ -1,0 +1,107 @@
+salesforce.LightningPage Record_Page_2 {
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          fieldInstance = {
+            fieldInstanceProperties = {
+              name = "uiBehavior"
+              value = "none"
+            }
+            fieldItem = salesforce.Almog_Custom_Object__c.field.Name
+            identifier = "RecordNameField3"
+          }
+        },
+      ]
+      name = "Facet-44f529e6-8d1f-4442-bfec-dbc5f337b3e6"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          fieldInstance = {
+            fieldInstanceProperties = {
+              name = "uiBehavior"
+              value = "none"
+            }
+            fieldItem = salesforce.Almog_Custom_Object__c.field.Favorite_word__c
+            identifier = "RecordFavorite_word_cField"
+          }
+        },
+      ]
+      name = "Facet-2be65049-b2cf-4b4d-8be6-9a4f0f5006ff"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "Facet-44f529e6-8d1f-4442-bfec-dbc5f337b3e6"
+              },
+            ]
+            componentName = "flexipage:column"
+            identifier = "flexipage_column"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "Facet-2be65049-b2cf-4b4d-8be6-9a4f0f5006ff"
+              },
+            ]
+            componentName = "flexipage:column"
+            identifier = "flexipage_column2"
+          }
+        },
+      ]
+      name = "Facet-15bc82ec-6537-4823-81b1-e8f67e31a3c9"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "columns"
+                value = "Facet-15bc82ec-6537-4823-81b1-e8f67e31a3c9"
+              },
+              {
+                name = "horizontalAlignment"
+                value = "false"
+              },
+              {
+                name = "label"
+                value = "Section"
+              },
+            ]
+            componentName = "flexipage:fieldSection"
+            identifier = "flexipage_fieldSection"
+          }
+        },
+      ]
+      name = "main"
+      type = "Region"
+    },
+  ]
+  masterLabel = "Record Page 2"
+  sobjectType = "Almog_Custom_Object__c"
+  template = {
+    name = "flexipage:recordHomeSingleColNoHeaderTemplateDesktop"
+    properties = {
+      name = "enablePageActionConfig"
+      value = "false"
+    }
+  }
+  type = "RecordPage"
+  fullName = "Record_Page_2"
+  _parent = [
+    salesforce.Almog_Custom_Object__c,
+  ]
+  _alias = "Record_Page_2"
+}

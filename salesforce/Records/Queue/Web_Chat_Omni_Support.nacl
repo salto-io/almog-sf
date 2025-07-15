@@ -1,0 +1,18 @@
+salesforce.Queue Web_Chat_Omni_Support {
+  doesSendEmailToMembers = false
+  name = "Web Chat Omni Support"
+  queueMembers = {
+    users = {
+      user = [
+        "almog.mesilaty+dev1@salto.io",
+        "almog.mesilaty+weak1@salto.io",
+      ]
+    }
+  }
+  queueRoutingConfig = salesforce.QueueRoutingConfig.instance.Web_Chat_Omni_Support
+  queueSobject = {
+    sobjectType = "Case"
+  }
+  fullName = "Web_Chat_Omni_Support"
+  _alias = "Web_Chat_Omni_Support"
+}

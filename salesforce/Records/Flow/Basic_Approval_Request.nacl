@@ -1,0 +1,492 @@
+salesforce.Flow Basic_Approval_Request {
+  fullName = "Basic_Approval_Request"
+  apiVersion = 62
+  areMetricsLoggedToDataCloud = false
+  decisions = [
+    {
+      description = "Determines whether the content requires revision before publication."
+      name = "DoesContentNeedRevision"
+      label = "Does Content Require Revision?"
+      defaultConnector = {
+        targetReference = "ReadyContentForPublication"
+      }
+      defaultConnectorLabel = "No (Default)"
+      rules = [
+        {
+          name = "IsReviseContent"
+          conditionLogic = "or"
+          conditions = [
+            {
+              leftValueReference = "WithdrawReviewRequest.Status"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "Completed"
+              }
+            },
+            {
+              leftValueReference = "ApproveOrRequestRevision.Outputs.Decision"
+              operator = "NotEqualTo"
+              rightValue = {
+                stringValue = "approved"
+              }
+            },
+          ]
+          connector = {
+            targetReference = "ReviseContent"
+          }
+          label = "Yes"
+        },
+      ]
+    },
+  ]
+  description = "Allows a content author to submit a content variant for content manager review, and allows for content variant revisions before the content manager approves for publication."
+  environments = "Default"
+  formulas = [
+    {
+      name = "GetLastComment"
+      dataType = "String"
+      expression = "IF(NOT(ISNULL({!ReviseAndResubmitContent.Outputs.Feedback})) && NOT(ISBLANK({!ReviseAndResubmitContent.Outputs.Feedback})), {!ReviseAndResubmitContent.Outputs.Feedback}, {!SubmitReviewRequest.Outputs.Feedback})"
+    },
+    {
+      name = "GetPresentFeedback"
+      dataType = "String"
+      expression = "IF(NOT(ISNULL({!ApproveOrRequestRevision.Outputs.Feedback})) && NOT(ISBLANK({!ApproveOrRequestRevision.Outputs.Feedback})), {!ApproveOrRequestRevision.Outputs.Feedback}, ' ')"
+    },
+    {
+      name = "GetPresentReviewer"
+      dataType = "String"
+      expression = "IF(NOT(ISNULL({!ApproveOrRequestRevision.Outputs.Reviewer})) && NOT(ISBLANK({!ApproveOrRequestRevision.Outputs.Reviewer})), {!ApproveOrRequestRevision.Outputs.Reviewer}, ' ')"
+    },
+  ]
+  interviewLabel = "$Label.ManagedContentOrchOOTBFlows.ApprovalRequestFlowLabel {!$Flow.CurrentDateTime}"
+  label = "Basic Approval Request"
+  orchestratedStages = [
+    {
+      description = "Sets the content variant's modification status to true and publication readiness status to false. Then allows the content author to provide comments before submitting the review request."
+      name = "InitiateContentReviewRequest"
+      label = "Initiate Content Review Request"
+      connector = {
+        targetReference = "ReviewContent"
+      }
+      exitConditionLogic = "and"
+      stageSteps = [
+        {
+          description = "After a workflow begins, the associated content can't be published until it is approved."
+          name = "Prevent_Content_Publication"
+          actionName = "managedContentVariantSetReadyStepBackground"
+          actionType = "managedContentVariantSetReadyStepBackground"
+          canAssigneeEdit = false
+          entryConditionLogic = "and"
+          exitConditionLogic = "and"
+          inputParameters = [
+            {
+              name = "ActionInput__IsReady"
+              value = {
+                booleanValue = false
+              }
+            },
+          ]
+          label = "Prevent Content Publication"
+          requiresAsyncProcessing = false
+          runAsUser = false
+          shouldLock = false
+          stepSubtype = "ManagedContentVariantSetReadyBackgroundStep"
+        },
+        {
+          description = "After a workflow begins, the associated content must be unlocked and edits should be allowed."
+          name = "Allow_Content_Edits"
+          actionName = "managedContentVariantSetLockStepBackground"
+          actionType = "managedContentVariantSetLockStepBackground"
+          canAssigneeEdit = false
+          entryConditionLogic = "and"
+          entryConditions = {
+            conditionType = "EntryCondition"
+            leftValueReference = "Prevent_Content_Publication.Status"
+            operator = "EqualTo"
+            rightValue = {
+              stringValue = "Completed"
+            }
+          }
+          exitConditionLogic = "and"
+          inputParameters = [
+            {
+              name = "ActionInput__IsLocked"
+              value = {
+                booleanValue = false
+              }
+            },
+          ]
+          label = "Allow Content Edits"
+          requiresAsyncProcessing = false
+          runAsUser = false
+          shouldLock = false
+          stepSubtype = "ManagedContentVariantSetLockBackgroundStep"
+        },
+        {
+          description = "Allows the content author to add comments to their request and to submit the content variant for review."
+          name = "SubmitReviewRequest"
+          actionName = "cms_orch__CMS_ReviseContent"
+          actionType = "managedContentRoleStepInteractive"
+          canAssigneeEdit = false
+          entryConditionLogic = "and"
+          entryConditions = {
+            conditionType = "EntryCondition"
+            leftValueReference = "Allow_Content_Edits.Status"
+            operator = "EqualTo"
+            rightValue = {
+              stringValue = "Completed"
+            }
+          }
+          exitConditionLogic = "and"
+          inputParameters = [
+            {
+              name = "ActionInput__MContentRoleDevName"
+              value = {
+                stringValue = "ContentAuthor_INTERNAL"
+              }
+            },
+            {
+              name = "ActionInput__RecordId"
+              value = {
+                elementReference = "MContentVariantId"
+              }
+            },
+          ]
+          label = "Submit Review Request"
+          requiresAsyncProcessing = false
+          runAsUser = false
+          shouldLock = false
+          stepSubtype = "ManagedContentRoleInteractiveStep"
+        },
+      ]
+    },
+    {
+      description = "Notifies the content author that their content variant has been approved, and sets the publication readiness status of the content variant to true."
+      name = "ReadyContentForPublication"
+      label = "Ready Content for Publication"
+      exitConditionLogic = "and"
+      stageSteps = [
+        {
+          description = "Notifies the content author that their content variant has been approved for publication, and allows the content author to conditionally view the final feedback for the content variant."
+          name = "ApprovedContent"
+          actionName = "cms_orch__CMS_NotifyRequester"
+          actionType = "managedContentRoleStepInteractive"
+          canAssigneeEdit = false
+          entryConditionLogic = "and"
+          exitConditionLogic = "and"
+          inputParameters = [
+            {
+              name = "Feedback"
+              value = {
+                elementReference = "ApproveOrRequestRevision.Outputs.Feedback"
+              }
+            },
+            {
+              name = "ActionInput__MContentRoleDevName"
+              value = {
+                stringValue = "ContentAuthor_INTERNAL"
+              }
+            },
+            {
+              name = "Reviewer"
+              value = {
+                elementReference = "ApproveOrRequestRevision.Outputs.Reviewer"
+              }
+            },
+            {
+              name = "ActionInput__RecordId"
+              value = {
+                elementReference = "MContentVariantId"
+              }
+            },
+          ]
+          label = "Approved Content"
+          requiresAsyncProcessing = false
+          runAsUser = false
+          shouldLock = false
+          stepSubtype = "ManagedContentRoleInteractiveStep"
+        },
+        {
+          description = "Sets the publication readiness status of the content variant to true."
+          name = "AllowContentPublication"
+          actionName = "managedContentVariantSetReadyStepBackground"
+          actionType = "managedContentVariantSetReadyStepBackground"
+          canAssigneeEdit = false
+          entryConditionLogic = "and"
+          entryConditions = {
+            conditionType = "EntryCondition"
+            leftValueReference = "ApprovedContent.Status"
+            operator = "EqualTo"
+            rightValue = {
+              stringValue = "Completed"
+            }
+          }
+          exitConditionLogic = "and"
+          inputParameters = [
+            {
+              name = "ActionInput__IsReady"
+              value = {
+                booleanValue = true
+              }
+            },
+          ]
+          label = "Allow Content Publication"
+          requiresAsyncProcessing = false
+          runAsUser = false
+          shouldLock = false
+          stepSubtype = "ManagedContentVariantSetReadyBackgroundStep"
+        },
+      ]
+    },
+    {
+      description = "Sets the content variant modification status to false. Allows the content manager to approve or request revisions to the content or allows the content author to withdraw the request."
+      name = "ReviewContent"
+      label = "Review Content"
+      connector = {
+        targetReference = "DoesContentNeedRevision"
+      }
+      exitActionInputParameters = [
+        {
+          name = "FirstStepStatus"
+          value = {
+            elementReference = "WithdrawReviewRequest.Status"
+          }
+        },
+        {
+          name = "SecondStepStatus"
+          value = {
+            elementReference = "ApproveOrRequestRevision.Status"
+          }
+        },
+      ]
+      exitActionName = "cms_orch__CMS_EvalApprovalStepStatus"
+      exitActionType = "evaluationFlow"
+      exitConditionLogic = "and"
+      stageSteps = [
+        {
+          description = "Sets the modification status of the content variant to false."
+          name = "PreventContentModifications"
+          actionName = "managedContentVariantSetLockStepBackground"
+          actionType = "managedContentVariantSetLockStepBackground"
+          canAssigneeEdit = false
+          entryConditionLogic = "and"
+          exitConditionLogic = "and"
+          inputParameters = [
+            {
+              name = "ActionInput__IsLocked"
+              value = {
+                booleanValue = true
+              }
+            },
+          ]
+          label = "Prevent Content Modifications"
+          requiresAsyncProcessing = false
+          runAsUser = false
+          shouldLock = false
+          stepSubtype = "ManagedContentVariantSetLockBackgroundStep"
+        },
+        {
+          description = "Allows a content manager to conditionally view a content author's feedback, provide revision comments, and approve or request revisions of a content variant."
+          name = "ApproveOrRequestRevision"
+          actionName = "cms_orch__CMS_ReviewContent"
+          actionType = "managedContentRoleStepInteractive"
+          canAssigneeEdit = false
+          entryConditionLogic = "and"
+          entryConditions = {
+            conditionType = "EntryCondition"
+            leftValueReference = "PreventContentModifications.Status"
+            operator = "EqualTo"
+            rightValue = {
+              stringValue = "Completed"
+            }
+          }
+          exitConditionLogic = "and"
+          inputParameters = [
+            {
+              name = "Feedback"
+              value = {
+                elementReference = "GetLastComment"
+              }
+            },
+            {
+              name = "ActionInput__MContentRoleDevName"
+              value = {
+                stringValue = "ContentManager_INTERNAL"
+              }
+            },
+            {
+              name = "ActionInput__RecordId"
+              value = {
+                elementReference = "MContentVariantId"
+              }
+            },
+          ]
+          label = "Approve or Request Revision"
+          requiresAsyncProcessing = false
+          runAsUser = false
+          shouldLock = false
+          stepSubtype = "ManagedContentRoleInteractiveStep"
+        },
+        {
+          description = "Allows a content author to withdraw the review request in order to make changes to the content variant."
+          name = "WithdrawReviewRequest"
+          actionName = "cms_orch__CMS_WithdrawReviewRequest"
+          actionType = "managedContentRoleStepInteractive"
+          canAssigneeEdit = false
+          entryConditionLogic = "and"
+          entryConditions = {
+            conditionType = "EntryCondition"
+            leftValueReference = "PreventContentModifications.Status"
+            operator = "EqualTo"
+            rightValue = {
+              stringValue = "Completed"
+            }
+          }
+          exitConditionLogic = "and"
+          inputParameters = [
+            {
+              name = "ActionInput__MContentRoleDevName"
+              value = {
+                stringValue = "ContentAuthor_INTERNAL"
+              }
+            },
+            {
+              name = "ActionInput__RecordId"
+              value = {
+                elementReference = "MContentVariantId"
+              }
+            },
+          ]
+          label = "Withdraw Review Request"
+          requiresAsyncProcessing = false
+          runAsUser = false
+          shouldLock = false
+          stepSubtype = "ManagedContentRoleInteractiveStep"
+        },
+      ]
+    },
+    {
+      description = "Sets the content variant's modification status to true and then allows the content author to review content manager feedback and provide comments before resubmitting the review request."
+      name = "ReviseContent"
+      label = "Revise Content"
+      connector = {
+        isGoTo = true
+        targetReference = "ReviewContent"
+      }
+      exitConditionLogic = "and"
+      stageSteps = [
+        {
+          description = "Set the modification status of the content variant to true."
+          name = "AllowContentModification"
+          actionName = "managedContentVariantSetLockStepBackground"
+          actionType = "managedContentVariantSetLockStepBackground"
+          canAssigneeEdit = false
+          entryConditionLogic = "and"
+          exitConditionLogic = "and"
+          inputParameters = [
+            {
+              name = "ActionInput__IsLocked"
+              value = {
+                booleanValue = false
+              }
+            },
+          ]
+          label = "Allow Content Modification"
+          requiresAsyncProcessing = false
+          runAsUser = false
+          shouldLock = false
+          stepSubtype = "ManagedContentVariantSetLockBackgroundStep"
+        },
+        {
+          description = "Allows a content author to conditionally view a reviewer's feedback, provide revision comments, and resubmit a content variant for review."
+          name = "ReviseAndResubmitContent"
+          actionName = "cms_orch__CMS_ReviseContent"
+          actionType = "managedContentRoleStepInteractive"
+          canAssigneeEdit = false
+          entryConditionLogic = "and"
+          entryConditions = {
+            conditionType = "EntryCondition"
+            leftValueReference = "AllowContentModification.Status"
+            operator = "EqualTo"
+            rightValue = {
+              stringValue = "Completed"
+            }
+          }
+          exitConditionLogic = "and"
+          inputParameters = [
+            {
+              name = "Feedback"
+              value = {
+                elementReference = "GetPresentFeedback"
+              }
+            },
+            {
+              name = "ActionInput__MContentRoleDevName"
+              value = {
+                stringValue = "ContentAuthor_INTERNAL"
+              }
+            },
+            {
+              name = "Reviewer"
+              value = {
+                elementReference = "GetPresentReviewer"
+              }
+            },
+            {
+              name = "ActionInput__RecordId"
+              value = {
+                elementReference = "MContentVariantId"
+              }
+            },
+          ]
+          label = "Revise and Resubmit Content"
+          requiresAsyncProcessing = false
+          runAsUser = false
+          shouldLock = false
+          stepSubtype = "ManagedContentRoleInteractiveStep"
+        },
+      ]
+    },
+  ]
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+  ]
+  processType = "ManagedContentAuthoringWorkflow"
+  sourceTemplate = "cms_orch__CMS_BasicApprovalRequest"
+  start = {
+    connector = {
+      targetReference = "InitiateContentReviewRequest"
+    }
+  }
+  status = "Active"
+  variables = [
+    {
+      description = "Required for a Managed Content Authoring Workflow (Beta) orchestration. Is passed into the orchestration."
+      name = "MContentSpaceId"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+    {
+      description = "Required for CMS Orchestration. Stores the ID of the managed content variant for the review request and is passed into the orchestration."
+      name = "MContentVariantId"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+  ]
+  _alias = "Basic Approval Request"
+}

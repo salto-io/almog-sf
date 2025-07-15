@@ -1,0 +1,133 @@
+salesforce.Flow salto_5023 {
+  fullName = "salto_5023"
+  actionCalls = [
+    {
+      name = "Send_Email_Action_1"
+      label = "Send Email Action 1"
+      actionName = "emailSimple"
+      actionType = "emailSimple"
+      connector = {
+        targetReference = "Decision_Action_1"
+      }
+      flowTransactionModel = "CurrentTransaction"
+      inputParameters = [
+        {
+          name = "senderAddress"
+          value = {
+            elementReference = "AccountVariable.Name"
+          }
+        },
+        {
+          name = "sendRichBody"
+          value = {
+            booleanValue = true
+          }
+        },
+        {
+          name = "recipientId"
+          value = {
+            elementReference = "$User.Email"
+          }
+        },
+        {
+          name = "emailTemplateId"
+          value = {
+            elementReference = "SendEmailAction1Template.Id"
+          }
+        },
+      ]
+      nameSegment = "emailSimple"
+      offset = 0
+    },
+  ]
+  apiVersion = 63
+  areMetricsLoggedToDataCloud = false
+  decisions = [
+    {
+      name = "Decision_Action_1"
+      label = "Decision Action 1"
+      defaultConnectorLabel = "Default Outcome"
+      rules = [
+        {
+          name = "OutCome"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "Send_Email_Action_1"
+              operator = "EqualTo"
+              rightValue = {
+                elementReference = "Send_Email_Action_1"
+              }
+            },
+          ]
+          label = "OutCome"
+        },
+      ]
+    },
+  ]
+  environments = "Default"
+  interviewLabel = "Invalid draft {!$Flow.CurrentDateTime}"
+  label = "salto-5023"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  start = {
+    connector = {
+      targetReference = "Send_Email_Action_1"
+    }
+  }
+  status = "Draft"
+  variables = [
+    {
+      name = "AccountVariable"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Account
+    },
+    {
+      name = "CollectionVariable"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Asset
+    },
+    {
+      name = "SendEmailAction1Template"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = "EmailTemplate"
+    },
+    {
+      name = "VariableForLoop"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Account
+    },
+  ]
+  _alias = "salto-5023"
+}

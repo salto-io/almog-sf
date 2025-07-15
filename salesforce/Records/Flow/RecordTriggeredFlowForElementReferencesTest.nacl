@@ -1,0 +1,408 @@
+salesforce.Flow RecordTriggeredFlowForElementReferencesTest {
+  fullName = "RecordTriggeredFlowForElementReferencesTest"
+  actionCalls = [
+    {
+      name = "AddScreenPopAction1"
+      label = "AddScreenPopAction1"
+      locationX = 369
+      locationY = 702
+      actionName = "addScreenPop"
+      actionType = "addScreenPop"
+      connector = {
+        targetReference = "SubmitForApproval1"
+      }
+      flowTransactionModel = "CurrentTransaction"
+      inputParameters = [
+        {
+          name = "screenPop"
+          value = {
+            stringValue = "[{\"id\":\"084e250a\",\"targetObjectId\":\"{!$Record.isunknown__c}\",\"isFocused\":true}]"
+          }
+        },
+        {
+          name = "pendingServiceRoutingInteractionInfoInputList"
+        },
+      ]
+      nameSegment = "addScreenPop"
+      offset = 0
+    },
+    {
+      name = "SubmitForApproval1"
+      label = "SubmitForApproval1"
+      locationX = 369
+      locationY = 702
+      actionName = "submit"
+      actionType = "submit"
+      connector = {
+        targetReference = "Decision1"
+      }
+      flowTransactionModel = "CurrentTransaction"
+      inputParameters = [
+        {
+          name = "objectId"
+          value = {
+            stringValue = "{!FlowVariableTest}"
+          }
+        },
+        {
+          name = "processDefinitionNameOrId"
+          value = {
+            elementReference = salesforce.Account.field.MasterRecordId
+          }
+        },
+      ]
+      nameSegment = "submit"
+      offset = 0
+      outputParameters = [
+        {
+          assignToReference = salesforce.Account.field.Id
+          name = "instanceId"
+        },
+        {
+          assignToReference = salesforce.Account.field.TestCollectionField__c
+          name = "instanceStatus"
+        },
+        {
+          assignToReference = salesforce.Account.field.Name
+          name = "entityId"
+        },
+      ]
+    },
+  ]
+  apiVersion = 63
+  areMetricsLoggedToDataCloud = false
+  assignments = [
+    {
+      name = "Assignment1"
+      label = "Assignment1"
+      locationX = 179
+      locationY = 405
+      assignmentItems = [
+        {
+          assignToReference = salesforce.Account.field.Id
+          operator = "Assign"
+          value = {
+            elementReference = salesforce.Account.field.RecordTypeId
+          }
+        },
+      ]
+      connector = {
+        targetReference = "Transform_1"
+      }
+    },
+  ]
+  decisions = [
+    {
+      name = "Check_FM_Amount"
+      label = "Check FM Amount"
+      locationX = 745
+      locationY = 918
+      defaultConnector = {
+        targetReference = "Transform2"
+      }
+      defaultConnectorLabel = ">=8k"
+      rules = [
+        {
+          name = "X8k"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = salesforce.Account.field.Name
+              operator = "EqualTo"
+              rightValue = {
+                elementReference = salesforce.Account.field.Name
+              }
+            },
+          ]
+          connector = {
+            targetReference = "Add_FM"
+          }
+          label = "<8k"
+        },
+      ]
+    },
+    {
+      name = "Decision1"
+      label = "Decision1"
+      locationX = 542
+      locationY = 695
+      defaultConnectorLabel = "Default Outcome"
+      rules = [
+        {
+          name = "Outcome1"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = salesforce.Account.field.Name
+              operator = "EqualTo"
+              rightValue = {
+                elementReference = salesforce.Account.field.Name
+              }
+            },
+          ]
+          label = "Outcome1"
+        },
+      ]
+    },
+  ]
+  environments = "Default"
+  interviewLabel = "RecordTriggeredFlowForElementReferencesTest {!$Flow.CurrentDateTime}"
+  label = "RecordTriggeredFlowForElementReferencesTest"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "FREE_FORM_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  recordLookups = [
+    {
+      name = "GetRecords1"
+      label = "GetRecords1"
+      locationX = 183
+      locationY = 976
+      assignNullValuesIfNoRecordsFound = false
+      connector = {
+        targetReference = "Transform2"
+      }
+      filterLogic = "and"
+      filters = [
+        {
+          field = salesforce.WebCart.field.Id
+          operator = "EqualTo"
+          value = {
+            elementReference = salesforce.Account.field.Name
+          }
+        },
+      ]
+      getFirstRecordOnly = false
+      object = salesforce.WebCart
+      queriedFields = [
+        salesforce.WebCart.field.Id,
+        salesforce.WebCart.field.Name,
+        salesforce.WebCart.field.TotalChargeTaxAmount,
+      ]
+      storeOutputAutomatically = true
+    },
+  ]
+  recordUpdates = [
+    {
+      name = "Add_FM"
+      label = "Add FM"
+      locationX = 1429
+      locationY = 506
+      connector = {
+        targetReference = "Assignment1"
+      }
+      filterLogic = "and"
+      filters = [
+        {
+          field = salesforce.Opportunity.field.Id
+          operator = "EqualTo"
+          value = {
+            stringValue = "Get_Opportunity.Id"
+          }
+        },
+      ]
+      inputAssignments = [
+        {
+          field = "null__NotFound"
+        },
+      ]
+      object = salesforce.Opportunity
+    },
+    {
+      name = "UpdateRecords1"
+      label = "UpdateRecords1"
+      locationX = 50
+      locationY = 780
+      connector = {
+        targetReference = "GetRecords1"
+      }
+      filterLogic = "and"
+      filters = [
+        {
+          field = salesforce.Asset.field.Price
+          operator = "EqualTo"
+          value = {
+            elementReference = "$Record__Prior.AnnualRevenue"
+          }
+        },
+        {
+          field = salesforce.Asset.field.Id
+          operator = "EqualTo"
+          value = {
+            elementReference = salesforce.Account.field.Id
+          }
+        },
+      ]
+      inputAssignments = [
+        {
+          field = "Street"
+          value = {
+            elementReference = salesforce.Asset.field.Name
+          }
+        },
+      ]
+      object = salesforce.Asset
+    },
+  ]
+  start = {
+    locationX = 517
+    locationY = 50
+    connector = {
+      targetReference = "Check_FM_Amount"
+    }
+    filterLogic = "and"
+    filters = [
+      {
+        field = salesforce.Account.field.IsDeleted
+        operator = "EqualTo"
+        value = {
+          booleanValue = false
+        }
+      },
+      {
+        field = salesforce.Account.field.isunknown__c
+        operator = "EqualTo"
+        value = {
+          booleanValue = true
+        }
+      },
+    ]
+    object = salesforce.Account
+    recordTriggerType = "CreateAndUpdate"
+    scheduledPaths = {
+      name = "ScheduledPath1"
+      connector = {
+        targetReference = "AddScreenPopAction1"
+      }
+      label = "ScheduledPath1"
+      maxBatchSize = 4
+      offsetNumber = 3
+      offsetUnit = "Days"
+      recordField = "CreatedDate"
+      timeSource = "RecordField"
+    }
+    triggerType = "RecordAfterSave"
+  }
+  status = "InvalidDraft"
+  transforms = [
+    {
+      name = "Transform2"
+      label = "Transform2"
+      locationX = 484
+      locationY = 884
+      dataType = "SObject"
+      isCollection = true
+      objectType = "Case"
+      scale = 0
+      storeOutputAutomatically = true
+      transformValues = {
+        transformValueActions = [
+          {
+            outputFieldApiName = "Id"
+            transformType = "Map"
+            value = {
+              elementReference = "GetRecords1[$EachItem].Id"
+            }
+          },
+          {
+            outputFieldApiName = "Subject"
+            transformType = "Map"
+            value = {
+              elementReference = "GetRecords1[$EachItem].Name"
+            }
+          },
+          {
+            outputFieldApiName = "Comments"
+            transformType = "Map"
+            value = {
+              elementReference = "GetRecords1[$EachItem].TotalChargeTaxAmount"
+            }
+          },
+          {
+            outputFieldApiName = "LastModifiedById"
+            transformType = "Map"
+            value = {
+              elementReference = salesforce.Account.field.AnnualRevenue
+            }
+          },
+        ]
+      }
+    },
+    {
+      name = "Transform_1"
+      label = "Transform 1"
+      locationX = 106
+      locationY = 576
+      connector = {
+        targetReference = "UpdateRecords1"
+      }
+      dataType = "SObject"
+      isCollection = false
+      objectType = "Lead"
+      scale = 0
+      storeOutputAutomatically = true
+      transformValues = {
+        transformValueActions = [
+          {
+            outputFieldApiName = "AnnualRevenue"
+            transformType = "Map"
+            value = {
+              elementReference = salesforce.Account.field.AnnualRevenue
+            }
+          },
+          {
+            outputFieldApiName = "CurrentGenerators__c"
+            transformType = "Map"
+            value = {
+              elementReference = salesforce.Account.field.Active__c
+            }
+          },
+        ]
+      }
+    },
+  ]
+  variables = [
+    {
+      name = "EmailVariable"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Customer
+    },
+    {
+      name = "FlowVariableTest"
+      apexClass = "ConnectApi__ChangeItemOutputRepresentation"
+      dataType = "Apex"
+      isCollection = false
+      isInput = true
+      isOutput = true
+    },
+  ]
+  _parent = [
+    salesforce.Account,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Lead.field.CurrentGenerators__c
+    },
+  ]
+  _alias = "RecordTriggeredFlowForElementReferencesTest"
+}

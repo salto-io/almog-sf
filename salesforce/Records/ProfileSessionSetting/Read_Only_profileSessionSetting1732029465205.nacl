@@ -1,0 +1,10 @@
+salesforce.ProfileSessionSetting Read_Only_profileSessionSetting1732029465205 {
+  externalCommunityUserIdentityVerif = false
+  forceLogout = false
+  profile = "read only"
+  sessionPersistence = false
+  sessionTimeout = 0
+  sessionTimeoutWarning = false
+  fullName = "Read_Only_profileSessionSetting1732029465205"
+  _alias = "Read_Only_profileSessionSetting1732029465205"
+}

@@ -1,0 +1,131 @@
+salesforce.Flow E {
+  fullName = "E"
+  apiVersion = 63
+  areMetricsLoggedToDataCloud = false
+  decisions = [
+    {
+      name = "Test_Decision_for_E_Flow"
+      label = "Test Decision for E Flow"
+      defaultConnectorLabel = "Default Outcome"
+      rules = [
+        {
+          name = "E_Flow_Decision_Outcome"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "TestNewResource.Name"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "Valid"
+              }
+            },
+            {
+              leftValueReference = "SecondVariable.FirstName"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "ValidLeadName"
+              }
+            },
+            {
+              leftValueReference = "TestCustomObjectVariable.IsDeleted"
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = false
+              }
+            },
+          ]
+          label = "E Flow Decision Outcome"
+        },
+      ]
+    },
+  ]
+  dynamicChoiceSets = {
+    name = "SecondResource"
+    dataType = "Currency"
+    displayField = salesforce.Opportunity.field.Amount
+    filterLogic = "and"
+    filters = {
+      field = salesforce.Opportunity.field.Amount
+      operator = "EqualTo"
+      value = {
+        numberValue = 3
+      }
+    }
+    object = salesforce.Opportunity
+    sortField = salesforce.Opportunity.field.Amount
+    sortOrder = "Desc"
+    valueField = salesforce.Opportunity.field.Amount
+  }
+  environments = "Default"
+  interviewLabel = "E {!$Flow.CurrentDateTime}"
+  label = "E"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  screens = [
+    {
+      description = "Test testing"
+      name = "E"
+      label = "E"
+      allowBack = true
+      allowFinish = true
+      allowPause = true
+      connector = {
+        targetReference = "Test_Decision_for_E_Flow"
+      }
+      showFooter = true
+      showHeader = true
+    },
+  ]
+  start = {
+    connector = {
+      targetReference = "E"
+    }
+  }
+  status = "Active"
+  variables = [
+    {
+      name = "SecondVariable"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Lead
+    },
+    {
+      name = "TestCustomObjectVariable"
+      dataType = "SObject"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      objectType = "TestCustomObject__Share"
+    },
+    {
+      name = "TestNewResource"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Account
+    },
+  ]
+  _alias = "E"
+}

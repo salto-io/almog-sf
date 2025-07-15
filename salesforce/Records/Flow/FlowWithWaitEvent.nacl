@@ -1,0 +1,171 @@
+salesforce.Flow FlowWithWaitEvent {
+  fullName = "FlowWithWaitEvent"
+  apiVersion = 63
+  areMetricsLoggedToDataCloud = false
+  assignments = [
+    {
+      name = "FirstAssignment"
+      label = "FirstAssignment"
+      assignmentItems = [
+        {
+          assignToReference = salesforce.Customer.field.Name
+          operator = "Assign"
+          value = {
+            stringValue = "Invalid"
+          }
+        },
+      ]
+    },
+  ]
+  environments = "Default"
+  interviewLabel = "FlowWithWaitEvent {!$Flow.CurrentDateTime}"
+  label = "FlowWithWaitEvent"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  start = {
+    connector = {
+      targetReference = "FirstWaitEvent"
+    }
+    filterLogic = "and"
+    filters = [
+      {
+        field = salesforce.Customer.field.Name
+        operator = "EqualTo"
+        value = {
+          stringValue = "Valid"
+        }
+      },
+    ]
+    object = salesforce.Customer
+    schedule = {
+      frequency = "Once"
+      startDate = "2025-03-15"
+      startTime = "01:00:00.000Z"
+    }
+    triggerType = "Scheduled"
+  }
+  status = "Draft"
+  waits = [
+    {
+      name = "FirstWaitEvent"
+      label = "FirstWaitEvent"
+      defaultConnector = {
+        targetReference = "WaitForAmountOfTime1"
+      }
+      defaultConnectorLabel = "Default Path"
+      waitEvents = {
+        name = "FirstWaitConfig"
+        conditionLogic = "and"
+        conditions = {
+          leftValueReference = salesforce.Customer.field.IsDeleted
+          operator = "EqualTo"
+          rightValue = {
+            elementReference = salesforce.Customer.field.IsDeleted
+          }
+        }
+        connector = {
+          targetReference = "FirstAssignment"
+        }
+        eventType = "DateRefAlarmEvent"
+        inputParameters = [
+          {
+            name = "TimeTableColumnEnumOrId"
+            value = {
+              stringValue = "Account"
+            }
+          },
+          {
+            name = "TimeFieldColumnEnumOrId"
+            value = {
+              stringValue = "test_for_unknown__c"
+            }
+          },
+          {
+            name = "EntityObjectId"
+            value = {
+              stringValue = "1"
+            }
+          },
+          {
+            name = "TimeOffset"
+            value = {
+              numberValue = 0
+            }
+          },
+          {
+            name = "TimeOffsetUnit"
+          },
+        ]
+        label = "FirstWaitConfig"
+        outputParameters = [
+          {
+            assignToReference = salesforce.Customer.field.Name
+            name = "AlarmTime"
+          },
+          {
+            assignToReference = salesforce.Customer.field.Id
+            name = "Status"
+          },
+        ]
+      }
+    },
+    {
+      name = "WaitForAmountOfTime1"
+      elementSubtype = "WaitDuration"
+      label = "WaitForAmountOfTime1"
+      defaultConnectorLabel = "Default Path"
+      timeZoneId = "Europe/Sofia"
+      waitEvents = {
+        conditionLogic = "and"
+        connector = {
+          targetReference = "WaitUntilDate1"
+        }
+        label = "el_0"
+        offset = 3
+        offsetUnit = "Days"
+        resumeTime = "00:15:00.000Z"
+      }
+    },
+    {
+      name = "WaitUntilDate1"
+      elementSubtype = "WaitDate"
+      label = "WaitUntilDate1"
+      defaultConnectorLabel = "Default Path"
+      timeZoneId = "Europe/Kaliningrad"
+      waitEvents = {
+        conditionLogic = "and"
+        label = "el_1"
+        resumeDate = "2025-03-13"
+        resumeTime = "01:15:00.000Z"
+      }
+    },
+  ]
+  _parent = [
+    salesforce.Customer,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account.field.test_for_unknown__c
+    },
+  ]
+  _alias = "FlowWithWaitEvent"
+}

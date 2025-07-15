@@ -1,0 +1,42 @@
+type salesforce.EmbeddedMessagingChannel {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  number anonymousUserJwtExpirationTime {
+  }
+  string authMode {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Auth",
+        "UnAuth",
+      ]
+    }
+  }
+  string connectedApp {
+  }
+  boolean isAttachmentUploadEnabled {
+  }
+  boolean isEstimatedWaitTimeEnabled {
+  }
+  boolean isFallbackMessageEnabled {
+  }
+  boolean isSaveTranscriptEnabled {
+  }
+  salesforce.MessagingAuthorization messagingAuthorizations {
+  }
+  number verifiedUserJwtExpirationTime {
+  }
+  metadataType = "EmbeddedMessagingChannel"
+}

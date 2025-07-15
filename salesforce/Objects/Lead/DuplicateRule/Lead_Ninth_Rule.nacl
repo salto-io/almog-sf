@@ -1,0 +1,33 @@
+salesforce.DuplicateRule Lead_Ninth_Rule@vu {
+  actionOnInsert = "Allow"
+  actionOnUpdate = "Allow"
+  alertText = "Use one of these records?"
+  duplicateRuleFilter = {
+    duplicateRuleFilterItems = {
+      field = salesforce.Lead.field.AnnualRevenue
+      operation = "equals"
+      value = "9"
+      sortOrder = 1
+      table = salesforce.Lead
+    }
+  }
+  duplicateRuleMatchRules = [
+    {
+      matchRuleSObjectType = salesforce.Lead
+      matchingRule = "Standard_Lead_Match_Rule_v1_0"
+    },
+  ]
+  isActive = false
+  masterLabel = "Ninth Rule"
+  operationsOnInsert = [
+    "Alert",
+    "Report",
+  ]
+  securityOption = "EnforceSharingRules"
+  sortOrder = 9
+  fullName = "Lead.Ninth_Rule"
+  _parent = [
+    salesforce.Lead,
+  ]
+  _alias = "Lead.Ninth_Rule"
+}

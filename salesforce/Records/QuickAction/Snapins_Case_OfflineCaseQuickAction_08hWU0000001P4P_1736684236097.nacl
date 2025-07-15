@@ -1,0 +1,40 @@
+salesforce.QuickAction Snapins_Case_OfflineCaseQuickAction_08hWU0000001P4P_1736684236097 {
+  description = "Snapins_Case_OfflineCaseQuickAction_08hWU0000001P4P_1736684236097"
+  fieldOverrides = [
+    {
+      field = "Origin"
+      literalValue = "Web"
+    },
+    {
+      field = "Status"
+      literalValue = "New"
+    },
+  ]
+  label = "Snapins_Case_OfflineCaseQuickAction_08hWU0000001P4P_1736684236097"
+  optionsCreateFeedItem = false
+  quickActionLayout = {
+    layoutSectionStyle = "TwoColumnsTopToBottom"
+    quickActionLayoutColumns = [
+      {
+        quickActionLayoutItems = [
+          {
+            emptySpace = false
+            field = "Subject"
+            uiBehavior = "Required"
+          },
+          {
+            emptySpace = false
+            field = "SuppliedEmail"
+            uiBehavior = "Edit"
+          },
+        ]
+      },
+      {
+      },
+    ]
+  }
+  targetObject = salesforce.Case
+  type = "Create"
+  fullName = "Snapins_Case_OfflineCaseQuickAction_08hWU0000001P4P_1736684236097"
+  _alias = "Snapins_Case_OfflineCaseQuickAction_08hWU0000001P4P_1736684236097"
+}

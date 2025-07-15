@@ -1,0 +1,51 @@
+salesforce.Flow Flow_for_approval_process {
+  fullName = "Flow_for_approval_process"
+  apiVersion = 63
+  areMetricsLoggedToDataCloud = false
+  assignments = [
+    {
+      name = "Value_Assignment"
+      label = "Value Assignment"
+      assignmentItems = [
+        {
+          assignToReference = "$Flow.CurrentRecord"
+          operator = "Assign"
+          value = {
+            stringValue = "\"\""
+          }
+        },
+      ]
+    },
+  ]
+  environments = "Default"
+  interviewLabel = "Flow for approval process {!$Flow.CurrentDateTime}"
+  label = "Flow for approval process"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  start = {
+    connector = {
+      targetReference = "Value_Assignment"
+    }
+  }
+  status = "Active"
+  _alias = "Flow for approval process"
+}

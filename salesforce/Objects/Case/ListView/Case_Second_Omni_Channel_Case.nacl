@@ -1,0 +1,13 @@
+salesforce.ListView Case_Second_Omni_Channel_Case {
+  fullName = "Case.Second_Omni_Channel_Case"
+  filterScope = "Queue"
+  label = "Second Omni Channel"
+  queue = salesforce.Queue.instance.Second_Omni_Channel
+  sharedTo = {
+    allInternalUsers = ""
+  }
+  _parent = [
+    salesforce.Case,
+  ]
+  _alias = "Second Omni Channel"
+}

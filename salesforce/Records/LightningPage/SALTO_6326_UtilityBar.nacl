@@ -1,0 +1,147 @@
+salesforce.LightningPage SALTO_6326_UtilityBar {
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "eager"
+                type = "decorator"
+                value = "false"
+              },
+              {
+                name = "height"
+                type = "decorator"
+                value = "480"
+              },
+              {
+                name = "icon"
+                type = "decorator"
+                value = "fallback"
+              },
+              {
+                name = "label"
+                type = "decorator"
+                value = "SALTO_6326_second"
+              },
+              {
+                name = "scrollable"
+                type = "decorator"
+                value = "true"
+              },
+              {
+                name = "width"
+                type = "decorator"
+                value = "340"
+              },
+            ]
+            componentName = "SALTO_6326_second"
+            identifier = "SALTO_6326_second"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "eager"
+                type = "decorator"
+                value = "false"
+              },
+              {
+                name = "height"
+                type = "decorator"
+                value = "480"
+              },
+              {
+                name = "icon"
+                type = "decorator"
+                value = "fallback"
+              },
+              {
+                name = "label"
+                type = "decorator"
+                value = "SALTO_6326_2"
+              },
+              {
+                name = "scrollable"
+                type = "decorator"
+                value = "true"
+              },
+              {
+                name = "width"
+                type = "decorator"
+                value = "340"
+              },
+            ]
+            componentName = "SALTO_6326"
+            identifier = "SALTO_6326"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "eager"
+                type = "decorator"
+                value = "false"
+              },
+              {
+                name = "height"
+                type = "decorator"
+                value = "480"
+              },
+              {
+                name = "icon"
+                type = "decorator"
+                value = "fallback"
+              },
+              {
+                name = "label"
+                type = "decorator"
+                value = "SALTO_6326"
+              },
+              {
+                name = "scrollable"
+                type = "decorator"
+                value = "true"
+              },
+              {
+                name = "width"
+                type = "decorator"
+                value = "340"
+              },
+            ]
+            componentName = "SALTO_6326"
+            identifier = "SALTO_63262"
+          }
+        },
+      ]
+      name = "utilityItems"
+      type = "Region"
+    },
+    {
+      name = "backgroundComponents"
+      type = "Background"
+    },
+  ]
+  masterLabel = "SALTO-6326 UtilityBar"
+  template = {
+    name = "one:utilityBarTemplateDesktop"
+    properties = {
+      name = "isLeftAligned"
+      value = "true"
+    }
+  }
+  type = "UtilityBar"
+  fullName = "SALTO_6326_UtilityBar"
+  _generated_dependencies = [
+    {
+      reference = salesforce.AuraDefinitionBundle.instance.SALTO_6326
+    },
+    {
+      reference = salesforce.AuraDefinitionBundle.instance.SALTO_6326_second
+    },
+  ]
+  _alias = "SALTO_6326_UtilityBar"
+}

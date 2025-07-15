@@ -1,0 +1,1266 @@
+salesforce.Flow Modify_Guest_Service_Appointment {
+  fullName = "Modify_Guest_Service_Appointment"
+  actionCalls = [
+    {
+      description = "Calls an action that cancels the service appointment and sends an email notification to the user who scheduled the appointment."
+      name = "CancelServiceAppointment"
+      label = "Cancel Service Appointment"
+      actionName = "cancelAppointment"
+      actionType = "cancelAppointment"
+      connector = {
+        targetReference = "ScreenDisplayCancellationConfirmation"
+      }
+      faultConnector = {
+        isGoTo = true
+        targetReference = "ScreenCollectCancellationReason"
+      }
+      flowTransactionModel = "CurrentTransaction"
+      inputParameters = [
+        {
+          name = "recordId"
+          value = {
+            elementReference = "ServiceAppointment.Id"
+          }
+        },
+        {
+          name = "cancelStatus"
+          value = {
+            elementReference = "ComponentCollectCancellationReason.status"
+          }
+        },
+        {
+          name = "cancellationReason"
+          value = {
+            elementReference = "ComponentCollectCancellationReason.cancellationReason"
+          }
+        },
+        {
+          name = "createSvcAppointmentUrl"
+          value = {
+            elementReference = "CreateServiceAppointmentUrl"
+          }
+        },
+        {
+          name = "confirmationEmailTemplateName"
+          value = {
+            elementReference = "CancelAppointmentEmailTemplateName"
+          }
+        },
+      ]
+      nameSegment = "cancelAppointment"
+      offset = 0
+      outputParameters = [
+        {
+          assignToReference = "ErrorMessage"
+          name = "errorMessage"
+        },
+      ]
+    },
+    {
+      description = "Calls an action that saves the modified service appointment details and sends an email notification to the flow user."
+      name = "SaveServiceAppointment"
+      label = "Save Service Appointment"
+      actionName = "saveAppointment"
+      actionType = "saveAppointment"
+      connector = {
+        targetReference = "ScreenDisplayServiceAppointmentModifyingConfirmation"
+      }
+      faultConnector = {
+        isGoTo = true
+        targetReference = "ScreenDisplayServiceAppointmentSummary"
+      }
+      flowTransactionModel = "Automatic"
+      inputParameters = [
+        {
+          name = "serviceAppointmentFields"
+          value = {
+            elementReference = "ServiceAppointmentFieldValues"
+          }
+        },
+        {
+          name = "selectedTimezone"
+          value = {
+            elementReference = "SelectedTimezone"
+          }
+        },
+        {
+          name = "IsInbound"
+          value = {
+            booleanValue = true
+          }
+        },
+        {
+          name = "modifyApptFlowUrl"
+          value = {
+            elementReference = "ModifyAppointmentFlowUrl"
+          }
+        },
+        {
+          name = "modifyApptEmailTemplate"
+          value = {
+            elementReference = "ModifyAppointmentEmailTemplate"
+          }
+        },
+        {
+          name = "svcApptToken"
+          value = {
+            elementReference = "svcApptToken"
+          }
+        },
+      ]
+      nameSegment = "saveAppointment"
+      offset = 0
+      outputParameters = [
+        {
+          assignToReference = "ErrorMessage"
+          name = "errorMessage"
+        },
+      ]
+    },
+  ]
+  apiVersion = 63
+  areMetricsLoggedToDataCloud = false
+  assignments = [
+    {
+      description = "Sets the DisableMultiResource variable to True for disabling multi-resource scheduling."
+      name = "SetDisableMultiResourceVariable"
+      label = "Set Disable Multi Resource Variable"
+      assignmentItems = [
+        {
+          assignToReference = "DisableMultiResource"
+          operator = "Assign"
+          value = {
+            booleanValue = true
+          }
+        },
+      ]
+      connector = {
+        isGoTo = true
+        targetReference = "ScreenSelectAppointmentTimeSlot"
+      }
+    },
+  ]
+  decisions = [
+    {
+      description = "Determines whether the appointment is anonymous."
+      name = "IsBookingAnonymous"
+      label = "Is Booking Anonymous?"
+      defaultConnector = {
+        targetReference = "IsDeviceScreenSmall"
+      }
+      defaultConnectorLabel = "No"
+      rules = [
+        {
+          name = "YesAnonymousBooking"
+          conditionLogic = "(1 AND 2) OR 3"
+          conditions = [
+            {
+              leftValueReference = "ModifyApptAnonymously"
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = true
+              }
+            },
+            {
+              leftValueReference = "AllowSvcResourceSelection"
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = false
+              }
+            },
+            {
+              leftValueReference = "ServiceAppointment.IsAnonymousBooking"
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = true
+              }
+            },
+          ]
+          connector = {
+            targetReference = "SetDisableMultiResourceVariable"
+          }
+          label = "Yes"
+        },
+      ]
+    },
+    {
+      description = "Determines whether the service appointment is multi-resource."
+      name = "IsBookingMultiResource"
+      label = "Is Booking Multi Resource?"
+      defaultConnector = {
+        targetReference = "ScreenSelectServiceResourceAndTimeSlot"
+      }
+      defaultConnectorLabel = "No"
+      rules = [
+        {
+          name = "BookingIsMultiResource"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "DisableMultiResource"
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = false
+              }
+            },
+          ]
+          connector = {
+            isGoTo = true
+            targetReference = "ScreenSelectServiceResource"
+          }
+          label = "Yes"
+        },
+      ]
+    },
+    {
+      description = "Determines if the user’s device screen size is small."
+      name = "IsDeviceScreenSmall"
+      label = "Is Device Screen Small?"
+      defaultConnector = {
+        targetReference = "IsBookingMultiResource"
+      }
+      defaultConnectorLabel = "No"
+      rules = [
+        {
+          name = "YesDeviceScreenSmall"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "$Client.FormFactor"
+              operator = "NotEqualTo"
+              rightValue = {
+                stringValue = "LARGE"
+              }
+            },
+          ]
+          connector = {
+            targetReference = "ScreenSelectServiceResource"
+          }
+          label = "Yes"
+        },
+      ]
+    },
+    {
+      description = "Determines whether the user wants to modify or cancel the service appointment."
+      name = "IsUserModifyingServiceAppointment"
+      label = "Is User Modifying Service Appointment?"
+      defaultConnector = {
+        targetReference = "ScreenCollectCancellationReason"
+      }
+      defaultConnectorLabel = "No"
+      rules = [
+        {
+          name = "YesModifyingAppointment"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "isUserModifyingAppointment"
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = true
+              }
+            },
+          ]
+          connector = {
+            targetReference = "IsBookingAnonymous"
+          }
+          label = "Yes"
+        },
+      ]
+    },
+  ]
+  description = "Modifies or cancels a service appointment for an unauthenticated user."
+  environments = "Default"
+  interviewLabel = "$Label.Industries_LightningSchedulerFileFlow.ModGstAppt {!$Flow.CurrentDateTime}"
+  label = "Modify Guest Service Appointment"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+  ]
+  processType = "Appointments"
+  runInMode = "DefaultMode"
+  screens = [
+    {
+      description = "Allows the flow user to specify a reason for the cancellation of the service appointment."
+      name = "ScreenCollectCancellationReason"
+      label = "Collect Cancellation Reason"
+      allowBack = true
+      allowFinish = true
+      allowPause = true
+      connector = {
+        targetReference = "CancelServiceAppointment"
+      }
+      fields = [
+        {
+          name = "ComponentCollectCancellationReason"
+          extensionName = "runtime_appointmentbooking:cancelApp"
+          fieldType = "ComponentInstance"
+          inputParameters = [
+            {
+              name = "cancelErrors"
+              value = {
+                elementReference = "$Flow.FaultMessage"
+              }
+            },
+            {
+              name = "isInbound"
+              value = {
+                booleanValue = true
+              }
+            },
+            {
+              name = "recordId"
+              value = {
+                elementReference = "ServiceAppointment.Id"
+              }
+            },
+          ]
+          inputsOnNextNavToAssocScrn = "UseStoredValues"
+          isRequired = true
+          storeOutputAutomatically = true
+        },
+      ]
+      showFooter = true
+      showHeader = true
+    },
+    {
+      description = "Displays the confirmation message that the service appointment is canceled."
+      name = "ScreenDisplayCancellationConfirmation"
+      label = "Display Cancellation Confirmation"
+      allowBack = false
+      allowFinish = true
+      allowPause = false
+      fields = [
+        {
+          name = "ComponentDisplayCancellationConfirmation"
+          extensionName = "runtime_appointmentbooking:flowConfirm"
+          fieldType = "ComponentInstance"
+          inputParameters = [
+            {
+              name = "isCancel"
+              value = {
+                booleanValue = true
+              }
+            },
+          ]
+          inputsOnNextNavToAssocScrn = "UseStoredValues"
+          isRequired = true
+          storeOutputAutomatically = true
+        },
+      ]
+      showFooter = false
+      showHeader = true
+    },
+    {
+      description = "Displays the confirmation to the flow user that the service appointment is modified."
+      name = "ScreenDisplayServiceAppointmentModifyingConfirmation"
+      label = "Display Service Appointment Modifying Confirmation"
+      allowBack = false
+      allowFinish = true
+      allowPause = false
+      fields = [
+        {
+          name = "ComponentDisplayServiceAppointmentModifyingConfirmation"
+          extensionName = "runtime_appointmentbooking:flowConfirm"
+          fieldType = "ComponentInstance"
+          inputsOnNextNavToAssocScrn = "UseStoredValues"
+          isRequired = true
+          storeOutputAutomatically = true
+        },
+      ]
+      showFooter = false
+      showHeader = true
+    },
+    {
+      description = "Displays a summary of the modified service appointment details to the flow user."
+      name = "ScreenDisplayServiceAppointmentSummary"
+      label = "Display Service Appointment Summary"
+      allowBack = true
+      allowFinish = true
+      allowPause = true
+      connector = {
+        targetReference = "SaveServiceAppointment"
+      }
+      fields = [
+        {
+          name = "ComponentDisplayServiceAppointmentSummary"
+          extensionName = "runtime_appointmentbooking:flowReview"
+          fieldType = "ComponentInstance"
+          inputParameters = [
+            {
+              name = "appointmentType"
+              value = {
+                elementReference = "ServiceAppointment.AppointmentType"
+              }
+            },
+            {
+              name = "contactId"
+              value = {
+                stringValue = ""
+              }
+            },
+            {
+              name = "parentRecordId"
+              value = {
+                elementReference = "ServiceAppointment.ParentRecordId"
+              }
+            },
+            {
+              name = "additionalInformation"
+              value = {
+                elementReference = "ServiceAppointment.AdditionalInformation"
+              }
+            },
+            {
+              name = "city"
+              value = {
+                elementReference = "ServiceAppointment.City"
+              }
+            },
+            {
+              name = "comments"
+              value = {
+                elementReference = "ServiceAppointment.Comments"
+              }
+            },
+            {
+              name = "country"
+              value = {
+                elementReference = "ServiceAppointment.Country"
+              }
+            },
+            {
+              name = "endDateTime"
+              value = {
+                elementReference = "ServiceAppointment.SchedEndTime"
+              }
+            },
+            {
+              name = "postalCode"
+              value = {
+                elementReference = "ServiceAppointment.PostalCode"
+              }
+            },
+            {
+              name = "startDateTime"
+              value = {
+                elementReference = "ServiceAppointment.SchedStartTime"
+              }
+            },
+            {
+              name = "state"
+              value = {
+                elementReference = "ServiceAppointment.State"
+              }
+            },
+            {
+              name = "street"
+              value = {
+                elementReference = "ServiceAppointment.Street"
+              }
+            },
+            {
+              name = "serviceResourceId"
+              value = {
+                elementReference = "ServiceResourceId"
+              }
+            },
+            {
+              name = "serviceTerritoryId"
+              value = {
+                elementReference = "ServiceAppointment.ServiceTerritoryId"
+              }
+            },
+            {
+              name = "workTypeGroupId"
+              value = {
+                elementReference = "WorkTypeGroupId"
+              }
+            },
+            {
+              name = "isAnonymousBooking"
+              value = {
+                elementReference = "ServiceAppointment.IsAnonymousBooking"
+              }
+            },
+            {
+              name = "isGuestUser"
+              value = {
+                booleanValue = true
+              }
+            },
+            {
+              name = "schedulingPolicyName"
+              value = {
+                elementReference = "SchedulingPolicyName"
+              }
+            },
+            {
+              name = "serviceAppointment"
+              value = {
+                elementReference = "ServiceAppointment"
+              }
+            },
+            {
+              name = "serviceAppointmentId"
+              value = {
+                elementReference = "ServiceAppointment.Id"
+              }
+            },
+            {
+              name = "isShowResourceSection"
+              value = {
+                elementReference = "AllowSvcResourceSelection"
+              }
+            },
+            {
+              name = "selectedTimezone"
+              value = {
+                elementReference = "SelectedTimezone"
+              }
+            },
+            {
+              name = "workTypeId"
+              value = {
+                elementReference = "ServiceAppointment.WorkTypeId"
+              }
+            },
+            {
+              name = "validationErrors"
+              value = {
+                elementReference = "ErrorMessage"
+              }
+            },
+            {
+              name = "saveErrors"
+              value = {
+                elementReference = "$Flow.FaultMessage"
+              }
+            },
+            {
+              name = "isSlotChanged"
+              value = {
+                booleanValue = true
+              }
+            },
+            {
+              name = "engagementChannelType"
+              value = {
+                elementReference = "EngagementChannelTypeId"
+              }
+            },
+          ]
+          inputsOnNextNavToAssocScrn = "UseStoredValues"
+          isRequired = true
+          outputParameters = [
+            {
+              assignToReference = "ServiceAppointmentFieldValues"
+              name = "serviceAppointmentFields"
+            },
+            {
+              assignToReference = "ErrorMessage"
+              name = "validationErrors"
+            },
+          ]
+        },
+      ]
+      showFooter = true
+      showHeader = true
+    },
+    {
+      description = "Allows the flow user to select a time slot to modify the service appointment."
+      name = "ScreenSelectAppointmentTimeSlot"
+      label = "Select Appointment Time Slot"
+      allowBack = true
+      allowFinish = true
+      allowPause = true
+      connector = {
+        targetReference = "ScreenDisplayServiceAppointmentSummary"
+      }
+      fields = [
+        {
+          name = "ComponentSelectAppointmentTimeSlot"
+          extensionName = "runtime_appointmentbooking:flowTimeslot"
+          fieldType = "ComponentInstance"
+          inputParameters = [
+            {
+              name = "changePrimary"
+              value = {
+                booleanValue = false
+              }
+            },
+            {
+              name = "disableMultiResourceAndConcurrency"
+              value = {
+                elementReference = "DisableMultiResource"
+              }
+            },
+            {
+              name = "engagementChannelType"
+              value = {
+                elementReference = "EngagementChannelTypeId"
+              }
+            },
+            {
+              name = "isInbound"
+              value = {
+                booleanValue = true
+              }
+            },
+            {
+              name = "isHideSkip"
+              value = {
+                booleanValue = true
+              }
+            },
+            {
+              name = "parentRecordId"
+              value = {
+                elementReference = "ServiceAppointment.ParentRecordId"
+              }
+            },
+            {
+              name = "schedulingPolicyName"
+              value = {
+                elementReference = "SchedulingPolicyName"
+              }
+            },
+            {
+              name = "selectedEndTime"
+              value = {
+                elementReference = "ServiceAppointment.SchedEndTime"
+              }
+            },
+            {
+              name = "selectedStartTime"
+              value = {
+                elementReference = "ServiceAppointment.SchedStartTime"
+              }
+            },
+            {
+              name = "selectedTimezone"
+              value = {
+                elementReference = "SelectedTimezone"
+              }
+            },
+            {
+              name = "serviceResourceId"
+              value = {
+                elementReference = "ServiceResourceId"
+              }
+            },
+            {
+              name = "serviceResources"
+              value = {
+                elementReference = "ServiceResources"
+              }
+            },
+            {
+              name = "serviceTerritoryId"
+              value = {
+                elementReference = "ServiceAppointment.ServiceTerritoryId"
+              }
+            },
+            {
+              name = "showTimeZonePicklist"
+              value = {
+                elementReference = "ShowTimeZonePicklist"
+              }
+            },
+            {
+              name = "currStartDate"
+              value = {
+                elementReference = "StartDate"
+              }
+            },
+            {
+              name = "workTypeGroupId"
+              value = {
+                elementReference = "WorkTypeGroupId"
+              }
+            },
+            {
+              name = "validationErrors"
+              value = {
+                elementReference = "ErrorMessage"
+              }
+            },
+            {
+              name = "serviceAppointmentId"
+              value = {
+                elementReference = "ServiceAppointment.Id"
+              }
+            },
+            {
+              name = "workType"
+              value = {
+                elementReference = "WorkType"
+              }
+            },
+          ]
+          inputsOnNextNavToAssocScrn = "ResetValues"
+          isRequired = true
+          outputParameters = [
+            {
+              assignToReference = "ServiceAppointment.SchedEndTime"
+              name = "selectedEndTime"
+            },
+            {
+              assignToReference = "ServiceAppointment.SchedStartTime"
+              name = "selectedStartTime"
+            },
+            {
+              assignToReference = "SelectedTimezone"
+              name = "selectedTimezone"
+            },
+            {
+              assignToReference = "ServiceResources"
+              name = "serviceResources"
+            },
+            {
+              assignToReference = "ServiceResourceId"
+              name = "serviceResourceId"
+            },
+            {
+              assignToReference = "StartDate"
+              name = "currStartDate"
+            },
+            {
+              assignToReference = "ErrorMessage"
+              name = "validationErrors"
+            },
+          ]
+        },
+      ]
+      showFooter = true
+      showHeader = true
+    },
+    {
+      description = "Allows the flow user to select the service resource to modify the service appointment."
+      name = "ScreenSelectServiceResource"
+      label = "Select Service Resource"
+      allowBack = true
+      allowFinish = true
+      allowPause = true
+      connector = {
+        targetReference = "ScreenSelectAppointmentTimeSlot"
+      }
+      fields = [
+        {
+          name = "ComponentSelectServiceResource"
+          extensionName = "runtime_appointmentbooking:resourceList"
+          fieldType = "ComponentInstance"
+          inputParameters = [
+            {
+              name = "serviceTerritoryId"
+              value = {
+                elementReference = "ServiceAppointment.ServiceTerritoryId"
+              }
+            },
+            {
+              name = "workTypeGroupId"
+              value = {
+                elementReference = "WorkTypeGroupId"
+              }
+            },
+            {
+              name = "anonymousBooking"
+              value = {
+                elementReference = "ModifyApptAnonymously"
+              }
+            },
+            {
+              name = "isAnonymousBooking"
+              value = {
+                elementReference = "ServiceAppointment.IsAnonymousBooking"
+              }
+            },
+            {
+              name = "defaultTimezone"
+              value = {
+                elementReference = "SelectedTimezone"
+              }
+            },
+            {
+              name = "engagementChannelType"
+              value = {
+                elementReference = "EngagementChannelTypeId"
+              }
+            },
+            {
+              name = "parentRecordId"
+              value = {
+                elementReference = "ServiceAppointment.ParentRecordId"
+              }
+            },
+            {
+              name = "serviceResourceId"
+              value = {
+                elementReference = "ServiceResourceId"
+              }
+            },
+            {
+              name = "schedulingPolicyName"
+              value = {
+                elementReference = "SchedulingPolicyName"
+              }
+            },
+            {
+              name = "resourceBooking"
+              value = {
+                elementReference = "AllowSvcResourceSelection"
+              }
+            },
+            {
+              name = "validationErrors"
+              value = {
+                elementReference = "ErrorMessage"
+              }
+            },
+          ]
+          inputsOnNextNavToAssocScrn = "UseStoredValues"
+          isRequired = true
+          outputParameters = [
+            {
+              assignToReference = "ServiceAppointment.IsAnonymousBooking"
+              name = "isAnonymousBooking"
+            },
+            {
+              assignToReference = "ServiceResourceId"
+              name = "serviceResourceId"
+            },
+            {
+              assignToReference = "ErrorMessage"
+              name = "validationErrors"
+            },
+          ]
+        },
+      ]
+      showFooter = true
+      showHeader = true
+    },
+    {
+      description = "Allows the flow user to select the service resource and the available time slot to modify the service appointment."
+      name = "ScreenSelectServiceResourceAndTimeSlot"
+      label = "Select Service Resource And Time Slot"
+      allowBack = true
+      allowFinish = true
+      allowPause = true
+      connector = {
+        targetReference = "ScreenDisplayServiceAppointmentSummary"
+      }
+      fields = [
+        {
+          name = "ComponentSelectServiceResourceAndTimeSlot"
+          extensionName = "runtime_appointmentbooking:resourceSlot"
+          fieldType = "ComponentInstance"
+          inputParameters = [
+            {
+              name = "anonymousBooking"
+              value = {
+                elementReference = "ModifyApptAnonymously"
+              }
+            },
+            {
+              name = "isAnonymousBooking"
+              value = {
+                elementReference = "ServiceAppointment.IsAnonymousBooking"
+              }
+            },
+            {
+              name = "preselectedTimezone"
+              value = {
+                elementReference = "SelectedTimezone"
+              }
+            },
+            {
+              name = "isInbound"
+              value = {
+                booleanValue = true
+              }
+            },
+            {
+              name = "parentRecordId"
+              value = {
+                elementReference = "ServiceAppointment.ParentRecordId"
+              }
+            },
+            {
+              name = "schedulingPolicyName"
+              value = {
+                elementReference = "SchedulingPolicyName"
+              }
+            },
+            {
+              name = "selectedEndTime"
+              value = {
+                elementReference = "ServiceAppointment.SchedEndTime"
+              }
+            },
+            {
+              name = "selectedStartTime"
+              value = {
+                elementReference = "ServiceAppointment.SchedStartTime"
+              }
+            },
+            {
+              name = "selectedTimezone"
+              value = {
+                elementReference = "SelectedTimezone"
+              }
+            },
+            {
+              name = "serviceResourceId"
+              value = {
+                elementReference = "ServiceResourceId"
+              }
+            },
+            {
+              name = "resourceBooking"
+              value = {
+                elementReference = "AllowSvcResourceSelection"
+              }
+            },
+            {
+              name = "serviceTerritoryId"
+              value = {
+                elementReference = "ServiceAppointment.ServiceTerritoryId"
+              }
+            },
+            {
+              name = "showTimeZonePicklist"
+              value = {
+                elementReference = "ShowTimeZonePicklist"
+              }
+            },
+            {
+              name = "currStartDate"
+              value = {
+                elementReference = "StartDate"
+              }
+            },
+            {
+              name = "workTypeGroupId"
+              value = {
+                elementReference = "WorkTypeGroupId"
+              }
+            },
+            {
+              name = "validationErrors"
+              value = {
+                elementReference = "ErrorMessage"
+              }
+            },
+            {
+              name = "engagementChannelType"
+              value = {
+                elementReference = "EngagementChannelTypeId"
+              }
+            },
+          ]
+          inputsOnNextNavToAssocScrn = "UseStoredValues"
+          isRequired = true
+          outputParameters = [
+            {
+              assignToReference = "ServiceAppointment.IsAnonymousBooking"
+              name = "isAnonymousBooking"
+            },
+            {
+              assignToReference = "ServiceAppointment.SchedEndTime"
+              name = "selectedEndTime"
+            },
+            {
+              assignToReference = "ServiceAppointment.SchedStartTime"
+              name = "selectedStartTime"
+            },
+            {
+              assignToReference = "SelectedTimezone"
+              name = "selectedTimezone"
+            },
+            {
+              assignToReference = "ServiceResourceId"
+              name = "serviceResourceId"
+            },
+            {
+              assignToReference = "StartDate"
+              name = "currStartDate"
+            },
+            {
+              assignToReference = "ErrorMessage"
+              name = "validationErrors"
+            },
+          ]
+        },
+      ]
+      showFooter = true
+      showHeader = true
+    },
+    {
+      description = "Displays radio button options that allow the flow user to either modify or cancel a service appointment."
+      name = "ScrnInitServiceAppointmentModOrCncl"
+      label = "Initialize Service Appointment Modification or Cancellation"
+      allowBack = true
+      allowFinish = true
+      allowPause = false
+      connector = {
+        targetReference = "IsUserModifyingServiceAppointment"
+      }
+      fields = [
+        {
+          name = "CpntInitServiceAppointmentModOrCncl"
+          extensionName = "runtime_appointmentbooking:guestModLndg"
+          fieldType = "ComponentInstance"
+          inputParameters = [
+            {
+              name = "isModifyingAppointment"
+              value = {
+                elementReference = "isUserModifyingAppointment"
+              }
+            },
+            {
+              name = "appointmentToken"
+              value = {
+                elementReference = "svcApptToken"
+              }
+            },
+          ]
+          inputsOnNextNavToAssocScrn = "UseStoredValues"
+          isRequired = true
+          outputParameters = [
+            {
+              assignToReference = "isUserModifyingAppointment"
+              name = "isModifyingAppointment"
+            },
+            {
+              assignToReference = "ServiceAppointment"
+              name = "serviceAppointment"
+            },
+            {
+              assignToReference = "ServiceResourceId"
+              name = "serviceResourceId"
+            },
+            {
+              assignToReference = "WorkTypeGroupId"
+              name = "workTypeGroupId"
+            },
+            {
+              assignToReference = "WorkType"
+              name = "workType"
+            },
+            {
+              assignToReference = "EngagementChannelTypeId"
+              name = "engagementChannelTypeId"
+            },
+          ]
+        },
+      ]
+      showFooter = true
+      showHeader = true
+    },
+  ]
+  sourceTemplate = "runtime_appointmentbooking__ModGstAppt"
+  start = {
+    connector = {
+      targetReference = "ScrnInitServiceAppointmentModOrCncl"
+    }
+  }
+  status = "Draft"
+  variables = [
+    {
+      description = "Stores a boolean value that indicates whether the flow user can select the service resource while modifying the service appointment or the service resource is selected by default."
+      name = "AllowSvcResourceSelection"
+      dataType = "Boolean"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      value = {
+        booleanValue = true
+      }
+    },
+    {
+      description = "Stores the dev name of the cancellation confirmation email template to use to notify the customer that their appointment has been canceled."
+      name = "CancelAppointmentEmailTemplateName"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "Stores the URL to include in the cancellation confirmation email that launches the flow to create an appointment for unauthenticated (guest) users."
+      name = "CreateServiceAppointmentUrl"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "Stores a boolean value that indicates whether to disable multi-resource scheduling or not."
+      name = "DisableMultiResource"
+      dataType = "Boolean"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      value = {
+        booleanValue = true
+      }
+    },
+    {
+      description = "Stores the ID of the engagement channel type associated with the service appointment."
+      name = "EngagementChannelTypeId"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "Stores the error messages shown to the flow user by various components and actions."
+      name = "ErrorMessage"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "Stores a boolean value that indicates whether to launch the modify service appointment flow or the cancel service appointment flow."
+      name = "isUserModifyingAppointment"
+      dataType = "Boolean"
+      isCollection = false
+      isInput = true
+      isOutput = false
+      value = {
+        booleanValue = true
+      }
+    },
+    {
+      description = "The dev name of the confirmation email template to use to notify a customer that their appointment has been modified."
+      name = "ModifyAppointmentEmailTemplate"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "Stores the URL to use to launch the flow to modify a guest appointment."
+      name = "ModifyAppointmentFlowUrl"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "Stores a boolean value that indicates whether the flow user can select to proceed with modifying the service appointment anonymously."
+      name = "ModifyApptAnonymously"
+      dataType = "Boolean"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      value = {
+        booleanValue = false
+      }
+    },
+    {
+      description = "Stores the API name of the scheduling policy that the flow user wants to associate with the flow."
+      name = "SchedulingPolicyName"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "Stores the timezone selected by the flow user."
+      name = "SelectedTimezone"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "Stores the service appointment record that was passed into the flow."
+      name = "ServiceAppointment"
+      dataType = "SObject"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      objectType = salesforce.ServiceAppointment
+    },
+    {
+      description = "Stores a JSON string containing name-value pairs to be used as the service appointment attributes."
+      name = "ServiceAppointmentFieldValues"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "Stores the ID of the primary or required service resource assigned to the service appointment."
+      name = "ServiceResourceId"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "Stores a JSON string containing a list of service resources when multi-resource scheduling is enabled."
+      name = "ServiceResources"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "Stores a boolean value that indicates whether to show the timezone picklist field."
+      name = "ShowTimeZonePicklist"
+      dataType = "Boolean"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      value = {
+        booleanValue = true
+      }
+    },
+    {
+      description = "Stores the start date of the service appointment."
+      name = "StartDate"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+    {
+      description = "Stores an encrypted token to identify the service appointment that the flow user wants to modify or cancel."
+      name = "svcApptToken"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+    {
+      description = "Stores the work type record that was passed into the flow."
+      name = "WorkType"
+      dataType = "SObject"
+      isCollection = false
+      isInput = false
+      isOutput = false
+      objectType = salesforce.WorkType
+    },
+    {
+      description = "Stores the ID of the work type group associated with the service appointment."
+      name = "WorkTypeGroupId"
+      dataType = "String"
+      isCollection = false
+      isInput = false
+      isOutput = false
+    },
+  ]
+  _alias = "Modify Guest Service Appointment"
+}

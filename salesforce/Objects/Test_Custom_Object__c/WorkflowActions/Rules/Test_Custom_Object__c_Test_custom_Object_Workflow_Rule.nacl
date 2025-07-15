@@ -1,0 +1,21 @@
+salesforce.WorkflowRule Test_Custom_Object__c_Test_custom_Object_Workflow_Rule@uuuuvssss {
+  fullName = "Test_Custom_Object__c.Test custom Object Workflow Rule"
+  actions = [
+    {
+      name = salesforce.WorkflowAlert.instance.Test_Custom_Object__c_Valid_Name_Alert@uuuuvuu
+      type = "Alert"
+    },
+  ]
+  active = true
+  formula = "Name = \"Valid\""
+  triggerType = "onCreateOrTriggeringUpdate"
+  _parent = [
+    salesforce.Test_Custom_Object__c,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Test_Custom_Object__c.field.Name
+    },
+  ]
+  _alias = "Test_Custom_Object__c.Test custom Object Workflow Rule"
+}

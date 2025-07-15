@@ -1,0 +1,15 @@
+salesforce.WorkflowTask Account_A@v {
+  fullName = "Account.A"
+  assignedTo = "almog.mesilaty+dev1@salto.io"
+  assignedToType = "user"
+  dueDateOffset = 10
+  notifyAssignee = false
+  priority = "Normal"
+  protected = false
+  status = "Not Started"
+  subject = "A"
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "Account.A"
+}

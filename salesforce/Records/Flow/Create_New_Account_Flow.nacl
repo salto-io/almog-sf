@@ -1,0 +1,55 @@
+salesforce.Flow Create_New_Account_Flow {
+  fullName = "Create_New_Account_Flow"
+  actionCalls = [
+    {
+      name = "New_Account"
+      label = "New Account"
+      actionName = salesforce.QuickAction.instance.NewAccount
+      actionType = "quickAction"
+      flowTransactionModel = "CurrentTransaction"
+      inputParameters = [
+        {
+          name = "Name"
+          value = {
+            elementReference = "New_Account"
+          }
+        },
+      ]
+      nameSegment = "NewAccount"
+      offset = 0
+    },
+  ]
+  apiVersion = 62
+  areMetricsLoggedToDataCloud = false
+  environments = "Default"
+  interviewLabel = "Create New Account Flow {!$Flow.CurrentDateTime}"
+  label = "Create New Account Flow"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  start = {
+    connector = {
+      targetReference = "New_Account"
+    }
+  }
+  status = "Active"
+  _alias = "Create New Account Flow"
+}

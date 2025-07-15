@@ -1,0 +1,10 @@
+salesforce.ProfileSessionSetting null_profileSessionSetting1742996381654 {
+  externalCommunityUserIdentityVerif = false
+  forceLogout = false
+  profile = "new security test profile"
+  sessionPersistence = false
+  sessionTimeout = 0
+  sessionTimeoutWarning = false
+  fullName = "null_profileSessionSetting1742996381654"
+  _alias = "null_profileSessionSetting1742996381654"
+}

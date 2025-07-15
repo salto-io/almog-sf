@@ -1,0 +1,9 @@
+salesforce.RecordType CollaborationGroup_RestrictedRecord {
+  fullName = "CollaborationGroup.RestrictedRecord"
+  active = true
+  label = "RestrictedRecord"
+  _parent = [
+    salesforce.CollaborationGroup,
+  ]
+  _alias = "RestrictedRecord"
+}

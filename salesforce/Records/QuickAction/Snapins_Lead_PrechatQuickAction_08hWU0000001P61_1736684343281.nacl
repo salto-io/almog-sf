@@ -1,0 +1,41 @@
+salesforce.QuickAction Snapins_Lead_PrechatQuickAction_08hWU0000001P61_1736684343281 {
+  description = "Snapins_Lead_PrechatQuickAction_08hWU0000001P61_1736684343281"
+  fieldOverrides = [
+    {
+      field = "Status"
+      literalValue = "New"
+    },
+  ]
+  label = "Snapins_Lead_PrechatQuickAction_08hWU0000001P61_1736684343281"
+  optionsCreateFeedItem = false
+  quickActionLayout = {
+    layoutSectionStyle = "TwoColumnsTopToBottom"
+    quickActionLayoutColumns = [
+      {
+        quickActionLayoutItems = [
+          {
+            emptySpace = false
+            field = "Name"
+            uiBehavior = "Required"
+          },
+          {
+            emptySpace = false
+            field = "Email"
+            uiBehavior = "Edit"
+          },
+          {
+            emptySpace = false
+            field = "Company"
+            uiBehavior = "Required"
+          },
+        ]
+      },
+      {
+      },
+    ]
+  }
+  targetObject = salesforce.Lead
+  type = "Create"
+  fullName = "Snapins_Lead_PrechatQuickAction_08hWU0000001P61_1736684343281"
+  _alias = "Snapins_Lead_PrechatQuickAction_08hWU0000001P61_1736684343281"
+}

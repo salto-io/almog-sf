@@ -1,0 +1,98 @@
+salesforce.ApprovalProcess Account_salto_6396@vu {
+  active = true
+  allowRecall = false
+  allowedSubmitters = [
+    {
+      type = "owner"
+    },
+  ]
+  approvalPageFields = {
+    field = [
+      "Name",
+      "Owner",
+    ]
+  }
+  approvalStep = [
+    {
+      allowDelegate = false
+      assignedApprover = {
+        approver = {
+          type = "adhoc"
+        }
+      }
+      label = "Step 1"
+      name = "Step_1"
+    },
+  ]
+  enableMobileDeviceAccess = false
+  entryCriteria = {
+    criteriaItems = {
+      field = salesforce.Account.field.SLAExpirationDate__c
+      operation = "equals"
+      value = "11/20/2024"
+    }
+  }
+  finalApprovalActions = {
+    action = [
+      {
+        name = salesforce.WorkflowTask.instance.Account_A@v
+        type = "Task"
+      },
+      {
+        name = salesforce.WorkflowAlert.instance.Account_B@v
+        type = "Alert"
+      },
+    ]
+  }
+  finalApprovalRecordLock = true
+  finalRejectionActions = {
+    action = [
+      {
+        name = salesforce.WorkflowFieldUpdate.instance.Account_C@v
+        type = "FieldUpdate"
+      },
+      {
+        name = salesforce.WorkflowTask.instance.Account_salto_6620@vu
+        type = "Task"
+      },
+      {
+        name = salesforce.WorkflowTask.instance.Account_salto_6620@vu
+        type = "Task"
+      },
+    ]
+  }
+  finalRejectionRecordLock = false
+  initialSubmissionActions = {
+    action = [
+      {
+        name = salesforce.WorkflowTask.instance.Account_A@v
+        type = "Task"
+      },
+    ]
+  }
+  label = "salto-6396"
+  nextAutomatedApprover = {
+    useApproverFieldOfRecordOwner = true
+    userHierarchyField = "Manager"
+  }
+  processOrder = 1
+  recallActions = {
+    action = [
+      {
+        name = salesforce.WorkflowTask.instance.Account_A@v
+        type = "Task"
+      },
+      {
+        name = salesforce.WorkflowOutboundMessage.instance.Account_D@v
+        type = "OutboundMessage"
+      },
+    ]
+  }
+  recordEditability = "AdminOrCurrentApprover"
+  showApprovalHistory = true
+  fullName = "Account.salto_6396"
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "salto-6396"
+}

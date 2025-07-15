@@ -1,0 +1,628 @@
+salesforce.Flow discovery_call_assessment {
+  fullName = "discovery_call_assessment"
+  areMetricsLoggedToDataCloud = false
+  assignments = [
+    {
+      name = "pageNamesInOrder_Assignment"
+      label = "pageNamesInOrder_Assignment"
+      locationX = 0
+      locationY = 0
+      assignmentItems = [
+        {
+          assignToReference = "pageNamesInOrder"
+          operator = "Add"
+          value = {
+            stringValue = "p_d2030b13_d523_4057_ad25_c2d8a602efe5"
+          }
+        },
+        {
+          assignToReference = "pageNamesInOrder"
+          operator = "Add"
+          value = {
+            stringValue = "thank_you_page"
+          }
+        },
+      ]
+      connector = {
+        targetReference = "p_d2030b13_d523_4057_ad25_c2d8a602efe5"
+      }
+    },
+  ]
+  choices = [
+    {
+      name = "c_021bb1fc_c7ba_401e_8951_886e70540f64"
+      choiceText = "Needs work"
+      dataType = "Number"
+      value = {
+        numberValue = 1
+      }
+    },
+    {
+      name = "c_04b985c6_4b2a_450f_827b_c7a3b2b2d8b1"
+      choiceText = "3"
+      dataType = "Number"
+      value = {
+        numberValue = 3
+      }
+    },
+    {
+      name = "c_0c0af968_e532_4281_9792_31992b69615a"
+      choiceText = "2"
+      dataType = "Number"
+      value = {
+        numberValue = 2
+      }
+    },
+    {
+      name = "c_169b8fef_dfa5_447f_82c3_4d0930a76e97"
+      choiceText = "3"
+      dataType = "Number"
+      value = {
+        numberValue = 3
+      }
+    },
+    {
+      name = "c_1d451ac0_a65f_4b67_9ee9_f0844204d1d8"
+      choiceText = "Excellent"
+      dataType = "Number"
+      value = {
+        numberValue = 5
+      }
+    },
+    {
+      name = "c_33216fdd_1d3f_4778_9a64_b4058e4c5798"
+      choiceText = "4"
+      dataType = "Number"
+      value = {
+        numberValue = 4
+      }
+    },
+    {
+      name = "c_34a98fb7_fd2d_4a68_82d7_7c483bd7bf84"
+      choiceText = "4"
+      dataType = "Number"
+      value = {
+        numberValue = 4
+      }
+    },
+    {
+      name = "c_34b3f406_7581_4fe3_b4a0_3afb58df117a"
+      choiceText = "4"
+      dataType = "Number"
+      value = {
+        numberValue = 4
+      }
+    },
+    {
+      name = "c_474286c7_494e_4c3c_b6db_d491867089fa"
+      choiceText = "Excellent"
+      dataType = "Number"
+      value = {
+        numberValue = 5
+      }
+    },
+    {
+      name = "c_549ef69e_48a1_413c_9e6b_a3437731511f"
+      choiceText = "2"
+      dataType = "Number"
+      value = {
+        numberValue = 2
+      }
+    },
+    {
+      name = "c_57606855_0adc_424f_9810_00e248ffecf4"
+      choiceText = "Excellent"
+      dataType = "Number"
+      value = {
+        numberValue = 5
+      }
+    },
+    {
+      name = "c_76aa3652_2c65_4bb3_9d4b_e3417c2961d1"
+      choiceText = "4"
+      dataType = "Number"
+      value = {
+        numberValue = 4
+      }
+    },
+    {
+      name = "c_8564d98e_42cc_4b59_bfed_a015df280b31"
+      choiceText = "Needs work"
+      dataType = "Number"
+      value = {
+        numberValue = 1
+      }
+    },
+    {
+      name = "c_90a944d2_3db4_4674_a5dd_a861e1aee8a2"
+      choiceText = "3"
+      dataType = "Number"
+      value = {
+        numberValue = 3
+      }
+    },
+    {
+      name = "c_93d9ce9d_63e0_4b7f_9f04_795c7c6456d5"
+      choiceText = "2"
+      dataType = "Number"
+      value = {
+        numberValue = 2
+      }
+    },
+    {
+      name = "c_99d953b9_bb4f_4977_9629_4f244545ae39"
+      choiceText = "Excellent"
+      dataType = "Number"
+      value = {
+        numberValue = 5
+      }
+    },
+    {
+      name = "c_a40f53e5_c7a3_4ae2_881e_75c0822f9ab3"
+      choiceText = "2"
+      dataType = "Number"
+      value = {
+        numberValue = 2
+      }
+    },
+    {
+      name = "c_b43d2402_5ac9_4477_9dc1_6beb2b6f25ac"
+      choiceText = "2"
+      dataType = "Number"
+      value = {
+        numberValue = 2
+      }
+    },
+    {
+      name = "c_d4c18153_2382_427d_9779_4aff55da8963"
+      choiceText = "Needs work"
+      dataType = "Number"
+      value = {
+        numberValue = 1
+      }
+    },
+    {
+      name = "c_d7936c2e_7513_4196_8108_123de14eb17a"
+      choiceText = "Needs work"
+      dataType = "Number"
+      value = {
+        numberValue = 1
+      }
+    },
+    {
+      name = "c_db8d0610_1b4b_412f_ab47_791a841237f3"
+      choiceText = "3"
+      dataType = "Number"
+      value = {
+        numberValue = 3
+      }
+    },
+    {
+      name = "c_dd6a7069_cb99_46d7_8a99_1a255aa0176e"
+      choiceText = "Needs work"
+      dataType = "Number"
+      value = {
+        numberValue = 1
+      }
+    },
+    {
+      name = "c_df2b725a_35b7_4151_b86b_4b7e22db818b"
+      choiceText = "3"
+      dataType = "Number"
+      value = {
+        numberValue = 3
+      }
+    },
+    {
+      name = "c_e3910409_2dfa_4243_a5d0_bff374a143fe"
+      choiceText = "4"
+      dataType = "Number"
+      value = {
+        numberValue = 4
+      }
+    },
+    {
+      name = "c_ed5ad64f_1b81_41c9_9398_0d9b29fc107f"
+      choiceText = "Excellent"
+      dataType = "Number"
+      value = {
+        numberValue = 5
+      }
+    },
+  ]
+  interviewLabel = "Discovery Call Assessment"
+  label = "Discovery Call Assessment"
+  processMetadataValues = [
+    {
+      name = "advanceThankYouPageEnabled"
+      value = {
+        booleanValue = false
+      }
+    },
+    {
+      name = "autoProgressEnabled"
+      value = {
+        booleanValue = false
+      }
+    },
+    {
+      name = "hasWelcomePage"
+      value = {
+        booleanValue = false
+      }
+    },
+    {
+      name = "isSimpleSurvey"
+      value = {
+        booleanValue = false
+      }
+    },
+    {
+      name = "overrideActiveVersion"
+      value = {
+        booleanValue = false
+      }
+    },
+    {
+      name = "surveyType"
+      value = {
+        stringValue = "Assessment"
+      }
+    },
+  ]
+  processType = "Survey"
+  screens = [
+    {
+      name = "p_d2030b13_d523_4057_ad25_c2d8a602efe5"
+      label = "Page 1"
+      locationX = 0
+      locationY = 0
+      allowBack = true
+      allowFinish = true
+      allowPause = true
+      fields = [
+        {
+          processMetadataValues = [
+            {
+              name = "autoProgressAction"
+              value = {
+                stringValue = "NONE"
+              }
+            },
+            {
+              name = "defaultValue"
+              value = {
+                elementReference = "var_q_da90d5b4_d12f_46dd_960d_38a7b6ebf552_defaultValue"
+              }
+            },
+            {
+              name = "iconType"
+              value = {
+                stringValue = "star"
+              }
+            },
+          ]
+          name = "q_da90d5b4_d12f_46dd_960d_38a7b6ebf552"
+          choiceReferences = [
+            "c_8564d98e_42cc_4b59_bfed_a015df280b31",
+            "c_0c0af968_e532_4281_9792_31992b69615a",
+            "c_db8d0610_1b4b_412f_ab47_791a841237f3",
+            "c_34b3f406_7581_4fe3_b4a0_3afb58df117a",
+            "c_57606855_0adc_424f_9810_00e248ffecf4",
+          ]
+          dataType = "Number"
+          extensionName = "survey:runtimeRating"
+          fieldText = '''
+<p><strong style="font-family: Arial; font-size: 10pt;">Preparation<span
+                class="ql-cursor"></span></strong></p>
+'''
+          fieldType = "ComponentChoice"
+          helpText = "Showed knowledge of the prospect and their history, and kept the conversation relevant."
+          isRequired = false
+          scale = 0
+        },
+        {
+          processMetadataValues = [
+            {
+              name = "autoProgressAction"
+              value = {
+                stringValue = "NONE"
+              }
+            },
+            {
+              name = "defaultValue"
+              value = {
+                elementReference = "var_q_8fc5ba56_867c_4251_a89a_1fd5f6fc7142_defaultValue"
+              }
+            },
+            {
+              name = "iconType"
+              value = {
+                stringValue = "star"
+              }
+            },
+          ]
+          name = "q_8fc5ba56_867c_4251_a89a_1fd5f6fc7142"
+          choiceReferences = [
+            "c_d4c18153_2382_427d_9779_4aff55da8963",
+            "c_93d9ce9d_63e0_4b7f_9f04_795c7c6456d5",
+            "c_04b985c6_4b2a_450f_827b_c7a3b2b2d8b1",
+            "c_34a98fb7_fd2d_4a68_82d7_7c483bd7bf84",
+            "c_ed5ad64f_1b81_41c9_9398_0d9b29fc107f",
+          ]
+          dataType = "Number"
+          extensionName = "survey:runtimeRating"
+          fieldText = '''
+<p><strong style="font-family: Arial; font-size: 10pt;">Qualification<span
+                class="ql-cursor"></span></strong></p>
+'''
+          fieldType = "ComponentChoice"
+          helpText = "Asked the right questions to evaluate the lead and determine fit."
+          isRequired = false
+          scale = 0
+        },
+        {
+          processMetadataValues = [
+            {
+              name = "autoProgressAction"
+              value = {
+                stringValue = "NONE"
+              }
+            },
+            {
+              name = "defaultValue"
+              value = {
+                elementReference = "var_q_12825d19_0310_4b5c_a522_b91648b61d0d_defaultValue"
+              }
+            },
+            {
+              name = "iconType"
+              value = {
+                stringValue = "star"
+              }
+            },
+          ]
+          name = "q_12825d19_0310_4b5c_a522_b91648b61d0d"
+          choiceReferences = [
+            "c_dd6a7069_cb99_46d7_8a99_1a255aa0176e",
+            "c_a40f53e5_c7a3_4ae2_881e_75c0822f9ab3",
+            "c_90a944d2_3db4_4674_a5dd_a861e1aee8a2",
+            "c_33216fdd_1d3f_4778_9a64_b4058e4c5798",
+            "c_1d451ac0_a65f_4b67_9ee9_f0844204d1d8",
+          ]
+          dataType = "Number"
+          extensionName = "survey:runtimeRating"
+          fieldText = "<p><strong style=\"font-family: Arial; font-size: 10pt;\">Identifying pain points<span class=\"ql-cursor\"></span></strong></p>"
+          fieldType = "ComponentChoice"
+          helpText = "Uncovered 3 - 4 business problems and how they impact the prospect's bottom line."
+          isRequired = false
+          scale = 0
+        },
+        {
+          processMetadataValues = [
+            {
+              name = "autoProgressAction"
+              value = {
+                stringValue = "NONE"
+              }
+            },
+            {
+              name = "defaultValue"
+              value = {
+                elementReference = "var_q_d7dddbc6_9947_46fb_8ec3_aae1af5ba661_defaultValue"
+              }
+            },
+            {
+              name = "iconType"
+              value = {
+                stringValue = "star"
+              }
+            },
+          ]
+          name = "q_d7dddbc6_9947_46fb_8ec3_aae1af5ba661"
+          choiceReferences = [
+            "c_021bb1fc_c7ba_401e_8951_886e70540f64",
+            "c_549ef69e_48a1_413c_9e6b_a3437731511f",
+            "c_169b8fef_dfa5_447f_82c3_4d0930a76e97",
+            "c_e3910409_2dfa_4243_a5d0_bff374a143fe",
+            "c_99d953b9_bb4f_4977_9629_4f244545ae39",
+          ]
+          dataType = "Number"
+          extensionName = "survey:runtimeRating"
+          fieldText = "<p><strong style=\"font-family: Arial; font-size: 10pt;\">Next steps</strong></p>"
+          fieldType = "ComponentChoice"
+          helpText = "Offered tangible and appropriate solutions, and set an agenda for follow-up."
+          isRequired = false
+          scale = 0
+        },
+        {
+          processMetadataValues = [
+            {
+              name = "autoProgressAction"
+              value = {
+                stringValue = "NONE"
+              }
+            },
+            {
+              name = "defaultValue"
+              value = {
+                elementReference = "var_q_3ff85da8_e49b_426b_bfcb_f15f6a939a75_defaultValue"
+              }
+            },
+            {
+              name = "iconType"
+              value = {
+                stringValue = "star"
+              }
+            },
+          ]
+          name = "q_3ff85da8_e49b_426b_bfcb_f15f6a939a75"
+          choiceReferences = [
+            "c_d7936c2e_7513_4196_8108_123de14eb17a",
+            "c_b43d2402_5ac9_4477_9dc1_6beb2b6f25ac",
+            "c_df2b725a_35b7_4151_b86b_4b7e22db818b",
+            "c_76aa3652_2c65_4bb3_9d4b_e3417c2961d1",
+            "c_474286c7_494e_4c3c_b6db_d491867089fa",
+          ]
+          dataType = "Number"
+          extensionName = "survey:runtimeRating"
+          fieldText = '''
+<p><strong style="font-family: Arial; font-size: 10pt;">Objection handling<span
+                class="ql-cursor"></span></strong></p>
+'''
+          fieldType = "ComponentChoice"
+          helpText = "Validated the prospect's objections, alleviated their concerns, and moved the conversation forward."
+          isRequired = false
+          scale = 0
+        },
+        {
+          processMetadataValues = [
+            {
+              name = "autoProgressAction"
+              value = {
+                stringValue = "NONE"
+              }
+            },
+          ]
+          name = "q_147df858_c7c1_4ce6_99d2_5c9c31cd304a"
+          dataType = "String"
+          extensionName = "survey:runtimeShortText"
+          fieldText = "<p><strong style=\"font-family: Arial; font-size: 10pt;\">What's one thing you learned from this call?<span class=\"ql-cursor\"></span></strong></p>"
+          fieldType = "ComponentInput"
+          isRequired = false
+        },
+        {
+          processMetadataValues = [
+            {
+              name = "autoProgressAction"
+              value = {
+                stringValue = "NONE"
+              }
+            },
+          ]
+          name = "q_6b3ff679_5937_46fd_ae85_f7efc249da9d"
+          dataType = "String"
+          extensionName = "survey:runtimeShortText"
+          fieldText = "<p><strong style=\"font-family: Arial; font-size: 10pt;\">What's the most important thing your teammate can do to improve?</strong></p>"
+          fieldType = "ComponentInput"
+          isRequired = false
+        },
+      ]
+      pausedText = "To pick up where you left off, refresh this page, or open the survey again."
+      showFooter = true
+      showHeader = true
+    },
+  ]
+  startElementReference = "pageNamesInOrder_Assignment"
+  status = "Active"
+  textTemplates = [
+    {
+      name = "thankYouDescriptionTextTemplate"
+      isViewedAsPlainText = false
+      text = '''
+Thank you for taking the time to submit feedback. Your teammate who requested the feedback will be
+            notified that it's ready for review.
+'''
+    },
+    {
+      name = "thankYouLabelTextTemplate"
+      isViewedAsPlainText = false
+      text = '''
+<p><span class="ql-cursor"></span><span style="font-family: Arial;
+            font-size: 10pt;">Thanks!</span></p>
+'''
+    },
+  ]
+  variables = [
+    {
+      name = "guestUserLang"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = true
+    },
+    {
+      name = "invitationId"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      value = {
+        stringValue = ""
+      }
+    },
+    {
+      name = "pageNamesInOrder"
+      dataType = "String"
+      isCollection = true
+      isInput = false
+      isOutput = true
+    },
+    {
+      name = "previewMode"
+      dataType = "Boolean"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      value = {
+        booleanValue = false
+      }
+    },
+    {
+      name = "thankYouDescription"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      value = {
+        stringValue = "{!thankYouDescriptionTextTemplate}"
+      }
+    },
+    {
+      name = "thankYouLabel"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      value = {
+        stringValue = "{!thankYouLabelTextTemplate}"
+      }
+    },
+    {
+      name = "var_q_12825d19_0310_4b5c_a522_b91648b61d0d_defaultValue"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+    {
+      name = "var_q_3ff85da8_e49b_426b_bfcb_f15f6a939a75_defaultValue"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+    {
+      name = "var_q_8fc5ba56_867c_4251_a89a_1fd5f6fc7142_defaultValue"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+    {
+      name = "var_q_d7dddbc6_9947_46fb_8ec3_aae1af5ba661_defaultValue"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+    {
+      name = "var_q_da90d5b4_d12f_46dd_960d_38a7b6ebf552_defaultValue"
+      dataType = "String"
+      isCollection = false
+      isInput = true
+      isOutput = false
+    },
+  ]
+  _alias = "Discovery Call Assessment"
+}

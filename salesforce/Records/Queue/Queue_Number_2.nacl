@@ -1,0 +1,17 @@
+salesforce.Queue Queue_Number_2 {
+  doesSendEmailToMembers = false
+  name = "Queue Number 2"
+  queueMembers = {
+    users = {
+      user = [
+        "almog.mesilaty+dev1@salto.io",
+      ]
+    }
+  }
+  queueRoutingConfig = salesforce.QueueRoutingConfig.instance.Queue_Number_2
+  queueSobject = {
+    sobjectType = "LiveChatTranscript"
+  }
+  fullName = "Queue_Number_2"
+  _alias = "Queue_Number_2"
+}

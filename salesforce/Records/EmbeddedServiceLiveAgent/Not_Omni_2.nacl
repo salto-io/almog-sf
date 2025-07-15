@@ -1,0 +1,22 @@
+salesforce.EmbeddedServiceLiveAgent Not_Omni_2 {
+  embeddedServiceConfig = salesforce.EmbeddedServiceConfig.instance.Not_Omni_2
+  embeddedServiceQuickActions = [
+    {
+      embeddedServiceLiveAgent = salesforce.EmbeddedServiceLiveAgent.instance.Not_Omni_2
+      order = 1
+      quickActionDefinition = salesforce.QuickAction.instance.Snapins_Lead_PrechatQuickAction_08hWU0000001P61_1736684343281
+      quickActionType = "Prechat"
+    },
+  ]
+  enabled = true
+  fontSize = "Medium"
+  isOfflineCaseEnabled = false
+  isQueuePositionEnabled = false
+  liveChatButton = salesforce.LiveChatButton.instance.Not_Omni_2
+  liveChatDeployment = salesforce.LiveChatDeployment.instance.live_agent_setup_flow
+  masterLabel = "Not Omni 2"
+  prechatEnabled = true
+  scenario = "Sales"
+  fullName = "Not_Omni_2"
+  _alias = "Not_Omni_2"
+}

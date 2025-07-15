@@ -1,0 +1,16 @@
+salesforce.PresenceUserConfig Web_Chat_Omni_Support_Group {
+  assignments = {
+    users = {
+      user = "almog.mesilaty+weak1@salto.io"
+    }
+  }
+  capacity = 20
+  enableAutoAccept = false
+  enableDecline = false
+  enableDeclineReason = false
+  enableDisconnectSound = true
+  enableRequestSound = true
+  label = "Web Chat Omni Support Group"
+  fullName = "Web_Chat_Omni_Support_Group"
+  _alias = "Web Chat Omni Support Group"
+}

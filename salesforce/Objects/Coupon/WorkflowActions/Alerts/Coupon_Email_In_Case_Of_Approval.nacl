@@ -1,0 +1,17 @@
+salesforce.WorkflowAlert Coupon_Email_In_Case_Of_Approval@vuuuu {
+  fullName = "Coupon.Email_In_Case_Of_Approval"
+  description = "Email In Case Of Approval"
+  protected = false
+  recipients = [
+    {
+      recipient = "almog.mesilaty+dev1@salto.io"
+      type = "user"
+    },
+  ]
+  senderType = "CurrentUser"
+  template = salesforce.EmailTemplate.instance.unfiled_public_CommerceReorderPortalInvitation@zcd
+  _parent = [
+    salesforce.Coupon,
+  ]
+  _alias = "Coupon.Email_In_Case_Of_Approval"
+}

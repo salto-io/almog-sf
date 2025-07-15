@@ -1,0 +1,30 @@
+salesforce.QuickAction Snapins_Contact_PrechatQuickAction_08hWU0000001MPt_1735735853022 {
+  description = "Snapins_Contact_PrechatQuickAction_08hWU0000001MPt_1735735853022"
+  label = "Snapins_Contact_PrechatQuickAction_08hWU0000001MPt_1735735853022"
+  optionsCreateFeedItem = false
+  quickActionLayout = {
+    layoutSectionStyle = "TwoColumnsTopToBottom"
+    quickActionLayoutColumns = [
+      {
+        quickActionLayoutItems = [
+          {
+            emptySpace = false
+            field = "Name"
+            uiBehavior = "Required"
+          },
+          {
+            emptySpace = false
+            field = "Email"
+            uiBehavior = "Edit"
+          },
+        ]
+      },
+      {
+      },
+    ]
+  }
+  targetObject = salesforce.Contact
+  type = "Create"
+  fullName = "Snapins_Contact_PrechatQuickAction_08hWU0000001MPt_1735735853022"
+  _alias = "Snapins_Contact_PrechatQuickAction_08hWU0000001MPt_1735735853022"
+}

@@ -1,0 +1,15 @@
+salesforce.ValidationRule Lead_Lead_Validation_Rule_2 {
+  fullName = "Lead.Lead_Validation_Rule_2"
+  active = true
+  errorConditionFormula = "Owner:User.City <> \"valid\""
+  errorMessage = "Lead user must have valid city"
+  _parent = [
+    salesforce.Lead,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.User
+    },
+  ]
+  _alias = "Lead.Lead_Validation_Rule_2"
+}

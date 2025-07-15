@@ -1,0 +1,85 @@
+salesforce.LightningPage second_custom_home_page {
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "home:eventContainer"
+            identifier = "home_eventContainer"
+            visibilityRule = {
+              criteria = [
+                {
+                  leftValue = "{!$Permission.StandardPermission.ActivitiesAccess}"
+                  operator = "EQUAL"
+                  rightValue = "true"
+                },
+              ]
+            }
+          }
+        },
+      ]
+      name = "top"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "SALTO_6326"
+            identifier = "c_SALTO_6326"
+          }
+        },
+      ]
+      name = "bottomLeft"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "SALTO_6326_second"
+            identifier = "c_SALTO_6326_second"
+          }
+        },
+      ]
+      name = "bottomRight"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "runtime_sales_activities:todayTaskContainer"
+            identifier = "runtime_sales_activities_todayTaskContainer"
+            visibilityRule = {
+              criteria = [
+                {
+                  leftValue = "{!$User.EndDay}"
+                  operator = "EQUAL"
+                  rightValue = "0"
+                },
+              ]
+            }
+          }
+        },
+      ]
+      name = "sidebar"
+      type = "Region"
+    },
+  ]
+  masterLabel = "second_custom_home_page"
+  template = {
+    name = "home:desktopTemplate"
+  }
+  type = "HomePage"
+  fullName = "second_custom_home_page"
+  _generated_dependencies = [
+    {
+      reference = salesforce.AuraDefinitionBundle.instance.SALTO_6326
+    },
+    {
+      reference = salesforce.AuraDefinitionBundle.instance.SALTO_6326_second
+    },
+  ]
+  _alias = "second_custom_home_page"
+}

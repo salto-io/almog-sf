@@ -444,7 +444,7 @@ type salesforce.MultiselectPicklist is string {
     }
     salesforce.FieldDependency fieldDependency {
     }
-    "List<salesforce.valueSet>" valueSet {
+    salesforce.OrderedMapOfvalueSet valueSet {
     }
     boolean restricted {
     }

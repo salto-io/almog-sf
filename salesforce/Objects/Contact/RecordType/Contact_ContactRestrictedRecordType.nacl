@@ -1,0 +1,132 @@
+salesforce.RecordType Contact_ContactRestrictedRecordType {
+  fullName = "Contact.ContactRestrictedRecordType"
+  active = true
+  label = "ContactRestrictedRecordType"
+  picklistValues = [
+    {
+      picklist = salesforce.Contact.field.GenderIdentity
+      values = [
+        {
+          fullName = "Female"
+          default = false
+        },
+        {
+          fullName = "Male"
+          default = false
+        },
+        {
+          fullName = "Nonbinary"
+          default = false
+        },
+        {
+          fullName = "Not Listed"
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Contact.field.LeadSource
+      values = [
+        {
+          fullName = salesforce.StandardValueSet.instance.LeadSource.standardValue.values.Other.fullName
+          default = false
+        },
+        {
+          fullName = salesforce.StandardValueSet.instance.LeadSource.standardValue.values.Partner_Referral@s.fullName
+          default = false
+        },
+        {
+          fullName = salesforce.StandardValueSet.instance.LeadSource.standardValue.values.Phone_Inquiry@s.fullName
+          default = false
+        },
+        {
+          fullName = salesforce.StandardValueSet.instance.LeadSource.standardValue.values.Purchased_List@s.fullName
+          default = false
+        },
+        {
+          fullName = salesforce.StandardValueSet.instance.LeadSource.standardValue.values.Web.fullName
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Contact.field.Level__c
+      values = [
+        {
+          fullName = salesforce.Contact.field.Level__c.valueSet.values.Primary.fullName
+          default = false
+        },
+        {
+          fullName = salesforce.Contact.field.Level__c.valueSet.values.Secondary.fullName
+          default = false
+        },
+        {
+          fullName = salesforce.Contact.field.Level__c.valueSet.values.Tertiary.fullName
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Contact.field.Name
+      values = [
+        {
+          fullName = "Dr."
+          default = false
+        },
+        {
+          fullName = "Mr."
+          default = false
+        },
+        {
+          fullName = "Mrs."
+          default = false
+        },
+        {
+          fullName = "Ms."
+          default = false
+        },
+        {
+          fullName = "Mx."
+          default = false
+        },
+        {
+          fullName = "Prof."
+          default = false
+        },
+      ]
+    },
+    {
+      picklist = salesforce.Contact.field.Pronouns
+      values = [
+        {
+          fullName = "He/Him"
+          default = false
+        },
+        {
+          fullName = "He/They"
+          default = false
+        },
+        {
+          fullName = "Not Listed"
+          default = false
+        },
+        {
+          fullName = "She/Her"
+          default = false
+        },
+        {
+          fullName = "She/They"
+          default = false
+        },
+        {
+          fullName = "They/Them"
+          default = false
+        },
+      ]
+    },
+  ]
+  _parent = [
+    salesforce.Contact,
+  ]
+  _alias = "ContactRestrictedRecordType"
+}

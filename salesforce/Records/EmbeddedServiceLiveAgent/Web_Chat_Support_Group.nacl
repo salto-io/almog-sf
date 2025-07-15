@@ -1,0 +1,28 @@
+salesforce.EmbeddedServiceLiveAgent Web_Chat_Support_Group {
+  embeddedServiceConfig = salesforce.EmbeddedServiceConfig.instance.Web_Chat_Support_Group
+  embeddedServiceQuickActions = [
+    {
+      embeddedServiceLiveAgent = salesforce.EmbeddedServiceLiveAgent.instance.Web_Chat_Support_Group
+      order = 1
+      quickActionDefinition = salesforce.QuickAction.instance.Snapins_Contact_PrechatQuickAction_08hWU0000001MRV_1735736759636
+      quickActionType = "Prechat"
+    },
+    {
+      embeddedServiceLiveAgent = salesforce.EmbeddedServiceLiveAgent.instance.Web_Chat_Support_Group
+      order = 2
+      quickActionDefinition = salesforce.QuickAction.instance.Snapins_Case_PrechatQuickAction_08hWU0000001MRV_1735736759670
+      quickActionType = "Prechat"
+    },
+  ]
+  enabled = true
+  fontSize = "Medium"
+  isOfflineCaseEnabled = false
+  isQueuePositionEnabled = false
+  liveChatButton = salesforce.LiveChatButton.instance.Web_Chat_Support_Group
+  liveChatDeployment = salesforce.LiveChatDeployment.instance.live_agent_setup_flow
+  masterLabel = "Web Chat Support Group"
+  prechatEnabled = true
+  scenario = "Service"
+  fullName = "Web_Chat_Support_Group"
+  _alias = "Web_Chat_Support_Group"
+}

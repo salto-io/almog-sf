@@ -1,0 +1,82 @@
+type salesforce.SurveySubject {
+  salesforce.Text Name {
+    apiName = "SurveySubject.Name"
+    label = "Record Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.MasterDetail ParentId {
+    apiName = "SurveySubject.ParentId"
+    label = "Parent ID"
+    _required = true
+    relationshipName = "Parent"
+  }
+  salesforce.Picklist SubjectEntityType {
+    apiName = "SurveySubject.SubjectEntityType"
+    label = "Related Object"
+    restricted = true
+  }
+  salesforce.Lookup SubjectId {
+    apiName = "SurveySubject.SubjectId"
+    label = "Subject ID"
+    _required = true
+    relationshipName = "Subject"
+  }
+  salesforce.Lookup SurveyId {
+    apiName = "SurveySubject.SurveyId"
+    label = "Survey ID"
+    _required = true
+    relationshipName = "Survey"
+  }
+  serviceid Id {
+    apiName = "SurveySubject.Id"
+    label = "Object Relationship ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SurveySubject.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SurveySubject.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SurveySubject.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SurveySubject.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SurveySubject.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SurveySubject.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup SurveyResponseId {
+    apiName = "SurveySubject.SurveyResponseId"
+    label = "Survey Response ID"
+    relationshipName = "SurveyResponse"
+  }
+  salesforce.Lookup SurveyInvitationId {
+    apiName = "SurveySubject.SurveyInvitationId"
+    label = "Survey Invitation ID"
+    relationshipName = "SurveyInvitation"
+  }
+}

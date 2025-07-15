@@ -1,0 +1,122 @@
+salesforce.Flow MegaFlow {
+  fullName = "MegaFlow"
+  apiVersion = 62
+  areMetricsLoggedToDataCloud = false
+  description = "Flow that has all the Flow features"
+  environments = "Default"
+  interviewLabel = "MegaFlow {!$Flow.CurrentDateTime}"
+  label = "MegaFlow"
+  orchestratedStages = [
+    {
+      name = "FirstStage"
+      label = "FirstStage"
+      exitConditionLogic = "and"
+      stageSteps = [
+        {
+          name = "FirstBackgroungStep"
+          actionName = "Flow_for_approval_process"
+          actionType = "stepBackground"
+          assignees = {
+            assignee = {
+              elementReference = "$User.EndDay"
+            }
+            assigneeType = "User"
+          }
+          canAssigneeEdit = false
+          entryConditionLogic = "and"
+          exitConditionLogic = "and"
+          label = "FirstBackgroungStep"
+          requiresAsyncProcessing = false
+          runAsUser = true
+          shouldLock = false
+          stepSubtype = "BackgroundStep"
+        },
+        {
+          name = "FirstInteractiveStep"
+          actionName = "E"
+          actionType = "stepInteractive"
+          assignees = {
+            assignee = {
+              elementReference = "$Organization.City"
+            }
+            assigneeType = "User"
+          }
+          canAssigneeEdit = false
+          entryConditionLogic = "and"
+          entryConditions = {
+            conditionType = "EntryCondition"
+            leftValueReference = "FirstBackgroungStep.Status"
+            operator = "EqualTo"
+            rightValue = {
+              stringValue = "Completed"
+            }
+          }
+          exitConditionLogic = "and"
+          inputParameters = [
+            {
+              name = "ActionInput__RecordId"
+              value = {
+                elementReference = "$Record.Id"
+              }
+            },
+            {
+              name = "ActionInput__CustomEmailSubject"
+            },
+            {
+              name = "ActionInput__CustomEmailBody"
+            },
+          ]
+          label = "FirstInteractiveStep"
+          requiresAsyncProcessing = false
+          runAsUser = false
+          shouldLock = false
+          stepSubtype = "InteractiveStep"
+        },
+      ]
+    },
+  ]
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Orchestrator"
+  start = {
+    connector = {
+      targetReference = "FirstStage"
+    }
+    filterLogic = "and"
+    filters = [
+      {
+        field = salesforce.Account.field.IsDeleted
+        operator = "EqualTo"
+        value = {
+          booleanValue = false
+        }
+      },
+    ]
+    object = salesforce.Account
+    recordTriggerType = "CreateAndUpdate"
+    triggerType = "RecordAfterSave"
+  }
+  status = "Draft"
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "MegaFlow"
+}

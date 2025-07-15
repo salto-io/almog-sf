@@ -1,0 +1,21 @@
+salesforce.LiveChatButton Not_Omni_2 {
+  deployments = {
+  }
+  enableQueue = false
+  isActive = true
+  label = "Not Omni 2"
+  optionsCustomRoutingIsEnabled = false
+  optionsHasChasitorIdleTimeout = false
+  optionsHasInviteAfterAccept = false
+  optionsHasInviteAfterReject = false
+  optionsHasRerouteDeclinedRequest = false
+  optionsIsAutoAccept = false
+  optionsIsInviteAutoRemove = false
+  routingType = "Choice"
+  skills = {
+    skill = "Almog_Skill"
+  }
+  type = "Standard"
+  fullName = "Not_Omni_2"
+  _alias = "Not Omni 2"
+}

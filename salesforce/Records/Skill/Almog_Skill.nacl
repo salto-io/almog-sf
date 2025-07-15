@@ -1,0 +1,11 @@
+salesforce.Skill Almog_Skill {
+  assignments = {
+    profiles = {
+      profile = "admin"
+    }
+  }
+  label = "Almog_Skill"
+  skillType = "Almog_Skill_Type"
+  fullName = "Almog_Skill"
+  _alias = "Almog_Skill"
+}

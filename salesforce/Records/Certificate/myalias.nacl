@@ -1,0 +1,11 @@
+salesforce.Certificate myalias {
+  caSigned = false
+  encryptedWithPlatformEncryption = false
+  expirationDate = "2025-05-21T09:13:24.000Z"
+  keySize = 2048
+  masterLabel = "myalias"
+  privateKeyExportable = true
+  fullName = "myalias"
+  content = file("salesforce/Records/Certificate/myalias.crt")
+  _alias = "myalias"
+}

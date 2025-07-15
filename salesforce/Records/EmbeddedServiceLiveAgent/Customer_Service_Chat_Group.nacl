@@ -1,0 +1,28 @@
+salesforce.EmbeddedServiceLiveAgent Customer_Service_Chat_Group {
+  embeddedServiceConfig = salesforce.EmbeddedServiceConfig.instance.Customer_Service_Chat_Group
+  embeddedServiceQuickActions = [
+    {
+      embeddedServiceLiveAgent = salesforce.EmbeddedServiceLiveAgent.instance.Customer_Service_Chat_Group
+      order = 1
+      quickActionDefinition = salesforce.QuickAction.instance.Snapins_Contact_PrechatQuickAction_08hWU0000001MPt_1735735853022
+      quickActionType = "Prechat"
+    },
+    {
+      embeddedServiceLiveAgent = salesforce.EmbeddedServiceLiveAgent.instance.Customer_Service_Chat_Group
+      order = 2
+      quickActionDefinition = salesforce.QuickAction.instance.Snapins_Case_PrechatQuickAction_08hWU0000001MPt_1735735853052
+      quickActionType = "Prechat"
+    },
+  ]
+  enabled = true
+  fontSize = "Medium"
+  isOfflineCaseEnabled = false
+  isQueuePositionEnabled = false
+  liveChatButton = salesforce.LiveChatButton.instance.Customer_Service_Chat_Group
+  liveChatDeployment = salesforce.LiveChatDeployment.instance.live_agent_setup_flow
+  masterLabel = "Customer Service Chat Group"
+  prechatEnabled = true
+  scenario = "Service"
+  fullName = "Customer_Service_Chat_Group"
+  _alias = "Customer_Service_Chat_Group"
+}

@@ -1,0 +1,15 @@
+salesforce.ValidationRule Contact_Contact_Validation_Rule {
+  fullName = "Contact.Contact_Validation_Rule"
+  active = true
+  errorConditionFormula = "Phone = \"0\""
+  errorMessage = "Phone number can not be 0"
+  _parent = [
+    salesforce.Contact,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Contact.field.Phone
+    },
+  ]
+  _alias = "Contact.Contact_Validation_Rule"
+}

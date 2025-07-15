@@ -1,0 +1,9 @@
+salesforce.RecordType Almog_Custom_Object__c_SecondRecordType {
+  fullName = "Almog_Custom_Object__c.SecondRecordType"
+  active = true
+  label = "SecondRecordType"
+  _parent = [
+    salesforce.Almog_Custom_Object__c,
+  ]
+  _alias = "SecondRecordType"
+}

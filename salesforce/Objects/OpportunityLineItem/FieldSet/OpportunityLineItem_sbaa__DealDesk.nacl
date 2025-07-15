@@ -1,0 +1,36 @@
+salesforce.FieldSet OpportunityLineItem_sbaa__DealDesk {
+  fullName = "OpportunityLineItem.sbaa__DealDesk"
+  description = "Fields displayed on Deal Desk page."
+  displayedFields = [
+    {
+      field = salesforce.OpportunityLineItem.field.ProductCode
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = salesforce.OpportunityLineItem.field.Product2Id
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = salesforce.OpportunityLineItem.field.Quantity
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = salesforce.OpportunityLineItem.field.ListPrice
+      isFieldManaged = false
+      isRequired = false
+    },
+    {
+      field = salesforce.OpportunityLineItem.field.UnitPrice
+      isFieldManaged = false
+      isRequired = false
+    },
+  ]
+  label = "Deal Desk"
+  _parent = [
+    salesforce.OpportunityLineItem,
+  ]
+  _alias = "Deal Desk (sbaa)"
+}

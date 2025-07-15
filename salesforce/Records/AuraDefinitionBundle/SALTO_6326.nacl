@@ -1,0 +1,8 @@
+salesforce.AuraDefinitionBundle SALTO_6326 {
+  apiVersion = 62
+  description = "Test lightning component"
+  fullName = "SALTO_6326"
+  type = "Component"
+  markup = file("salesforce/Records/AuraDefinitionBundle/SALTO_6326/SALTO_6326.cmp")
+  _alias = "SALTO_6326"
+}

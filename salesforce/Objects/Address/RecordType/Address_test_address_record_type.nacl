@@ -1,0 +1,9 @@
+salesforce.RecordType Address_test_address_record_type {
+  fullName = "Address.test_address_record_type"
+  active = false
+  label = "test address record type"
+  _parent = [
+    salesforce.Address,
+  ]
+  _alias = "test address record type"
+}

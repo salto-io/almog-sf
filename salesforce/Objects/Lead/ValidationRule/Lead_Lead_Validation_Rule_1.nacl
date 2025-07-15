@@ -1,0 +1,15 @@
+salesforce.ValidationRule Lead_Lead_Validation_Rule_1 {
+  fullName = "Lead.Lead_Validation_Rule_1"
+  active = true
+  errorConditionFormula = "Id  = \"invalid\""
+  errorMessage = "ID can not be invalid"
+  _parent = [
+    salesforce.Lead,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Lead.field.Id
+    },
+  ]
+  _alias = "Lead.Lead_Validation_Rule_1"
+}

@@ -1,0 +1,81 @@
+salesforce.Flow Update_Opportunity_Type_change {
+  fullName = "Update_Opportunity_Type_change"
+  apiVersion = 63
+  areMetricsLoggedToDataCloud = false
+  assignments = [
+    {
+      name = "Set_Opportunity_Type"
+      label = "Set Opportunity Type"
+      assignmentItems = [
+        {
+          assignToReference = salesforce.Opportunity.field.Type
+          operator = "Assign"
+          value = {
+            elementReference = "UpdateOpportunityType"
+          }
+        },
+        {
+          assignToReference = salesforce.Opportunity.field.Id
+          operator = "Assign"
+          value = {
+            elementReference = salesforce.Opportunity.field.ContactId
+          }
+        },
+      ]
+      connector = {
+        targetReference = "Update_Opportunity"
+      }
+    },
+  ]
+  environments = "Default"
+  formulas = [
+    {
+      name = "UpdateOpportunityType"
+      dataType = "String"
+      expression = "'New Type'"
+    },
+  ]
+  interviewLabel = "Update Opportunity Type {!$Flow.CurrentDateTime}"
+  label = "Update Opportunity Type"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  recordUpdates = [
+    {
+      name = "Update_Opportunity"
+      label = "Update Opportunity"
+      inputReference = "$Record"
+    },
+  ]
+  start = {
+    connector = {
+      targetReference = "Set_Opportunity_Type"
+    }
+    object = salesforce.Opportunity
+    recordTriggerType = "CreateAndUpdate"
+    triggerType = "RecordAfterSave"
+  }
+  status = "Draft"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+  _alias = "Update Opportunity Type"
+}

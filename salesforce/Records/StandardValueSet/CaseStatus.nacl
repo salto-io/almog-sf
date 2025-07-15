@@ -1,0 +1,74 @@
+salesforce.StandardValueSet CaseStatus {
+  fullName = "CaseStatus"
+  sorted = false
+  standardValue = {
+    values = {
+      New = {
+        fullName = "New"
+        default = true
+        label = "New"
+        closed = false
+      }
+      Working = {
+        fullName = "Working"
+        default = false
+        label = "Working"
+        closed = false
+      }
+      Escalated = {
+        fullName = "Escalated"
+        default = false
+        label = "Escalated"
+        closed = false
+      }
+      Closed = {
+        fullName = "Closed"
+        default = false
+        label = "Closed"
+        closed = true
+      }
+      In_Progress@s = {
+        fullName = "In Progress"
+        default = false
+        label = "In Progress"
+        closed = false
+      }
+      On_Hold@s = {
+        fullName = "On Hold"
+        default = false
+        label = "On Hold"
+        closed = false
+      }
+      Waiting_for_Customer@s = {
+        fullName = "Waiting for Customer"
+        default = false
+        label = "Waiting for Customer"
+        closed = false
+      }
+      Merged = {
+        fullName = "Merged"
+        default = false
+        label = "Merged"
+        closed = true
+      }
+      Response_Received@s = {
+        fullName = "Response Received"
+        default = false
+        label = "Response Received"
+        closed = false
+      }
+    }
+    order = [
+      salesforce.StandardValueSet.instance.CaseStatus.standardValue.values.New,
+      salesforce.StandardValueSet.instance.CaseStatus.standardValue.values.Working,
+      salesforce.StandardValueSet.instance.CaseStatus.standardValue.values.Escalated,
+      salesforce.StandardValueSet.instance.CaseStatus.standardValue.values.Closed,
+      salesforce.StandardValueSet.instance.CaseStatus.standardValue.values.In_Progress@s,
+      salesforce.StandardValueSet.instance.CaseStatus.standardValue.values.On_Hold@s,
+      salesforce.StandardValueSet.instance.CaseStatus.standardValue.values.Waiting_for_Customer@s,
+      salesforce.StandardValueSet.instance.CaseStatus.standardValue.values.Merged,
+      salesforce.StandardValueSet.instance.CaseStatus.standardValue.values.Response_Received@s,
+    ]
+  }
+  _alias = "CaseStatus"
+}

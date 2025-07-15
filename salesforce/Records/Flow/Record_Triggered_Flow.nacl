@@ -1,0 +1,186 @@
+salesforce.Flow Record_Triggered_Flow {
+  fullName = "Record_Triggered_Flow"
+  apiVersion = 63
+  areMetricsLoggedToDataCloud = false
+  decisions = [
+    {
+      name = "FirstDecision"
+      label = "FirstDecision"
+      defaultConnector = {
+        targetReference = "SecondStage"
+      }
+      defaultConnectorLabel = "Default Outcome"
+      rules = [
+        {
+          name = "FirstOutcome"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = salesforce.Contact.field.IsPriorityRecord
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = true
+              }
+            },
+            {
+              leftValueReference = salesforce.Contact.field.IsEmailBounced
+              operator = "EqualTo"
+              rightValue = {
+                elementReference = salesforce.Contact.field.IsDeleted
+              }
+            },
+            {
+              leftValueReference = "$Record.Account.Name"
+              operator = "EqualTo"
+              rightValue = {
+                elementReference = "$Record.CreatedBy.Contact.IsPriorityRecord"
+              }
+            },
+            {
+              leftValueReference = salesforce.Contact.field.CustomTextField__c
+              operator = "EqualTo"
+              rightValue = {
+                elementReference = salesforce.Contact.field.Languages__c
+              }
+            },
+            {
+              leftValueReference = salesforce.Contact.field.RelationshipToAccount__c
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = false
+              }
+            },
+          ]
+          label = "FirstOutcome"
+        },
+      ]
+    },
+  ]
+  environments = "Default"
+  interviewLabel = "Record Triggered Flow {!$Flow.CurrentDateTime}"
+  label = "Record Triggered Flow"
+  orchestratedStages = [
+    {
+      description = "The first stage"
+      name = "First_Stage"
+      label = "First Stage"
+      connector = {
+        targetReference = "FirstDecision"
+      }
+      exitConditionLogic = "and"
+      stageSteps = [
+        {
+          name = "Interactive_Step_1_of_First_Stage"
+          actionName = "setup_service_experience__Create_Case"
+          actionType = "stepInteractive"
+          assignees = {
+            assignee = {
+              stringValue = "almog.mesilaty+dev1@salto.io"
+            }
+            assigneeType = "User"
+          }
+          canAssigneeEdit = false
+          entryConditionLogic = "and"
+          exitConditionLogic = "and"
+          inputParameters = [
+            {
+              name = "ActionInput__RecordId"
+              value = {
+                stringValue = "First_Stage"
+              }
+            },
+          ]
+          label = "Interactive Step 1 of First Stage"
+          requiresAsyncProcessing = false
+          runAsUser = false
+          shouldLock = false
+          stepSubtype = "InteractiveStep"
+        },
+      ]
+    },
+    {
+      name = "SecondStage"
+      label = "SecondStage"
+      exitConditionLogic = "and"
+      exitConditions = {
+        conditionType = "ExitCondition"
+        leftValueReference = salesforce.Contact.field.IsPriorityRecord
+        operator = "EqualTo"
+        rightValue = {
+          booleanValue = true
+        }
+      }
+      stageSteps = [
+        {
+          name = "SecondStageBackgroundStep"
+          actionName = "runtime_service_fieldservice__CrSerAppNotFound"
+          actionType = "stepBackground"
+          canAssigneeEdit = false
+          entryConditionLogic = "and"
+          entryConditions = {
+            conditionType = "EntryCondition"
+            leftValueReference = salesforce.Contact.field.IsDeleted
+            operator = "EqualTo"
+            rightValue = {
+              booleanValue = false
+            }
+          }
+          exitConditionLogic = "and"
+          inputParameters = [
+            {
+              name = "contactId"
+              value = {
+                elementReference = "$Record.IsDeleted"
+              }
+            },
+            {
+              name = "workTypeId"
+              value = {
+                elementReference = "$Record.IsPriorityRecord"
+              }
+            },
+          ]
+          label = "SecondStageBackgroundStep"
+          requiresAsyncProcessing = false
+          runAsUser = false
+          shouldLock = false
+          stepSubtype = "BackgroundStep"
+        },
+      ]
+    },
+  ]
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Orchestrator"
+  start = {
+    connector = {
+      targetReference = "First_Stage"
+    }
+    object = salesforce.Contact
+    recordTriggerType = "Create"
+    triggerType = "RecordAfterSave"
+  }
+  status = "Draft"
+  _parent = [
+    salesforce.Contact,
+  ]
+  _alias = "Record Triggered Flow"
+}

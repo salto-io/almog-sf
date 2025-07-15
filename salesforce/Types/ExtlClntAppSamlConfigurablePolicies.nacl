@@ -1,0 +1,117 @@
+type salesforce.ExtlClntAppSamlConfigurablePolicies {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+  }
+  string acsUrl {
+  }
+  string certificate {
+  }
+  string commaSeparatedPermissionSet {
+  }
+  string commaSeparatedProfile {
+  }
+  salesforce.ExtlClntAppSamlConfigurablePoliciesAttribute customAttributes {
+  }
+  string encryptionCertificate {
+  }
+  string encryptionType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "AES_128",
+        "AES_256",
+      ]
+    }
+  }
+  string entityUrl {
+  }
+  string externalClientApplication {
+    foreignKeyDomain = [
+      salesforce.ExternalClientApplication,
+    ]
+  }
+  string issuer {
+  }
+  string label {
+  }
+  string nameIdFormat {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "EmailAddress",
+        "Persistent",
+        "Transient",
+        "Unspecified",
+      ]
+    }
+  }
+  string signingAlgorithmType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "SHA1",
+        "SHA256",
+      ]
+    }
+  }
+  string singleLogoutBindingType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "PostBinding",
+        "RedirectBinding",
+      ]
+    }
+  }
+  string singleLogoutUrl {
+  }
+  string startUrl {
+  }
+  string subjectCustomAttribute {
+  }
+  string subjectType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "CustomAttribute",
+        "FederationId",
+        "PersistentId",
+        "SpokeId",
+        "UserId",
+        "Username",
+      ]
+    }
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "ecaSamlPlcy"
+  dirName = "extlClntAppSamlConfigurablePolicies"
+  metadataType = "ExtlClntAppSamlConfigurablePolicies"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "label"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

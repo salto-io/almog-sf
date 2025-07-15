@@ -1,0 +1,4 @@
+salesforce.ManagedTopics CustomerService_WithReferences {
+  fullName = "CustomerService_WithReferences"
+  _alias = "CustomerService_WithReferences"
+}

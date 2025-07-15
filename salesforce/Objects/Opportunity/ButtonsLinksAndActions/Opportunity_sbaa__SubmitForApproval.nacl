@@ -1,0 +1,15 @@
+salesforce.WebLink Opportunity_sbaa__SubmitForApproval {
+  fullName = "Opportunity.sbaa__SubmitForApproval"
+  availability = "online"
+  displayType = "button"
+  encodingKey = "UTF-8"
+  linkType = "url"
+  masterLabel = "Submit for Approval"
+  openType = "replace"
+  protected = false
+  url = "/apex/SBAA__SubmitOpportunity?id={!Opportunity.Id}"
+  _parent = [
+    salesforce.Opportunity,
+  ]
+  _alias = "Opportunity.sbaa__SubmitForApproval"
+}

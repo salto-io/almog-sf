@@ -1,0 +1,118 @@
+type salesforce.SurveyQuestionResponse {
+  serviceid Id {
+    apiName = "SurveyQuestionResponse.Id"
+    label = "Survey Question Response ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SurveyQuestionResponse.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text ResponseShortText {
+    apiName = "SurveyQuestionResponse.ResponseShortText"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SurveyQuestionResponse.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SurveyQuestionResponse.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SurveyQuestionResponse.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SurveyQuestionResponse.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SurveyQuestionResponse.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup ResponseId {
+    apiName = "SurveyQuestionResponse.ResponseId"
+    label = "Survey Response ID"
+    _required = true
+    relationshipName = "Response"
+  }
+  salesforce.Lookup QuestionId {
+    apiName = "SurveyQuestionResponse.QuestionId"
+    label = "Survey Question ID"
+    relationshipName = "Question"
+  }
+  salesforce.Lookup QuestionChoiceId {
+    apiName = "SurveyQuestionResponse.QuestionChoiceId"
+    label = "Survey Question Choice ID"
+    relationshipName = "QuestionChoice"
+  }
+  salesforce.Lookup SurveyVersionId {
+    apiName = "SurveyQuestionResponse.SurveyVersionId"
+    label = "Survey Version ID"
+    _required = true
+    relationshipName = "SurveyVersion"
+  }
+  salesforce.Lookup InvitationId {
+    apiName = "SurveyQuestionResponse.InvitationId"
+    label = "Survey Invitation ID"
+    relationshipName = "Invitation"
+  }
+  salesforce.Picklist Datatype {
+    apiName = "SurveyQuestionResponse.Datatype"
+    label = "Data Type"
+    restricted = true
+  }
+  salesforce.Number Rank {
+    apiName = "SurveyQuestionResponse.Rank"
+    label = "Rank"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Date DateValue {
+    apiName = "SurveyQuestionResponse.DateValue"
+    label = "Date Value"
+  }
+  salesforce.DateTime DateTimeValue {
+    apiName = "SurveyQuestionResponse.DateTimeValue"
+    label = "Date Time Value"
+  }
+  salesforce.LongTextArea ChoiceValue {
+    apiName = "SurveyQuestionResponse.ChoiceValue"
+    label = "Choice Value"
+    length = 1000
+  }
+  salesforce.LongTextArea ResponseValue {
+    apiName = "SurveyQuestionResponse.ResponseValue"
+    label = "Response Value"
+    length = 32000
+  }
+  salesforce.Checkbox IsTrueOrFalse {
+    apiName = "SurveyQuestionResponse.IsTrueOrFalse"
+    label = "True or False"
+    defaultValue = false
+  }
+  salesforce.Number NumberValue {
+    apiName = "SurveyQuestionResponse.NumberValue"
+    label = "Number Value"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+}

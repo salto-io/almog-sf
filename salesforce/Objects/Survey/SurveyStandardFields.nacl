@@ -1,0 +1,95 @@
+type salesforce.Survey {
+  serviceid Id {
+    apiName = "Survey.Id"
+    label = "Survey ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "Survey.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "Survey.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "Survey.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "Survey.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "Survey.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "Survey.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "Survey.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "Survey.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Summary TotalVersionsCount {
+    apiName = "Survey.TotalVersionsCount"
+    label = "Number of Versions"
+    precision = 9
+  }
+  salesforce.Text DeveloperName {
+    apiName = "Survey.DeveloperName"
+    label = "Developer Name"
+    _required = true
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.LongTextArea Description {
+    apiName = "Survey.Description"
+    label = "Description"
+    length = 65535
+  }
+  salesforce.Lookup ActiveVersionId {
+    apiName = "Survey.ActiveVersionId"
+    label = "Survey Version ID"
+    relationshipName = "ActiveVersion"
+  }
+  salesforce.Picklist SurveyType {
+    apiName = "Survey.SurveyType"
+    label = "Type"
+    restricted = true
+  }
+  salesforce.Lookup LatestVersionId {
+    apiName = "Survey.LatestVersionId"
+    label = "Survey Version ID"
+    relationshipName = "LatestVersion"
+  }
+  salesforce.Text NamespacePrefix {
+    apiName = "Survey.NamespacePrefix"
+    label = "Namespace Prefix"
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+}

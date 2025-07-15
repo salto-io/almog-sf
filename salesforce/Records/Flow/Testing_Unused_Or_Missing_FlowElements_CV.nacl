@@ -1,0 +1,248 @@
+salesforce.Flow Testing_Unused_Or_Missing_FlowElements_CV {
+  fullName = "Testing_Unused_Or_Missing_FlowElements_CV"
+  actionCalls = [
+    {
+      name = "Article1"
+      label = "Article1"
+      actionName = salesforce.QuickAction.instance.KnowledgeArticlePreconfigured
+      actionType = "quickAction"
+      flowTransactionModel = "CurrentTransaction"
+      inputParameters = [
+        {
+          name = "Title"
+          value = {
+            elementReference = "Flow_for_approval_process.IsSuccess"
+          }
+        },
+        {
+          name = "UrlName"
+          value = {
+            elementReference = "Outcome1"
+          }
+        },
+      ]
+      nameSegment = "KnowledgeArticlePreconfigured"
+      offset = 0
+    },
+    {
+      name = "NewTask1"
+      label = "NewTask1"
+      actionName = salesforce.QuickAction.instance.NewTask
+      actionType = "quickAction"
+      flowTransactionModel = "CurrentTransaction"
+      inputParameters = [
+        {
+          name = "OwnerId"
+          value = {
+            elementReference = "Article1"
+          }
+        },
+      ]
+      nameSegment = "NewTask"
+      offset = 0
+    },
+  ]
+  apiVersion = 63
+  areMetricsLoggedToDataCloud = false
+  decisions = [
+    {
+      name = "Decision1"
+      label = "Decision1"
+      defaultConnector = {
+        targetReference = "Screen2"
+      }
+      defaultConnectorLabel = "Default Outcome"
+      rules = [
+        {
+          name = "Outcome1"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "Flow_for_approval_process.Results.Flow__InterviewGuid"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "\"Valid\""
+              }
+            },
+            {
+              leftValueReference = "Flow_for_approval_process.IsSuccess"
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = true
+              }
+            },
+          ]
+          connector = {
+            targetReference = "Article1"
+          }
+          label = "Outcome1"
+        },
+      ]
+    },
+  ]
+  environments = "Default"
+  interviewLabel = "Testing_Unused_Or_Missing_FlowElements_CV {!$Flow.CurrentDateTime}"
+  label = "Testing_Unused_Or_Missing_FlowElements_CV"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  screens = [
+    {
+      name = "Screen1"
+      label = "Screen1"
+      actions = {
+        name = "Flow_for_approval_process"
+        actionName = "Flow_for_approval_process"
+        actionType = "flow"
+        label = "Flow for approval process"
+        nameSegment = "Flow_for_approval_process"
+      }
+      allowBack = true
+      allowFinish = true
+      allowPause = true
+      connector = {
+        targetReference = "Decision1"
+      }
+      fields = [
+        {
+          name = "ActionButton1"
+          extensionName = "flowruntime:actionButtonField"
+          fieldType = "ComponentInstance"
+          inputParameters = [
+            {
+              name = "label"
+              value = {
+                stringValue = "Action Button"
+              }
+            },
+            {
+              name = "isSuccess"
+              value = {
+                elementReference = "Flow_for_approval_process.IsSuccess"
+              }
+            },
+            {
+              name = "inProgress"
+              value = {
+                elementReference = "Flow_for_approval_process.InProgress"
+              }
+            },
+            {
+              name = "errorMessage"
+              value = {
+                elementReference = "Flow_for_approval_process.ErrorMessage"
+              }
+            },
+          ]
+          inputsOnNextNavToAssocScrn = "UseStoredValues"
+          isRequired = true
+          storeOutputAutomatically = true
+        },
+      ]
+      showFooter = true
+      showHeader = true
+      triggers = {
+        eventName = "flow__screenfieldclick"
+        eventSource = "ActionButton1"
+        handlers = {
+          screenActionName = "Flow_for_approval_process"
+        }
+      }
+    },
+    {
+      name = "Screen2"
+      label = "Screen2"
+      actions = {
+        name = "BTN2ApprovalProcess"
+        actionName = "Flow_for_approval_process"
+        actionType = "flow"
+        label = "Flow for approval process"
+        nameSegment = "Flow_for_approval_process"
+      }
+      allowBack = true
+      allowFinish = true
+      allowPause = true
+      connector = {
+        targetReference = "NewTask1"
+      }
+      fields = [
+        {
+          name = "Name1"
+          extensionName = "flowruntime:name"
+          fieldType = "ComponentInstance"
+          inputsOnNextNavToAssocScrn = "UseStoredValues"
+          isRequired = true
+          storeOutputAutomatically = true
+        },
+        {
+          name = "ActionButton"
+          extensionName = "flowruntime:actionButtonField"
+          fieldType = "ComponentInstance"
+          inputParameters = [
+            {
+              name = "label"
+              value = {
+                stringValue = "Action Button"
+              }
+            },
+            {
+              name = "isSuccess"
+              value = {
+                elementReference = "BTN2ApprovalProcess.IsSuccess"
+              }
+            },
+            {
+              name = "inProgress"
+              value = {
+                elementReference = "BTN2ApprovalProcess.InProgress"
+              }
+            },
+            {
+              name = "errorMessage"
+              value = {
+                elementReference = "BTN2ApprovalProcess.ErrorMessage"
+              }
+            },
+          ]
+          inputsOnNextNavToAssocScrn = "UseStoredValues"
+          isRequired = true
+          storeOutputAutomatically = true
+        },
+      ]
+      showFooter = true
+      showHeader = true
+      triggers = {
+        eventName = "flow__screenfieldclick"
+        eventSource = "ActionButton"
+        handlers = {
+          screenActionName = "BTN2ApprovalProcess"
+        }
+      }
+    },
+  ]
+  start = {
+    connector = {
+      targetReference = "Screen1"
+    }
+  }
+  status = "Draft"
+  _alias = "Testing_Unused_Or_Missing_FlowElements_CV"
+}

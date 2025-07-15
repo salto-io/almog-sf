@@ -1,0 +1,47 @@
+salesforce.Flow G {
+  fullName = "G"
+  apiVersion = 62
+  areMetricsLoggedToDataCloud = false
+  environments = "Default"
+  interviewLabel = "G {!$Flow.CurrentDateTime}"
+  label = "G"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "Flow"
+  screens = [
+    {
+      name = "G"
+      label = "G"
+      allowBack = true
+      allowFinish = true
+      allowPause = true
+      showFooter = true
+      showHeader = true
+    },
+  ]
+  start = {
+    connector = {
+      targetReference = "G"
+    }
+  }
+  status = "Draft"
+  _alias = "G"
+}

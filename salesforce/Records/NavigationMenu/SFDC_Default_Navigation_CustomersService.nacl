@@ -1,0 +1,14 @@
+salesforce.NavigationMenu SFDC_Default_Navigation_CustomersService {
+  container = "CustomersService"
+  containerType = "Network"
+  label = "Default Navigation"
+  navigationMenuItem = {
+    label = "Topics"
+    position = 0
+    publiclyAvailable = true
+    target = "ShowMoreTopics"
+    type = "NavigationalTopic"
+  }
+  fullName = "SFDC_Default_Navigation_CustomersService"
+  _alias = "Default Navigation"
+}

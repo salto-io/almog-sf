@@ -1,0 +1,457 @@
+type salesforce.Account {
+  salesforce.Lookup AccountLookup__c {
+    apiName = "Account.AccountLookup__c"
+    deleteConstraint = "SetNull"
+    label = "Account"
+    referenceTo = [
+      salesforce.Account,
+    ]
+    relationshipLabel = "Accounts"
+    relationshipName = "Accounts"
+  }
+  salesforce.Picklist Active__c {
+    apiName = "Account.Active__c"
+    label = "Active"
+    valueSet = {
+      values = {
+        No = {
+          fullName = "No"
+          default = false
+          label = "No"
+        }
+        Yes = {
+          fullName = "Yes"
+          default = false
+          label = "Yes"
+        }
+      }
+      order = [
+        salesforce.Account.field.Active__c.valueSet.values.No,
+        salesforce.Account.field.Active__c.valueSet.values.Yes,
+      ]
+    }
+    sorted = false
+    restricted = false
+  }
+  salesforce.Text Custom_Field_Not_Required__c {
+    apiName = "Account.Custom_Field_Not_Required__c"
+    defaultValueFormula = "\"Default\""
+    externalId = false
+    label = "Custom Field Not Required"
+    length = 20
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist CustomerPriority__c {
+    apiName = "Account.CustomerPriority__c"
+    label = "Customer Priority"
+    valueSet = {
+      values = {
+        High = {
+          fullName = "High"
+          default = false
+          label = "High"
+        }
+        Low = {
+          fullName = "Low"
+          default = false
+          label = "Low"
+        }
+        Medium = {
+          fullName = "Medium"
+          default = false
+          label = "Medium"
+        }
+      }
+      order = [
+        salesforce.Account.field.CustomerPriority__c.valueSet.values.High,
+        salesforce.Account.field.CustomerPriority__c.valueSet.values.Low,
+        salesforce.Account.field.CustomerPriority__c.valueSet.values.Medium,
+      ]
+    }
+    sorted = false
+    restricted = false
+  }
+  salesforce.Lookup LookupToAsset__c {
+    apiName = "Account.LookupToAsset__c"
+    deleteConstraint = "Restrict"
+    label = "LookupToAsset"
+    referenceTo = [
+      salesforce.Asset,
+    ]
+    relationshipLabel = "Accounts (LookupToAsset)"
+    relationshipName = "Accounts1"
+    _required = true
+  }
+  salesforce.Lookup LookupToTest__c {
+    apiName = "Account.LookupToTest__c"
+    deleteConstraint = "Restrict"
+    label = "TestCustomObject"
+    referenceTo = [
+      salesforce.TestCustomObject__c,
+    ]
+    relationshipLabel = "Accounts"
+    relationshipName = "testCustoms"
+    _required = true
+  }
+  salesforce.Number NumberofLocations__c {
+    apiName = "Account.NumberofLocations__c"
+    externalId = false
+    label = "Number of Locations"
+    precision = 3
+    scale = 0
+    unique = false
+  }
+  salesforce.Lookup RelationshipToAsset__c {
+    apiName = "Account.RelationshipToAsset__c"
+    deleteConstraint = "Restrict"
+    label = "Asset"
+    referenceTo = [
+      salesforce.Asset,
+    ]
+    relationshipLabel = "Accounts"
+    relationshipName = "Accounts"
+    _required = true
+  }
+  salesforce.Checkbox SBQQ__AssetQuantitiesCombined__c {
+    apiName = "Account.SBQQ__AssetQuantitiesCombined__c"
+    defaultValue = false
+    deprecated = false
+    description = "Option to combine quantities of multiple assets for the same product into one line when renewal quote is generated."
+    inlineHelpText = "Option to combine quantities of multiple assets for the same product into one line when renewal quote is generated."
+    label = "Combine Asset Quantities"
+  }
+  salesforce.Checkbox SBQQ__CoTermedContractsCombined__c {
+    apiName = "Account.SBQQ__CoTermedContractsCombined__c"
+    defaultValue = false
+    deprecated = false
+    description = "Flag that controls whether assets and subscriptions from multiple co-teremed contracts are rolled up together. By default, each co-termed contract generates a separate group on renewal quote."
+    inlineHelpText = "Enable to combine assets and subscriptions from multiple co-termed contracts. By default, each co-termed contract generates a separate group on renewal quote."
+    label = "Combine Co-Termed Contracts"
+  }
+  salesforce.Picklist SBQQ__CoTerminationEvent__c {
+    apiName = "Account.SBQQ__CoTerminationEvent__c"
+    deprecated = false
+    description = "Determines when contracts are co-terminated."
+    inlineHelpText = "Determines when contracts are co-terminated."
+    label = "Co-Termination Event"
+    valueSet = {
+      values = {
+        Add_on@b = {
+          fullName = "Add-on"
+          default = false
+          label = "Add-on"
+        }
+        Renewal = {
+          fullName = "Renewal"
+          default = false
+          label = "Renewal"
+        }
+      }
+      order = [
+        salesforce.Account.field.SBQQ__CoTerminationEvent__c.valueSet.values.Add_on@b,
+        salesforce.Account.field.SBQQ__CoTerminationEvent__c.valueSet.values.Renewal,
+      ]
+    }
+    sorted = false
+    restricted = false
+    fieldDependency = {
+      controllingField = salesforce.Account.field.SBQQ__ContractCoTermination__c
+      valueSettings = [
+        {
+          valueName = salesforce.Account.field.SBQQ__CoTerminationEvent__c.valueSet.values.Add_on@b.fullName
+          controllingFieldValue = [
+            salesforce.Account.field.SBQQ__ContractCoTermination__c.valueSet.values.Always.fullName,
+            salesforce.Account.field.SBQQ__ContractCoTermination__c.valueSet.values.Prompt.fullName,
+          ]
+        },
+        {
+          valueName = salesforce.Account.field.SBQQ__CoTerminationEvent__c.valueSet.values.Renewal.fullName
+          controllingFieldValue = [
+            salesforce.Account.field.SBQQ__ContractCoTermination__c.valueSet.values.Always.fullName,
+          ]
+        },
+      ]
+    }
+  }
+  salesforce.Picklist SBQQ__ContractCoTermination__c {
+    apiName = "Account.SBQQ__ContractCoTermination__c"
+    deprecated = false
+    description = "Determines how service and subscription contracts for this customer are co-terminated."
+    inlineHelpText = "Determines how service and subscription contracts for this customer are co-terminated."
+    label = "Contract Co-Termination"
+    valueSet = {
+      values = {
+        Never = {
+          fullName = "Never"
+          default = true
+          label = "Never"
+        }
+        Always = {
+          fullName = "Always"
+          default = false
+          label = "Always"
+        }
+        Prompt = {
+          fullName = "Prompt"
+          default = false
+          label = "Prompt"
+        }
+      }
+      order = [
+        salesforce.Account.field.SBQQ__ContractCoTermination__c.valueSet.values.Never,
+        salesforce.Account.field.SBQQ__ContractCoTermination__c.valueSet.values.Always,
+        salesforce.Account.field.SBQQ__ContractCoTermination__c.valueSet.values.Prompt,
+      ]
+    }
+    sorted = false
+    restricted = false
+  }
+  salesforce.Lookup SBQQ__DefaultOpportunity__c {
+    apiName = "Account.SBQQ__DefaultOpportunity__c"
+    deleteConstraint = "SetNull"
+    deprecated = false
+    description = "Default opportunity for this account used by an e-Commerce module to obtain the customer's price book and associate with \"shopping cart\" quotes."
+    inlineHelpText = "Default opportunity for this account used by an e-Commerce module to obtain the customer's price book and associate with \"shopping cart\" quotes."
+    label = "Default Opportunity"
+    referenceTo = [
+      salesforce.Opportunity,
+    ]
+    relationshipLabel = "Accounts"
+    relationshipName = "WebAccounts"
+  }
+  salesforce.Checkbox SBQQ__IgnoreParentContractedPrices__c {
+    apiName = "Account.SBQQ__IgnoreParentContractedPrices__c"
+    defaultValue = false
+    deprecated = false
+    description = "Select if contracted prices should not be inherited from the parent account."
+    inlineHelpText = "Select if contracted prices should not be inherited from the parent account."
+    label = "Ignore Parent Contracted Prices"
+  }
+  salesforce.Checkbox SBQQ__PreserveBundle__c {
+    apiName = "Account.SBQQ__PreserveBundle__c"
+    defaultValue = false
+    deprecated = false
+    description = "Select to maintain bundle hierarchy on renewal quotes and amendments"
+    inlineHelpText = "Select checkbox to maintain bundle hierarchy on renewal quotes and amendments."
+    label = "Preserve Bundle Structure"
+  }
+  salesforce.Date SBQQ__PriceHoldEnd__c {
+    apiName = "Account.SBQQ__PriceHoldEnd__c"
+    deprecated = false
+    description = "End date for any price hold that may be in effect."
+    inlineHelpText = "Enter date until which the prices must be held."
+    label = "Price Hold End"
+  }
+  salesforce.Picklist SBQQ__RenewalModel__c {
+    apiName = "Account.SBQQ__RenewalModel__c"
+    deprecated = false
+    description = "The option to distinguish between Subscription or Asset based renewal."
+    inlineHelpText = "Choose Asset Based to make renewals based off of an account's assets, or choose Contract Based to make renewals based off of contracts created from a quote."
+    label = "Renewal Model"
+    valueSet = {
+      values = {
+        Asset_Based@s = {
+          fullName = "Asset Based"
+          default = false
+          label = "Asset Based"
+        }
+        Contract_Based@s = {
+          fullName = "Contract Based"
+          default = false
+          label = "Contract Based"
+        }
+      }
+      order = [
+        salesforce.Account.field.SBQQ__RenewalModel__c.valueSet.values.Asset_Based@s,
+        salesforce.Account.field.SBQQ__RenewalModel__c.valueSet.values.Contract_Based@s,
+      ]
+    }
+    sorted = false
+    restricted = false
+  }
+  salesforce.Picklist SBQQ__RenewalPricingMethod__c {
+    apiName = "Account.SBQQ__RenewalPricingMethod__c"
+    deprecated = false
+    description = "Method for pricing products on renewal."
+    inlineHelpText = "Use \"Same\" to keep the same price paid last time. Use \"List\" to use current list price. Use \"Uplift\" to use the price paid last time plus some uplift."
+    label = "Renewal Pricing Method"
+    valueSet = {
+      values = {
+        Same = {
+          fullName = "Same"
+          default = true
+          label = "Same"
+        }
+        List = {
+          fullName = "List"
+          default = false
+          label = "List"
+        }
+        Uplift = {
+          fullName = "Uplift"
+          default = false
+          label = "Uplift"
+        }
+      }
+      order = [
+        salesforce.Account.field.SBQQ__RenewalPricingMethod__c.valueSet.values.Same,
+        salesforce.Account.field.SBQQ__RenewalPricingMethod__c.valueSet.values.List,
+        salesforce.Account.field.SBQQ__RenewalPricingMethod__c.valueSet.values.Uplift,
+      ]
+    }
+    sorted = false
+    restricted = false
+  }
+  salesforce.Picklist SBQQ__TaxExempt__c {
+    apiName = "Account.SBQQ__TaxExempt__c"
+    deprecated = false
+    description = "Selected if this account has active certificates"
+    inlineHelpText = "Selected if this account has active certificates"
+    label = "Tax-Exempt"
+    valueSet = {
+      values = {
+        No = {
+          fullName = "No"
+          default = true
+          label = "No"
+        }
+        Yes = {
+          fullName = "Yes"
+          default = false
+          label = "Yes"
+        }
+      }
+      order = [
+        salesforce.Account.field.SBQQ__TaxExempt__c.valueSet.values.No,
+        salesforce.Account.field.SBQQ__TaxExempt__c.valueSet.values.Yes,
+      ]
+    }
+    sorted = false
+    restricted = false
+  }
+  salesforce.Date SLAExpirationDate__c {
+    apiName = "Account.SLAExpirationDate__c"
+    label = "SLA Expiration Date"
+  }
+  salesforce.Text SLASerialNumber__c {
+    apiName = "Account.SLASerialNumber__c"
+    externalId = false
+    label = "SLA Serial Number"
+    length = 10
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Picklist SLA__c {
+    apiName = "Account.SLA__c"
+    label = "SLA"
+    valueSet = {
+      values = {
+        Gold = {
+          fullName = "Gold"
+          default = false
+          label = "Gold"
+        }
+        Silver = {
+          fullName = "Silver"
+          default = false
+          label = "Silver"
+        }
+        Platinum = {
+          fullName = "Platinum"
+          default = false
+          label = "Platinum"
+        }
+        Bronze = {
+          fullName = "Bronze"
+          default = false
+          label = "Bronze"
+        }
+      }
+      order = [
+        salesforce.Account.field.SLA__c.valueSet.values.Gold,
+        salesforce.Account.field.SLA__c.valueSet.values.Silver,
+        salesforce.Account.field.SLA__c.valueSet.values.Platinum,
+        salesforce.Account.field.SLA__c.valueSet.values.Bronze,
+      ]
+    }
+    sorted = false
+    restricted = false
+  }
+  salesforce.MultiselectPicklist TestCollectionField__c {
+    apiName = "Account.TestCollectionField__c"
+    label = "TestCollectionField"
+    _required = true
+    valueSet = {
+      values = {
+        First = {
+          fullName = "First"
+          default = true
+          label = "First"
+        }
+        Second = {
+          fullName = "Second"
+          default = false
+          label = "Second"
+        }
+        Third = {
+          fullName = "Third"
+          default = false
+          label = "Third"
+        }
+      }
+      order = [
+        salesforce.Account.field.TestCollectionField__c.valueSet.values.First,
+        salesforce.Account.field.TestCollectionField__c.valueSet.values.Second,
+        salesforce.Account.field.TestCollectionField__c.valueSet.values.Third,
+      ]
+    }
+    sorted = false
+    restricted = true
+    visibleLines = 4
+  }
+  salesforce.Picklist UpsellOpportunity__c {
+    apiName = "Account.UpsellOpportunity__c"
+    label = "Upsell Opportunity"
+    valueSet = {
+      values = {
+        Maybe = {
+          fullName = "Maybe"
+          default = false
+          label = "Maybe"
+        }
+        No = {
+          fullName = "No"
+          default = false
+          label = "No"
+        }
+        Yes = {
+          fullName = "Yes"
+          default = false
+          label = "Yes"
+        }
+      }
+      order = [
+        salesforce.Account.field.UpsellOpportunity__c.valueSet.values.Maybe,
+        salesforce.Account.field.UpsellOpportunity__c.valueSet.values.No,
+        salesforce.Account.field.UpsellOpportunity__c.valueSet.values.Yes,
+      ]
+    }
+    sorted = false
+    restricted = false
+  }
+  salesforce.Checkbox isunknown__c {
+    apiName = "Account.isunknown__c"
+    defaultValue = false
+    label = "isunknown"
+  }
+  salesforce.Date test_for_unknown__c {
+    apiName = "Account.test_for_unknown__c"
+    label = "test for unknown"
+  }
+  salesforce.Checkbox top_secret__c {
+    apiName = "Account.top_secret__c"
+    defaultValue = false
+    label = "top secret"
+  }
+}

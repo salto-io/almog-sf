@@ -1,0 +1,85 @@
+salesforce.ApprovalProcess Coupon_New_Coupon_Approval_Process@vuuu {
+  active = true
+  allowRecall = false
+  allowedSubmitters = [
+    {
+      type = "creator"
+    },
+    {
+      type = "owner"
+    },
+  ]
+  approvalPageFields = {
+    field = [
+      "Name",
+    ]
+  }
+  approvalStep = [
+    {
+      allowDelegate = false
+      approvalActions = {
+        action = [
+          {
+            name = salesforce.WorkflowAlert.instance.Coupon_Email_In_Case_Of_Approval@vuuuu
+            type = "Alert"
+          },
+        ]
+      }
+      assignedApprover = {
+        approver = {
+          type = "adhoc"
+        }
+      }
+      label = "Coupon Approval Step"
+      name = "Coupon_Approval_Step"
+      rejectionActions = {
+        action = [
+          {
+            name = salesforce.WorkflowAlert.instance.Coupon_Email_In_Case_Of_Approval@vuuuu
+            type = "Alert"
+          },
+        ]
+      }
+    },
+  ]
+  emailTemplate = "unfiled$public/SchedulerUnauthenticatedUserAppointmentTypeEmailTemplateForAmazonChime"
+  enableMobileDeviceAccess = false
+  entryCriteria = {
+    formula = "Id = \"1\""
+  }
+  finalApprovalActions = {
+    action = [
+      {
+        name = salesforce.WorkflowAlert.instance.Coupon_Email_In_Case_Of_Approval@vuuuu
+        type = "Alert"
+      },
+    ]
+  }
+  finalApprovalRecordLock = true
+  finalRejectionActions = {
+    action = [
+      {
+        name = salesforce.WorkflowAlert.instance.Coupon_Email_In_Case_Of_Approval@vuuuu
+        type = "Alert"
+      },
+    ]
+  }
+  finalRejectionRecordLock = false
+  label = "New Coupon Approval Process"
+  processOrder = 1
+  recallActions = {
+    action = [
+      {
+        name = salesforce.WorkflowAlert.instance.Coupon_Email_In_Case_Of_Approval@vuuuu
+        type = "Alert"
+      },
+    ]
+  }
+  recordEditability = "AdminOnly"
+  showApprovalHistory = false
+  fullName = "Coupon.New_Coupon_Approval_Process"
+  _parent = [
+    salesforce.Coupon,
+  ]
+  _alias = "New Coupon Approval Process"
+}

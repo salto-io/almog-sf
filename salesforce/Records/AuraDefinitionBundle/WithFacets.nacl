@@ -1,0 +1,8 @@
+salesforce.AuraDefinitionBundle WithFacets {
+  apiVersion = 62
+  description = "A Lightning Component Bundle"
+  fullName = "WithFacets"
+  type = "Component"
+  markup = file("salesforce/Records/AuraDefinitionBundle/WithFacets/WithFacets.cmp")
+  _alias = "WithFacets"
+}

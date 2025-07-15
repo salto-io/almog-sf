@@ -1,0 +1,112 @@
+salesforce.Flow TestLeftValueReferences {
+  fullName = "TestLeftValueReferences"
+  actionCalls = [
+    {
+      name = "NewTaskAction"
+      label = "NewTaskAction"
+      actionName = salesforce.QuickAction.instance.NewTask
+      actionType = "quickAction"
+      flowTransactionModel = "CurrentTransaction"
+      inputParameters = [
+        {
+          name = "WhoId"
+          value = {
+            elementReference = salesforce.Account.field.Id
+          }
+        },
+        {
+          name = "OwnerId"
+          value = {
+            elementReference = salesforce.Account.field.Id
+          }
+        },
+      ]
+      nameSegment = "NewTask"
+      offset = 0
+    },
+  ]
+  apiVersion = 63
+  areMetricsLoggedToDataCloud = false
+  decisions = [
+    {
+      name = "FirstDecision"
+      label = "FirstDecision"
+      defaultConnector = {
+        targetReference = "NewTaskAction"
+      }
+      defaultConnectorLabel = "Default Outcome"
+      rules = [
+        {
+          name = "FirstDecisionOutcome"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = salesforce.Account.field.IsDeleted
+              operator = "EqualTo"
+              rightValue = {
+                elementReference = salesforce.Account.field.isunknown__c
+              }
+            },
+          ]
+          label = "FirstDecisionOutcome"
+        },
+      ]
+    },
+  ]
+  environments = "Default"
+  interviewLabel = "TestLeftValueReferences {!$Flow.CurrentDateTime}"
+  label = "TestLeftValueReferences"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  start = {
+    connector = {
+      targetReference = "FirstDecision"
+    }
+    filterLogic = "and"
+    filters = [
+      {
+        field = salesforce.Account.field.Name
+        operator = "EqualTo"
+        value = {
+          stringValue = ""
+        }
+      },
+    ]
+    object = salesforce.Account
+    recordTriggerType = "CreateAndUpdate"
+    scheduledPaths = {
+      name = "FirstScheduledPath"
+      label = "FirstScheduledPath"
+      maxBatchSize = 3
+      offsetNumber = 5
+      offsetUnit = "Days"
+      recordField = "LastModifiedDate"
+      timeSource = "RecordField"
+    }
+    triggerType = "RecordAfterSave"
+  }
+  status = "Active"
+  _parent = [
+    salesforce.Account,
+  ]
+  _alias = "TestLeftValueReferences"
+}

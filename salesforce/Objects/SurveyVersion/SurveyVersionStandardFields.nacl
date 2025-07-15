@@ -1,0 +1,83 @@
+type salesforce.SurveyVersion {
+  serviceid Id {
+    apiName = "SurveyVersion.Id"
+    label = "Survey Version ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SurveyVersion.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "SurveyVersion.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SurveyVersion.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SurveyVersion.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SurveyVersion.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SurveyVersion.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SurveyVersion.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup SurveyId {
+    apiName = "SurveyVersion.SurveyId"
+    label = "Survey ID"
+    _required = true
+    relationshipName = "Survey"
+  }
+  salesforce.Number VersionNumber {
+    apiName = "SurveyVersion.VersionNumber"
+    label = "Version Number"
+    _required = true
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Picklist SurveyStatus {
+    apiName = "SurveyVersion.SurveyStatus"
+    label = "Survey Status"
+    restricted = true
+  }
+  salesforce.Lookup BrandingSetId {
+    apiName = "SurveyVersion.BrandingSetId"
+    label = "Branding Set ID"
+    relationshipName = "BrandingSet"
+  }
+  salesforce.LongTextArea Description {
+    apiName = "SurveyVersion.Description"
+    label = "Description"
+    length = 65535
+  }
+  salesforce.Checkbox IsTemplate {
+    apiName = "SurveyVersion.IsTemplate"
+    label = "Template"
+    defaultValue = false
+  }
+}

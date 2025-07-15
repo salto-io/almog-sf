@@ -1,0 +1,12 @@
+salesforce.AuthProvider LiveMessageSetup {
+  friendlyName = "LiveMessageSetup"
+  includeOrgIdInIdentifier = false
+  isPkceEnabled = false
+  providerType = "Facebook"
+  requireMfa = false
+  sendAccessTokenInHeader = false
+  sendClientCredentialsInHeader = false
+  sendSecretInApis = true
+  fullName = "LiveMessageSetup"
+  _alias = "LiveMessageSetup"
+}

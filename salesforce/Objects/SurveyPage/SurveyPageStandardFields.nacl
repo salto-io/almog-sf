@@ -1,0 +1,70 @@
+type salesforce.SurveyPage {
+  serviceid Id {
+    apiName = "SurveyPage.Id"
+    label = "Survey Page ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SurveyPage.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "SurveyPage.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SurveyPage.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SurveyPage.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SurveyPage.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SurveyPage.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SurveyPage.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup SurveyVersionId {
+    apiName = "SurveyPage.SurveyVersionId"
+    label = "Survey Version ID"
+    _required = true
+    relationshipName = "SurveyVersion"
+  }
+  salesforce.Text DeveloperName {
+    apiName = "SurveyPage.DeveloperName"
+    label = "Developer Name"
+    _required = true
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Number DisplayOrder {
+    apiName = "SurveyPage.DisplayOrder"
+    label = "Display Order"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+}

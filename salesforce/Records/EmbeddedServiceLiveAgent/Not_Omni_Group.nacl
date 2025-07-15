@@ -1,0 +1,34 @@
+salesforce.EmbeddedServiceLiveAgent Not_Omni_Group {
+  embeddedServiceConfig = salesforce.EmbeddedServiceConfig.instance.Not_Omni_Group
+  embeddedServiceQuickActions = [
+    {
+      embeddedServiceLiveAgent = salesforce.EmbeddedServiceLiveAgent.instance.Not_Omni_Group
+      order = 1
+      quickActionDefinition = salesforce.QuickAction.instance.Snapins_Case_OfflineCaseQuickAction_08hWU0000001P4P_1736684236097
+      quickActionType = "OfflineCase"
+    },
+    {
+      embeddedServiceLiveAgent = salesforce.EmbeddedServiceLiveAgent.instance.Not_Omni_Group
+      order = 1
+      quickActionDefinition = salesforce.QuickAction.instance.Snapins_Contact_PrechatQuickAction_08hWU0000001P4P_1736684236832
+      quickActionType = "Prechat"
+    },
+    {
+      embeddedServiceLiveAgent = salesforce.EmbeddedServiceLiveAgent.instance.Not_Omni_Group
+      order = 2
+      quickActionDefinition = salesforce.QuickAction.instance.Snapins_Case_PrechatQuickAction_08hWU0000001P4P_1736684236869
+      quickActionType = "Prechat"
+    },
+  ]
+  enabled = true
+  fontSize = "Medium"
+  isOfflineCaseEnabled = true
+  isQueuePositionEnabled = false
+  liveChatButton = salesforce.LiveChatButton.instance.Not_Omni_1
+  liveChatDeployment = salesforce.LiveChatDeployment.instance.live_agent_setup_flow
+  masterLabel = "Not Omni Group"
+  prechatEnabled = true
+  scenario = "Service"
+  fullName = "Not_Omni_Group"
+  _alias = "Not_Omni_Group"
+}

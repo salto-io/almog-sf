@@ -1,0 +1,34 @@
+salesforce.EmbeddedServiceLiveAgent Customer_Service_Chat_Group_2 {
+  embeddedServiceConfig = salesforce.EmbeddedServiceConfig.instance.Customer_Service_Chat_Group_2
+  embeddedServiceQuickActions = [
+    {
+      embeddedServiceLiveAgent = salesforce.EmbeddedServiceLiveAgent.instance.Customer_Service_Chat_Group_2
+      order = 1
+      quickActionDefinition = salesforce.QuickAction.instance.Snapins_Case_OfflineCaseQuickAction_08hWU0000001NQn_1736078477496
+      quickActionType = "OfflineCase"
+    },
+    {
+      embeddedServiceLiveAgent = salesforce.EmbeddedServiceLiveAgent.instance.Customer_Service_Chat_Group_2
+      order = 1
+      quickActionDefinition = salesforce.QuickAction.instance.Snapins_Contact_PrechatQuickAction_08hWU0000001NQn_1736078478162
+      quickActionType = "Prechat"
+    },
+    {
+      embeddedServiceLiveAgent = salesforce.EmbeddedServiceLiveAgent.instance.Customer_Service_Chat_Group_2
+      order = 2
+      quickActionDefinition = salesforce.QuickAction.instance.Snapins_Case_PrechatQuickAction_08hWU0000001NQn_1736078478193
+      quickActionType = "Prechat"
+    },
+  ]
+  enabled = true
+  fontSize = "Medium"
+  isOfflineCaseEnabled = true
+  isQueuePositionEnabled = false
+  liveChatButton = salesforce.LiveChatButton.instance.Customer_Service_Chat_Group_2
+  liveChatDeployment = salesforce.LiveChatDeployment.instance.live_agent_setup_flow
+  masterLabel = "Customer Service Chat Group 2"
+  prechatEnabled = true
+  scenario = "Service"
+  fullName = "Customer_Service_Chat_Group_2"
+  _alias = "Customer_Service_Chat_Group_2"
+}

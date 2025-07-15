@@ -1,0 +1,14 @@
+salesforce.NavigationMenu SFDC_Default_Navigation_Web_Chat {
+  container = "Web Chat"
+  containerType = "Network"
+  label = "Default Navigation"
+  navigationMenuItem = {
+    label = "Topics"
+    position = 0
+    publiclyAvailable = true
+    target = "ShowMoreTopics"
+    type = "NavigationalTopic"
+  }
+  fullName = "SFDC_Default_Navigation_Web_Chat"
+  _alias = "Default Navigation"
+}

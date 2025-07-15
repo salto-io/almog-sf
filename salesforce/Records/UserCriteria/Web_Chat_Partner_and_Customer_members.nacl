@@ -1,0 +1,10 @@
+salesforce.UserCriteria Web_Chat_Partner_and_Customer_members@svuuu {
+  description = "Member criteria matches customer and partner member"
+  masterLabel = "Customer and Partner Members"
+  userTypes = [
+    "Partner",
+    "Customer",
+  ]
+  fullName = "Web Chat.Partner_and_Customer_members"
+  _alias = "Web Chat.Partner_and_Customer_members"
+}

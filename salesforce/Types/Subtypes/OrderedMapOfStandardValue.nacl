@@ -1,0 +1,8 @@
+type salesforce.OrderedMapOfStandardValue {
+  "Map<salesforce.StandardValue>" values {
+    _required = true
+  }
+  "List<salesforce.StandardValue>" order {
+    _required = true
+  }
+}

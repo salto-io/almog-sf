@@ -1,0 +1,26 @@
+salesforce.AutoResponseRules Case {
+  autoResponseRule = {
+    fullName = "Sample Case Auto-Response Rule"
+    active = true
+    ruleEntry = {
+      criteriaItems = [
+        {
+          field = salesforce.Case.field.Origin
+          operation = "equals"
+          value = "Email"
+        },
+        {
+          field = salesforce.Case.field.Subject
+          operation = "contains"
+          value = "[SAMPLE CASE SUBJECT]"
+        },
+      ]
+      notifyCcRecipients = false
+      senderEmail = "almog.mesilaty@salto.io"
+      senderName = "Almog Mesilaty"
+      template = salesforce.EmailTemplate.instance.unfiled_public_Email_to_Case_Sample_1735735062602@zcduuuu
+    }
+  }
+  fullName = "Case"
+  _alias = "Case"
+}

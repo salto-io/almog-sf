@@ -1,0 +1,10 @@
+salesforce.ProfileSessionSetting B2B_Reordering_Portal_Buyer_Profile_profileSessionSetting1741700682377 {
+  externalCommunityUserIdentityVerif = false
+  forceLogout = false
+  profile = "b2b reordering portal buyer profile"
+  sessionPersistence = false
+  sessionTimeout = 480
+  sessionTimeoutWarning = false
+  fullName = "B2B_Reordering_Portal_Buyer_Profile_profileSessionSetting1741700682377"
+  _alias = "B2B_Reordering_Portal_Buyer_Profile_profileSessionSetting1741700682377"
+}

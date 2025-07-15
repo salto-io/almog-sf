@@ -1,0 +1,10 @@
+salesforce.ProfileSessionSetting PT2_profileSessionSetting1741635431708 {
+  externalCommunityUserIdentityVerif = false
+  forceLogout = false
+  profile = "standard"
+  sessionPersistence = false
+  sessionTimeout = 480
+  sessionTimeoutWarning = false
+  fullName = "PT2_profileSessionSetting1741635431708"
+  _alias = "PT2_profileSessionSetting1741635431708"
+}

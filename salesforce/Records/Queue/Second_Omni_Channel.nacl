@@ -1,0 +1,17 @@
+salesforce.Queue Second_Omni_Channel {
+  doesSendEmailToMembers = false
+  name = "Second Omni Channel"
+  queueMembers = {
+    users = {
+      user = [
+        "almog.mesilaty+dev1@salto.io",
+      ]
+    }
+  }
+  queueRoutingConfig = salesforce.QueueRoutingConfig.instance.Second_Omni_Channel
+  queueSobject = {
+    sobjectType = "Case"
+  }
+  fullName = "Second_Omni_Channel"
+  _alias = "Second_Omni_Channel"
+}

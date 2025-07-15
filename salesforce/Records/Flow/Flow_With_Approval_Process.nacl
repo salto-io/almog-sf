@@ -1,0 +1,68 @@
+salesforce.Flow Flow_With_Approval_Process {
+  fullName = "Flow_With_Approval_Process"
+  actionCalls = [
+    {
+      name = "Submit"
+      label = "Submit"
+      actionName = "submit"
+      actionType = "submit"
+      flowTransactionModel = "CurrentTransaction"
+      inputParameters = [
+        {
+          name = "objectId"
+          value = {
+            elementReference = "Submit.entityId"
+          }
+        },
+        {
+          name = "processDefinitionNameOrId"
+          value = {
+            stringValue = "New_Coupon_Approval_Process"
+          }
+        },
+      ]
+      nameSegment = "submit"
+      offset = 0
+      storeOutputAutomatically = true
+    },
+  ]
+  apiVersion = 63
+  areMetricsLoggedToDataCloud = false
+  environments = "Default"
+  interviewLabel = "Flow With Approval Process {!$Flow.CurrentDateTime}"
+  label = "Flow With Approval Process"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  start = {
+    connector = {
+      targetReference = "Submit"
+    }
+    object = salesforce.CouponCodeRedemption
+    recordTriggerType = "Create"
+    triggerType = "RecordAfterSave"
+  }
+  status = "Active"
+  _parent = [
+    salesforce.CouponCodeRedemption,
+  ]
+  _alias = "Flow With Approval Process"
+}

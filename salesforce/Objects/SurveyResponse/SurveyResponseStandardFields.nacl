@@ -1,0 +1,111 @@
+type salesforce.SurveyResponse {
+  serviceid Id {
+    apiName = "SurveyResponse.Id"
+    label = "Survey Response ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SurveyResponse.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "SurveyResponse.Name"
+    label = "Response Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SurveyResponse.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SurveyResponse.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SurveyResponse.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SurveyResponse.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SurveyResponse.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup InvitationId {
+    apiName = "SurveyResponse.InvitationId"
+    label = "Survey Invitation ID"
+    _required = true
+    relationshipName = "Invitation"
+  }
+  salesforce.Lookup InterviewId {
+    apiName = "SurveyResponse.InterviewId"
+    label = "Interview ID"
+    relationshipName = "Interview"
+  }
+  salesforce.Text InterviewGuid {
+    apiName = "SurveyResponse.InterviewGuid"
+    label = "Interview GUID"
+    length = 255
+    unique = true
+    caseSensitive = false
+  }
+  salesforce.Lookup SubmitterId {
+    apiName = "SurveyResponse.SubmitterId"
+    label = "Response Submitter ID"
+    relationshipName = "Submitter"
+  }
+  salesforce.Picklist Status {
+    apiName = "SurveyResponse.Status"
+    label = "Response Status"
+    _required = true
+    restricted = true
+  }
+  salesforce.Picklist Language {
+    apiName = "SurveyResponse.Language"
+    label = "Response Language"
+    restricted = true
+  }
+  salesforce.DateTime CompletionDateTime {
+    apiName = "SurveyResponse.CompletionDateTime"
+    label = "Response Completion Date and Time"
+  }
+  salesforce.Text IpAddress {
+    apiName = "SurveyResponse.IpAddress"
+    label = "Response IP Address"
+    length = 39
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Geolocation Location {
+    apiName = "SurveyResponse.Location"
+    label = "Response Location"
+    scale = 0
+  }
+  salesforce.Lookup SurveyVersionId {
+    apiName = "SurveyResponse.SurveyVersionId"
+    label = "Survey Version ID"
+    _required = true
+    relationshipName = "SurveyVersion"
+  }
+  salesforce.Lookup SurveyId {
+    apiName = "SurveyResponse.SurveyId"
+    label = "Survey ID"
+    _required = true
+    relationshipName = "Survey"
+  }
+}

@@ -1,0 +1,13 @@
+salesforce.EmbeddedServiceConfig Not_Omni_Group {
+  areGuestUsersAllowed = false
+  deploymentFeature = "LiveAgent"
+  deploymentType = "Web"
+  isEnabled = true
+  isTermsAndConditionsEnabled = false
+  isTermsAndConditionsRequired = false
+  masterLabel = "Not Omni Group"
+  shouldHideAuthDialog = false
+  site = salesforce.CustomSite.instance.CustomersService
+  fullName = "Not_Omni_Group"
+  _alias = "Not_Omni_Group"
+}

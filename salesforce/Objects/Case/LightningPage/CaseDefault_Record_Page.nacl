@@ -1,0 +1,163 @@
+salesforce.LightningPage CaseDefault_Record_Page {
+  description = "A three-column record page that includes the Highlights Panel, Chatter, Record Detail, Contact Detail, and Related Lists."
+  flexiPageRegions = [
+    {
+      name = "leftsidebar"
+      replaceable = "enabled"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "collapsed"
+                value = "true"
+              },
+              {
+                name = "numVisibleActions"
+                value = "1"
+              },
+            ]
+            componentName = "force:highlightsPanel"
+            identifier = "force_highlightsPanel"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "tabs"
+                value = "tabs"
+              },
+            ]
+            componentName = "flexipage:tabset"
+            identifier = "flexipage_tabset"
+          }
+        },
+      ]
+      name = "main"
+      replaceable = "enabled"
+      type = "Region"
+    },
+    {
+      name = "rightsidebar"
+      replaceable = "enabled"
+      type = "Region"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "active"
+                value = "true"
+              },
+              {
+                name = "body"
+                value = "feedTabContent"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.feed"
+              },
+            ]
+            componentName = "flexipage:tab"
+            identifier = "feedTab"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "active"
+                value = "true"
+              },
+              {
+                name = "body"
+                value = "relatedTabContent"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.relatedLists"
+              },
+            ]
+            componentName = "flexipage:tab"
+            identifier = "relatedTab"
+          }
+        },
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "body"
+                value = "detailTabContent"
+              },
+              {
+                name = "title"
+                value = "Standard.Tab.detail"
+              },
+            ]
+            componentName = "flexipage:tab"
+            identifier = "detailTab"
+          }
+        },
+      ]
+      name = "tabs"
+      replaceable = "enabled"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "forceChatter:recordFeedContainer"
+            identifier = "forceChatter_recordFeedContainer"
+          }
+        },
+      ]
+      name = "feedTabContent"
+      replaceable = "enabled"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "force:relatedListContainer"
+            identifier = "force_relatedListContainer"
+          }
+        },
+      ]
+      name = "relatedTabContent"
+      replaceable = "enabled"
+      type = "Facet"
+    },
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentName = "force:detailPanel"
+            identifier = "force_detailPanel"
+          }
+        },
+      ]
+      name = "detailTabContent"
+      replaceable = "enabled"
+      type = "Facet"
+    },
+  ]
+  masterLabel = "Case Record View Default"
+  sobjectType = "Case"
+  template = {
+    name = "flexipage:recordHomeThreeColTemplateDesktop"
+  }
+  type = "RecordPage"
+  fullName = "CaseDefault_Record_Page"
+  _parent = [
+    salesforce.Case,
+  ]
+  _alias = "CaseDefault_Record_Page"
+}

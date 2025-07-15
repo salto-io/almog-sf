@@ -1,0 +1,41 @@
+salesforce.LightningPage custom_case_page {
+  flexiPageRegions = [
+    {
+      itemInstances = [
+        {
+          componentInstance = {
+            componentInstanceProperties = [
+              {
+                name = "decorate"
+                value = "true"
+              },
+              {
+                name = "richTextValue"
+                value = "<p style=\"text-align: center;\"><span style=\"font-size: 16px;\">Custom Case Page Title</span></p>"
+              },
+            ]
+            componentName = "flexipage:richText"
+            identifier = "flexipage_richText"
+          }
+        },
+      ]
+      name = "main"
+      type = "Region"
+    },
+  ]
+  masterLabel = "custom_case_page"
+  sobjectType = "Case"
+  template = {
+    name = "flexipage:recordHomeSingleColNoHeaderTemplateDesktop"
+    properties = {
+      name = "enablePageActionConfig"
+      value = "false"
+    }
+  }
+  type = "RecordPage"
+  fullName = "custom_case_page"
+  _parent = [
+    salesforce.Case,
+  ]
+  _alias = "custom_case_page"
+}

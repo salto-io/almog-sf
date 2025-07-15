@@ -1,0 +1,73 @@
+type salesforce.SurveyQuestionChoice {
+  serviceid Id {
+    apiName = "SurveyQuestionChoice.Id"
+    label = "Survey Question Choice ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "SurveyQuestionChoice.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.Text Name {
+    apiName = "SurveyQuestionChoice.Name"
+    label = "Name"
+    _required = true
+    length = 255
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "SurveyQuestionChoice.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "SurveyQuestionChoice.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "SurveyQuestionChoice.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "SurveyQuestionChoice.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "SurveyQuestionChoice.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Lookup QuestionId {
+    apiName = "SurveyQuestionChoice.QuestionId"
+    label = "Survey Question ID"
+    _required = true
+    relationshipName = "Question"
+  }
+  salesforce.Lookup SurveyVersionId {
+    apiName = "SurveyQuestionChoice.SurveyVersionId"
+    label = "Survey Version ID"
+    relationshipName = "SurveyVersion"
+  }
+  salesforce.Text DeveloperName {
+    apiName = "SurveyQuestionChoice.DeveloperName"
+    label = "Developer Name"
+    _required = true
+    length = 80
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Checkbox IsDeprecated {
+    apiName = "SurveyQuestionChoice.IsDeprecated"
+    label = "Is Deprecated"
+    defaultValue = false
+  }
+}

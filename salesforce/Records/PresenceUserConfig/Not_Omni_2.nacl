@@ -1,0 +1,16 @@
+salesforce.PresenceUserConfig Not_Omni_2 {
+  assignments = {
+    users = {
+      user = "almog.mesilaty+dev1@salto.io"
+    }
+  }
+  capacity = 20
+  enableAutoAccept = false
+  enableDecline = false
+  enableDeclineReason = false
+  enableDisconnectSound = false
+  enableRequestSound = false
+  label = "Not Omni 2"
+  fullName = "Not_Omni_2"
+  _alias = "Not Omni 2"
+}

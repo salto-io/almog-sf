@@ -1,0 +1,59 @@
+type salesforce.UiFormatSpecificationSet {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string field {
+    foreignKeyDomain = [
+      salesforce.CustomField,
+    ]
+  }
+  string formatType {
+    _restriction = {
+      enforce_value = false
+      values = [
+        "ICON",
+      ]
+    }
+  }
+  serviceid fullName {
+  }
+  string masterLabel {
+  }
+  string sobjectType {
+    foreignKeyDomain = [
+      "CustomObject",
+    ]
+  }
+  salesforce.UiFormatSpecification uiFormatSpecifications {
+  }
+  string internalId {
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "uiFormatSpecificationSet"
+  dirName = "uiFormatSpecificationSets"
+  metadataType = "UiFormatSpecificationSet"
+  _important_values = [
+    {
+      value = "fullName"
+      highlighted = true
+      indexed = false
+    },
+    {
+      value = "masterLabel"
+      highlighted = true
+      indexed = false
+    },
+  ]
+}

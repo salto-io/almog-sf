@@ -1,0 +1,144 @@
+salesforce.CustomApplication standard__LightningSalesConsole {
+  actionOverrides = [
+    {
+      actionName = "View"
+      comment = "Action override created by Lightning App Builder during activation."
+      content = "custom_case_page"
+      formFactor = "Large"
+      skipRecordTypeSelect = false
+      type = "Flexipage"
+      pageOrSobjectType = "Case"
+    },
+    {
+      actionName = "View"
+      comment = "Action override created by Lightning App Builder during activation."
+      content = "custom_case_page"
+      formFactor = "Small"
+      skipRecordTypeSelect = false
+      type = "Flexipage"
+      pageOrSobjectType = "Case"
+    },
+    {
+      actionName = "Tab"
+      content = "custom_home_page"
+      formFactor = "Large"
+      skipRecordTypeSelect = false
+      type = "Flexipage"
+      pageOrSobjectType = "standard-home"
+    },
+  ]
+  formFactors = [
+    "Small",
+    "Large",
+  ]
+  isNavAutoTempTabsDisabled = false
+  isNavPersonalizationDisabled = false
+  isNavTabPersistenceDisabled = false
+  isOmniPinnedViewEnabled = false
+  label = "Sales Console"
+  navType = "Console"
+  profileActionOverrides = [
+    {
+      actionName = "Tab"
+      content = "second_custom_home_page"
+      formFactor = "Large"
+      pageOrSobjectType = "standard-home"
+      type = "Flexipage"
+      profile = "Standard"
+    },
+    {
+      actionName = "Tab"
+      content = "second_custom_home_page"
+      formFactor = "Large"
+      pageOrSobjectType = "standard-home"
+      type = "Flexipage"
+      profile = "Admin"
+    },
+    {
+      actionName = "View"
+      content = "second_custom_case_page"
+      formFactor = "Large"
+      pageOrSobjectType = "Case"
+      type = "Flexipage"
+      profile = "Standard"
+    },
+    {
+      actionName = "View"
+      content = "second_custom_case_page"
+      formFactor = "Small"
+      pageOrSobjectType = "Case"
+      type = "Flexipage"
+      profile = "Standard"
+    },
+  ]
+  tabs = [
+    "standard-home",
+    salesforce.CustomTab.instance.custom_tab,
+    "standard-Lead",
+    "standard-Account",
+    "standard-Contact",
+    "standard-Opportunity",
+    "standard-Campaign",
+    "standard-Task",
+    "standard-Event",
+    "standard-report",
+    "standard-Dashboard",
+    "standard-Feed",
+    "standard-CollaborationGroup",
+    "standard-File",
+    "standard-Case",
+  ]
+  uiType = "Lightning"
+  utilityBar = "LightningSalesConsole_UtilityBar"
+  workspaceConfig = {
+    mappings = [
+      {
+        tab = salesforce.CustomTab.instance.custom_tab
+      },
+      {
+        tab = "standard-Account"
+      },
+      {
+        tab = "standard-Campaign"
+      },
+      {
+        tab = "standard-Case"
+      },
+      {
+        tab = "standard-CollaborationGroup"
+      },
+      {
+        tab = "standard-Contact"
+      },
+      {
+        tab = "standard-Dashboard"
+      },
+      {
+        tab = "standard-Event"
+      },
+      {
+        tab = "standard-Feed"
+      },
+      {
+        tab = "standard-File"
+      },
+      {
+        tab = "standard-Lead"
+      },
+      {
+        tab = "standard-Opportunity"
+      },
+      {
+        tab = "standard-Task"
+      },
+      {
+        tab = "standard-home"
+      },
+      {
+        tab = "standard-report"
+      },
+    ]
+  }
+  fullName = "standard__LightningSalesConsole"
+  _alias = "Sales Console (standard)"
+}

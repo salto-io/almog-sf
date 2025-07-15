@@ -1,0 +1,22 @@
+type salesforce.ConsumptionSchedule {
+  salesforce.Picklist SBQQ__Category__c {
+    apiName = "ConsumptionSchedule.SBQQ__Category__c"
+    deprecated = false
+    label = "Category"
+    _required = true
+    valueSet = {
+      values = {
+        Rates = {
+          fullName = "Rates"
+          default = true
+          label = "Rates"
+        }
+      }
+      order = [
+        salesforce.ConsumptionSchedule.field.SBQQ__Category__c.valueSet.values.Rates,
+      ]
+    }
+    sorted = false
+    restricted = false
+  }
+}

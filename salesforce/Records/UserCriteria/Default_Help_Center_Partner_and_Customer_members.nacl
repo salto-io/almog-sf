@@ -1,0 +1,10 @@
+salesforce.UserCriteria Default_Help_Center_Partner_and_Customer_members@ssvuuu {
+  description = "Member criteria matches customer and partner member"
+  masterLabel = "Customer and Partner Members"
+  userTypes = [
+    "Partner",
+    "Customer",
+  ]
+  fullName = "Default Help Center.Partner_and_Customer_members"
+  _alias = "Default Help Center.Partner_and_Customer_members"
+}

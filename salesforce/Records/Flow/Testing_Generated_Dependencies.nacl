@@ -1,0 +1,206 @@
+salesforce.Flow Testing_Generated_Dependencies {
+  fullName = "Testing_Generated_Dependencies"
+  apiVersion = 63
+  areMetricsLoggedToDataCloud = false
+  decisions = [
+    {
+      name = "Reference_Testing_Record_Prefix"
+      label = "Reference_Testing_Record_Prefix"
+      defaultConnector = {
+        targetReference = "Reference_Testing_Variable"
+      }
+      defaultConnectorLabel = "Default Outcome"
+      rules = [
+        {
+          name = "Reference_Testing_Outcomes"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = salesforce.Account.field.Name
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "\"false\""
+              }
+            },
+            {
+              leftValueReference = salesforce.Account.field.isunknown__c
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = true
+              }
+            },
+            {
+              leftValueReference = "$Record.RelationshipToAsset__r.Price"
+              operator = "EqualTo"
+              rightValue = {
+                numberValue = 0
+              }
+            },
+            {
+              leftValueReference = "$Record.RelationshipToAsset__r.CustomText__c"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "\"true\""
+              }
+            },
+            {
+              leftValueReference = "$Record.RelationshipToAsset__r.RelationshipToCart__r.TotalChargeItemAdjAmount"
+              operator = "EqualTo"
+              rightValue = {
+                numberValue = 0
+              }
+            },
+            {
+              leftValueReference = "$Record.RelationshipToAsset__r.RelationshipToCart__r.CustomNumber__c"
+              operator = "EqualTo"
+              rightValue = {
+                numberValue = 1
+              }
+            },
+          ]
+          label = "Reference Testing Outcomes"
+        },
+      ]
+    },
+    {
+      name = "Reference_Testing_Variable"
+      label = "Reference_Testing_Variable"
+      defaultConnectorLabel = "Default Outcome"
+      rules = [
+        {
+          name = "Reference_Testing_Variable_Outcome"
+          conditionLogic = "and"
+          conditions = [
+            {
+              leftValueReference = "TestingVariable.IsDeleted"
+              operator = "EqualTo"
+              rightValue = {
+                booleanValue = false
+              }
+            },
+            {
+              leftValueReference = "TestingVariable.ContractCustomText__c"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "\"True\""
+              }
+            },
+            {
+              leftValueReference = "TestingVariable.LookupToLead__r.AnnualRevenue"
+              operator = "EqualTo"
+              rightValue = {
+                numberValue = 0
+              }
+            },
+            {
+              leftValueReference = "TestingVariable.LookupToLead__r.LeadCustomText__c"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "\"True\""
+              }
+            },
+            {
+              leftValueReference = "TestingVariable.LookupToLead__r.LookupToOrder__r.TotalAmount"
+              operator = "EqualTo"
+              rightValue = {
+                numberValue = 0
+              }
+            },
+            {
+              leftValueReference = "TestingVariable.LookupToLead__r.LookupToOrder__r.OrderCustomText__c"
+              operator = "EqualTo"
+              rightValue = {
+                stringValue = "\"True\""
+              }
+            },
+          ]
+          label = "Reference_Testing_Variable_Outcome"
+        },
+      ]
+    },
+  ]
+  environments = "Default"
+  interviewLabel = "Testing_Generated_Dependencies {!$Flow.CurrentDateTime}"
+  label = "Testing_Generated_Dependencies"
+  processMetadataValues = [
+    {
+      name = "BuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+    {
+      name = "CanvasMode"
+      value = {
+        stringValue = "AUTO_LAYOUT_CANVAS"
+      }
+    },
+    {
+      name = "OriginBuilderType"
+      value = {
+        stringValue = "LightningFlowBuilder"
+      }
+    },
+  ]
+  processType = "AutoLaunchedFlow"
+  start = {
+    connector = {
+      targetReference = "Reference_Testing_Record_Prefix"
+    }
+    object = salesforce.Account
+    recordTriggerType = "Create"
+    triggerType = "RecordAfterSave"
+  }
+  status = "Active"
+  variables = [
+    {
+      name = "TestingVariable"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Contract
+    },
+    {
+      name = "TestVariable"
+      dataType = "SObject"
+      isCollection = false
+      isInput = true
+      isOutput = true
+      objectType = salesforce.Account
+    },
+  ]
+  _parent = [
+    salesforce.Account,
+  ]
+  _generated_dependencies = [
+    {
+      reference = salesforce.Account.field.RelationshipToAsset__c
+    },
+    {
+      reference = salesforce.Asset.field.CustomText__c
+    },
+    {
+      reference = salesforce.Asset.field.RelationshipToCart__c
+    },
+    {
+      reference = salesforce.Contract.field.ContractCustomText__c
+    },
+    {
+      reference = salesforce.Contract.field.LookupToLead__c
+    },
+    {
+      reference = salesforce.Lead.field.LeadCustomText__c
+    },
+    {
+      reference = salesforce.Lead.field.LookupToOrder__c
+    },
+    {
+      reference = salesforce.Order.field.OrderCustomText__c
+    },
+    {
+      reference = salesforce.WebCart.field.CustomNumber__c
+    },
+  ]
+  _alias = "Testing_Generated_Dependencies"
+}

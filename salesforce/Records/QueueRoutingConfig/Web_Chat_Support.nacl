@@ -1,0 +1,10 @@
+salesforce.QueueRoutingConfig Web_Chat_Support {
+  capacityType = "INHERITED"
+  capacityWeight = 5
+  isAttributeBased = false
+  label = "Web Chat Support"
+  routingModel = "MOST_AVAILABLE"
+  routingPriority = 1
+  fullName = "Web_Chat_Support"
+  _alias = "Web Chat Support"
+}

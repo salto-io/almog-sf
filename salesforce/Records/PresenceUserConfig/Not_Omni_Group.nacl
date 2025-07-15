@@ -1,0 +1,11 @@
+salesforce.PresenceUserConfig Not_Omni_Group {
+  capacity = 20
+  enableAutoAccept = false
+  enableDecline = false
+  enableDeclineReason = false
+  enableDisconnectSound = false
+  enableRequestSound = false
+  label = "Not Omni Group"
+  fullName = "Not_Omni_Group"
+  _alias = "Not Omni Group"
+}

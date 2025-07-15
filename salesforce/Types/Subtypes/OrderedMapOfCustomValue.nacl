@@ -1,0 +1,8 @@
+type salesforce.OrderedMapOfCustomValue {
+  "Map<salesforce.CustomValue>" values {
+    _required = true
+  }
+  "List<salesforce.CustomValue>" order {
+    _required = true
+  }
+}

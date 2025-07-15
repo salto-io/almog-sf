@@ -1,0 +1,13 @@
+salesforce.AuraDefinitionBundle SALTO_6326_APP {
+  apiVersion = 62
+  description = "A Lightning Component Bundle"
+  fullName = "SALTO_6326_APP"
+  type = "Application"
+  markup = file("salesforce/Records/AuraDefinitionBundle/SALTO_6326_APP/SALTO_6326_APP.app")
+  _generated_dependencies = [
+    {
+      reference = salesforce.AuraDefinitionBundle.instance.SALTO_6326
+    },
+  ]
+  _alias = "SALTO_6326_APP"
+}

@@ -1,0 +1,257 @@
+type salesforce.LiveChatTranscript {
+  salesforce.Summary Abandoned {
+    apiName = "LiveChatTranscript.Abandoned"
+    label = "Abandoned After"
+    precision = 9
+  }
+  salesforce.Lookup AccountId {
+    apiName = "LiveChatTranscript.AccountId"
+    label = "Account ID"
+    relationshipName = "Account"
+  }
+  salesforce.Number AverageResponseTimeOperator {
+    apiName = "LiveChatTranscript.AverageResponseTimeOperator"
+    label = "Agent Average Response Time"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number AverageResponseTimeVisitor {
+    apiName = "LiveChatTranscript.AverageResponseTimeVisitor"
+    label = "Visitor Average Response Time"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Html Body {
+    apiName = "LiveChatTranscript.Body"
+    label = "Body"
+    length = 131072
+  }
+  salesforce.Text Browser {
+    apiName = "LiveChatTranscript.Browser"
+    label = "Browser"
+    length = 200
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text BrowserLanguage {
+    apiName = "LiveChatTranscript.BrowserLanguage"
+    label = "Browser Language"
+    length = 200
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup CaseId {
+    apiName = "LiveChatTranscript.CaseId"
+    label = "Case ID"
+    relationshipName = "Case"
+  }
+  salesforce.Summary ChatDuration {
+    apiName = "LiveChatTranscript.ChatDuration"
+    label = "Chat Duration"
+    precision = 9
+  }
+  salesforce.Lookup ContactId {
+    apiName = "LiveChatTranscript.ContactId"
+    label = "Contact ID"
+    relationshipName = "Contact"
+  }
+  salesforce.DateTime EndTime {
+    apiName = "LiveChatTranscript.EndTime"
+    label = "End Time"
+  }
+  salesforce.Picklist EndedBy {
+    apiName = "LiveChatTranscript.EndedBy"
+    label = "Ended By"
+    restricted = true
+  }
+  salesforce.Text IpAddress {
+    apiName = "LiveChatTranscript.IpAddress"
+    label = "Visitor IP Address"
+    length = 39
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup LeadId {
+    apiName = "LiveChatTranscript.LeadId"
+    label = "Lead ID"
+    relationshipName = "Lead"
+  }
+  salesforce.Lookup LiveChatButtonId {
+    apiName = "LiveChatTranscript.LiveChatButtonId"
+    label = "Chat Button ID"
+    relationshipName = "LiveChatButton"
+  }
+  salesforce.Lookup LiveChatDeploymentId {
+    apiName = "LiveChatTranscript.LiveChatDeploymentId"
+    label = "Chat Deployment ID"
+    relationshipName = "LiveChatDeployment"
+  }
+  salesforce.Lookup LiveChatVisitorId {
+    apiName = "LiveChatTranscript.LiveChatVisitorId"
+    label = "Chat Visitor ID"
+    _required = true
+    relationshipName = "LiveChatVisitor"
+  }
+  salesforce.Text Location {
+    apiName = "LiveChatTranscript.Location"
+    label = "Location"
+    length = 200
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Number MaxResponseTimeOperator {
+    apiName = "LiveChatTranscript.MaxResponseTimeOperator"
+    label = "Agent Maximum Response Time"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number MaxResponseTimeVisitor {
+    apiName = "LiveChatTranscript.MaxResponseTimeVisitor"
+    label = "Visitor Maximum Response Time"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Number OperatorMessageCount {
+    apiName = "LiveChatTranscript.OperatorMessageCount"
+    label = "Agent Message Count"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Lookup OwnerId {
+    apiName = "LiveChatTranscript.OwnerId"
+    label = "Owner ID"
+    relationshipName = "Owner"
+    _hidden_value = true
+  }
+  salesforce.Text Platform {
+    apiName = "LiveChatTranscript.Platform"
+    label = "Platform"
+    length = 200
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Text ReferrerUri {
+    apiName = "LiveChatTranscript.ReferrerUri"
+    label = "Referring Site"
+    length = 200
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.DateTime RequestTime {
+    apiName = "LiveChatTranscript.RequestTime"
+    label = "Request Time"
+  }
+  salesforce.Text ScreenResolution {
+    apiName = "LiveChatTranscript.ScreenResolution"
+    label = "Screen Resolution"
+    length = 200
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Lookup SkillId {
+    apiName = "LiveChatTranscript.SkillId"
+    label = "Skill ID"
+    relationshipName = "Skill"
+  }
+  salesforce.DateTime StartTime {
+    apiName = "LiveChatTranscript.StartTime"
+    label = "Start Time"
+  }
+  salesforce.Picklist Status {
+    apiName = "LiveChatTranscript.Status"
+    label = "Status"
+    restricted = true
+  }
+  salesforce.Html SupervisorTranscriptBody {
+    apiName = "LiveChatTranscript.SupervisorTranscriptBody"
+    label = "Supervisor Transcript Body"
+    length = 131072
+  }
+  salesforce.Text UserAgent {
+    apiName = "LiveChatTranscript.UserAgent"
+    label = "User Agent"
+    length = 200
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Number VisitorMessageCount {
+    apiName = "LiveChatTranscript.VisitorMessageCount"
+    label = "Visitor Message Count"
+    scale = 0
+    precision = 9
+    unique = false
+  }
+  salesforce.Text VisitorNetwork {
+    apiName = "LiveChatTranscript.VisitorNetwork"
+    label = "Network"
+    length = 200
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Summary WaitTime {
+    apiName = "LiveChatTranscript.WaitTime"
+    label = "Wait Time"
+    precision = 9
+  }
+  serviceid Id {
+    apiName = "LiveChatTranscript.Id"
+    label = "Chat Transcript ID"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "LiveChatTranscript.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    _hidden_value = true
+  }
+  salesforce.AutoNumber Name {
+    apiName = "LiveChatTranscript.Name"
+    label = "Chat Transcript Name"
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "LiveChatTranscript.CreatedDate"
+    label = "Created Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "LiveChatTranscript.CreatedById"
+    label = "Created By ID"
+    relationshipName = "CreatedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "LiveChatTranscript.LastModifiedDate"
+    label = "Last Modified Date"
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "LiveChatTranscript.LastModifiedById"
+    label = "Last Modified By ID"
+    relationshipName = "LastModifiedBy"
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "LiveChatTranscript.SystemModstamp"
+    label = "System Modstamp"
+    _hidden_value = true
+  }
+  salesforce.Text ChatKey {
+    apiName = "LiveChatTranscript.ChatKey"
+    label = "Chat Key"
+    length = 200
+    unique = false
+    caseSensitive = false
+  }
+  salesforce.Checkbox IsChatbotSession {
+    apiName = "LiveChatTranscript.IsChatbotSession"
+    label = "Is Chatbot Session"
+    defaultValue = false
+  }
+}

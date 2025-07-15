@@ -1,0 +1,10 @@
+salesforce.UserCriteria CustomerService_WithReferences_Partner_and_Customer_members@uvuuu {
+  description = "Member criteria matches customer and partner member"
+  masterLabel = "Customer and Partner Members"
+  userTypes = [
+    "Partner",
+    "Customer",
+  ]
+  fullName = "CustomerService_WithReferences.Partner_and_Customer_members"
+  _alias = "CustomerService_WithReferences.Partner_and_Customer_members"
+}
